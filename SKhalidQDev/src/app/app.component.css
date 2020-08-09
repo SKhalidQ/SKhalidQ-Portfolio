@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+}
+
+#NavigationDiv {
+    margin: 100px auto;
+}
+
+label {
+    margin: 50px;
+}
+
+button {
+    margin-top: 50px;
+}
