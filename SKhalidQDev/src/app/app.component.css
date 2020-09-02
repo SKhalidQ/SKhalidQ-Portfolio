@@ -2,14 +2,54 @@ h1 {
     text-align: center;
 }
 
+.logo {
+    background-image: url('../../logo_transparent.png');
+    height: 50px;
+}
+
 #NavigationDiv {
-    margin: 100px auto;
-}
-
-label {
-    margin: 50px;
-}
-
-button {
     margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+mat-card {
+    max-width: 400px;
+}
+
+.bbisImage {
+    background-image: url('../../BBISA_Screenshot.png');
+}
+
+.animeListImage {
+    background-image: url('../../AnimeList_Screenshot.png');
+}
+
+.githubLogo {
+    width: 30px;
+}
+
+.githubLogoDiv {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: -35px;
+    margin-right: 20px;
+}
+
+.githubLink {
+
+}
+
+@media (max-width: 864px) {
+    #NavigationDiv {
+        display: block;
+    }
+
+    mat-card {
+        margin-top: 50px;
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+    }
 }
