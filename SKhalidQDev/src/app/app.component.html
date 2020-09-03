@@ -1,62 +1,36 @@
-<div>
-  <img class="logo" src="/assets/logo_transparent.png">
-</div>
+<p>
+  <mat-toolbar>
+    <mat-toolbar-row class="mat-elevation-z5">
+      <img class="logo" src="/assets/logo_transparent.png" matTooltip="Home" routerLink="/home">
+      <span>{{title}}</span>
+      <a mat-button id="projects" routerLink="/projects" routerLinkActive="activeRoute">Projects</a>
+      <span class="example-spacer"></span>
+      <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button> -->
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="mat-elevation-z10">
+      <span>{{pageNameService.sectionNameChaning | async}}</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</p>
+
+<section *ngIf="progress">
+  <mat-progress-bar mode="indeterminate" ></mat-progress-bar>
+</section>
+
 <div>
   <h1> Welcome to SKhalidQ</h1>
 </div>
 
-<div class="content">
-  <div id="NavigationDiv">
-    <mat-card>
-      <mat-card-header>
-        <div mat-card-avatar><fa-icon [icon]="faBeer" size="3x"></fa-icon></div>
-        <mat-card-title>Beer Bottle Inventory System App</mat-card-title>
-        <mat-card-subtitle>Honours Stage Project</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image class="bbisImage" src="/assets/BBISA_Screenshot.png" alt="Main menu image">
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <div class="redirectButton">
-        <a mat-raised-button #BBISA color="primary" href="http://BBIS.SKhalidQ.Dev">Go</a>
-      </div>
-        
-      <div class="githubLogoDiv">
-        <img class="githubLogo" matTooltip="Available on request" src="/assets/github-brands.svg" alt="Github Link">
-      </div>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card>
-      <mat-card-header>
-        <div mat-card-avatar><fa-icon [icon]="faList" size="3x"></fa-icon></div>
-        <mat-card-title>Anime List</mat-card-title>
-        <mat-card-subtitle>Personal Project</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image class="animeListImage" src="/assets/AnimeList_Screenshot.png" alt="Main menu image">
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <div class="redirectButton">
-          <a mat-raised-button #MyList color="primary" href="http://AnimeList.SKhalidQ.Dev">Go</a>
-        </div>
-        
-        <div class="githubLogoDiv">
-          <a href="https://github.com/DarkCreature97/AnimeList" matTooltip="Github Link" class="githubLink" alt="Github Link" target="_blank">
-            <img class="githubLogo" src="/assets/github-brands.svg">
-          </a>
-        </div>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-</div>
+<main>
+  <router-outlet></router-outlet>
+</main>

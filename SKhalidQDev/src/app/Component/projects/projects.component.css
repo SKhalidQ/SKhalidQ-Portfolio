@@ -1,0 +1,61 @@
+#NavigationDiv {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+} 
+
+mat-card:hover {
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+mat-card {
+    max-width: 400px;
+}
+
+.bbisImage {
+    background-image: url('/assets/BBISA_Screenshot.png');
+}
+
+.animeListImage {
+    background-image: url('/assets/AnimeList_Screenshot.png');
+}
+
+.githubLogo {
+    width: 30px;
+}
+
+.githubLogoDiv {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: -35px;
+    margin-right: 20px;
+}
+
+iframe {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    width: 90%;
+    height: 500px;
+    border: 0;
+}
+
+mat-progress-bar {
+    height: 5px;
+}
+
+@media (max-width: 864px) {
+    #NavigationDiv {
+        display: block;
+    }
+
+    mat-card {
+        margin-top: 50px;
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+    }
+}

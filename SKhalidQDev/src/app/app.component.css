@@ -5,51 +5,22 @@ h1 {
 .logo {
     background-image: url('/assets/logo_transparent.png');
     height: 50px;
+    margin-right: 10px;
 }
 
-#NavigationDiv {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-around;
+.logo:hover {
+    background-color: #2A2A2A;
+    border-radius: 5px;
 }
 
-mat-card {
-    max-width: 400px;
+.example-spacer {
+    flex: 1 1 auto;
 }
 
-.bbisImage {
-    background-image: url('/assets/BBISA_Screenshot.png');
+#projects {
+    margin-left: 20px;
 }
 
-.animeListImage {
-    background-image: url('/assets/AnimeList_Screenshot.png');
-}
-
-.githubLogo {
-    width: 30px;
-}
-
-.githubLogoDiv {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-top: -35px;
-    margin-right: 20px;
-}
-
-.githubLink {
-
-}
-
-@media (max-width: 864px) {
-    #NavigationDiv {
-        display: block;
-    }
-
-    mat-card {
-        margin-top: 50px;
-    }
-    .content {
-        display: flex;
-        justify-content: center;
-    }
+.activeRoute {
+    background-color: rgb(26, 25, 25);
 }
