@@ -3,7 +3,7 @@ h1 {
 }
 
 .logo {
-    background-image: url('/logo_transparent.png');
+    background-image: url('../assets/logo_transparent.png');
     height: 50px;
 }
 
@@ -18,11 +18,11 @@ mat-card {
 }
 
 .bbisImage {
-    background-image: url('/BBISA_Screenshot.png');
+    background-image: url('../assets/BBISA_Screenshot.png');
 }
 
 .animeListImage {
-    background-image: url('/AnimeList_Screenshot.png');
+    background-image: url('../assets/AnimeList_Screenshot.png');
 }
 
 .githubLogo {
