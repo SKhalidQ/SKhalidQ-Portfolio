@@ -14,14 +14,6 @@ mat-card {
     max-width: 400px;
 }
 
-.bbisImage {
-    background-image: url('/assets/BBISA_Screenshot.png');
-}
-
-.animeListImage {
-    background-image: url('/assets/AnimeList_Screenshot.png');
-}
-
 .githubLogo {
     width: 30px;
 }
@@ -39,7 +31,8 @@ iframe {
     margin: 50px auto;
     width: 90%;
     height: 500px;
-    border: 0;
+    border: 0.5;
+    border-color: rgba(0, 0, 0, 0.712);
 }
 
 mat-progress-bar {

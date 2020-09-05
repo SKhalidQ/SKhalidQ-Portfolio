@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
-body { margin: 0; font-family: "Segoe UI"; }
+body { margin: 0; height: 100%; font-family: "Segoe UI"; }
+
+.toolTip {
+    height: auto;
+    background: #b71c1cdc;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;

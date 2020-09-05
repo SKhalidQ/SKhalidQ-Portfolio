@@ -1,36 +1,47 @@
-<p>
+<div [class.lightTheme]="lightMode">
   <mat-toolbar>
     <mat-toolbar-row class="mat-elevation-z5">
-      <img class="logo" src="/assets/logo_transparent.png" matTooltip="Home" routerLink="/home">
-      <span>{{title}}</span>
-      <a mat-button id="projects" routerLink="/projects" routerLinkActive="activeRoute">Projects</a>
+      <img class="logo" src="/assets/logo_transparent.png" matTooltip="Home" matTooltipShowDelay="600" matTooltipClass="toolTip" routerLink="/home">
+      
+      <span class="title">{{ title }}</span>
+      
+      <a mat-button class="mainBar" routerLink="/curriculum" [routerLinkActive]="activeRoute">Curriculum</a>
+      <a mat-button class="mainBar" routerLink="/projects" [routerLinkActive]="activeRoute">Projects</a>
+      <a mat-button class="mainBar" routerLink="/about" [routerLinkActive]="activeRoute">About</a>
       <span class="example-spacer"></span>
-      <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button> -->
+      <button mat-button [matMenuTriggerFor]="menu"><mat-icon>format_color_fill</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <div class="menu">
+          <button mat-menu-item (click)="Toggled(!isToggled)"><mat-icon>{{themeIcon}}</mat-icon>{{themeMode}} mode</button>
+        </div>
+      </mat-menu>
     </mat-toolbar-row>
-
+    
     <mat-toolbar-row class="mat-elevation-z10">
-      <span>{{pageNameService.sectionNameChaning | async}}</span>
+      <span>{{pageNameService.sectionNameChanging | async}}</span>
       <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button>
+      <a mat-icon-button href="https://twitter.com/SKhalidQDev" target="_blank">
+        <img class="githubLogo" src="/assets/twitter-brands.svg">
+      </a>
+      <a mat-icon-button disabled class="example-icon" href="https://twitter.com/SKhalidQDev" target="_blank">
+        <img class="githubLogo" src="/assets/youtube-brands.svg">
+      </a>
     </mat-toolbar-row>
   </mat-toolbar>
-</p>
-
-<section *ngIf="progress">
-  <mat-progress-bar mode="indeterminate" ></mat-progress-bar>
-</section>
-
-<div>
-  <h1> Welcome to SKhalidQ</h1>
+  
+  <section *ngIf="progress">
+    <mat-progress-bar mode="indeterminate" ></mat-progress-bar>
+  </section>
+  
+  <mat-sidenav-container>
+    <main style="overflow: auto;">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-container>
 </div>
 
-<main>
-  <router-outlet></router-outlet>
-</main>
+
+
+
+
+

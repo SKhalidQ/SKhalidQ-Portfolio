@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageNameService } from 'src/app/Services/page-name.service';
 
 @Component({
   selector: 'app-not-found',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pageName: PageNameService) { 
+    this.pageName.sectionName.next('Not found');
+   }
 
   ngOnInit(): void {
   }

@@ -16,12 +16,12 @@
         </mat-card-content>
         <mat-card-actions>
           <div class="redirectButton">
-          <a mat-raised-button #BBISA color="primary" href="http://BBIS.SKhalidQ.Dev" (click)="iFrame = true" target="myFrame" matTooltip="Open a small window">Preview</a>
-          <a mat-raised-button #BBISA color="primary" (click)="onClick()" href="http://BBIS.SKhalidQ.Dev" matTooltip="Open full window">Go</a>
+          <a mat-raised-button #BBISA href="http://BBIS.SKhalidQ.Dev" (click)="iFrame = true" target="myFrame" matTooltip="Open a small window" matTooltipShowDelay="600" matTooltipClass="toolTip">Preview</a>
+          <a mat-raised-button #BBISA color="accent" (click)="onClick()" href="http://BBIS.SKhalidQ.Dev" matTooltip="Open full window" matTooltipShowDelay="600" matTooltipClass="toolTip">Go</a>
         </div>
           
         <div class="githubLogoDiv">
-          <img class="githubLogo" matTooltip="Available on request" src="/assets/github-brands.svg" alt="Github Link">
+          <img class="githubLogo" matTooltip="Available on request" matTooltipShowDelay="600" matTooltipClass="toolTip" src="/assets/github-brands.svg" alt="Github Link">
         </div>
         </mat-card-actions>
       </mat-card>
@@ -42,12 +42,12 @@
         </mat-card-content>
         <mat-card-actions>
           <div class="redirectButton">
-            <a mat-raised-button #MyList color="primary" (click)="iFrame = true" target="myFrame" href="http://AnimeList.SKhalidQ.Dev" matTooltip="Open a small window">Preview</a>
-            <a mat-raised-button #MyList color="primary" (click)="onClick()" href="http://AnimeList.SKhalidQ.Dev" matTooltip="Open full window">Go</a>
+            <a mat-raised-button #MyList (click)="iFrame = true" target="myFrame" href="http://AnimeList.SKhalidQ.Dev" matTooltip="Open a small window" matTooltipShowDelay="600" matTooltipClass="toolTip">Preview</a>
+            <a mat-raised-button #MyList color="accent" (click)="onClick()" href="http://AnimeList.SKhalidQ.Dev" matTooltip="Open full window" matTooltipShowDelay="600" matTooltipClass="toolTip">Go</a>
           </div>
           
           <div class="githubLogoDiv">
-            <a href="https://github.com/DarkCreature97/AnimeList" matTooltip="Github Link" class="githubLink" alt="Github Link" target="_blank">
+            <a href="https://github.com/DarkCreature97/AnimeList" matTooltip="Github Link" matTooltipShowDelay="600" matTooltipClass="toolTip" class="githubLink" alt="Github Link" target="_blank">
               <img class="githubLogo" src="/assets/github-brands.svg">
             </a>
           </div>

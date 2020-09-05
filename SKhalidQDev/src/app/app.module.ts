@@ -14,21 +14,30 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ProjectsComponent } from './Component/projects/projects.component';
 
 //Components
 import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { HomeComponent } from './Components/home/home.component';
+import { CurriculumComponent } from './Components/curriculum/curriculum.component';
+import { ProjectsComponent } from './Components/projects/projects.component';
+import { NavigationComponent } from './Components/navigation/navigation.component';
+import { AboutComponent } from './Components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    CurriculumComponent,
+    NavigationComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +49,9 @@ import { HomeComponent } from './Components/home/home.component';
     MatTooltipModule,
     MatProgressBarModule,
     MatToolbarModule,
+    MatMenuModule,
+    MatSlideToggleModule,
+    MatSidenavModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     FontAwesomeModule
   ],
