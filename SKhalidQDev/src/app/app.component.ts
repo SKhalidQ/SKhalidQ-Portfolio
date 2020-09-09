@@ -18,6 +18,7 @@ export class AppComponent implements OnInit{
   themeMode: string = "Light";
   themeIcon: string = "wb_sunny"
   sectionName = "Home";
+  currentLanguage = "English";
 
   constructor(public pageNameService: PageNameService) { 
     this.pageNameService.sectionName.next('Home');
@@ -27,7 +28,7 @@ export class AppComponent implements OnInit{
     this.progress = false;
   }
 
-  Toggled(toggle: boolean) {
+  Changetheme(toggle: boolean) {
     this.isToggled = toggle;
     if (toggle) {
       this.lightMode = true;
@@ -40,6 +41,17 @@ export class AppComponent implements OnInit{
       this.themeIcon = "wb_sunny";
       this.activeRoute = "activeRouteDark"
     }
+  }
+
+  ChangeLanguage(language: string) {
+    if (language == "English") {
+      this.currentLanguage = language;
+    } else if (language == "Castellano") {
+      this.currentLanguage = language;
+    } else if (language == "Català") {
+      this.currentLanguage = language;
+    }
+    console.log(this.currentLanguage);
   }
 
   ngOnInit(): void {

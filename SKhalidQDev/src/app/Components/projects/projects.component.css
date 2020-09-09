@@ -2,16 +2,23 @@
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
-} 
+}
 
 mat-card:hover {
-    -webkit-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-    transform: scale(1.02);
+    width: 410px;
+    height: 460px;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    
 }
 
 mat-card {
-    max-width: 400px;
+    width: 400px;
+    height: 450px;
+    transition: width 0.3s, height, 0.3s;
+}
+
+p {
+    width: 400px;
 }
 
 .githubLogo {

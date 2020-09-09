@@ -12,7 +12,7 @@
     outline: 0;
 }
 
-.example-spacer {
+.spacer {
     flex: 1 1 auto;
 }
 
@@ -24,12 +24,13 @@
     margin-left: 10px;
 }
 
-.activeRouteDark {
-    background-color: rgb(26, 25, 25);
+.rightButtons {
+    margin-left: 10px;
 }
 
-.activeRouteLight {
-    background-color: rgb(202, 202, 202);
+.activeRoute {
+    color: red;
+    background: rgba(73, 59, 59, 0.151);
 }
 
 mat-toolbar {
@@ -38,11 +39,38 @@ mat-toolbar {
     z-index: 5;
 }
 
-.githubLogo {
+mat-menu {
+    border-radius: 1;
+}
+
+.icon {
     width: 30px;
 }
 
+.langMenu {
+    width: 200px;
+}
+
+.banderas {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+mat-sidenav-container {
+    padding-top: 10vh;
+    height: calc(100vh);
+}
+
 main {
-    padding-top: 150px;
-    height: calc(100vh - 150px);
+    padding-top: 50px;
+    height: calc(100vh - 14vh);
+}
+
+@media (max-width: 864px) {
+    mat-sidenav-container {
+        height: calc(120vh);
+    }
 }
