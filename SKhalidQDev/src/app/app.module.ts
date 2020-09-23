@@ -29,6 +29,9 @@ import { CurriculumComponent } from './Components/curriculum/curriculum.componen
 import { ProjectsComponent } from './Components/projects/projects.component';
 import { NavigationComponent } from './Components/navigation/navigation.component';
 import { AboutComponent } from './Components/about/about.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { SideNavListComponent } from './Components/side-nav-list/side-nav-list.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { AboutComponent } from './Components/about/about.component';
     HomeComponent,
     CurriculumComponent,
     NavigationComponent,
-    AboutComponent
+    AboutComponent,
+    HeaderComponent,
+    SideNavListComponent
   ],
   imports: [
     BrowserModule,
@@ -54,8 +59,9 @@ import { AboutComponent } from './Components/about/about.component';
     MatSlideToggleModule,
     MatSidenavModule,
     MatDividerModule,
+    MatListModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

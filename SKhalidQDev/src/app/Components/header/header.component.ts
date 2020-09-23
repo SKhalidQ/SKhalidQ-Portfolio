@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { PageNameService } from './Services/page-name.service';
-import  *  as  data  from  './Languages/languages.json';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { PageNameService } from 'src/app/Services/page-name.service';
+import  *  as  data  from  '../../Languages/languages.json';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
+export class HeaderComponent implements OnInit {
 
-export class AppComponent implements OnInit{
-  
+  @Output() toggle = new EventEmitter<void>();
+
   title: string = 'SKhalidQDev';
   progress: boolean = false;
   iFrame: boolean = false;
@@ -35,6 +36,13 @@ export class AppComponent implements OnInit{
 
   constructor(public pageNameService: PageNameService) { 
     this.pageNameService.sectionName.next('Home');
+  }
+
+  ngOnInit(): void {
+  }
+
+  onToggle() {
+    this.toggle.emit();
   }
 
   Changetheme(toggle: boolean) {
@@ -86,7 +94,4 @@ export class AppComponent implements OnInit{
     }
   }
 
-  ngOnInit(): void {
-    
-  }
 }

@@ -58,36 +58,3 @@ mat-menu {
     height: 20px;
     margin-right: 10px;
 }
-
-mat-sidenav-container {
-    padding-top: 10vh;
-    height: 100vh;
-}
-
-main {
-    padding-top: 50px;
-    height: calc(100vh - 16vh);
-}
-
-/* @media (max-width: 864px) {
-    mat-sidenav-container {
-        height: calc(100vh);
-    }
-} */
-
-
-
-
-
-  
-.example-sidenav-content {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-}
-  
-.example-sidenav {
-    padding: 20px;
-}
-  

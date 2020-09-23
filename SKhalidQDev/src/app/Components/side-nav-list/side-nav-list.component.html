@@ -1,0 +1,17 @@
+<mat-drawer #drawer class="example-sidenav" mode="side">
+    <a mat-list-item routerLink="LogIn" routerLinkActive="true" [routerLinkActiveOptions]="{ exact: true }" (click)="onClose()">
+        <!-- <mat-icon>input</mat-icon> -->
+        <span class="menuIcons">Log In</span>
+      </a>
+      <a mat-list-item routerLink="SignUp" routerLinkActive="true" [routerLinkActiveOptions]="{ exact: true }" (click)="onClose()">
+        <!-- <mat-icon></mat-icon> -->
+        <span class="menuIcons">Sign Up</span>
+      </a>
+    
+      <mat-list-item>
+        <button mat-icon-button routerLink="Home" routerLinkActive="true" [routerLinkActiveOptions]="{ exact: true }" (click)="onClose()">
+          <!-- <mat-icon>eject</mat-icon> -->
+          <span class="menuIcons">Log Out</span>
+        </button>
+      </mat-list-item>
+  </mat-drawer>
