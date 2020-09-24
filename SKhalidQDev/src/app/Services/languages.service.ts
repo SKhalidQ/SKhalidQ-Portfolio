@@ -4,10 +4,11 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ThemeModesService {
-  themeMode = new BehaviorSubject<boolean>(false);
+export class LanguagesService {
 
-  themeMode$ = this.themeMode.asObservable();
+  language = new BehaviorSubject<string>("English");
+
+  activeLanguage$ = this.language.asObservable();
 
   constructor() { }
 }

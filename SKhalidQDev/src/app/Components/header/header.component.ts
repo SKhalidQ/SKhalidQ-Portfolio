@@ -1,5 +1,7 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PageNameService } from 'src/app/Services/page-name.service';
+import { ThemeModesService } from 'src/app/Services/theme-modes.service';
 import  *  as  data  from  '../../Languages/languages.json';
 
 @Component({
@@ -21,6 +23,8 @@ export class HeaderComponent implements OnInit {
   sectionName = "Home";
   currentLanguage = "English";
   showFiller = false;
+  smallScreen: boolean;
+  xSmallScreen: boolean;
   
   //Language
   engLang: any = data['default'][0];
@@ -33,9 +37,16 @@ export class HeaderComponent implements OnInit {
   CurriculumBtn: string = this.engLang['CurriculumBtn'];
   ProjectsBtn: string = this.engLang['ProjectsBtn'];
   AboutBtn: string = this.engLang['AboutBtn'];
+  EngBtn: string = this.engLang['EngBtn'];
+  CastBtn: string = this.engLang['CastBtn'];
+  CatBtn: string = this.engLang['CatBtn'];
 
-  constructor(public pageNameService: PageNameService) { 
+  constructor(public pageNameService: PageNameService, private themeModeService: ThemeModesService, breakpointObserver: BreakpointObserver) { 
     this.pageNameService.sectionName.next('Home');
+    breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe((x) => {
+      this.smallScreen = x.breakpoints[Breakpoints.Small] && !x.breakpoints[Breakpoints.XSmall];
+      this.xSmallScreen = x.breakpoints[Breakpoints.XSmall];
+    });
   }
 
   ngOnInit(): void {
@@ -53,12 +64,14 @@ export class HeaderComponent implements OnInit {
       this.themeBtn = this.GetLangString(this.currentLanguage, "DarkBtn");
       this.defaultThemeString = "DarkBtn";
       this.activeRoute = "activeRouteLight"
+      this.themeModeService.themeMode.next(this.lightMode);
     } else {
       this.lightMode = false;
       this.themeBtn = this.GetLangString(this.currentLanguage, "LightBtn");
       this.defaultThemeString = "LightBtn";
       this.themeIcon = "wb_sunny";
       this.activeRoute = "activeRouteDark"
+      this.themeModeService.themeMode.next(this.lightMode);
     }
   }
 
@@ -68,18 +81,27 @@ export class HeaderComponent implements OnInit {
       this.CurriculumBtn = this.engLang['CurriculumBtn'];
       this.ProjectsBtn = this.engLang['ProjectsBtn'];
       this.AboutBtn = this.engLang['AboutBtn'];
+      this.EngBtn = this.engLang['EngBtn'];
+      this.CastBtn = this.engLang['CastBtn'];
+      this.CatBtn = this.engLang['CatBtn'];
       this.themeBtn = this.GetLangString(this.currentLanguage, this.defaultThemeString);
     } else if (language == "Castellano") {
       this.currentLanguage = language;
       this.CurriculumBtn = this.castLang['CurriculumBtn'];
       this.ProjectsBtn = this.castLang['ProjectsBtn'];
       this.AboutBtn = this.castLang['AboutBtn'];
+      this.EngBtn = this.castLang['EngBtn'];
+      this.CastBtn = this.castLang['CastBtn'];
+      this.CatBtn = this.castLang['CatBtn'];
       this.themeBtn = this.GetLangString(this.currentLanguage, this.defaultThemeString);
     } else if (language == "Català") {
       this.currentLanguage = language;
       this.CurriculumBtn = this.catLang['CurriculumBtn'];
       this.ProjectsBtn = this.catLang['ProjectsBtn'];
       this.AboutBtn = this.catLang['AboutBtn'];
+      this.EngBtn = this.catLang['EngBtn'];
+      this.CastBtn = this.catLang['CastBtn'];
+      this.CatBtn = this.catLang['CatBtn'];
       this.themeBtn = this.GetLangString(this.currentLanguage, this.defaultThemeString);
     }
   }

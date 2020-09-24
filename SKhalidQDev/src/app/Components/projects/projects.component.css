@@ -5,16 +5,25 @@
 }
 
 mat-card:hover {
-    width: 410px;
-    height: 460px;
+    width: 405px;
+    height: 420px;
     box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     
 }
 
 mat-card {
     width: 400px;
-    height: 450px;
+    height: 415px;
     transition: width 0.3s, height, 0.3s;
+}
+
+.cardImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    margin: auto;
+    padding-bottom: 10px;
 }
 
 p {
@@ -57,5 +66,7 @@ mat-progress-bar {
     .content {
         display: flex;
         justify-content: center;
+        align-items: center;
+        padding-bottom: 50px;
     }
 }

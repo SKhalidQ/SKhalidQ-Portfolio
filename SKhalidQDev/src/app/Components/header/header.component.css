@@ -4,7 +4,7 @@
 }
 
 .logo:hover {
-    background-color: #2A2A2A;
+    background-color: #2a2a2a52;
     border-radius: 5px;
 }
 
@@ -20,11 +20,11 @@
     margin: 0 10px;
 }
 
-.mainBar {
+.leftBtns {
     margin-left: 10px;
 }
 
-.rightButtons {
+.socialMedBtn {
     margin-left: 10px;
 }
 
@@ -57,4 +57,10 @@ mat-menu {
     width: 30px;
     height: 20px;
     margin-right: 10px;
+}
+
+@media (max-width: 960px) {
+    .leftBtns, .rightBtns {
+        visibility: hidden;
+    }
 }

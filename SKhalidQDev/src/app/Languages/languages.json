@@ -12,7 +12,10 @@
         "AboutTitle": "About",
         "Welcome": "Welcome to",
         "PreviewBtn": "Preview",
-        "GoBtn": "Go"
+        "GoBtn": "Go",
+        "EngBtn": "English",
+        "CastBtn": "Castilian",
+        "CatBtn": "Catalan"
     },
     { 
         "Language": "Castellano", 
@@ -24,10 +27,13 @@
         "HomeTitle": "Home",
         "CurriculumTitle": "Currículum Vitae",
         "ProjectsTitle": "Proyectos",
-        "AboutTitle": "Sobre",
+        "AboutTitle": "Acerca de",
         "Welcome": "Bienvenidos a",
         "PreviewBtn": "Vista Previa",
-        "GoBtn": "Ir"
+        "GoBtn": "Ir",
+        "EngBtn": "Inglés",
+        "CastBtn": "Castellano",
+        "CatBtn": "Catalán"
     },
     { 
         "Language": "Català", 
@@ -42,6 +48,9 @@
         "AboutTitle": "Sobre",
         "Welcome": "Benvinguts a",
         "PreviewBtn": "Vista Prèvia",
-        "GoBtn": "Anar"
+        "GoBtn": "Anar",
+        "EngBtn": "Anglés",
+        "CastBtn": "Castellà",
+        "CatBtn": "Català"
     }
 ]

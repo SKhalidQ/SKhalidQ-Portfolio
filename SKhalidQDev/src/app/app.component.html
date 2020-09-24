@@ -1,61 +1,16 @@
-<div [class.lightTheme]="lightMode">
-  <mat-sidenav-container  class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-      <app-side-nav-list (closeSNav)="drawer.close()"></app-side-nav-list>
+<div [class.lightTheme]="themeModes.themeMode$ | async">
+  <mat-drawer-container class="container" autosize>
+    <mat-drawer #sideNav role="navigation" class="sideNav" mode="over">
+      <app-side-nav-list (closeSNav)="sideNav.close()"></app-side-nav-list>
     </mat-drawer>
     
-    <mat-sidenav-content>
-      <mat-toolbar>
-        <mat-toolbar-row class="mat-elevation-z5">
-          <div>
-            <button mat-icon-button class="menuButton" (click)="drawer.toggle()">
-              <mat-icon>menu</mat-icon>
-            </button>
-          </div>
-          <img class="logo" src="/assets/logo_transparent.png" matTooltip="Home" matTooltipShowDelay="600" matTooltipClass="toolTip" routerLink="/home">
-          
-          <span class="title">{{ title }}</span>
-          
-          <a mat-button class="mainBar" routerLink="/curriculum" routerLinkActive="activeRoute">{{ CurriculumBtn }}</a>
-          <a mat-button class="mainBar" routerLink="/projects" routerLinkActive="activeRoute">{{ ProjectsBtn }}</a>
-          <a mat-button class="mainBar" routerLink="/about" routerLinkActive="activeRoute">{{ AboutBtn }}</a>
-          <span class="spacer"></span>
-          <a mat-button [matMenuTriggerFor]="menu"><mat-icon>format_color_fill</mat-icon></a>
-          <mat-menu #menu="matMenu">
-            <div class="menu">
-              <button mat-menu-item (click)="Changetheme(!isToggled)"><mat-icon>{{ themeIcon }}</mat-icon>{{ themeBtn }}</button>
-            </div>
-          </mat-menu>
-          <a mat-button [matMenuTriggerFor]="languages"><mat-icon>language</mat-icon></a>
-          <mat-menu #languages="matMenu">
-            <div class="langMenu">
-              <button mat-menu-item style="display: flex; align-items: center;" (click)="ChangeLanguage('English')"><img class="banderas" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg"> English</button>
-              <button mat-menu-item style="display: flex; align-items: center;" (click)="ChangeLanguage('Castellano')"><img class="banderas" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg"> Castellano</button>
-              <button mat-menu-item style="display: flex; align-items: center;" (click)="ChangeLanguage('Català')"><img class="banderas" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg"> Català</button>
-            </div>
-          </mat-menu>
-        </mat-toolbar-row>
-        
-        <mat-toolbar-row class="mat-elevation-z10">
-          <span>{{pageNameService.sectionNameChanging | async}}</span>
-          <span class="spacer"></span>
-          <a mat-icon-button class="rightButtons" href="https://twitter.com/SKhalidQDev" target="_blank">
-            <img class="icon" src="/assets/twitter-brands.svg">
-          </a>
-          <a mat-icon-button class="rightButtons" href="https://uk.linkedin.com/in/sad-khalid-qayyum-74488015b/en-us" target="_blank">
-            <img class="icon" src="/assets/linkedin-in-brands.svg">
-          </a>
-        </mat-toolbar-row>
-      </mat-toolbar>
-      <!-- <app-header></app-header> -->
-      
-      <section *ngIf="progress">
-        <mat-progress-bar mode="indeterminate" ></mat-progress-bar>
-      </section>
-      
-      <main style="overflow: auto;">
-        <router-outlet></router-outlet>
-      </main>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+    <app-header (toggle)="sideNav.toggle()"></app-header>
+    
+    <section *ngIf="progress">
+      <mat-progress-bar mode="indeterminate" ></mat-progress-bar>
+    </section>
+    <main style="overflow: auto;">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-drawer-container>
 </div>

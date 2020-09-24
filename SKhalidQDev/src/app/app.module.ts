@@ -19,7 +19,6 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 
-
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 //Components

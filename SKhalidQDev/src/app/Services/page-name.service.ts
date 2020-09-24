@@ -6,7 +6,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class PageNameService {
   sectionName = new BehaviorSubject<string>('Home');
-
+  
+  //Change to activePageName$
   sectionNameChanging = this.sectionName.asObservable();
 
   constructor() { }

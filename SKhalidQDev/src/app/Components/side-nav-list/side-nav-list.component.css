@@ -1,0 +1,55 @@
+mat-nav-list {
+    margin-top: 5vh;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover, a:active {
+    color: lightgray;
+}
+
+span {
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+.activeRoute {
+    color: red;
+    background-color: #35343483;
+}
+
+.activeRoute:hover {
+    color: red;
+    background-color: #3f3e3e;
+}
+
+.divider {
+    margin: 15px;
+}
+
+mat-menu {
+    border-radius: 1;
+}
+
+.icon {
+    width: 30px;
+}
+
+.langMenu {
+    width: 200px;
+}
+
+.banderas {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+mat-icon {
+    font-size: 20px;
+}

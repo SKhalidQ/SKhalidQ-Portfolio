@@ -1,17 +1,38 @@
-<mat-drawer #drawer class="example-sidenav" mode="side">
-    <a mat-list-item routerLink="LogIn" routerLinkActive="true" [routerLinkActiveOptions]="{ exact: true }" (click)="onClose()">
-        <!-- <mat-icon>input</mat-icon> -->
-        <span class="menuIcons">Log In</span>
-      </a>
-      <a mat-list-item routerLink="SignUp" routerLinkActive="true" [routerLinkActiveOptions]="{ exact: true }" (click)="onClose()">
-        <!-- <mat-icon></mat-icon> -->
-        <span class="menuIcons">Sign Up</span>
-      </a>
-    
-      <mat-list-item>
-        <button mat-icon-button routerLink="Home" routerLinkActive="true" [routerLinkActiveOptions]="{ exact: true }" (click)="onClose()">
-          <!-- <mat-icon>eject</mat-icon> -->
-          <span class="menuIcons">Log Out</span>
-        </button>
-      </mat-list-item>
-  </mat-drawer>
+<mat-nav-list>
+  <a mat-list-item class="mainBar" routerLink="/curriculum" routerLinkActive="activeRoute">
+    <mat-icon>description</mat-icon>
+    <span>{{ CurriculumBtn }}</span>
+  </a>
+  <a mat-list-item class="mainBar" routerLink="/projects" routerLinkActive="activeRoute">
+    <mat-icon>code</mat-icon>
+    <span>{{ ProjectsBtn }}</span>
+  </a>
+  <a mat-list-item class="mainBar" routerLink="/about" routerLinkActive="activeRoute">
+    <mat-icon>info</mat-icon>
+    <span>{{ AboutBtn }}</span>
+  </a>
+  <mat-divider class="divider"></mat-divider>
+  <a mat-list-item [matMenuTriggerFor]="menu">
+    <mat-icon>format_color_fill</mat-icon>
+    <span>{{ themeBtn }}</span>
+  </a>
+  <mat-menu #menu="matMenu">
+    <div class="menu">
+      <button mat-menu-item (click)="Changetheme(!isToggled)">
+        <mat-icon>{{ themeIcon }}</mat-icon>
+        {{ themeBtn }}
+      </button>
+    </div>
+  </mat-menu>
+  <a mat-list-item [matMenuTriggerFor]="languages">
+    <mat-icon>language</mat-icon>
+    <span>{{ currentLanguage }}</span>
+  </a>
+  <mat-menu #languages="matMenu">
+    <div class="langMenu">
+      <button mat-menu-item style="display: flex; align-items: center;" (click)="ChangeLanguage('English')"><img class="banderas" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg">{{ EngBtn }}</button>
+      <button mat-menu-item style="display: flex; align-items: center;" (click)="ChangeLanguage('Castellano')"><img class="banderas" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg">{{ CastBtn }}</button>
+      <button mat-menu-item style="display: flex; align-items: center;" (click)="ChangeLanguage('Català')"><img class="banderas" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg">{{ CatBtn }}</button>
+    </div>
+  </mat-menu>
+</mat-nav-list>
