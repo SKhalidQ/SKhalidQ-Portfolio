@@ -4,17 +4,16 @@
     justify-content: space-around;
 }
 
-mat-card:hover {
-    width: 405px;
-    height: 420px;
-    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    
-}
-
 mat-card {
     width: 400px;
     height: 415px;
     transition: width 0.3s, height, 0.3s;
+}
+
+mat-card:hover {
+    width: 405px;
+    height: 420px;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .cardImage {
@@ -45,10 +44,18 @@ iframe {
     display: flex;
     justify-content: center;
     margin: 50px auto;
+    width: 89%;
+    height: 480px;
+    border: 0.5;
+    transition: width 0.3s, height, 0.3s;
+    border-color: rgba(0, 0, 0, 0.534);
+}
+
+iframe:hover {
     width: 90%;
     height: 500px;
-    border: 0.5;
-    border-color: rgba(0, 0, 0, 0.712);
+    border-color: rgba(0, 0, 0, 0.336);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); 
 }
 
 mat-progress-bar {

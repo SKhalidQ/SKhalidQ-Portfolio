@@ -1,3 +1,4 @@
+import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterEvent } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PageNameService } from 'src/app/Services/page-name.service';
@@ -25,6 +26,7 @@ export class HeaderComponent implements OnInit {
   showFiller = false;
   smallScreen: boolean;
   xSmallScreen: boolean;
+  Loading: boolean = false;
   
   //Language
   engLang: any = data['default'][0];
@@ -41,12 +43,21 @@ export class HeaderComponent implements OnInit {
   CastBtn: string = this.engLang['CastBtn'];
   CatBtn: string = this.engLang['CatBtn'];
 
-  constructor(public pageNameService: PageNameService, private themeModeService: ThemeModesService, breakpointObserver: BreakpointObserver) { 
+  constructor(
+    public pageNameService: PageNameService, 
+    private themeModeService: ThemeModesService, 
+    breakpointObserver: BreakpointObserver, 
+    private router: Router) { 
     this.pageNameService.sectionName.next('Home');
+    
     breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe((x) => {
       this.smallScreen = x.breakpoints[Breakpoints.Small] && !x.breakpoints[Breakpoints.XSmall];
       this.xSmallScreen = x.breakpoints[Breakpoints.XSmall];
     });
+
+    this.router.events.subscribe((e : RouterEvent) => {
+      this.navigationInterceptor(e);
+    })
   }
 
   ngOnInit(): void {
@@ -113,6 +124,27 @@ export class HeaderComponent implements OnInit {
       return this.castLang[word];
     } else if (language == 'Català') {
       return this.catLang[word];
+    }
+  }
+
+  navigationInterceptor(event: RouterEvent): void {
+    if (event instanceof NavigationStart) {
+      this.Loading = true;
+      console.log(this.Loading);
+    }
+    if (event instanceof NavigationEnd) {
+      this.Loading = false;
+      console.log(this.Loading);
+    }
+
+    // Set loading state to false in both of the below events to hide the spinner in case a request fails
+    if (event instanceof NavigationCancel) {
+      this.Loading = false;
+      console.log(this.Loading);
+    }
+    if (event instanceof NavigationError) {
+      this.Loading = false;
+      console.log(this.Loading);
     }
   }
 

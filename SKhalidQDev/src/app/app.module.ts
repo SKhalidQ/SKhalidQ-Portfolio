@@ -18,7 +18,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
 
+//FontAwesome
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 //Components
@@ -30,7 +32,6 @@ import { NavigationComponent } from './Components/navigation/navigation.componen
 import { AboutComponent } from './Components/about/about.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { SideNavListComponent } from './Components/side-nav-list/side-nav-list.component';
-import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [

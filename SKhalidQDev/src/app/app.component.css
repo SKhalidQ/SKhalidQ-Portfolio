@@ -8,13 +8,13 @@
 }
 
 main {
-    padding-top: 50px;
+    margin-top: 50px;
     height: calc(100vh - 13vh);
 }
 
 @media (max-width: 960px) {
     main {
-        margin-top: 5vh;
+        margin-top: 150px;
         height: calc(100vh - 31vh);
     }
 

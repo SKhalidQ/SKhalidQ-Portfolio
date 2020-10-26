@@ -8,13 +8,11 @@ import { ThemeModesService } from './Services/theme-modes.service';
 })
 
 export class AppComponent implements OnInit {
-
   progress: boolean = false;
   showFiller = false;
   lightMode: boolean = false;
   
-  constructor(public themeModes: ThemeModesService) {
-  }
+  constructor(public themeModes: ThemeModesService) { }
   
   ngOnInit(): void {
     console.log(window.innerWidth);

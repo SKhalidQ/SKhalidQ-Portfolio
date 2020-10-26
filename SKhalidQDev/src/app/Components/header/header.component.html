@@ -1,4 +1,8 @@
 <mat-toolbar>
+  <section *ngIf="Loading">
+    <mat-progress-bar mode="indeterminate" color="warn" ></mat-progress-bar>
+  </section>
+  
   <mat-toolbar-row class="mat-elevation-z5">
     <button mat-icon-button class="menuButton" *ngIf="smallScreen || xSmallScreen" (click)="onToggle()">
       <mat-icon>menu</mat-icon>
@@ -11,6 +15,7 @@
     <a mat-button class="leftBtns" routerLink="/projects" routerLinkActive="activeRoute">{{ ProjectsBtn }}</a>
     <a mat-button class="leftBtns" routerLink="/about" routerLinkActive="activeRoute">{{ AboutBtn }}</a>
     <span class="spacer"></span>
+    
     <a mat-button class="rightBtns" [matMenuTriggerFor]="menu"><mat-icon>format_color_fill</mat-icon></a>
     <mat-menu #menu="matMenu">
       <div class="menu">
@@ -19,6 +24,7 @@
         </button>
       </div>
     </mat-menu>
+    
     <a mat-button class="rightBtns" [matMenuTriggerFor]="languages"><mat-icon>language</mat-icon></a>
     <mat-menu #languages="matMenu">
       <div class="langMenu">
@@ -30,7 +36,7 @@
   </mat-toolbar-row>
   
   <mat-toolbar-row class="mat-elevation-z10">
-    <span>{{pageNameService.sectionNameChanging | async}}</span>
+    <span>{{ pageNameService.sectionNameChanging | async }}</span>
     <span class="spacer"></span>
     <a mat-icon-button class="socialMedBtn" href="https://twitter.com/SKhalidQDev" target="_blank">
       <img class="icon" src="/assets/twitter-brands.svg">

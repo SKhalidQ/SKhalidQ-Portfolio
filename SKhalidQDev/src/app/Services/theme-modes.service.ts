@@ -4,6 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ThemeModesService {
   themeMode = new BehaviorSubject<boolean>(false);
 
