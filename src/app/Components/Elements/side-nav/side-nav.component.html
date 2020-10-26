@@ -1,0 +1,42 @@
+<mat-nav-list>
+  <!-- <app-header>Send false to the header so it doesnt show row 2</app-header> -->
+
+  <!-- Temporal -->
+  <mat-toolbar>
+      <mat-toolbar-row class="mat-elevation-z5">
+        <button type="button" style="margin-right: 10px;" (click)="onToggle()" mat-icon-button><mat-icon>clear</mat-icon></button>
+        <img class="logo" src="/assets/Images/logo_transparent.png" matTooltip="Home" matTooltipShowDelay="600" matTooltipClass="toolTip" routerLink="/home">
+        <h2 style="margin: 0 10px 0 0;">{{ title }}</h2>
+      </mat-toolbar-row>
+  </mat-toolbar>
+
+  <!--End Temporal-->
+
+  <mat-divider></mat-divider>
+
+  <a mat-list-item *ngFor="let route of routeData" [routerLink]="route.route" routerLinkActive="activeRoute">
+    <mat-icon class="routeBtn">{{ route.icon}}</mat-icon>
+    <span>{{ route.btnText }}</span>
+  </a>
+  <mat-divider></mat-divider>
+
+  <a mat-list-item [matMenuTriggerFor]="menu"><mat-icon class="routeBtn">format_color_fill</mat-icon ><span>Theme</span></a>
+    <mat-menu #menu="matMenu">
+      <div class="menu">
+        <button mat-menu-item (click)="ChangeTheme()"><mat-icon>{{ currentTheme.icon }}</mat-icon>{{ currentTheme.btnText }}</button>
+      </div>
+    </mat-menu>
+
+  <a mat-list-item [matMenuTriggerFor]="languages" ><mat-icon class="routeBtn">language</mat-icon><span>Languages</span></a>
+  <mat-menu #languages="matMenu">
+    <div class="langMenu">
+      <button mat-menu-item *ngFor="let languages of languageData" [matTooltip]="languages.tooltip" style="display: flex; align-items: center;" [disabled]="languages.disabled">
+        <img class="banderas" *ngIf="languages.flag != null" [src]="languages.flag">
+        <div class="notFoundDiv" *ngIf="languages.flag == null">
+          <mat-icon class="noImage" color="warn" [inline]="true">error_outline</mat-icon>
+        </div>
+        {{ languages.lang }}
+      </button>
+    </div>
+  </mat-menu>
+</mat-nav-list>

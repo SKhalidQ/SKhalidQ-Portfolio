@@ -1,0 +1,146 @@
+<div class="cv mat-elevation-z5">
+  <div class="cv_left">
+    
+    <div class="cv_profile">
+      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="profile_pic">
+    </div>
+
+    <div class="cv_content">
+      <div class="cv_item cv_info">
+        <div class="title">
+          <p class="bold">Sad Khalid Qayyum</p>
+          <p class="regular">BSc (Hons) Computer Science</p>
+          <mat-divider></mat-divider>
+        </div>
+
+        <ul>
+          <li>
+            <div class="icon">
+              <mat-icon>email</mat-icon>
+            </div>
+            <div class="data"> SKhalidQDev@outlook.es </div>
+          </li>
+
+          <li>
+            <div class="icon">
+              <mat-icon>web</mat-icon>
+            </div>
+            <div class="data"> www.skhalidq.dev </div>
+          </li>
+        </ul>
+      </div>
+      
+      <mat-divider></mat-divider>
+
+      <div class="cv_item cv_skills">
+        <div class="title">
+          <p class="bold">{{ _titles[0].Skills }}</p>
+        </div>
+        
+        <ul *ngFor="let skill of _skills">
+          <li>
+            <div class="skill_name">{{ skill.Name }}</div>
+            <div class="skill_progress">
+              <span [style]="'width: ' + skill.Percentage + ';'"></span>
+            </div>
+            <div class="skill_per">{{ skill.Percentage }}</div>
+          </li>
+        </ul>
+
+      </div>
+      
+      <mat-divider></mat-divider>
+
+      <div class="cv_item cv_skills">
+        <div class="title">
+          <p class="bold">Languages</p>
+        </div>
+        
+        <ul *ngFor="let language of _languages">
+          <li>
+            <div class="skill_name">{{ language.Language }}</div>
+            <div class="skill_progress">
+              <span [style]="'width: ' + language.Percentage + ';'"></span>
+            </div>
+            <div class="skill_per">{{ language.Percentage }}</div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="cv_right">
+    <div class="cv_font">
+      <div class="cv_item cv_about">
+        <div class="title">
+          <p class="bold">{{ _titles[0].Profile }}</p>
+        </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis illo fugit officiis distinctio culpa officia totam atque exercitationem inventore repudiandae?</p>
+      </div>
+
+      <mat-divider></mat-divider>
+      
+      <div class="cv_item cv_work">
+        <div class="title">
+          <p class="bold">{{ _titles[0].WorkExp }}</p>
+        </div>
+
+        <ul>
+          <li *ngFor="let job of _jobs">
+            <div class="date">{{ job.Year }}</div> 
+            <div class="info">
+              <p class="semi-bold">{{ job.JobTitle }}</p> 
+              <p>{{ job.JobDescription }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <mat-divider></mat-divider>
+
+      <div class="cv_item cv_education">
+        <div class="title">
+          <p class="bold">{{ _titles[0].Education }}</p>
+        </div>
+
+        <ul>
+          <li *ngFor="let qualification of _qualifications">
+            <div class="date">{{ qualification.Year }}</div> 
+            <div class="info">
+              <p class="semi-bold">{{ qualification.Qualification }}</p> 
+              <p>{{ qualification.Modules }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+          
+      <!-- <mat-divider></mat-divider>
+
+      <div class="cv_item cv_achievements">
+        <div class="title">
+          <p class="bold">Achievements</p>
+        </div>
+
+        <ul>
+          <li class="achievement_list">
+            <p>Active member of Microsoft Windows Insider program since 2014.</p>
+          </li>
+        </ul>
+      </div> -->
+
+    </div>
+    
+    <mat-divider></mat-divider>
+    
+    <div class="cv_item cv_hobby">
+      <div class="title">
+        <p class="bold">{{ _titles[0].Hobbies }}</p>
+      </div>
+
+      <ul>
+        <li *ngFor="let hobbie of _hobbies"><mat-icon>{{ hobbie }}</mat-icon></li>
+      </ul>
+    </div>
+  </div>
+</div>

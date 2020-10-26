@@ -1,0 +1,70 @@
+.card {
+    min-width: 400px;
+    max-width: 400px;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+  
+.header-image {
+    background-size: cover;
+}
+
+.notFoundDiv {
+    text-align: center;
+}
+
+.noImage {
+    margin: 110px auto;
+    transform: scale(18);
+}
+
+img {
+    display: flex;
+    justify-content: center;
+}
+
+mat-card-content {
+    height: 80px;
+}
+
+.button {
+    width: 80px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.github {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: -48px;
+}
+
+/* @media only screen and (max-width: 2259px) {
+    .card {
+        transform: translateY(5px);
+    }
+}
+
+@media only screen and (max-width: 1907px) {
+    .card {
+        transform: translateY(10px);
+    }
+}
+
+@media only screen and (max-width: 1365px) {
+    .card {
+        transform: translateY(15px);
+    }
+}
+
+@media only screen and (max-width: 913px) {
+    .card {
+        transform: translateY(20px);
+    }
+} */

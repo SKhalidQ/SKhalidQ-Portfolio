@@ -1,0 +1,11 @@
+div {
+    text-align: center;
+    margin-top: 40vh;
+}
+
+mat-icon {
+    vertical-align: text-top;
+    margin-right: auto;
+    font-size: 29px;
+}
+  

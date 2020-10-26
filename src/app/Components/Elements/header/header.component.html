@@ -1,0 +1,53 @@
+<mat-toolbar>
+    <mat-toolbar-row class="mat-elevation-z5">
+        
+      <button type="button" style="margin-right: 10px;" mat-icon-button *ngIf="smallScreen || xSmallScreen" (click)="onToggle()"><mat-icon>menu</mat-icon></button>
+      <img class="logo" src="/assets/Images/logo_transparent.png" matTooltip="Home" matTooltipShowDelay="600" matTooltipClass="toolTip" routerLink="/home">
+      <h2 style="margin: 0 10px 0 0;">{{ title }}</h2>
+      
+      <div>
+        <button class="navigationBtn" mat-button *ngFor="let route of routeData" [routerLink]="route.route" routerLinkActive="activeRoute mat-elevation-z5">{{ route.btnText }}</button>
+      </div>
+
+      <span style="flex: 1 1 auto;"></span>
+
+      <!-- Find a solution to the menu to make it shorter in lines -->
+
+      <button mat-icon-button class="navigationBtn" [matMenuTriggerFor]="menu"><mat-icon>format_color_fill</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <div class="menu">
+          <button mat-menu-item (click)="ChangeTheme()"><mat-icon>{{ currentTheme.icon }}</mat-icon>{{ currentTheme.btnText }}</button>
+        </div>
+      </mat-menu>
+      
+      <button mat-icon-button class="navigationBtn" [matMenuTriggerFor]="languages"><mat-icon>language</mat-icon></button>
+      <mat-menu #languages="matMenu">
+        <div class="langMenu">
+          <button mat-menu-item *ngFor="let languages of languageData" [matTooltip]="languages.tooltip" style="display: flex; align-items: center;" (click)="ChangeLanguage(languages.lang)" [disabled]="languages.disabled">
+          <img class="banderas" *ngIf="languages.flag != null" [src]="languages.flag">
+          <div class="notFoundDiv" *ngIf="languages.flag == null">
+            <mat-icon color="warn" class="noImage" [inline]="true">error_outline</mat-icon>
+          </div>
+          {{ languages.lang }}</button>
+        </div>
+      </mat-menu>
+
+      <!--End of menus-->
+
+    </mat-toolbar-row>
+    
+    <mat-toolbar-row class="mat-elevation-z10">
+
+      <h3>{{ activePageService.activePage$ | async }}</h3>
+
+      <span class="spacer"></span>
+
+      <a mat-icon-button *ngFor="let socialMediaLink of socialMediaData" [href]="socialMediaLink.route" target="_blank">
+        <div class="notFoundDiv" *ngIf="socialMediaLink.icon == null">
+          <mat-icon color="warn" class="noImage" [inline]="true">error_outline</mat-icon>
+        </div>
+        <img class="icon" *ngIf="socialMediaLink.icon != null" [src]="socialMediaLink.icon">
+      </a>
+      
+    </mat-toolbar-row>
+</mat-toolbar>
