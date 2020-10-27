@@ -4,7 +4,7 @@ import { ButtonText, LanguagesList } from 'src/app/Models/language-Models';
 import { RouteLinks, SocialMediaLinks } from 'src/app/Models/route-Links';
 import { ThemeMode, Themes } from 'src/app/Models/theme-Models';
 import { ActivePageService } from 'src/app/Services/ActivePage/active-page.service';
-import { SidenavService } from 'src/app/Services/sidenav/sidenav.service';
+import { SidenavService } from 'src/app/Services/SideNav/sidenav.service';
 import { SnackbarService } from 'src/app/Services/Snackbar/snackbar.service';
 import { GithubLogoService } from 'src/app/Services/Theme/github-logo.service';
 import { ThemeService } from 'src/app/Services/Theme/theme.service';
