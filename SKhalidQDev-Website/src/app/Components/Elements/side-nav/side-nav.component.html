@@ -30,7 +30,7 @@
   <a mat-list-item [matMenuTriggerFor]="languages" ><mat-icon class="routeBtn">language</mat-icon><span>Languages</span></a>
   <mat-menu #languages="matMenu">
     <div class="langMenu">
-      <button mat-menu-item *ngFor="let languages of languageData" [matTooltip]="languages.tooltip" style="display: flex; align-items: center;" [disabled]="languages.disabled">
+      <button mat-menu-item *ngFor="let languages of languageData" [matTooltip]="languages.tooltip" (click)="ChangeLanguage(languages.lang)" style="display: flex; align-items: center;" [disabled]="languages.disabled">
         <img class="banderas" *ngIf="languages.flag != null" [src]="languages.flag">
         <div class="notFoundDiv" *ngIf="languages.flag == null">
           <mat-icon class="noImage" color="warn" [inline]="true">error_outline</mat-icon>

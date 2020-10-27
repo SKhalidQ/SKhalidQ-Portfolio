@@ -42,4 +42,17 @@ export class SideNavComponent implements OnInit {
     }
   }
 
+  ChangeLanguage(language: string) {
+    var message = '';
+    var button = '';
+
+    switch (language) {
+      case 'English': message = 'Language set to English'; button = 'Dismiss'; break;
+      case 'Spanish': message = 'Idioma establecido a Castellano'; button = 'Descartar'; break;
+      case 'Catalan': message = 'Idioma definit a Català'; button = 'Descartar'; break;
+    }
+    
+    this.snackbarService.OpenSnackbar(message, button, this.currentTheme.snackbar);
+  }
+
 }
