@@ -6,7 +6,9 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class GithubLogoService {
 
+  constructor() { }
+
   githubLogo = new BehaviorSubject<string>('../assets/Images/github-brands-light.svg');
-  
   githubLogo$ = this.githubLogo.asObservable();
+  
 }

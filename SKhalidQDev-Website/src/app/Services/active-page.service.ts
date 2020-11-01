@@ -4,11 +4,11 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ThemeService {
-
+export class ActivePageService {
+  
   constructor() { }
 
-  themeMode = new BehaviorSubject<string>('DarkTheme');
-  themeMode$ = this.themeMode.asObservable();
-  
+  activePage = new BehaviorSubject<string>('');
+  activePage$ = this.activePage.asObservable();
+
 }

@@ -14,21 +14,23 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
+import { PlatformModule } from '@angular/cdk/platform';
 
 //Components
-import { CurriculumComponent } from './Components/Pages/curriculum/curriculum.component';
-import { NotFoundComponent } from './Components/Pages/not-found/not-found.component';
-import { ProjectsComponent } from './Components/Pages/projects/projects.component';
-import { SideNavComponent } from './Components/Elements/side-nav/side-nav.component';
-import { CardComponent } from './Components/Elements/card/card.component';
-import { HeaderComponent } from './Components/Elements/header/header.component';
-import { AboutComponent } from './Components/Pages/about/about.component';
-import { HomeComponent } from './Components/Pages/home/home.component';
+import { ProjectCardComponent } from './Components/project-card/project-card.component';
+import { CurriculumComponent } from './Pages/curriculum/curriculum.component';
+import { NotFoundComponent } from './Pages/not-found/not-found.component';
+import { ProjectsComponent } from './Pages/projects/projects.component';
+import { SideNavComponent } from './Components/side-nav/side-nav.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { AboutComponent } from './Pages/about/about.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { HomeComponent } from './Pages/home/home.component';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { TestComponent } from './Test/test/test.component';
@@ -36,13 +38,13 @@ import { TestComponent } from './Test/test/test.component';
 
 @NgModule({
   declarations: [
+    ProjectCardComponent,
     CurriculumComponent,
     ProjectsComponent,
     NotFoundComponent,
     SideNavComponent,
     HeaderComponent,
     AboutComponent,
-    CardComponent,
     HomeComponent,
     AppComponent,
     TestComponent,
@@ -60,8 +62,10 @@ import { TestComponent } from './Test/test/test.component';
     MatTooltipModule,
     MatSidenavModule,
     MatDividerModule,
+    ClipboardModule,
     MatButtonModule,
     MatDialogModule,
+    PlatformModule,
     MatCardModule,
     MatIconModule,
     MatListModule,

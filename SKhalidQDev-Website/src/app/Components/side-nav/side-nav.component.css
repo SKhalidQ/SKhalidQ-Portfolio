@@ -1,0 +1,54 @@
+mat-nav-list {
+    padding-top: 0px;
+}
+
+app-header {
+    width: 20px;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo:hover {
+    background-color: #2a2a2a52;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logo:focus {
+    outline: 0;
+}
+
+.notFoundDiv {
+    text-align: center;
+    margin: 0 3px;
+}
+
+.noImage {
+    margin: 0 4px;
+    transform: scale(2);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.routeBtn {
+    margin-left: 10px;
+}
+
+button:hover, button:active {
+    color: lightgray;
+}
+
+span {
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+mat-divider {
+    margin: 20px;
+}

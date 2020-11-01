@@ -1,0 +1,42 @@
+.logo {
+    height: 50px;
+    margin: 0 10px 0 0px;
+}
+
+.logo:hover {
+    background-color: #2a2a2a52;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logo:focus {
+    outline: 0;
+}
+
+.notFoundDiv {
+    text-align: center;
+    margin: 0 3px;
+}
+
+.noImage {
+    margin: 0 4px;
+    transform: scale(2);
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+a, .navigationBtn {
+    margin-left: 10px;
+}
+
+.icon {
+    width: 30px;
+}
+
+@media (max-width: 960px) {
+    .navigationBtn {
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,67 @@
+div {
+  display: flex;
+  justify-content: center ;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+app-project-card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 400px;
+  margin: 0 25px;
+  transition: ease-in-out 0.5s all;
+}
+
+@media only screen and (max-width: 2259px) {
+  /* div {
+    transform: translateY(5px);
+  } */
+
+  /* @-webkit-keyframes diagonal-slide {
+    0% {
+      right: 0;
+      left: 0;
+    }
+    100% {
+      right: 100px;
+      left: 100px;
+    }
+  }
+    
+  @keyframes diagonal-slide {
+    0% {
+      right: 0;
+      left: 0;
+    }
+      100% {
+      right: 100px;
+      left: 100px;
+    }
+  }
+    
+  app-project-card {
+      -webkit-animation: diagonal-slide 1.5s;
+      animation: diagonal-slide 1.5s;
+      position: relative;
+  } */
+}
+
+@media only screen and (max-width: 1907px) {
+  /* div {
+    transform: translateY(10px);
+  } */
+}
+
+@media only screen and (max-width: 1365px) {
+  /* div {
+    transform: translateY(15px);
+  } */
+}
+
+@media only screen and (max-width: 913px) {
+  /* div {
+    transform: translateY(20px);
+  } */
+}

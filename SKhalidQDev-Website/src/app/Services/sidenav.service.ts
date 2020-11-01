@@ -4,11 +4,10 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ThemeService {
+export class SidenavService {
 
   constructor() { }
 
-  themeMode = new BehaviorSubject<string>('DarkTheme');
-  themeMode$ = this.themeMode.asObservable();
-  
+  isSidenavActive = new BehaviorSubject<boolean>(false);
+  isSidenavActive$ = this.isSidenavActive.asObservable();
 }

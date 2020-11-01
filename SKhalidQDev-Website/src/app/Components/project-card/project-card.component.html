@@ -1,0 +1,30 @@
+<mat-card class="card">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"><mat-icon color="warn" style="font-size: 40px;">{{ item.icon }}</mat-icon></div>
+      <mat-card-title>{{ item.title }}</mat-card-title>
+      <!-- Once everything is completed, remove the h5 tag -->
+      <mat-card-subtitle><h5>{{ item.subtitle }}</h5></mat-card-subtitle>
+    </mat-card-header>
+    <div class="projectPreviewImage">
+  
+    </div>
+    <!-- <img mat-card-image *ngIf="item.image != null" [src]="item.image" alt="A preview image of the project"> -->
+    <img mat-card-image *ngIf="item.image != null" [src]="item.image" alt="A preview image of the project">
+    <div class="notFoundDiv" *ngIf="item.image == null">
+      <mat-icon class="noImage" color="warn" [inline]="true">error_outline</mat-icon>
+    </div>
+    <mat-card-content>
+      <p> {{ item.description }} </p>
+    </mat-card-content>
+    <mat-card-actions style="margin-left: 0px; margin-right: 0px;">
+      <a class="button" mat-flat-button color="warn" [href]="item.websiteURL" [disabled]="!item.website">Go</a>
+      <div class="github">
+        <a mat-icon-button [href]="item.githubURL" style="width: 37px;" [disabled]="!item.publicRepo"
+          [matTooltip]="GetTooltipText(item.publicRepo)" matTooltipShowDelay="600" matTooltipClass="toolTip" class="githubLink"
+          alt="Github Link" target="_blank">
+          <img style="width: 36px;" [src]="githubService.githubLogo$ | async">
+        </a>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+  
