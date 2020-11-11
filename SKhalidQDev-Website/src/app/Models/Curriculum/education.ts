@@ -3,7 +3,7 @@ export interface EducationModel {
   Qualification: string;
   Modules: string;
 }
-  
+
 export const EducationEng: EducationModel[] = [
   {
     Year: "2017 - 2020",

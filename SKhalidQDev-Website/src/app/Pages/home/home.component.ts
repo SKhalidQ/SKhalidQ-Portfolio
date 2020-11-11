@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { ActivePageService } from 'src/app/Services/active-page.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { ActivePageService } from 'src/app/Services/active-page.service';
 })
 export class HomeComponent {
 
-  constructor(private activePageService: ActivePageService) {
+  constructor(activePageService: ActivePageService) {
     activePageService.activePage.next('Home');
   }
 

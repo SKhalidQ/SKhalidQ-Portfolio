@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 import { ActivePageService } from 'src/app/Services/active-page.service';
 import { SnackbarService } from 'src/app/Services/snackbar.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -19,9 +19,10 @@ export class AboutComponent {
 
   Evolution() {
     if (this.easterEggCount < 10) {
-      this.easterEggCount ++;
+      this.easterEggCount++;
     } else if (this.easterEggCount == 10) {
-      this.snackbar.OpenSnackbar('EVOLUTION!', 'Dismiss', 'EVOLUTION');
+      this.snackbar.EVOLUTION();
+      this.soundtrack.volume = 1.0;
       this.soundtrack.play();
       this.easterEggCount = 1;
       this.audioPlaying = true;

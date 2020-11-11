@@ -15,19 +15,6 @@ h2 {
     font-weight: bold;
 }
 
-.unselectable {
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
- 
-    /*
-      Introduced in IE 10.
-      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-    */
-    -ms-user-select: none;
-    user-select: none;
- }
-
 @media only screen and (max-width: 960px) {
     div {
         padding-right: 30px;

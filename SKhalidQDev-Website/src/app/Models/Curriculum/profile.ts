@@ -1,3 +1,4 @@
 export const Profile: string[] = [
-    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis illo fugit officiis distinctio culpa officia totam atque exercitationem inventore repudiandae?'
+    'Recently graduated in Computer Science with a Second Class (Division 1), looking for a job in the software development industry.' + 
+    ' Ready to use my skills which I have gained during my education and in my spare time. Excited to learn more and to try new technologies.'
 ];

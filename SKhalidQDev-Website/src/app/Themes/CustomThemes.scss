@@ -12,8 +12,8 @@ $dark-app-theme: mat-dark-theme((
     primary: $dark-app-primary,
     accent: $dark-app-accent,
     warn: $dark-app-warn,  
-    )
-  ));
+  )
+));
     
 @include angular-material-theme($dark-app-theme);
  

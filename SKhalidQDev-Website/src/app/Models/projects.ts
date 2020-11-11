@@ -13,12 +13,12 @@ interface ProjectData {
 export const Projects: ProjectData[] = [
   {
     icon: "list",
-    title: "MyList",
+    title: "MyList (Alpha)",
     subtitle: "Personal Project",
     image: "../../assets/Images/MyListPreview.png",
-    description: "The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan." + 
-    " A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.",
-    website: true,
+    description: "A website which allows poeple to keep track of the series and movies they are watching." + 
+    " They can add a serie and update the episode number and the minute they last left an episode. This project is built using Angular and ASP.NET Core.",
+    website: false,
     websiteURL: "NotFound",
     publicRepo: true,
     githubURL: "https://github.com/DarkCreature97/AnimeList",
@@ -28,7 +28,7 @@ export const Projects: ProjectData[] = [
     title: "Beer Bottle Inventory System App",
     subtitle: "Honours Stage Project",
     image: "../../assets/Images/BBISAPreview.png",
-    description: "Final year project built using Angular CLI and ASP.NET Core. It allows users to track" + 
+    description: "Final year project built using Angular and ASP.NET Core. It allows users to track" + 
     " a beer bottle inventory by adding their details. The user can log orders and history of the sales " + 
     "which impact the stock amount of a product.",
     website: true,
@@ -65,7 +65,7 @@ export const Projects: ProjectData[] = [
     title: "Data Mining",
     subtitle: "Data Mining and Decision Systems - 3rd Year Module",
     image: "../../assets/Images/DataMiningPreview.png",
-    description: "This Data Mining project analyses a medical history dataset to predict using different algorithms how patients are" + 
+    description: "This Data Mining project analyses a medical history dataset using different algorithms to predict how patients are" + 
     " more at risk depending on their deseases. Built using Python and Jupyter Notebook.",
     website: false,
     websiteURL: "",
@@ -78,7 +78,7 @@ export const Projects: ProjectData[] = [
     subtitle: "Networking and User Interface Design - 2nd Year Module",
     image: "../../assets/Images/NetworkingPreview.png",
     description: "A client developed using C# and WPF, which sends requests to the server built in WPF with different" + 
-    " HTTP Protocols inclussing \"Whois\" and HTTP 0.9 - 1.1.",
+    " HTTP Protocols including \"Whois\" and HTTP 0.9 - 1.1.",
     website: false,
     websiteURL: "",
     publicRepo: false,

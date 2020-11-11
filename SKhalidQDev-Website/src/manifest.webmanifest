@@ -1,8 +1,8 @@
 {
-  "name": "SKhalidQDev-Website",
-  "short_name": "SKhalidQDev-Website",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "SKhalidQDev\nv0.8.5",
+  "short_name": "SKhalidQDev",
+  "theme_color": "#D33232",
+  "background_color": "#303030",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

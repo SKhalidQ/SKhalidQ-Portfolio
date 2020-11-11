@@ -1,13 +1,13 @@
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ButtonText, LanguagesList } from 'src/app/Models/language';
-import { RouteLinks, SocialMediaLinks } from 'src/app/Models/route-Links';
-import { ThemeMode, Themes } from 'src/app/Models/theme';
-import { ActivePageService } from 'src/app/Services/active-page.service';
-import { SidenavService } from 'src/app/Services/sidenav.service';
-import { SnackbarService } from 'src/app/Services/snackbar.service';
 import { GithubLogoService } from 'src/app/Services/Theme/github-logo.service';
+import { RouteLinks, SocialMediaLinks } from 'src/app/Models/route-Links';
+import { ActivePageService } from 'src/app/Services/active-page.service';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { ThemeMode, ThemeModel, Themes } from 'src/app/Models/theme';
+import { SnackbarService } from 'src/app/Services/snackbar.service';
 import { ThemeService } from 'src/app/Services/Theme/theme.service';
+import { SidenavService } from 'src/app/Services/sidenav.service';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { LanguagesList } from 'src/app/Models/language';
 
 @Component({
   selector: 'app-header',
@@ -23,7 +23,7 @@ export class HeaderComponent {
   isSticky: boolean = false;
   smallScreen: boolean;
   xSmallScreen: boolean;
-  currentTheme: ThemeMode;
+  currentTheme: ThemeModel;
   routeData = RouteLinks;
   socialMediaData = SocialMediaLinks;
   languageData = LanguagesList;
@@ -36,7 +36,7 @@ export class HeaderComponent {
       private themeService: ThemeService,
       private githubLogoService: GithubLogoService,
       private snackbarService: SnackbarService) { 
-      this.currentTheme = this.themeData[0];
+      this.currentTheme = this.themeData[ThemeMode.DarkMode];
 
     this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe((x) => {
       this.smallScreen = x.breakpoints[Breakpoints.Small] && !x.breakpoints[Breakpoints.XSmall];
@@ -50,13 +50,13 @@ export class HeaderComponent {
 
   ChangeTheme() {
     if (this.themeService.themeMode.getValue() == "LightTheme") {
-      this.snackbarService.OpenSnackbar('Dark theme enabled', 'Dismiss', 'sbarDTheme');
-      this.currentTheme = this.themeData[0];
+      this.snackbarService.OpenSnackbar('Dark theme enabled', 'Dismiss', this.themeData[ThemeMode.DarkMode].snackbar);
+      this.currentTheme = this.themeData[ThemeMode.DarkMode];
       this.githubLogoService.githubLogo.next('../assets/Images/github-brands-light.svg');
       this.themeService.themeMode.next(this.currentTheme.theme);
     } else {
-      this.snackbarService.OpenSnackbar('Light theme enabled', 'Dismiss', 'sbarLTheme');
-      this.currentTheme = this.themeData[1];
+      this.snackbarService.OpenSnackbar('Light theme enabled', 'Dismiss', this.themeData[ThemeMode.LightMode].snackbar);
+      this.currentTheme = this.themeData[ThemeMode.LightMode];
       this.githubLogoService.githubLogo.next('../assets/Images/github-brands-dark.svg');
       this.themeService.themeMode.next(this.currentTheme.theme);
     }

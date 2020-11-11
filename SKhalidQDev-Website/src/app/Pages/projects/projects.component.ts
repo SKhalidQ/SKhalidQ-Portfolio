@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Projects } from 'src/app/Models/projects';
 import { ActivePageService } from 'src/app/Services/active-page.service';
+import { Projects } from 'src/app/Models/projects';
 
 @Component({
   selector: 'app-projects',
@@ -9,7 +9,7 @@ import { ActivePageService } from 'src/app/Services/active-page.service';
 })
 export class ProjectsComponent {
 
-  constructor(private activePageService: ActivePageService) {
+  constructor(activePageService: ActivePageService) {
     activePageService.activePage.next('Projects');
   }
 

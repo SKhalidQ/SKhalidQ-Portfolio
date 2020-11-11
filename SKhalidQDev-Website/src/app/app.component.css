@@ -1,13 +1,11 @@
 .container {
     padding-top: 128px;
-    /* padding-top: 100vh; */
     height: 100vh;
 }
     
 .DarkTheme {
     background: #212121;
 }
-
 
 mat-drawer {
     width: 260px;

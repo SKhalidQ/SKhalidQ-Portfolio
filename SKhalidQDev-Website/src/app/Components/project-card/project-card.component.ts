@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
 import { GithubLogoService } from 'src/app/Services/Theme/github-logo.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project-card',
@@ -11,8 +11,6 @@ export class ProjectCardComponent {
   @Input() item: any;
 
   tooltipTxt: string;
-
-  // githubLogo: string = "../../../../assets/Images/github-brands-dark.svg";
 
   constructor(public githubService: GithubLogoService) { }
 

@@ -1,9 +1,9 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { LanguagesList } from 'src/app/Models/language';
-import { RouteLinks } from 'src/app/Models/route-Links';
-import { ThemeMode, Themes } from 'src/app/Models/theme';
+import { ThemeMode, ThemeModel, Themes } from 'src/app/Models/theme';
 import { SnackbarService } from 'src/app/Services/snackbar.service';
 import { ThemeService } from 'src/app/Services/Theme/theme.service';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { LanguagesList } from 'src/app/Models/language';
+import { RouteLinks } from 'src/app/Models/route-Links';
 
 @Component({
   selector: 'app-side-nav',
@@ -14,13 +14,13 @@ export class SideNavComponent {
   @Output() toggle = new EventEmitter<void>();
 
   title = "SKhalidQDev";
-  currentTheme: ThemeMode;
+  currentTheme: ThemeModel;
   routeData = RouteLinks;
   languageData = LanguagesList;
   themeData = Themes;
 
   constructor (private themeService: ThemeService, private snackbarService: SnackbarService) { 
-    this.currentTheme = this.themeData[0];
+    this.currentTheme = this.themeData[ThemeMode.DarkMode];
   }
 
   onToggle() {
@@ -29,12 +29,12 @@ export class SideNavComponent {
 
   ChangeTheme() {
     if (this.themeService.themeMode.getValue() == "LightTheme") {
-      this.snackbarService.OpenSnackbar('Dark theme enabled', 'Dismiss', 'sbarDTheme');
-      this.currentTheme = this.themeData[0];
+      this.snackbarService.OpenSnackbar('Dark theme enabled', 'Dismiss', this.themeData[ThemeMode.DarkMode].snackbar);
+      this.currentTheme = this.themeData[ThemeMode.DarkMode];
       this.themeService.themeMode.next(this.currentTheme.theme);
     } else {
-      this.snackbarService.OpenSnackbar('Light theme enabled', 'Dismiss', 'sbarLTheme');
-      this.currentTheme = this.themeData[1];
+      this.snackbarService.OpenSnackbar('Light theme enabled', 'Dismiss', this.themeData[ThemeMode.DarkMode].snackbar);
+      this.currentTheme = this.themeData[ThemeMode.LightMode];
       this.themeService.themeMode.next(this.currentTheme.theme);
     }
   }

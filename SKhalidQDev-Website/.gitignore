@@ -46,5 +46,6 @@ testem.log
 Thumbs.db
 
 #Test
-
-src/app/Test/test
+# /src/app/Test/test
+/src/assets/Test
+/src/app/Test

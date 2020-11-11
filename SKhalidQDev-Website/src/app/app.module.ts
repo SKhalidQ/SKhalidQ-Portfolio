@@ -33,7 +33,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { HomeComponent } from './Pages/home/home.component';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
-import { TestComponent } from './Test/test/test.component';
+
+//Test Component
+//import { TestComponent } from './Test/test/test.component';
 
 
 @NgModule({
@@ -47,7 +49,7 @@ import { TestComponent } from './Test/test/test.component';
     AboutComponent,
     HomeComponent,
     AppComponent,
-    TestComponent,
+    // TestComponent,
   ],
   imports: [
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),

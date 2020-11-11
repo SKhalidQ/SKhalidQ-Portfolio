@@ -2,10 +2,10 @@ import { Achievements } from './Curriculum/achievements';
 import { CVTitlesModel, CVTitles } from './Curriculum/titles';
 import { EducationEng, EducationModel } from './Curriculum/education';
 import { EmploymentModel, EmploymentEng } from './Curriculum/employment';
+import { TechnicalSkills, TechnicalSkillsModel, NonTechSkillsModel, NonTechSkills } from './Curriculum/skills';
+import { LanguagesEng, LanguagesModel } from './Curriculum/languages';
 import { Hobbies } from './Curriculum/hobbies';
 import { Profile } from './Curriculum/profile';
-import { LanguagesEng, LanguagesModel } from './Curriculum/languages';
-import { TechnicalSkills, TechnicalSkillsModel, NonTechSkillsModel, NonTechSkills } from './Curriculum/skills';
 
 export interface CurriculumModel {
     CVTitles: CVTitlesModel[];

@@ -3,7 +3,7 @@
         
       <button type="button" style="margin-right: 10px;" mat-icon-button *ngIf="smallScreen || xSmallScreen" (click)="onToggle()"><mat-icon>menu</mat-icon></button>
       <img class="logo" src="/assets/Images/logo_transparent.png" matTooltip="Home" matTooltipShowDelay="600" matTooltipClass="toolTip" routerLink="/home">
-      <h2 style="margin: 0 10px 0 0;">{{ title }}</h2>
+      <h2 style="margin: 0 20px 0 0;">{{ title }}</h2>
       
       <div>
         <button class="navigationBtn" mat-button *ngFor="let route of routeData" [routerLink]="route.route" routerLinkActive="activeRoute mat-elevation-z5">{{ route.btnText }}</button>
