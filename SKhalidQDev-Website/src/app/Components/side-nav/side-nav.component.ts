@@ -13,22 +13,23 @@ import { RouteLinks } from 'src/app/Models/route-Links';
 export class SideNavComponent {
   @Output() toggle = new EventEmitter<void>();
 
-  title = "SKhalidQDev";
+  title = 'SKhalidQDev';
+  isSidenav = true;
   currentTheme: ThemeModel;
   routeData = RouteLinks;
   languageData = LanguagesList;
   themeData = Themes;
 
-  constructor (private themeService: ThemeService, private snackbarService: SnackbarService) { 
+  constructor(private themeService: ThemeService, private snackbarService: SnackbarService) {
     this.currentTheme = this.themeData[ThemeMode.DarkMode];
   }
 
-  onToggle() {
+  onToggle(): void {
     this.toggle.emit();
   }
 
-  ChangeTheme() {
-    if (this.themeService.themeMode.getValue() == "LightTheme") {
+  ChangeTheme(): void {
+    if (this.themeService.themeMode.getValue() === 'LightTheme') {
       this.snackbarService.OpenSnackbar('Dark theme enabled', 'Dismiss', this.themeData[ThemeMode.DarkMode].snackbar);
       this.currentTheme = this.themeData[ThemeMode.DarkMode];
       this.themeService.themeMode.next(this.currentTheme.theme);
@@ -39,16 +40,16 @@ export class SideNavComponent {
     }
   }
 
-  ChangeLanguage(language: string) {
-    var message = '';
-    var button = '';
+  ChangeLanguage(language: string): void {
+    let message = '';
+    let button = '';
 
     switch (language) {
       case 'English': message = 'Language set to English'; button = 'Dismiss'; break;
       case 'Spanish': message = 'Idioma establecido a Castellano'; button = 'Descartar'; break;
       case 'Catalan': message = 'Idioma definit a Català'; button = 'Descartar'; break;
     }
-    
+
     this.snackbarService.OpenSnackbar(message, button, this.currentTheme.snackbar);
   }
 

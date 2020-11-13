@@ -1,11 +1,14 @@
-import { getSupportedInputTypes, Platform, supportsPassiveEventListeners, supportsScrollBehavior, } from '@angular/cdk/platform';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { DialogComponent } from './Components/dialog/dialog.component';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ThemeService } from 'src/app/Services/Theme/theme.service';
+import { environment } from 'src/environments/environment';
+import { MatDialog } from '@angular/material/dialog';
 import { ThemeMode, Themes } from './Models/theme';
 import { SwUpdate } from '@angular/service-worker';
 import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
+import { Platform } from '@angular/cdk/platform';
 import { filter, map } from 'rxjs/operators';
 
 @Component({
@@ -15,18 +18,15 @@ import { filter, map } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
 
-  title = 'SKhalidQDev-Website';
+  title = 'SKhalidQDev';
+  // versionNumber = environment.appVersion;
   showFiller = false;
   smallScreen: boolean;
   xSmallScreen: boolean;
   currentTheme: ThemeMode;
   themeData = Themes;
 
-  updateContent: boolean = false;
-
-  supportedInputTypes = Array.from(getSupportedInputTypes()).join(', ');
-  supportsPassiveEventListeners = supportsPassiveEventListeners();
-  supportsScrollBehavior = supportsScrollBehavior();
+  updateContent = false;
 
   constructor(
     public breakpointObserver: BreakpointObserver,
@@ -35,11 +35,8 @@ export class AppComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
-    update: SwUpdate) {
-    update.available.subscribe(() => {
-      // this.updateContent = true;
-      update.activateUpdate().then(() => document.location.reload());
-    })
+    private dialog: MatDialog,
+    private update: SwUpdate) {
 
     breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe((x) => {
       this.smallScreen = x.breakpoints[Breakpoints.Small] && !x.breakpoints[Breakpoints.XSmall];
@@ -49,16 +46,34 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.SetTabTitle();
+
+    this.CheckUpdates();
+  }
+
+  CheckUpdates(): void {
+    this.update.available.subscribe(() => {
+      this.dialog.open(DialogComponent, {
+        data: { Title: `New update!`, Message: 'There is new content available on this page. Would you like to update?', Action: 'Refresh' }
+      }).afterClosed().subscribe(() => {
+        document.location.reload();
+      });
+    });
+  }
+
+  SetTabTitle(): any {
     const appTitle = this.titleService.getTitle();
+    const title = 'title';
+
     this.router.events.pipe(filter(event => event instanceof NavigationEnd),
       map(() => {
         const child = this.activatedRoute.firstChild;
-        if (child.snapshot.data['title']) return child.snapshot.data['title'];
+        if (child.snapshot.data[title]) { return child.snapshot.data[title]; }
 
         return appTitle;
       })).subscribe((ttl: string) => {
         this.titleService.setTitle(ttl);
-    });
+      }
+    );
   }
-
 }

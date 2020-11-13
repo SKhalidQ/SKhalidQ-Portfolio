@@ -17,16 +17,16 @@ export class CurriculumComponent {
     activePageService.activePage.next('Curriculum Vitae');
   }
 
-  Notify() {
-    var currentTheme = (this.theme.themeMode.value == 'LightTheme') ? 'sbarLTheme' : 'sbarDTheme';
+  Notify(): void {
+    const currentTheme = (this.theme.themeMode.value === 'LightTheme') ? 'sbarLTheme' : 'sbarDTheme';
 
     this.snackbar.OpenSnackbar('Copied to clipboard', 'Dismiss', currentTheme);
   }
 
   UnderLine(skill: string): string {
 
-    var underline = 0;
-    for (let { } of skill.split('')) underline += 10.5;
+    let underline = 0;
+    for (let { } of skill.split('')) { underline += 10.5; }
 
     return `width: ${underline}px;`;
   }

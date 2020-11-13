@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ActivePageService {
-  
+
   constructor() { }
 
   activePage = new BehaviorSubject<string>('');

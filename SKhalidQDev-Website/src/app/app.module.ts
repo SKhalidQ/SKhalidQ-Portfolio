@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 
-//Material
+// Material
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -21,7 +21,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { PlatformModule } from '@angular/cdk/platform';
 
-//Components
+// Components
 import { ProjectCardComponent } from './Components/project-card/project-card.component';
 import { CurriculumComponent } from './Pages/curriculum/curriculum.component';
 import { NotFoundComponent } from './Pages/not-found/not-found.component';
@@ -33,8 +33,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { HomeComponent } from './Pages/home/home.component';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
+import { DialogComponent } from './Components/dialog/dialog.component';
 
-//Test Component
+// Test Component
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { AppComponent } from './app.component';
     AboutComponent,
     HomeComponent,
     AppComponent,
+    DialogComponent,
   ],
   imports: [
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),

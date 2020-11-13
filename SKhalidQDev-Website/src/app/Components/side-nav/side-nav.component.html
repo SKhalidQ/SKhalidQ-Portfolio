@@ -2,14 +2,15 @@
   <!-- <app-header>Send false to the header so it doesnt show row 2</app-header> -->
 
   <!-- Temporal -->
-  <mat-toolbar>
+  <!-- <mat-toolbar>
       <mat-toolbar-row class="mat-elevation-z5">
         <button type="button" style="margin-right: 10px;" (click)="onToggle()" mat-icon-button><mat-icon>clear</mat-icon></button>
         <img class="logo" src="/assets/Images/logo_transparent.png" matTooltip="Home" matTooltipShowDelay="600" matTooltipClass="toolTip" routerLink="/home">
         <h2 style="margin: 0 10px 0 0;">{{ title }}</h2>
       </mat-toolbar-row>
-  </mat-toolbar>
+  </mat-toolbar> -->
 
+  <app-header [isSideNav]="isSidenav"></app-header>
   <!--End Temporal-->
 
   <mat-divider></mat-divider>

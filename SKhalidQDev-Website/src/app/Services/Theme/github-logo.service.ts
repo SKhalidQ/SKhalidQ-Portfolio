@@ -10,5 +10,5 @@ export class GithubLogoService {
 
   githubLogo = new BehaviorSubject<string>('../assets/Images/github-brands-dark.svg');
   githubLogo$ = this.githubLogo.asObservable();
-  
+
 }

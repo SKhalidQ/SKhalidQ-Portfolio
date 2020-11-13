@@ -14,11 +14,11 @@ export class ProjectCardComponent {
 
   constructor(public githubService: GithubLogoService) { }
 
-  GetTooltipText(publicRepo: boolean) {
+  GetTooltipText(publicRepo: boolean): string {
     if (!publicRepo){
-      return "Available at request";
+      return 'Available at request';
     } else {
-      return "Github Repository Link";
+      return 'Github Repository Link';
     }
   }
 

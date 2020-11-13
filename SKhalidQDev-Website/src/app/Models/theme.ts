@@ -12,7 +12,7 @@ export enum ThemeMode {
 export const Themes = {
     [ThemeMode.DarkMode]: { btnText: 'Light Mode', theme: 'DarkTheme', snackbar: 'sbarDTheme', icon: 'brightness_3' },
     [ThemeMode.LightMode]: { btnText: 'Dark Mode', theme: 'LightTheme', snackbar: 'sbarLTheme', icon: 'wb_sunny' },
-}
+};
 
 
 export interface GithubLogo {
@@ -20,5 +20,5 @@ export interface GithubLogo {
 }
 
 export const GithubLogo: GithubLogo = {
-    logoColour: "../assets/Images/github-brands-dark.svg"
-}
+    logoColour: '../assets/Images/github-brands-dark.svg'
+};
