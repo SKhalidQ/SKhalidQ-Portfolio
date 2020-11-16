@@ -1,6 +1,6 @@
 import { ActivePageService } from 'src/app/Services/active-page.service';
-import { environment } from 'src/environments/environment';
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-about',
