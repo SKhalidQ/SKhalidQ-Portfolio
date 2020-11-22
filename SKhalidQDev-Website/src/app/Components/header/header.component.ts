@@ -9,6 +9,7 @@ import { ThemeService } from 'src/app/Services/Theme/theme.service';
 import { SidenavService } from 'src/app/Services/sidenav.service';
 import { LanguagesList } from 'src/app/Models/language';
 import { OverlayContainer } from '@angular/cdk/overlay';
+import { EasterEggService } from 'src/app/Services/easter-egg.service';
 
 @Component({
   selector: 'app-header',
@@ -29,14 +30,11 @@ export class HeaderComponent {
   languageData = LanguagesList;
   themeData = Themes;
 
-  easterEggCount = 1;
-  audioPlaying = false;
-  soundtrack = new Audio('../../assets/Easter Eggs/Evolution.flac');
-
   constructor(
     breakpointObserver: BreakpointObserver,
     public activePageService: ActivePageService,
     public isSidenavActive: SidenavService,
+    public easterEggService: EasterEggService,
     private themeService: ThemeService,
     private githubLogoService: GithubLogoService,
     private snackbarService: SnackbarService,
@@ -87,20 +85,6 @@ export class HeaderComponent {
     }
 
     this.snackbarService.OpenSnackbar(message, button, this.currentTheme.snackbar);
-  }
-
-  Evolution(btn: string): void {
-    if (btn === 'About') {
-      if (this.easterEggCount < 3) {
-        this.easterEggCount++;
-      } else if (this.easterEggCount === 3) {
-        this.snackbarService.EVOLUTION();
-        this.soundtrack.volume = 1.0;
-        this.soundtrack.play();
-        this.easterEggCount = 1;
-        this.audioPlaying = true;
-      }
-    }
   }
 
 }

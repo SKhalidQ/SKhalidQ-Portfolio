@@ -4,6 +4,7 @@ import { ThemeService } from 'src/app/Services/Theme/theme.service';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { LanguagesList } from 'src/app/Models/language';
 import { RouteLinks } from 'src/app/Models/route-Links';
+import { EasterEggService } from 'src/app/Services/easter-egg.service';
 
 @Component({
   selector: 'app-side-nav',
@@ -20,7 +21,7 @@ export class SideNavComponent {
   languageData = LanguagesList;
   themeData = Themes;
 
-  constructor(private themeService: ThemeService, private snackbarService: SnackbarService) {
+  constructor(private themeService: ThemeService, private snackbarService: SnackbarService, public easterEggService: EasterEggService) {
     this.currentTheme = this.themeData[ThemeMode.DarkMode];
   }
 

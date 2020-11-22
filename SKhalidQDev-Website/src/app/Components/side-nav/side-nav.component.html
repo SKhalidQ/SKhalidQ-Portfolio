@@ -15,7 +15,7 @@
 
   <mat-divider></mat-divider>
 
-  <a mat-list-item *ngFor="let route of routeData" [routerLink]="route.route" routerLinkActive="activeRoute">
+  <a mat-list-item *ngFor="let route of routeData" [routerLink]="route.route" routerLinkActive="activeRoute" (click)="easterEggService.Evolution(route.btnText)">
     <mat-icon class="routeBtn">{{ route.icon}}</mat-icon>
     <span>{{ route.btnText }}</span>
   </a>

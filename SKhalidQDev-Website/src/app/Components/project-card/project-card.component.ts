@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ProjectCardComponent {
 
-  @Input() item: any;
+  @Input() project: any;
 
   tooltipTxt: string;
 

@@ -4,6 +4,7 @@
 
 export const environment = {
   appVersionDev: require('../../package.json').version + ' - dev',
+  betaVersion: '\rBeta',
   production: false
 };
 

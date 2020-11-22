@@ -34,6 +34,7 @@ import { HomeComponent } from './Pages/home/home.component';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { DialogComponent } from './Components/dialog/dialog.component';
+import { CurriculumTemplateComponent } from './Components/curriculum-template/curriculum-template.component';
 
 // Test Component
 
@@ -50,6 +51,7 @@ import { DialogComponent } from './Components/dialog/dialog.component';
     HomeComponent,
     AppComponent,
     DialogComponent,
+    CurriculumTemplateComponent,
   ],
   imports: [
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),

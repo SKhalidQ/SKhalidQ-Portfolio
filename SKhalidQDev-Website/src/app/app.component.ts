@@ -1,13 +1,13 @@
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { DialogComponent } from './Components/dialog/dialog.component';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ThemeService } from 'src/app/Services/Theme/theme.service';
 import { environment } from 'src/environments/environment';
-import { MatDialog } from '@angular/material/dialog';
 import { ThemeMode, Themes } from './Models/theme';
+import { MatDialog } from '@angular/material/dialog';
 import { SwUpdate } from '@angular/service-worker';
-import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Platform } from '@angular/cdk/platform';
 import { filter, map } from 'rxjs/operators';
 
@@ -63,12 +63,18 @@ export class AppComponent implements OnInit {
 
   SetTabTitle(): any {
     const appTitle = this.titleService.getTitle();
+    let beta = environment.betaVersion;
     const title = 'title';
 
     this.router.events.pipe(filter(event => event instanceof NavigationEnd),
       map(() => {
         const child = this.activatedRoute.firstChild;
-        if (child.snapshot.data[title]) { return child.snapshot.data[title]; }
+        if (child.snapshot.data[title]) {
+          if (beta == null) {
+            beta = '';
+          }
+          return child.snapshot.data[title] + beta;
+        }
 
         return appTitle;
       })).subscribe((ttl: string) => {

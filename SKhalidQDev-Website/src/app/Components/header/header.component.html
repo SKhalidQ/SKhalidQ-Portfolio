@@ -5,13 +5,13 @@
       (click)="toggle.emit()">
       <mat-icon>{{ CloseBtn() }}</mat-icon>
     </button>
-    <img class="logo" src="/assets/Images/logo_transparent.png" matTooltip="Home" matTooltipShowDelay="600"
+    <img class="logo" src="/assets/Images/logo_transparent.png" routerLinkActive="mat-elevation-z5" matTooltip="Home" matTooltipShowDelay="600"
       matTooltipClass="toolTip" routerLink="/home">
     <h2 style="margin: 0 20px 0 0;">{{ title }}</h2>
 
     <div *ngIf="!isSideNav">
       <button class="navigationBtn" mat-button *ngFor="let route of routeData" [routerLink]="route.route"
-        routerLinkActive="activeRoute mat-elevation-z5" (click)="Evolution(route.btnText)">{{ route.btnText }}</button>
+        routerLinkActive="activeRoute mat-elevation-z5" (click)="easterEggService.Evolution(route.btnText)">{{ route.btnText }}</button>
     </div>
 
     <span style="flex: 1 1 auto;"></span>

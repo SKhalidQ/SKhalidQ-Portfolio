@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Welcome to SKhalidQ</h1>
+
+   <div class="cv">
+       <app-curriculum-template [data]="cv"></app-curriculum-template>
+       <h3 class="cv-Description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero eligendi illum corporis? Deserunt necessitatibus iusto soluta ipsam qui. Quibusdam, dolor.
+           <button mat-raised-button color="basic">Curriculum</button>
+        </h3>
+    </div>
+
+    <div class="projectCard">
+        <h3 class="card-Description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore error nobis dolore. Ipsum porro reiciendis voluptatibus repudiandae quas. Maiores, saepe?
+            <button mat-raised-button color="basic">Projects</button>
+        </h3>
+        <app-project-card class="card" [project]="project"></app-project-card>
+    </div>
+
+</div>
