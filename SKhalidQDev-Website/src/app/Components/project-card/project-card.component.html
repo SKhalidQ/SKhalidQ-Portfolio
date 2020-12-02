@@ -9,7 +9,7 @@
   
     </div>
     <!-- <img mat-card-image *ngIf="item.image != null" [src]="item.image" alt="A preview image of the project"> -->
-    <img mat-card-image *ngIf="project.image != null" [src]="project.image" alt="A preview image of the project" loading="lazy">
+    <img mat-card-image *ngIf="project.image != null" [src]="project.image" alt="A preview image of the project" loading="eager">
     <div class="notFoundDiv" *ngIf="project.image == null">
       <mat-icon class="noImage" color="warn" [inline]="true">error_outline</mat-icon>
     </div>
