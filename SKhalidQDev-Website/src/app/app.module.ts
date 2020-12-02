@@ -35,6 +35,7 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { DialogComponent } from './Components/dialog/dialog.component';
 import { CurriculumTemplateComponent } from './Components/curriculum-template/curriculum-template.component';
+import { ImageLoadingDirective } from './Directives/image-loading.directive';
 
 // Test Component
 
@@ -52,6 +53,7 @@ import { CurriculumTemplateComponent } from './Components/curriculum-template/cu
     AppComponent,
     DialogComponent,
     CurriculumTemplateComponent,
+    ImageLoadingDirective,
   ],
   imports: [
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
