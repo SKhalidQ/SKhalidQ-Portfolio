@@ -1,11 +1,21 @@
 @keyframes animation1 {
     0% {
-      opacity: 0;
-      transform: translateY(-10%);
+        opacity: 0;
+        transform: translateY(-10%);
     }
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animation2 {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -24,7 +34,7 @@ h1 {
 }
 
 .cv { 
-    animation: 2s ease-out 1 animation1;
+    /* animation: 2s ease-out 1 animation1; */
     display: flex;
     justify-content: flex-start;
     margin-top: 50px;
@@ -34,7 +44,7 @@ h1 {
 }
 
 .projectCard {
-    animation: 2s ease-out 1 animation1;
+    /* animation: 2s ease-out 1 animation1; */
     display: flex;
     justify-content: flex-end;
     justify-items: center;
@@ -53,6 +63,17 @@ app-curriculum-template {
 app-project-card {
     margin: 20px;
     box-shadow: inset 0px 0px 100px 5px rgb(0, 0, 0);
+}
+
+.cvPreview {
+    margin: 0 0 0 10px;
+    width: 800px;
+}    
+
+.projectPreview {
+    margin: 50px 0 0;
+    width: 450px;
+    height: 470px;
 }
 
 h3 {

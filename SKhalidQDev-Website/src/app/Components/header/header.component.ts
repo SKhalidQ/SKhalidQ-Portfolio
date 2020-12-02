@@ -10,11 +10,14 @@ import { SidenavService } from 'src/app/Services/sidenav.service';
 import { LanguagesList } from 'src/app/Models/language';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { EasterEggService } from 'src/app/Services/easter-egg.service';
+import { CVImgService } from 'src/app/Services/Theme/cv-img.service';
+import { ProjectImgService } from 'src/app/Services/Theme/project-img.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  animations: []
 })
 export class HeaderComponent {
 
@@ -37,6 +40,8 @@ export class HeaderComponent {
     public easterEggService: EasterEggService,
     private themeService: ThemeService,
     private githubLogoService: GithubLogoService,
+    private cvImgService: CVImgService,
+    private projectImgService: ProjectImgService,
     private snackbarService: SnackbarService,
     private overlayContainer: OverlayContainer) {
 
@@ -53,7 +58,7 @@ export class HeaderComponent {
     this.toggle.emit();
   }
 
-  CloseBtn(): string {
+  get toggleIcon(): string {
     return this.isSideNav === true ? 'clear' : 'menu';
   }
 
@@ -63,6 +68,8 @@ export class HeaderComponent {
       this.snackbarService.OpenSnackbar('Dark theme enabled', 'Dismiss', this.themeData[ThemeMode.DarkMode].snackbar);
       this.currentTheme = this.themeData[ThemeMode.DarkMode];
       this.githubLogoService.githubLogo.next('../assets/Images/github-brands-light.svg');
+      this.cvImgService.cvImage.next('../assets/Images/CVPreviewDark.png');
+      this.projectImgService.projectImage.next('../assets/Images/ProjectPreviewDark.png');
       this.themeService.themeMode.next(this.currentTheme.theme);
     } else {
       // this.overlayContainer.getContainerElement().classList.replace('DarkTheme','LightTheme');
@@ -70,6 +77,8 @@ export class HeaderComponent {
       this.snackbarService.OpenSnackbar('Light theme enabled', 'Dismiss', this.themeData[ThemeMode.LightMode].snackbar);
       this.currentTheme = this.themeData[ThemeMode.LightMode];
       this.githubLogoService.githubLogo.next('../assets/Images/github-brands-dark.svg');
+      this.cvImgService.cvImage.next('../assets/Images/CVPreviewLight.png');
+      this.projectImgService.projectImage.next('../assets/Images/ProjectPreviewLight.png');
       this.themeService.themeMode.next(this.currentTheme.theme);
     }
   }

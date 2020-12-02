@@ -1,14 +1,8 @@
 div {
-    margin: 40px auto;
+  margin: 40px;
+  width: auto;
 }
 
-
-.mat-elevation-z5 {
-    transition: all 0.3s;
-    border-radius: 2px;
-  }
-  
-  .mat-elevation-z5:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 37px rgba(0, 0, 0, 0.35);
-  }
+app-curriculum-template {
+  padding: 40px;
+}

@@ -14,7 +14,8 @@ import { filter, map } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: []
 })
 export class AppComponent implements OnInit {
 
@@ -54,7 +55,11 @@ export class AppComponent implements OnInit {
   CheckUpdates(): void {
     this.update.available.subscribe(() => {
       this.dialog.open(DialogComponent, {
-        data: { Title: `New update!`, Message: 'There is new content available on this page. Would you like to update?', Action: 'Refresh' }
+        data: {
+          Title: `New update!`,
+          Message: 'There is new content available on this page. Would you like to update?',
+          Action: 'Refresh'
+        }
       }).afterClosed().subscribe(() => {
         document.location.reload();
       });

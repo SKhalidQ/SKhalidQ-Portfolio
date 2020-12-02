@@ -288,7 +288,7 @@ mat-divider {
   border: 2px solid #f40b0b;
 }
 
-@media only screen and (max-width: 810px) {
+/* @media only screen and (max-width: 810px) {
   * {
     box-sizing: border-box;
     list-style: none;
@@ -470,4 +470,4 @@ mat-divider {
   .cv .cv_right .cv_hobby ul li:last-child:before {
     display: none;
   }
-}
+} */

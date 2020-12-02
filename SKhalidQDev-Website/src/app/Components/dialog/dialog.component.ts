@@ -5,7 +5,8 @@ import { DialogDataModel } from 'src/app/Models/dialog';
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.css']
+  styleUrls: ['./dialog.component.css'],
+  animations: []
 })
 export class DialogComponent implements OnInit {
 

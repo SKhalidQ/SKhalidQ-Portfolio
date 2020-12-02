@@ -5,7 +5,6 @@ div {
 
 mat-icon {
     vertical-align: text-top;
-    margin-right: auto;
+    margin-right: 10px;
     font-size: 29px;
 }
-  

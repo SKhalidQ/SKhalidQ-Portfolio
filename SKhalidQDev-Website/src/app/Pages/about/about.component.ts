@@ -5,7 +5,8 @@ import { environment } from 'src/environments/environment.prod';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.css'],
+  animations: []
 })
 export class AboutComponent {
 

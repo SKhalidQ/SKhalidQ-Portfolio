@@ -1,11 +1,13 @@
 import { Curriculum, CurriculumModel } from 'src/app/Models/curriculum';
 import { ActivePageService } from 'src/app/Services/active-page.service';
 import { Component } from '@angular/core';
+import { Animations } from 'src/app/Themes/animations';
 
 @Component({
   selector: 'app-curriculum',
   templateUrl: './curriculum.component.html',
-  styleUrls: ['./curriculum.component.css']
+  styleUrls: ['./curriculum.component.css'],
+  animations: [Animations.fade]
 })
 export class CurriculumComponent {
 

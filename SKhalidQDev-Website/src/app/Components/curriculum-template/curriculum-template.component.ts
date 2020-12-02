@@ -6,11 +6,14 @@ import { ThemeService } from 'src/app/Services/Theme/theme.service';
 @Component({
   selector: 'app-curriculum-template',
   templateUrl: './curriculum-template.component.html',
-  styleUrls: ['./curriculum-template.component.css']
+  styleUrls: ['./curriculum-template.component.css'],
+  animations: []
 })
 export class CurriculumTemplateComponent implements OnInit {
 
   @Input() data: any;
+
+  emailstring = 'mailto:skhalidqdev@outlook.es';
 
   hideButtons: string;
 
