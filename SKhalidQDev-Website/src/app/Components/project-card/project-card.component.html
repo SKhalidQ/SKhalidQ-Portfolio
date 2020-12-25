@@ -2,15 +2,13 @@
     <mat-card-header>
       <div mat-card-avatar class="header-image"><mat-icon color="warn" style="font-size: 40px;">{{ project.icon }}</mat-icon></div>
       <mat-card-title>{{ project.title }}</mat-card-title>
-      <!-- Once everything is completed, remove the h5 tag -->
       <mat-card-subtitle><h5>{{ project.subtitle }}</h5></mat-card-subtitle>
     </mat-card-header>
     <div class="projectPreviewImage">
   
     </div>
-    <!-- <img mat-card-image *ngIf="item.image != null" [src]="item.image" alt="A preview image of the project"> -->
-    <img mat-card-image *ngIf="project.image != null" [src]="project.image" alt="A preview image of the project">
-    <div class="notFoundDiv" *ngIf="project.image == null">
+    <img mat-card-image *ngIf="project.image != null" [src]="project.image">
+    <div class="notFoundDiv" *ngIf="project.image == null || project.image.length <= 0">
       <mat-icon class="noImage" color="warn" [inline]="true">error_outline</mat-icon>
     </div>
     <mat-card-content>

@@ -1,0 +1,27 @@
+[
+    {
+        "version": "v1.10.0",
+        "date": "22/11/2020",
+        "icon": "notes",
+        "logs": [
+            {
+                "title": "Completed",
+                "description": [
+                    "Finished something I don't remember"
+                ]
+            },
+            {
+                "title": "ToDo",
+                "description": [
+                    "Need to finish something I don't remember"
+                ]
+            },
+            {
+                "title": "Bugs",
+                "description": [
+                    "That thing I don't remember has a bug"
+                ]
+            }
+        ]
+    }
+]

@@ -1,10 +1,12 @@
-import { ActivePageService } from 'src/app/Services/active-page.service';
-import { Component } from '@angular/core';
-import { Projects } from 'src/app/Models/projects';
-import { Curriculum, CurriculumModel } from 'src/app/Models/curriculum';
-import { Animations } from 'src/app/Themes/animations';
-import { CVImgService } from 'src/app/Services/Theme/cv-img.service';
 import { ProjectImgService } from 'src/app/Services/Theme/project-img.service';
+import { ActivePageService } from 'src/app/Services/active-page.service';
+import { Curriculum, CurriculumModel } from 'src/app/Models/curriculum';
+import { CVImgService } from 'src/app/Services/Theme/cv-img.service';
+import { Animations } from 'src/app/Themes/animations';
+import { ProjectModel } from 'src/app/Models/projects';
+import { Component } from '@angular/core';
+
+import ProjectsJson from '../../../assets/JSON/Projects.json';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +16,7 @@ import { ProjectImgService } from 'src/app/Services/Theme/project-img.service';
 })
 export class HomeComponent {
 
-  project = Projects[2];
+  project: ProjectModel = ProjectsJson[2];
   cv: CurriculumModel[] = Curriculum;
 
   constructor(activePageService: ActivePageService, public cvImgService: CVImgService, public projectImgService: ProjectImgService) {
