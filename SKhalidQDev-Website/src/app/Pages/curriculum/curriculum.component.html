@@ -1,3 +1,7 @@
 <div [@fade]>
     <app-curriculum-template [data]="curriculum" class="cv"></app-curriculum-template>
 </div>
+
+<div *ngIf="curriculum.length <= 0" class="error-message">
+    <h1><mat-icon color="warn">error_outline</mat-icon> There seems to be a problem while getting all the data</h1>
+</div>

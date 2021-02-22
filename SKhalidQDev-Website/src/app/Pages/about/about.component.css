@@ -15,6 +15,15 @@ h2 {
     font-weight: bold;
 }
 
+.changelog {
+    margin-bottom: 20px;
+}
+
+.btn {
+    font-size: 20px;
+    background-color: rgba(61, 61, 61, 0.137);
+}
+
 @media only screen and (max-width: 960px) {
     div {
         padding-right: 30px;

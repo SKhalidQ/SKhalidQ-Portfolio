@@ -6,3 +6,14 @@ div {
 app-curriculum-template {
   padding: 40px;
 }
+
+.error-message {
+  display: flex;
+  justify-content: space-around;
+}
+
+mat-icon {
+  vertical-align: text-top;
+  margin-right: 10px;
+  font-size: 30px;
+}

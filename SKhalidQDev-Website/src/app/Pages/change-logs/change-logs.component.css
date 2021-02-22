@@ -1,0 +1,35 @@
+.container {
+    margin: 50px 20px;
+}
+
+button {
+    margin: 0 10px 0 0;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 0 20px;
+    max-width: 425px;
+}
+
+span {
+    background-color: red;
+    margin: 10px 0;
+    width: 90px;
+}
+
+mat-divider {
+    margin: 0 0 20px 0;
+}
+
+.error-message {
+    display: flex;
+    justify-content: space-around;
+}
+
+mat-icon {
+    vertical-align: text-top;
+    margin-right: 10px;
+    font-size: 30px;
+}

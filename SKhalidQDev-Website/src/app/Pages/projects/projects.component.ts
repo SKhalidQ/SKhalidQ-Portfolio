@@ -1,7 +1,9 @@
 import { ActivePageService } from 'src/app/Services/active-page.service';
-import { Projects } from 'src/app/Models/projects';
-import { Component } from '@angular/core';
+import { ProjectModel } from 'src/app/Models/projects';
 import { Animations } from 'src/app/Themes/animations';
+import { Component } from '@angular/core';
+
+import ProjectsJson from '../../../assets/JSON/Projects.json';
 
 @Component({
   selector: 'app-projects',
@@ -15,6 +17,5 @@ export class ProjectsComponent {
     activePageService.activePage.next('Projects');
   }
 
-  projects = Projects;
-
+  projects: ProjectModel[] = ProjectsJson;
 }
