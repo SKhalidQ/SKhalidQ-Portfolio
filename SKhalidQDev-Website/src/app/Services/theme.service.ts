@@ -1,17 +1,14 @@
-import { ThemeMode, Themes } from 'src/app/Models/theme';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { ThemeMode, Themes } from '../Models/theme';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
 
-  themeData = Themes;
-
   constructor() { }
 
-  themeMode = new BehaviorSubject<string>(this.themeData[ThemeMode.DarkMode].theme);
+  themeMode = new BehaviorSubject<string>(localStorage.getItem('ThemeMode') || Themes[ThemeMode.LightMode].theme);
   themeMode$ = this.themeMode.asObservable();
-
 }

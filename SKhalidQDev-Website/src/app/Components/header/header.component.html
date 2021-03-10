@@ -5,9 +5,10 @@
       (click)="toggle.emit()" onclick="this.blur()">
       <mat-icon>{{ toggleIcon }}</mat-icon>
     </button>
-    <img class="logo" src="/assets/Images/logo_transparent.png" routerLinkActive="mat-elevation-z3" matTooltip="Home"
-      matTooltipShowDelay="600" matTooltipClass="toolTip" routerLink="/home">
-    <h2 style="margin: 0 20px 0 0;">{{ title }}</h2>
+    <div class="logo" routerLinkActive="mat-elevation-z3" matTooltip="Home" matTooltipShowDelay="600" matTooltipClass="toolTip" routerLink="/home">
+      <img src="/assets/Images/logo_transparent.png" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+      <h2>{{ title }}</h2>
+    </div>
 
     <div *ngIf="!isSideNav">
       <button class="navigationBtn" mat-button *ngFor="let route of routeData" [routerLink]="route.route"
@@ -17,37 +18,24 @@
 
     <span style="flex: 1 1 auto;"></span>
 
-    <!-- Find a solution to the menu to make it shorter in lines -->
-
-    <button mat-icon-button class="navigationBtn" [matMenuTriggerFor]="menu" *ngIf="!isSideNav">
-      <mat-icon>format_color_fill</mat-icon>
+    <button mat-icon-button (click)="ChangeTheme()" *ngIf="!smallScreen && !xSmallScreen">
+      <mat-icon >{{ themeService.themeMode.value === 'LightMode' ? 'brightness_3' : 'wb_sunny' }}</mat-icon>
     </button>
-    <mat-menu #menu="matMenu">
-      <div class="menu">
-        <button mat-menu-item (click)="ChangeTheme()">
-          <mat-icon>{{ currentTheme.icon }}</mat-icon>{{ currentTheme.btnText }}
-        </button>
-      </div>
-    </mat-menu>
 
-    <button mat-icon-button class="navigationBtn" [matMenuTriggerFor]="languages" *ngIf="!isSideNav">
+    <button mat-icon-button class="navigationBtn" *ngIf="!isSideNav" [matMenuTriggerFor]="languages">
       <mat-icon>language</mat-icon>
     </button>
-    <mat-menu #languages="matMenu">
+
+    <mat-menu #languages="matMenu" [class]="themeService.themeMode$ | async">
       <div class="langMenu">
-        <button mat-menu-item *ngFor="let languages of languageData" [matTooltip]="languages.tooltip"
+        <button mat-menu-item *ngFor="let languages of languageData" [matTooltip]="languages.tooltip" matTooltipShowDelay="600" matTooltipClass="toolTip" 
           style="display: flex; align-items: center;" (click)="ChangeLanguage(languages.lang)"
           [disabled]="languages.disabled">
-          <img class="banderas" *ngIf="languages.flag != null" [src]="languages.flag">
-          <div class="notFoundDiv" *ngIf="languages.flag == null">
-            <mat-icon color="warn" class="noImage" [inline]="true">error_outline</mat-icon>
-          </div>
+          <img class="banderas" *ngIf="languages.flag != null" [src]="languages.flag" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
           {{ languages.lang }}
         </button>
       </div>
     </mat-menu>
-
-    <!--End of menus-->
 
   </mat-toolbar-row>
 
@@ -58,10 +46,7 @@
     <span class="spacer"></span>
 
     <a mat-icon-button *ngFor="let socialMediaLink of socialMediaData" [href]="socialMediaLink.route" target="_blank">
-      <div class="notFoundDiv" *ngIf="socialMediaLink.icon == null">
-        <mat-icon color="warn" class="noImage" [inline]="true">error_outline</mat-icon>
-      </div>
-      <img class="icon" *ngIf="socialMediaLink.icon != null" [src]="socialMediaLink.icon">
+      <img class="icon" *ngIf="socialMediaLink.icon != null" [src]="socialMediaLink.icon" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
     </a>
 
   </mat-toolbar-row>

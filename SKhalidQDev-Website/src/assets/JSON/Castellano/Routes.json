@@ -1,0 +1,17 @@
+[
+    {
+        "btnText": "Curriculum",
+        "icon": "description",
+        "route": "/curriculum"
+    },
+    {
+        "btnText": "Proyectos",
+        "icon": "code",
+        "route": "/projects"
+    },
+    {
+        "btnText": "Acerca de",
+        "icon": "info",
+        "route": "/about"
+    }
+]

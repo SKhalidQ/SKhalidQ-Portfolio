@@ -8,13 +8,6 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
-body {
-  background: #585c68;
-  font-size: 14px;
-  line-height: 22px;
-  color: #555555;
-}
-
 .bold {
   font-weight: 700;
   font-size: 20px;
@@ -33,11 +26,20 @@ body {
   background-color: #FAFAFA;
 }
 
+.mat-elevation-z5 {
+  transition: all 0.3s;
+  border-radius: 2px;
+}
+
+.mat-elevation-z5:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 37px rgba(0, 0, 0, 0.35);
+}
+ 
 .cv {
   width: 900px;
   height: auto;
   display: flex;
-  margin: auto;
 }
 
 .cv_font {
@@ -60,17 +62,7 @@ body {
 .cv .cv_left .cv_profile img {
   width: 100%;
   height: 100%;
-  border-radius: 2px 2px 0 0;
-}
-
-.mat-elevation-z5 {
-  transition: all 0.3s;
-  border-radius: 2px;
-}
-
-.mat-elevation-z5:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 37px rgba(0, 0, 0, 0.35);
+  border-top-left-radius: 2px;
 }
 
 .cv .cv_left .cv_content {
@@ -207,7 +199,7 @@ mat-divider {
 }
 
 .cv .cv_right ul li .info {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .cv .cv_right ul li:last-child .info {
@@ -226,15 +218,24 @@ mat-divider {
   border: 2px solid #f40b0b;
 }
 
-.cv .cv_right .cv_work ul li:after,
+.cv .cv_right .cv_work ul li:after{
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: -21px;
+  width: 2px;
+  height: 170px;
+  background: #f40b04;
+}
+
 .cv .cv_right .cv_education ul li:after {
   content: "";
   position: absolute;
   top: 14px;
   left: -21px;
   width: 2px;
-  height: 118px;
-  background: #f40b0b;
+  height: 110px;
+  background: #f40b04;
 }
 
 .cv .cv_right .cv_hobby ul {
@@ -288,7 +289,7 @@ mat-divider {
   border: 2px solid #f40b0b;
 }
 
-/* @media only screen and (max-width: 810px) {
+@media only screen and (max-width: 961px) {
   * {
     box-sizing: border-box;
     list-style: none;
@@ -310,11 +311,12 @@ mat-divider {
   }
 
   .cv {
-    width: 800px;
+    width: 790px;
   }
 
   .cv .cv_left {
-    width: 280px;
+    width: 350px;
+    font-size: 13px;
   }
 
   .cv .cv_left .cv_profile {
@@ -327,17 +329,8 @@ mat-divider {
     height: 100%;
   }
 
-
   .cv .cv_left .cv_content {
     padding: 0 25px;
-  }
-
-  .cv .title {
-    margin-bottom: 20px;
-  }
-
-  .cv .cv_item {
-    padding: 25px 0;
   }
 
   mat-divider {
@@ -383,7 +376,7 @@ mat-divider {
   }
 
   .cv .cv_left .cv_skills ul li .skill_progress {
-    width: 60%;
+    width: 50%;
     margin: 0 5px;
     height: 5px;
     border-radius: 5px;
@@ -405,7 +398,7 @@ mat-divider {
   }
 
   .cv .cv_right {
-    width: 520px;
+    width: 480px;
     padding: 25px;
   }
 
@@ -437,12 +430,18 @@ mat-divider {
     height: 6px;
   }
 
-  .cv .cv_right .cv_work ul li:after,
+  .cv .cv_right .cv_work ul li:after {
+    top: 14px;
+    left: -21px;
+    width: 2px;
+    height: 180px;
+  }
+
   .cv .cv_right .cv_education ul li:after {
     top: 14px;
     left: -21px;
     width: 2px;
-    height: 115px;
+    height: 100px;
   }
 
   .cv .cv_right .cv_hobby ul {
@@ -451,23 +450,23 @@ mat-divider {
   }
 
   .cv .cv_right .cv_hobby ul li {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
 
   .cv .cv_right .cv_hobby ul li mat-icon {
-    font-size: 30px;
+    margin: 0;
+    font-size: 28px;
   }
 
   .cv .cv_right .cv_hobby ul li:before {
-    top: 40px;
-    right: -52px;
-    width: 50px;
+    top: 30px;
+    right: -35px;
+    width: 34px;
     height: 2px;
-
   }
 
   .cv .cv_right .cv_hobby ul li:last-child:before {
     display: none;
   }
-} */
+}

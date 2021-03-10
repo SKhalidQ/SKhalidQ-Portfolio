@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SnackbarService } from 'src/app/Services/snackbar.service';
-import { ThemeService } from 'src/app/Services/Theme/theme.service';
+import { ThemeService } from 'src/app/Services/theme.service';
 
 @Component({
   selector: 'app-curriculum-template',
@@ -17,19 +17,17 @@ export class CurriculumTemplateComponent implements OnInit {
 
   hideButtons: string;
 
-  constructor(private snackbar: SnackbarService, private theme: ThemeService, private router: Router) {
+  constructor(private snackbar: SnackbarService, private router: Router) {
   }
 
   Notify(): void {
-    const currentTheme = (this.theme.themeMode.value === 'LightTheme') ? 'sbarLTheme' : 'sbarDTheme';
-
-    this.snackbar.OpenSnackbar('Copied to clipboard', 'Dismiss', currentTheme);
+    this.snackbar.OpenSnackbar('Copied to clipboard', 'Dismiss');
   }
 
   UnderLine(skill: string): string {
 
     let underline = 0;
-    for (let { } of skill.split('')) { underline += 10.5; }
+    for (let { } of skill.split('')) { underline += 10.3; }
 
     return `width: ${underline}px;`;
   }

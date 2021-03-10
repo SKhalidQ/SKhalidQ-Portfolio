@@ -3,7 +3,7 @@
     <mat-drawer #drawer [class]="themeService.themeMode$ | async" mode="over">
       <app-side-nav (toggle)="drawer.toggle()"></app-side-nav>
     </mat-drawer>
-
+    
     <app-header (toggle)="drawer.toggle()"></app-header>
 
     <main>

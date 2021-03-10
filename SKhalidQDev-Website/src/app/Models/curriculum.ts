@@ -4,15 +4,15 @@ import { EducationModel } from './Curriculum/education';
 import { LanguagesModel } from './Curriculum/languages';
 import { CVTitlesModel } from './Curriculum/titles';
 
-import TechnicalSkillsData from '../../assets/JSON/CV/CVTechnicalSkills.json'
-import NonTechSkillsData from '../../assets/JSON/CV/CVNonTechSkills.json'
-import AchievementsData from '../../assets/JSON/CV/CVAchievements.json'
-import EmploymentData from '../../assets/JSON/CV/CVEmployment.json'
-import EducationData from '../../assets/JSON/CV/CVEducation.json'
-import LanguagesData from '../../assets/JSON/CV/CVLanguages.json'
-import HobbiesData from '../../assets/JSON/CV/CVHobbies.json'
-import ProfileData from '../../assets/JSON/CV/CVProfile.json'
-import TitlesData from '../../assets/JSON/CV/CVTitles.json'
+import TechnicalSkillsData from '../../assets/JSON/English/CV/CVTechnicalSkills.json';
+import NonTechSkillsData from '../../assets/JSON/English/CV/CVNonTechSkills.json';
+import AchievementsData from '../../assets/JSON/English/CV/CVAchievements.json';
+import EmploymentData from '../../assets/JSON/English/CV/CVEmployment.json';
+import EducationData from '../../assets/JSON/English/CV/CVEducation.json';
+import LanguagesData from '../../assets/JSON/English/CV/CVLanguages.json';
+import HobbiesData from '../../assets/JSON/English/CV/CVHobbies.json';
+import ProfileData from '../../assets/JSON/English/CV/CVProfile.json';
+import TitlesData from '../../assets/JSON/English/CV/CVTitles.json';
 
 export interface CurriculumModel {
     CVTitles: CVTitlesModel[];

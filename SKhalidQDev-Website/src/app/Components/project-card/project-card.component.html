@@ -1,28 +1,27 @@
 <mat-card class="card">
-    <mat-card-header>
-      <div mat-card-avatar class="header-image"><mat-icon color="warn" style="font-size: 40px;">{{ project.icon }}</mat-icon></div>
-      <mat-card-title>{{ project.title }}</mat-card-title>
-      <mat-card-subtitle><h5>{{ project.subtitle }}</h5></mat-card-subtitle>
-    </mat-card-header>
-    <div class="projectPreviewImage">
+  <mat-card-header class="header">
+    <div mat-card-avatar><mat-icon class="header-icon" color="warn">{{ project.icon }}</mat-icon></div>
+    <mat-card-title>{{ project.title }}</mat-card-title>
+    <mat-card-subtitle><h5>{{ project.subtitle }}</h5></mat-card-subtitle>
+  </mat-card-header>
+
+  <img class="project-preview" mat-card-image [src]="project.image" appDisableRightclick onerror="this.src='../../assets/Images/error_outline-14px.svg'">
   
+  <mat-icon class="error-icon" color="warn" [inline]="true" *ngIf="project.image == null || project.image.length <= 0">error_outline</mat-icon>
+
+  <mat-card-content class="project-description">
+    <p>{{ project.description }}</p>
+  </mat-card-content>
+
+  <mat-card-actions class="project-button-container">
+    <div class="website-link-container">
+      <a mat-flat-button class="website-link" color="warn" [href]="project.websiteURL" *ngIf="project.website" [disabled]="project.websiteURL.length <= 0"><mat-icon>navigate_before</mat-icon></a>
     </div>
-    <img mat-card-image *ngIf="project.image != null" [src]="project.image">
-    <div class="notFoundDiv" *ngIf="project.image == null || project.image.length <= 0">
-      <mat-icon class="noImage" color="warn" [inline]="true">error_outline</mat-icon>
-    </div>
-    <mat-card-content>
-      <p> {{ project.description }} </p>
-    </mat-card-content>
-    <mat-card-actions style="margin-left: 0px; margin-right: 0px;">
-      <a class="button" mat-flat-button color="warn" [href]="project.websiteURL" [disabled]="!project.website">Go</a>
-      <div class="github">
-        <a mat-icon-button [href]="project.githubURL" style="width: 37px;" [disabled]="!project.publicRepo"
-          [matTooltip]="GetTooltipText(project.publicRepo)" matTooltipShowDelay="600" matTooltipClass="toolTip" class="githubLink"
-          alt="Github Link" target="_blank">
-          <img style="width: 36px;" [src]="githubService.githubLogo$ | async">
-        </a>
-      </div>
-    </mat-card-actions>
-  </mat-card>
-  
+
+    <a mat-icon-button class="github-link" [href]="project.githubURL" [disabled]="!project.publicRepo"
+      [matTooltip]="GetTooltipText(project.publicRepo)" matTooltipShowDelay="600" matTooltipClass="toolTip" target="_blank">
+      <img class="github-image" [src]="themeService.themeMode.value == 'LightMode' ? ( !project.publicRepo ? disabledGithub : darkGithub ) : ( !project.publicRepo ? disabledGithub : lightGithub )" alt="Github Image" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+    </a>
+  </mat-card-actions>
+
+</mat-card>

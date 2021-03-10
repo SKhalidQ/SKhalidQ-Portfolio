@@ -1,5 +1,6 @@
-import { GithubLogoService } from 'src/app/Services/Theme/github-logo.service';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ThemeService } from 'src/app/Services/theme.service';
 
 @Component({
   selector: 'app-project-card',
@@ -12,15 +13,14 @@ export class ProjectCardComponent {
   @Input() project: any;
 
   tooltipTxt: string;
+  lightGithub = '../assets/Images/github-brands-light.svg';
+  darkGithub = '../assets/Images/github-brands-dark.svg';
+  disabledGithub = '../assets/Images/github-brands-disabled.svg';
 
-  constructor(public githubService: GithubLogoService) { }
+  constructor(private http: HttpClient, public themeService: ThemeService) { }
 
   GetTooltipText(publicRepo: boolean): string {
-    if (!publicRepo){
-      return 'Available at request';
-    } else {
-      return 'Github Repository Link';
-    }
+    return !publicRepo ? 'Available at request' : 'GitHub Repository Link';
   }
 
 }

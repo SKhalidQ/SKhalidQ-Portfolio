@@ -1,7 +1,9 @@
 import { Curriculum, CurriculumModel } from 'src/app/Models/curriculum';
 import { ActivePageService } from 'src/app/Services/active-page.service';
-import { Component } from '@angular/core';
 import { Animations } from 'src/app/Themes/animations';
+import { Component } from '@angular/core';
+
+import ActivePageEng from '../../../assets/JSON/English/ActivePage.json';
 
 @Component({
   selector: 'app-curriculum',
@@ -14,7 +16,7 @@ export class CurriculumComponent {
   curriculum: CurriculumModel[] = Curriculum;
 
   constructor(activePageService: ActivePageService) {
-    activePageService.activePage.next('Curriculum Vitae');
+    activePageService.activePage.next(ActivePageEng.curriculum);
   }
 
 }

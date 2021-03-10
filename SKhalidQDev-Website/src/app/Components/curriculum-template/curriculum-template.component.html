@@ -2,7 +2,7 @@
     <div class="cv_left">
 
         <div class="cv_profile">
-            <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="profile_pic">
+            <img src="../../../assets/Images/logo.png" appDisableRightclick alt="profile_pic" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
         </div>
 
         <div class="cv_content">
@@ -19,12 +19,12 @@
                             <mat-icon>email</mat-icon>
                         </div>
                         <div class="data"> SKhalidQDev@outlook.es
-                            <button [cdkCopyToClipboard]="'SKhalidQDev@outlook.es'" mat-icon-button (click)="Notify()" [style]="hideButtons">
+                            <!-- <button [cdkCopyToClipboard]="'SKhalidQDev@outlook.es'" mat-icon-button (click)="Notify()" [style]="hideButtons">
                                 <mat-icon>content_copy</mat-icon>
-                            </button>
-                            <!-- <a mat-icon-button [href]="'mailto:SKhalidQDev@outlook.es'" target="_top" [style]="hideButtons">
+                            </button> -->
+                            <a mat-icon-button [href]="'mailto:SKhalidQDev@outlook.es'" target="_top" [style]="hideButtons" matTooltip="Open default mail" matTooltipShowDelay="600" matTooltipClass="toolTip">
                                 <mat-icon>launch</mat-icon>
-                            </a> -->
+                            </a>
                         </div>
                     </li>
 
@@ -34,7 +34,7 @@
                         </div>
                         <div class="data">
                             www.skhalidq.dev
-                            <button [cdkCopyToClipboard]="'https://www.skhalidq.dev'" mat-icon-button (click)="Notify()" [style]="hideButtons">
+                            <button [cdkCopyToClipboard]="'https://www.skhalidq.dev'" mat-icon-button (click)="Notify()" [style]="hideButtons" matTooltip="Copy to clipboard" matTooltipShowDelay="600" matTooltipClass="toolTip">
                                 <mat-icon>content_copy</mat-icon>
                             </button>
                         </div>

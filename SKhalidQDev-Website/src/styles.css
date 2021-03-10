@@ -11,10 +11,6 @@
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
-    /*
-        Introduced in IE 10.
-        See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-    */
     -ms-user-select: none;
     user-select: none;
 }
@@ -36,16 +32,17 @@ body {
 
 .toolTip {
     background: rgba(255, 0, 0, 0.815);
-    height: 20px;
+    font-size: small;
 }
 
-.sbarDTheme {
-    background: #303030de;
+.DarkMode {
+    background: #303030ef;
     color: #FAFAFA;
 }
 
-.sbarLTheme {
-    background: #fafafae1;
+.LightMode {
+    background: #fafafaea;
+    color: #303030de;
 }
 
 .icon {

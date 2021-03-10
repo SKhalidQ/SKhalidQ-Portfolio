@@ -1,8 +1,11 @@
 export class ThemeModel {
-    btnText: string;
     theme: string;
-    snackbar: string;
-    icon: string;
+    btnText: string;
+}
+
+export class ThemeTextModel {
+    themeMessage: ThemeMode;
+    btnText: ThemeMode;
 }
 
 export enum ThemeMode {
@@ -10,15 +13,11 @@ export enum ThemeMode {
 }
 
 export const Themes = {
-    [ThemeMode.DarkMode]: { btnText: 'Light Mode', theme: 'DarkTheme', snackbar: 'sbarDTheme', icon: 'brightness_3' },
-    [ThemeMode.LightMode]: { btnText: 'Dark Mode', theme: 'LightTheme', snackbar: 'sbarLTheme', icon: 'wb_sunny' },
+    [ThemeMode.DarkMode]: { theme: 'DarkMode', btnText: 'Light mode' },
+    [ThemeMode.LightMode]: { theme: 'LightMode', btnText: 'Dark mode' }
 };
 
-
-export interface GithubLogo {
-    logoColour: string;
-}
-
-export const GithubLogo: GithubLogo = {
-    logoColour: '../assets/Images/github-brands-dark.svg'
+export const ThemesDemo = {
+    [ThemeMode.DarkMode]: { theme: 'DarkMode' },
+    [ThemeMode.LightMode]: { theme: 'LightMode' }
 };

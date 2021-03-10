@@ -1,13 +1,26 @@
-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;    
-    margin: 400px auto auto;
+@keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
 
-ul {
+.main {
+    height: calc(100vh - 150px);
+    display: flex;
     text-align: center;
-    list-style-type: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: linear;
+}
+
+.content {
+    margin: auto;
+    animation: appear 1s ease-in-out;
 }
 
 h2 {
@@ -15,26 +28,13 @@ h2 {
     font-weight: bold;
 }
 
-.changelog {
-    margin-bottom: 20px;
+h4 {
+    margin: 20px 0 0;
 }
 
-.btn {
-    font-size: 20px;
-    background-color: rgba(61, 61, 61, 0.137);
+a:hover {
+    background-image: linear-gradient(90deg, transparent 30%, #f5e5e44f 1%, #30303000);
+    background-position: 100% 0;
+    background-size: 500% 250%;
+    transition: .7s ease-in;
 }
-
-@media only screen and (max-width: 960px) {
-    div {
-        padding-right: 30px;
-        margin: 50% auto;
-    }
-}
-
-@media only screen and (max-width: 960px) and (max-height: 832px) {
-    div {
-        padding-right: 30px;
-        margin: 10px 0 0 0;
-    }
-}
-

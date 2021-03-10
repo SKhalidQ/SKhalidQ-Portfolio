@@ -1,17 +1,18 @@
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Injectable } from '@angular/core';
+import { ThemeService } from './theme.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SnackbarService {
 
-  constructor(private snackbar: MatSnackBar) { }
+  constructor(private snackbar: MatSnackBar, private themeService: ThemeService) { }
 
-  OpenSnackbar(message: string, action: string, theme: string): void {
+  OpenSnackbar(message: string, action: string): void {
     this.snackbar.open(message, action, {
       duration: 3000,
-      panelClass: [theme],
+      panelClass: [this.themeService.themeMode.value],
     });
   }
 

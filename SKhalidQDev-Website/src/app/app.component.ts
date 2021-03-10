@@ -1,7 +1,7 @@
 import { DialogComponent } from './Components/dialog/dialog.component';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { ThemeService } from 'src/app/Services/Theme/theme.service';
+import { ThemeService } from 'src/app/Services/theme.service';
 import { environment } from 'src/environments/environment';
 import { ThemeMode, Themes } from './Models/theme';
 import { MatDialog } from '@angular/material/dialog';

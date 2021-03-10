@@ -3,6 +3,11 @@ div {
   width: auto;
 }
 
+.cv-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 app-curriculum-template {
   padding: 40px;
 }
@@ -16,4 +21,10 @@ mat-icon {
   vertical-align: text-top;
   margin-right: 10px;
   font-size: 30px;
+}
+
+@media only screen and (max-width: 961px) {
+  .cv-container {
+    justify-content: flex-start;
+  }
 }

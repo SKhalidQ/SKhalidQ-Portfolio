@@ -1,17 +1,23 @@
-import { GithubLogoService } from 'src/app/Services/Theme/github-logo.service';
-import { RouteLinks, SocialMediaLinks } from 'src/app/Models/route-Links';
 import { ActivePageService } from 'src/app/Services/active-page.service';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { EasterEggService } from 'src/app/Services/easter-egg.service';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ThemeMode, ThemeModel, Themes } from 'src/app/Models/theme';
 import { SnackbarService } from 'src/app/Services/snackbar.service';
-import { ThemeService } from 'src/app/Services/Theme/theme.service';
 import { SidenavService } from 'src/app/Services/sidenav.service';
+import { ThemeService } from 'src/app/Services/theme.service';
 import { LanguagesList } from 'src/app/Models/language';
-import { OverlayContainer } from '@angular/cdk/overlay';
-import { EasterEggService } from 'src/app/Services/easter-egg.service';
-import { CVImgService } from 'src/app/Services/Theme/cv-img.service';
-import { ProjectImgService } from 'src/app/Services/Theme/project-img.service';
+
+import ThemeTextCast from 'src/assets/JSON/Castellano/ThemeMessage.json';
+import ThemeTextEng from 'src/assets/JSON/English/ThemeMessage.json';
+import ThemeTextCat from 'src/assets/JSON/Catala/ThemeMessage.json';
+
+import RoutesCast from 'src/assets/JSON/Castellano/Routes.json';
+import RoutesEng from 'src/assets/JSON/English/Routes.json';
+import RoutesCat from 'src/assets/JSON/Catala/Routes.json';
+
+import SocialMedia from 'src/assets/JSON/SocialMedia.json';
+import { LanguageService } from 'src/app/Services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -23,35 +29,49 @@ export class HeaderComponent {
 
   @Output() toggle = new EventEmitter<void>();
   @Input() isSideNav: boolean;
+
   title = 'SKhalidQDev';
   isSticky = false;
   smallScreen: boolean;
   xSmallScreen: boolean;
   currentTheme: ThemeModel;
-  routeData = RouteLinks;
-  socialMediaData = SocialMediaLinks;
+
+  routeData = RoutesEng;
+  socialMediaData = SocialMedia;
+
   languageData = LanguagesList;
   themeData = Themes;
+
+  currentThemeText = ThemeTextEng;
 
   constructor(
     breakpointObserver: BreakpointObserver,
     public activePageService: ActivePageService,
     public isSidenavActive: SidenavService,
     public easterEggService: EasterEggService,
-    private themeService: ThemeService,
-    private githubLogoService: GithubLogoService,
-    private cvImgService: CVImgService,
-    private projectImgService: ProjectImgService,
-    private snackbarService: SnackbarService,
-    private overlayContainer: OverlayContainer) {
-
-    // this.overlayContainer.getContainerElement().classList.replace('cdk-overlay-container','LightTheme');
-    this.currentTheme = this.themeData[ThemeMode.DarkMode];
+    public themeService: ThemeService,
+    private languageService: LanguageService,
+    private snackbarService: SnackbarService) {
+    this.currentTheme = this.themeData[ThemeMode.LightMode];
 
     breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe((x) => {
       this.smallScreen = x.breakpoints[Breakpoints.Small] && !x.breakpoints[Breakpoints.XSmall];
       this.xSmallScreen = x.breakpoints[Breakpoints.XSmall];
     });
+
+    languageService.currentLanguage$.subscribe(
+      (response: string) => {
+        if (response.startsWith('En')) {
+          this.routeData = RoutesEng;
+        } else if (response.startsWith('Cas')) {
+          this.routeData = RoutesCast;
+        } else if (response.startsWith('Cat')) {
+          this.routeData = RoutesCat;
+        } else {
+          this.routeData = RoutesEng;
+        }
+      }
+    );
   }
 
   onToggle(): void {
@@ -63,24 +83,25 @@ export class HeaderComponent {
   }
 
   ChangeTheme(): void {
-    if (this.themeService.themeMode.getValue() === 'LightTheme') {
-      // this.overlayContainer.getContainerElement().classList.replace('LightTheme','DarkTheme');
-      this.snackbarService.OpenSnackbar('Dark theme enabled', 'Dismiss', this.themeData[ThemeMode.DarkMode].snackbar);
-      this.currentTheme = this.themeData[ThemeMode.DarkMode];
-      this.githubLogoService.githubLogo.next('../assets/Images/github-brands-light.svg');
-      this.cvImgService.cvImage.next('../assets/Images/CVPreviewDark.png');
-      this.projectImgService.projectImage.next('../assets/Images/ProjectPreviewDark.png');
-      this.themeService.themeMode.next(this.currentTheme.theme);
-    } else {
-      // this.overlayContainer.getContainerElement().classList.replace('DarkTheme','LightTheme');
-      console.log(this.overlayContainer.getContainerElement().classList);
-      this.snackbarService.OpenSnackbar('Light theme enabled', 'Dismiss', this.themeData[ThemeMode.LightMode].snackbar);
-      this.currentTheme = this.themeData[ThemeMode.LightMode];
-      this.githubLogoService.githubLogo.next('../assets/Images/github-brands-dark.svg');
-      this.cvImgService.cvImage.next('../assets/Images/CVPreviewLight.png');
-      this.projectImgService.projectImage.next('../assets/Images/ProjectPreviewLight.png');
-      this.themeService.themeMode.next(this.currentTheme.theme);
+    let message: string;
+
+    switch (this.themeService.themeMode.getValue()) {
+      case this.themeData[ThemeMode.LightMode].theme:
+        message = this.currentThemeText.message.darkMode;
+        this.currentTheme = this.themeData[ThemeMode.DarkMode];
+        break;
+
+      case this.themeData[ThemeMode.DarkMode].theme:
+        message = this.currentThemeText.message.lightMode;
+        this.currentTheme = this.themeData[ThemeMode.LightMode];
+        break;
+
+      default: break;
     }
+
+    this.themeService.themeMode.next(this.currentTheme.theme);
+    this.snackbarService.OpenSnackbar(message, 'Dismiss');
+    localStorage.setItem('ThemeMode', this.currentTheme.theme);
   }
 
   ChangeLanguage(language: string): void {
@@ -88,12 +109,31 @@ export class HeaderComponent {
     let button = '';
 
     switch (language) {
-      case 'English': message = 'Language set to English'; button = 'Dismiss'; break;
-      case 'Spanish': message = 'Idioma establecido a Castellano'; button = 'Descartar'; break;
-      case 'Catalan': message = 'Idioma definit a Català'; button = 'Descartar'; break;
+      case 'English':
+        this.routeData = RoutesEng;
+        this.currentThemeText = ThemeTextEng;
+        message = 'Language set to English';
+        button = 'Dismiss';
+        break;
+
+      case 'Castellano':
+        this.routeData = RoutesCast;
+        this.currentThemeText = ThemeTextCast;
+        message = 'Idioma establecido a Castellano';
+        button = 'Descartar';
+        break;
+
+      case 'Catala':
+        this.routeData = RoutesCat;
+        this.currentThemeText = ThemeTextCat;
+        message = 'Idioma definit a Català';
+        button = 'Descartar';
+        break;
     }
 
-    this.snackbarService.OpenSnackbar(message, button, this.currentTheme.snackbar);
+    this.languageService.currentLanguage.next(language);
+    this.snackbarService.OpenSnackbar(message, button);
+    localStorage.setItem('Lang', language);
   }
 
 }

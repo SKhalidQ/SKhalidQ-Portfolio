@@ -1,12 +1,21 @@
-import { ProjectImgService } from 'src/app/Services/Theme/project-img.service';
 import { ActivePageService } from 'src/app/Services/active-page.service';
-import { Curriculum, CurriculumModel } from 'src/app/Models/curriculum';
-import { CVImgService } from 'src/app/Services/Theme/cv-img.service';
+import { LanguageService } from 'src/app/Services/language.service';
+import { ThemeService } from 'src/app/Services/theme.service';
 import { Animations } from 'src/app/Themes/animations';
-import { ProjectModel } from 'src/app/Models/projects';
+import { HomeModel } from 'src/app/Models/home';
 import { Component } from '@angular/core';
 
-import ProjectsJson from '../../../assets/JSON/Projects.json';
+import RouteCast from 'src/assets/JSON/Castellano/Routes.json';
+import RouteEng from 'src/assets/JSON/English/Routes.json';
+import RouteCat from 'src/assets/JSON/Catala/Routes.json';
+
+import ActivePageCast from '../../../assets/JSON/Castellano/ActivePage.json';
+import ActivePageEng from '../../../assets/JSON/English/ActivePage.json';
+import ActivePageCat from '../../../assets/JSON/Catala/ActivePage.json';
+
+import HomeCast from '../../../assets/JSON/Castellano/Home.json';
+import HomeEng from '../../../assets/JSON/English/Home.json';
+import HomeCat from '../../../assets/JSON/Catala/Home.json';
 
 @Component({
   selector: 'app-home',
@@ -16,11 +25,37 @@ import ProjectsJson from '../../../assets/JSON/Projects.json';
 })
 export class HomeComponent {
 
-  project: ProjectModel = ProjectsJson[2];
-  cv: CurriculumModel[] = Curriculum;
+  homeData: HomeModel;
+  routeData;
 
-  constructor(activePageService: ActivePageService, public cvImgService: CVImgService, public projectImgService: ProjectImgService) {
-    activePageService.activePage.next('Home');
+  darkCV = '../../../assets/Images/CVPreviewDark.png';
+  lightCV = '../../../assets/Images/CVPreviewLight.png';
+  darkProject = '../../../assets/Images/ProjectPreviewDark.png';
+  lightProject = '../../../assets/Images/ProjectPreviewLight.png';
+
+  constructor(
+    activePageService: ActivePageService,
+    public themeService: ThemeService,
+    languageService: LanguageService) {
+    activePageService.activePage.next(ActivePageEng.home);
+
+    languageService.currentLanguage$.subscribe(
+      (response: string) => {
+        if (response.startsWith('En')) {
+          this.homeData = HomeEng;
+          this.routeData = RouteEng;
+          activePageService.activePage.next(ActivePageEng.home);
+        } else if (response.startsWith('Cas')) {
+          this.homeData = HomeCast;
+          this.routeData = RouteCast;
+          activePageService.activePage.next(ActivePageCast.home);
+        } else if (response.startsWith('Cat')) {
+          this.homeData = HomeCat;
+          this.routeData = RouteCat;
+          activePageService.activePage.next(ActivePageCat.home);
+        }
+      }
+    );
   }
 
 }

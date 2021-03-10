@@ -1,0 +1,10 @@
+{
+    "message": {
+        "lightMode": "Light mode enabled",
+        "darkMode": "Dark mode enabled"
+    },
+    "btnText": {
+        "lightMode": "Light mode",
+        "darkMode": "Dark mode"
+    }
+}

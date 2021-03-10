@@ -14,8 +14,8 @@ interface Buttons {
     Home: string;
     Themes: string;
     ProjGoBtn: string;
-    LightTheme: string;
-    DarkTheme: string;
+    LightMode: string;
+    DarkMode: string;
     Languages: string;
     English: string;
     Spanish: string;
@@ -31,14 +31,14 @@ export const LanguagesList: Languages[] = [
         tooltip: null,
     },
     {
-        lang: 'Spanish',
+        lang: 'Castellano',
         flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg',
         activeLang: false,
         disabled: true,
         tooltip: 'Coming soon',
     },
     {
-        lang: 'Catalan',
+        lang: 'Catala',
         flag: 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg',
         activeLang: false,
         disabled: true,
@@ -55,8 +55,8 @@ export const ButtonText: Buttons[] = [
         Home: 'Home',
         ProjGoBtn: 'Go',
         Themes: 'Themes',
-        LightTheme: 'Light Theme',
-        DarkTheme: 'Dark Theme',
+        LightMode: 'Light Theme',
+        DarkMode: 'Dark Theme',
         Languages: 'Languages',
         English: 'English',
         Spanish: 'Spanish',
@@ -70,8 +70,8 @@ export const ButtonText: Buttons[] = [
         Home: 'Inicio',
         ProjGoBtn: 'Ir',
         Themes: 'Temas',
-        LightTheme: 'Tema claro',
-        DarkTheme: 'Tema oscuro',
+        LightMode: 'Tema claro',
+        DarkMode: 'Tema oscuro',
         Languages: 'Idiomas',
         English: 'Inglés',
         Spanish: 'Castellano',
@@ -85,8 +85,8 @@ export const ButtonText: Buttons[] = [
         Home: 'Inici',
         ProjGoBtn: 'Anar',
         Themes: 'Temes',
-        LightTheme: 'Tema clar',
-        DarkTheme: 'Tema fosc',
+        LightMode: 'Tema clar',
+        DarkMode: 'Tema fosc',
         Languages: 'Idiomes',
         English: 'Angles',
         Spanish: 'Castella',

@@ -1,12 +1,21 @@
 import { ThemeMode, ThemeModel, Themes } from 'src/app/Models/theme';
-import { SnackbarService } from 'src/app/Services/snackbar.service';
-import { ThemeService } from 'src/app/Services/Theme/theme.service';
-import { Component, EventEmitter, Output } from '@angular/core';
-import { LanguagesList } from 'src/app/Models/language';
-import { RouteLinks } from 'src/app/Models/route-Links';
 import { EasterEggService } from 'src/app/Services/easter-egg.service';
-import { CVImgService } from 'src/app/Services/Theme/cv-img.service';
-import { ProjectImgService } from 'src/app/Services/Theme/project-img.service';
+import { SnackbarService } from 'src/app/Services/snackbar.service';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { ThemeService } from 'src/app/Services/theme.service';
+import { LanguagesList } from 'src/app/Models/language';
+
+import SocialMedia from 'src/assets/JSON/SocialMedia.json';
+
+import ThemeTextCast from 'src/assets/JSON/Castellano/ThemeMessage.json';
+import ThemeTextEng from 'src/assets/JSON/English/ThemeMessage.json';
+import ThemeTextCat from 'src/assets/JSON/Catala/ThemeMessage.json';
+
+import RoutesCast from 'src/assets/JSON/Castellano/Routes.json';
+import RoutesEng from 'src/assets/JSON/English/Routes.json';
+import RoutesCat from 'src/assets/JSON/Catala/Routes.json';
+
+import { LanguageService } from 'src/app/Services/language.service';
 
 @Component({
   selector: 'app-side-nav',
@@ -15,43 +24,58 @@ import { ProjectImgService } from 'src/app/Services/Theme/project-img.service';
   animations: []
 })
 export class SideNavComponent {
-  // @Output() toggle = new EventEmitter<void>();
 
-  title = 'SKhalidQDev';
-  isSidenav = true;
+  @Output() toggle = new EventEmitter<void>();
+
   currentTheme: ThemeModel;
-  routeData = RouteLinks;
   languageData = LanguagesList;
   themeData = Themes;
+  routeData = RoutesEng;
+  socialMediaData = SocialMedia;
+  btnTheme = ThemeTextEng.btnText;
+  currentThemeText = ThemeTextEng;
+  isSidenav = true;
 
   constructor(
-    private themeService: ThemeService,
+    public themeService: ThemeService,
     private snackbarService: SnackbarService,
     public easterEggService: EasterEggService,
-    private cvImgService: CVImgService,
-    private projectImgService: ProjectImgService) {
-    this.currentTheme = this.themeData[ThemeMode.DarkMode];
+    private languageService: LanguageService) {
+    this.currentTheme = this.themeData[ThemeMode.LightMode];
+
+    languageService.currentLanguage$.subscribe(
+      (response: string) => {
+        if (response.startsWith('En')) {
+          this.routeData = RoutesEng;
+        } else if (response.startsWith('Cas')) {
+          this.routeData = RoutesCast;
+        } else if (response.startsWith('Cat')) {
+          this.routeData = RoutesCat;
+        }
+      }
+    );
   }
 
-  // onToggle(): void {
-  //   this.toggle.emit();
-  // }
-
-
   ChangeTheme(): void {
-    if (this.themeService.themeMode.getValue() === 'LightTheme') {
-      this.snackbarService.OpenSnackbar('Dark theme enabled', 'Dismiss', this.themeData[ThemeMode.DarkMode].snackbar);
-      this.currentTheme = this.themeData[ThemeMode.DarkMode];
-      this.cvImgService.cvImage.next('../assets/Images/CVPreviewDark.png');
-      this.projectImgService.projectImage.next('../assets/Images/ProjectPreviewDark.png');
-      this.themeService.themeMode.next(this.currentTheme.theme);
-    } else {
-      this.snackbarService.OpenSnackbar('Light theme enabled', 'Dismiss', this.themeData[ThemeMode.LightMode].snackbar);
-      this.currentTheme = this.themeData[ThemeMode.LightMode];
-      this.cvImgService.cvImage.next('../assets/Images/CVPreviewLight.png');
-      this.projectImgService.projectImage.next('../assets/Images/ProjectPreviewLight.png');
-      this.themeService.themeMode.next(this.currentTheme.theme);
+    let message: string;
+
+    switch (this.themeService.themeMode.getValue()) {
+      case this.themeData[ThemeMode.LightMode].theme:
+        message = ThemeTextEng.message.darkMode;
+        this.currentTheme = this.themeData[ThemeMode.DarkMode];
+        break;
+
+        case this.themeData[ThemeMode.DarkMode].theme:
+        message = ThemeTextEng.message.lightMode;
+        this.currentTheme = this.themeData[ThemeMode.LightMode];
+        break;
+
+      default: break;
     }
+
+    this.themeService.themeMode.next(this.currentTheme.theme);
+    this.snackbarService.OpenSnackbar(message, 'Dismiss');
+    localStorage.setItem('ThemeMode', this.currentTheme.theme);
   }
 
   ChangeLanguage(language: string): void {
@@ -59,12 +83,31 @@ export class SideNavComponent {
     let button = '';
 
     switch (language) {
-      case 'English': message = 'Language set to English'; button = 'Dismiss'; break;
-      case 'Spanish': message = 'Idioma establecido a Castellano'; button = 'Descartar'; break;
-      case 'Catalan': message = 'Idioma definit a Català'; button = 'Descartar'; break;
+      case 'English':
+        this.routeData = RoutesEng;
+        this.currentThemeText = ThemeTextEng;
+        message = 'Language set to English';
+        button = 'Dismiss';
+        break;
+
+      case 'Castellano':
+        this.routeData = RoutesCast;
+        this.currentThemeText = ThemeTextCast;
+        message = 'Idioma establecido a Castellano';
+        button = 'Descartar';
+        break;
+
+      case 'Catala':
+        this.routeData = RoutesCat;
+        this.currentThemeText = ThemeTextCat;
+        message = 'Idioma definit a Català';
+        button = 'Descartar';
+        break;
     }
 
-    this.snackbarService.OpenSnackbar(message, button, this.currentTheme.snackbar);
+    this.languageService.currentLanguage.next(language);
+    this.snackbarService.OpenSnackbar(message, button);
+    localStorage.setItem('Lang', language);
   }
 
 }

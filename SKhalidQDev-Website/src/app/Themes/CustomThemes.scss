@@ -3,22 +3,27 @@
 @include mat-core();
   
 //Default Theme
-$dark-app-primary: mat-palette($mat-indigo);
-$dark-app-accent:  mat-palette($mat-pink, A200, A100, A400);
-$dark-app-warn:    mat-palette($mat-red);
+$light-app-primary: mat-palette($mat-indigo);
+$light-app-accent:  mat-palette($mat-red, A200, A100, A400);
+$light-app-warn:    mat-palette($mat-red);
 
-$dark-app-theme: mat-dark-theme((
+$light-app-theme: mat-light-theme((
   color: (
-    primary: $dark-app-primary,
-    accent: $dark-app-accent,
-    warn: $dark-app-warn,  
+    primary: $light-app-primary,
+    accent: $light-app-accent,
+    warn: $light-app-warn,  
   )
 ));
-    
-@include angular-material-theme($dark-app-theme);
+
+@include angular-material-theme($light-app-theme);
+
+//Light Theme
+.LightMode {
+  @include angular-material-theme($light-app-theme);
+}
  
 //Dark Theme
-.DarkTheme {
+.DarkMode {
   $dark-app-primary: mat-palette($mat-indigo);
   $dark-app-accent:  mat-palette($mat-pink, A200, A100, A400);
   $dark-app-warn:    mat-palette($mat-red);
@@ -32,20 +37,4 @@ $dark-app-theme: mat-dark-theme((
   ));
   
   @include angular-material-theme($dark-app-theme);
-}
-
-//Light Theme
-.LightTheme {
-  $light-app-primary: mat-palette($mat-indigo);
-  $light-app-accent:  mat-palette($mat-red, A200, A100, A400);
-  $light-app-warn:    mat-palette($mat-red);
-  
-  $light-app-theme: mat-light-theme((
-    color: (
-      primary: $light-app-primary,
-      accent: $light-app-accent,
-      warn: $light-app-warn,  
-    )
-  ));
-  @include angular-material-theme($light-app-theme);
 }
