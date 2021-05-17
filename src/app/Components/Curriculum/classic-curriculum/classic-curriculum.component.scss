@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
-
 @keyframes shadow {
   from {
     box-shadow: unset;
@@ -73,34 +71,32 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
+  
+  .contact {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 20px 0 0;
+    
+    mat-icon {
+      margin: 0 5px 0 0;
+    }
+  }
+  
+  .contact, .contact label {
+    cursor: pointer;
+  }
 }
-
-.contact {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-  margin: 0 20px 0 0;
-}
-
-.contact, .contact label {
-  cursor: pointer;
-}
-
-.contact mat-icon {
-  margin: 0 5px 0 0;
-}
-
-/*---------------------------------------------------------------------------------------------------*/
 
 .bottom-container {
   height: calc(100% - 12%);
   border-radius: 0 0 5px 5px;
-}
-
-.bottom-content {
-  height: calc(100% - 40px);
-  margin: 20px;
+  
+  .bottom-content {
+    height: calc(100% - 40px);
+    margin: 20px;
+  }
 }
 
 .section-divider {
@@ -126,14 +122,20 @@
   flex-direction: column;
   max-width: 800px;
   margin: 30px;
-}
-
-.section-title {
-  font-family: 'Earth Normal';
-  font-size: x-large;
-  text-transform: uppercase;
-  color: red;
-  margin: 0 0 10px 0;
+  
+  .section-title {
+    font-family: 'Earth Normal';
+    font-size: x-large;
+    text-transform: uppercase;
+    color: red;
+    margin: 0 0 10px 0;
+  }
+  
+  .section-subtitle {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: bold;
+  }
 }
 
 .content {
@@ -141,15 +143,9 @@
   font-weight: lighter;
 }
 
-.section-subtitle {
-  font-family: 'Montserrat';
-  font-size: 16px;
-  font-weight: bold;
-}
-
 .list-container {
   display: flex;
-  justify-content: space-evenly;
+  place-content: space-evenly;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
@@ -160,8 +156,6 @@
 .list-content {
   margin: 0 0 0 10px;
 }
-
-/* -------------------------------------------------------------------------------------- */
 
 .employ-history ul,
 .education ul,
@@ -239,41 +233,39 @@ ul li:last-child .info {
   justify-content: space-evenly;
   list-style-type: none;
   width: calc(100% - 40px);
+  
+  li {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #f40b0b;
+    border-radius: 50%;
+    position: relative;
+    color: #f40b0b;
+    display: flex;
+    place-content: center center;
+    
+    mat-icon {
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+    }
+  }
+  
+  li:before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -40px;
+    width: 40px;
+    height: 2px;
+    background: #f40b0b;
+  }
+  
+  li:last-child:before {
+    display: none;
+  }
 }
-
-.hobbies ul li {
-  width: 80px;
-  height: 80px;
-  border: 2px solid #f40b0b;
-  border-radius: 50%;
-  position: relative;
-  color: #f40b0b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hobbies ul li mat-icon {
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-}
-
-.hobbies ul li:before {
-  content: "";
-  position: absolute;
-  top: 40px;
-  right: -40px;
-  width: 40px;
-  height: 2px;
-  background: #f40b0b;
-}
-
-.hobbies ul li:last-child:before {
-  display: none;
-}
-
 
 @media only screen and (max-width: 598px) {
   .cv-container {
@@ -291,74 +283,65 @@ ul li:last-child .info {
     font-size: 20px;
   }
   
-  .education-title {
+  .education-title,
+  ul li .date {
     font-size: 12px;
   }
   
   .contact-container {
     font-size: 10px;
-  }
-  
-  .contact, .contact label {
-    cursor: pointer;
-  }
-  
-  .contact mat-icon {
-    margin: 0 5px 0 0;
-    font-size: 22px;
-  }
-  
-  /*---------------------------------------------------------------------------------------------------*/
 
-  .section-title {
-    font-size: large;
+    .contact, .contact label {
+      cursor: pointer;
+    }
+    
+    .contact mat-icon {
+      margin: 0 5px 0 0;
+      font-size: 22px;
+    }
   }
   
   .content {
     font-size: x-small;
   }
   
-  .section-subtitle {
-    font-size: small;
-  }
-
   .section-container {
     max-width: 400px;
-  }
   
-  /* -------------------------------------------------------------------------------------- */
+    .section-title {
+      font-size: large;
+    }
+    
+    .section-subtitle {
+      font-size: small;
+    }
+  }
 
-  .employ-history ul li:after{
+  .employ-history ul li:after {
     min-height: 25.5ch;
   }
 
-
   .education ul li:after {
     height: 108px;
-  }
-
-  ul li .date {
-    font-size: 12px;
   }
    
   .hobbies ul {
     width: 100%;
     padding: 0;
-  }
-
-  .hobbies ul li {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .hobbies ul li mat-icon {
-    font-size: 30px; 
-  }
-  
-  .hobbies ul li:before {
-    top: 25px;
-    right: -14px;
-    width: 13px;
+    
+    li {
+      width: 50px;
+      height: 50px;
+      mat-icon {
+        font-size: 30px; 
+      }  
+    }
+    
+    li:before {
+      top: 25px;
+      right: -14px;
+      width: 13px;
+    }
   }
 
 }
