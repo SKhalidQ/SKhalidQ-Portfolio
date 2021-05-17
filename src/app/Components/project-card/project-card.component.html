@@ -1,0 +1,39 @@
+<mat-card class="card">
+  <mat-card-header class="header">
+    <div mat-card-avatar>
+      <mat-icon class="header-icon" color="warn">{{ project.icon }}</mat-icon>
+    </div>
+    <mat-card-title>{{ project.title }}</mat-card-title>
+    <mat-card-subtitle>
+      <h5>{{ project.subtitle }}</h5>
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <img class="project-preview" mat-card-image [src]="project.image" appDisableRightclick
+    onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+
+  <mat-icon class="error-icon" color="warn" [inline]="true" *ngIf="project.image === null || project.image.length <= 0">
+    error_outline</mat-icon>
+
+  <mat-card-content class="project-description">
+    <p>{{ project.description }}</p>
+  </mat-card-content>
+
+  <mat-card-actions class="project-button-container">
+    <div class="website-link-container">
+      <a mat-flat-button class="website-link" color="warn" [href]="project.websiteURL" *ngIf="project.website"
+        [disabled]="project.websiteURL.length <= 0">
+        <mat-icon>open_in_browser</mat-icon>
+      </a>
+    </div>
+
+    <a mat-icon-button class="github-link" [href]="project.githubURL" [disabled]="!project.publicRepo"
+      [matTooltip]="GetTooltipText(project.publicRepo)" matTooltipShowDelay="200" matTooltipClass="toolTip"
+      target="_blank">
+      <img class="github-image"
+        [src]="themeService.themeMode.value === 'LightMode' ? ( !project.publicRepo ? disabledGithub : darkGithub ) : ( !project.publicRepo ? disabledGithub : lightGithub )"
+        alt="Github Image" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+    </a>
+  </mat-card-actions>
+
+</mat-card>

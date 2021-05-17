@@ -1,0 +1,8 @@
+[
+    { "icon": "video_library", "tooltip": "Movies & Series" },
+    { "icon": "sports_esports", "tooltip": "Games" },
+    { "icon": "library_music", "tooltip": "Music" },
+    { "icon": "movie_creation", "tooltip": "Video editing" },
+    { "icon": "code", "tooltip": "Code" },
+    { "icon": "fitness_center", "tooltip": "Stay healthy" }
+]

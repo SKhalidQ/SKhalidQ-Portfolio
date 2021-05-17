@@ -1,0 +1,19 @@
+<mat-expansion-panel class="mat-elevation-z3 main">
+  <mat-expansion-panel-header class="panel-header mat-elevation-z2">
+    <mat-panel-title> {{ data.version }} </mat-panel-title>
+    <mat-panel-description>
+      {{ data.date }}
+      <mat-icon>{{ data.icon }}</mat-icon>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <!-- Content Here -->
+  <div>
+    <li *ngFor="let logs of data.logs">
+      <h3>{{ logs.title }}</h3>
+      <ul *ngFor="let description of logs.description">
+        <h4>{{ description }}</h4>
+      </ul>
+    </li>
+  </div>
+</mat-expansion-panel>
+  

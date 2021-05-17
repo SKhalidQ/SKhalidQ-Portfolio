@@ -1,0 +1,59 @@
+<mat-toolbar>
+  <mat-toolbar-row class="mat-elevation-z5">
+
+    <button type="button" style="margin-right: 10px;" mat-icon-button *ngIf="smallScreen || xSmallScreen"
+      (click)="toggle.emit()" onclick="this.blur()">
+      <mat-icon>{{ toggleIcon }}</mat-icon>
+    </button>
+
+    <div class="logo" routerLinkActive="mat-elevation-z3" matTooltip="Home" matTooltipShowDelay="600"
+      matTooltipClass="toolTip" routerLink="/home">
+      <img src="/assets/Images/logo_transparent.png" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+      <h2 class="title">{{ title }}</h2>
+    </div>
+
+
+    <div *ngIf="!isSideNav">
+      <button class="navigationBtn" mat-button *ngFor="let route of routeData" [routerLink]="route.route"
+        routerLinkActive="activeRoute mat-elevation-z5" (click)="easterEggService.Evolution(route.btnText)">{{
+        route.btnText }}</button>
+    </div>
+
+    <span style="flex: 1 1 auto;"></span>
+
+    <button mat-icon-button (click)="ChangeTheme()" *ngIf="!smallScreen && !xSmallScreen">
+      <mat-icon>{{ themeService.themeMode.value === 'LightMode' ? 'brightness_3' : 'wb_sunny' }}</mat-icon>
+    </button>
+
+    <button mat-icon-button class="navigationBtn" *ngIf="!isSideNav" [matMenuTriggerFor]="languages">
+      <mat-icon>language</mat-icon>
+    </button>
+
+    <mat-menu #languages="matMenu" [class]="themeService.themeMode$ | async">
+      <div class="langMenu">
+        <button mat-menu-item *ngFor="let languages of languageData" [matTooltip]="languages.tooltip"
+          matTooltipShowDelay="600" matTooltipClass="toolTip" style="display: flex; align-items: center;"
+          (click)="ChangeLanguage(languages.lang)" [disabled]="languages.disabled">
+          
+          <img class="banderas" *ngIf="languages.flag !== null" [src]="languages.flag"
+            onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+          {{ languages.lang }}
+        </button>
+      </div>
+    </mat-menu>
+
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="mat-elevation-z6" *ngIf="!isSideNav">
+
+    <h3>{{ activePageService.activePage$ | async }}</h3>
+
+    <span class="spacer"></span>
+
+    <a mat-icon-button *ngFor="let socialMediaLink of socialMediaData" [href]="socialMediaLink.route" target="_blank">
+      <img class="icon" *ngIf="socialMediaLink.icon !== null" [src]="socialMediaLink.icon"
+        onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+    </a>
+
+  </mat-toolbar-row>
+</mat-toolbar>

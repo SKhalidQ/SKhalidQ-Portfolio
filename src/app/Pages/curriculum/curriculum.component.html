@@ -1,0 +1,18 @@
+<!-- <div class="toggle-container">
+    <div>
+        <mat-slide-toggle #slideToggle color="warn" class="slide-toggle" [checked]="isModern" (toggleChange)="switchCV()"></mat-slide-toggle>
+        <span for="slideToggle">{{ toggleText }}</span>
+    </div>
+</div> -->
+
+<div class="cv-container" *ngIf="!isModern">
+    <app-classic-curriculum [@fade-in-out] [data]="curriculum" class="cv" (isModern)="SwitchCV($event)"></app-classic-curriculum>
+</div>
+
+<div class="cv-container" *ngIf="isModern">
+    <app-modern-curriculum [@fade-in-out] [data]="curriculum" class="cv" (isModern)="SwitchCV($event)"></app-modern-curriculum>
+</div>
+
+<div *ngIf="curriculum.length <= 0" class="error-message">
+    <h1><mat-icon color="warn">error_outline</mat-icon> There seems to be a problem while getting all the data</h1>
+</div>
