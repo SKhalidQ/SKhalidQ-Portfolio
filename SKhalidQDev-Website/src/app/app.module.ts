@@ -1,7 +1,8 @@
+import { DisableRightclickDirective } from './Directives/disable-rightclick.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { ClipboardModule } from '@angular/cdk/clipboard';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { PlatformModule } from '@angular/cdk/platform';
 import { NgModule } from '@angular/core';
 
@@ -9,10 +10,10 @@ import { NgModule } from '@angular/core';
 import { MaterialModules } from './app-material.module';
 
 // Components
-import { CurriculumTemplateComponent } from './Components/curriculum-template/curriculum-template.component';
+import { CurriculumModernComponent } from './Components/curriculum-modern/curriculum-modern.component'
+import { CurriculumClassicComponent } from './Components/curriculum-classic/curriculum-classic.component';
 import { ExpansionPanelsComponent } from './Components/expansion-panels/expansion-panels.component';
 import { ProjectCardComponent } from './Components/project-card/project-card.component';
-import { DisableRightclickDirective } from './Directives/disable-rightclick.directive';
 import { ChangeLogsComponent } from './Pages/change-logs/change-logs.component';
 import { CurriculumComponent } from './Pages/curriculum/curriculum.component';
 import { SideNavComponent } from './Components/side-nav/side-nav.component';
@@ -24,7 +25,6 @@ import { AboutComponent } from './Pages/about/about.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { HomeComponent } from './Pages/home/home.component';
 import { environment } from '../environments/environment';
-import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 // Test Component
@@ -32,8 +32,9 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    CurriculumTemplateComponent,
+    CurriculumClassicComponent,
     DisableRightclickDirective,
+    CurriculumModernComponent,
     ExpansionPanelsComponent,
     ProjectCardComponent,
     CurriculumComponent,
@@ -52,7 +53,6 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    ClipboardModule,
     MaterialModules,
     PlatformModule,
     BrowserModule,

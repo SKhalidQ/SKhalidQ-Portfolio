@@ -1,5 +1,6 @@
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -9,6 +10,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -17,6 +19,7 @@ import { MatMenuModule } from '@angular/material/menu';
 export const MaterialModules = [
     MatProgressSpinnerModule,
     MatProgressBarModule,
+    MatSlideToggleModule,
     MatExpansionModule,
     MatSnackBarModule,
     MatGridListModule,
@@ -24,6 +27,7 @@ export const MaterialModules = [
     MatTooltipModule,
     MatSidenavModule,
     MatDividerModule,
+    ClipboardModule,
     MatButtonModule,
     MatDialogModule,
     MatCardModule,

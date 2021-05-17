@@ -154,6 +154,7 @@ mat-divider {
   width: 14%;
   color: white;
 }
+
 .skill_per {
   margin-left: 5px;
 }
@@ -263,8 +264,8 @@ mat-divider {
   content: "";
   position: absolute;
   top: 40px;
-  right: -40px;
-  width: 40px;
+  right: -15px;
+  width: 14px;
   height: 2px;
   background: #f40b0b;
 }
@@ -461,8 +462,8 @@ mat-divider {
 
   .cv .cv_right .cv_hobby ul li:before {
     top: 30px;
-    right: -35px;
-    width: 34px;
+    right: -18px;
+    width: 17px;
     height: 2px;
   }
 

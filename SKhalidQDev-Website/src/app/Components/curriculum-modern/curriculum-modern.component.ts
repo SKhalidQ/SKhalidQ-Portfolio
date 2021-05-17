@@ -1,15 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SnackbarService } from 'src/app/Services/snackbar.service';
-import { ThemeService } from 'src/app/Services/theme.service';
 
 @Component({
-  selector: 'app-curriculum-template',
-  templateUrl: './curriculum-template.component.html',
-  styleUrls: ['./curriculum-template.component.css'],
-  animations: []
+  selector: 'app-curriculum-modern',
+  templateUrl: './curriculum-modern.component.html',
+  styleUrls: ['./curriculum-modern.component.css']
 })
-export class CurriculumTemplateComponent implements OnInit {
+export class CurriculumModernComponent implements OnInit {
 
   @Input() data: any;
 
@@ -19,19 +17,19 @@ export class CurriculumTemplateComponent implements OnInit {
 
   constructor(private snackbar: SnackbarService, private router: Router) {
   }
-
+  
   Notify(): void {
     this.snackbar.OpenSnackbar('Copied to clipboard', 'Dismiss');
   }
-
+  
   UnderLine(skill: string): string {
-
+    
     let underline = 0;
-    for (let { } of skill.split('')) { underline += 10.3; }
-
+    for (let { } of skill.split('')) { underline += 12; }
+    
     return `width: ${underline}px;`;
   }
-
+  
   ngOnInit(): void {
     this.hideButtons = this.router.url === '/home' ? 'display: none;' : '';
   }

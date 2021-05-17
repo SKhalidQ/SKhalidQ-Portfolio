@@ -3,6 +3,7 @@ import { EmploymentModel } from './Curriculum/employment';
 import { EducationModel } from './Curriculum/education';
 import { LanguagesModel } from './Curriculum/languages';
 import { CVTitlesModel } from './Curriculum/titles';
+import { HobbiesModel } from './Curriculum/hobbies';
 
 import TechnicalSkillsData from '../../assets/JSON/English/CV/CVTechnicalSkills.json';
 import NonTechSkillsData from '../../assets/JSON/English/CV/CVNonTechSkills.json';
@@ -23,7 +24,7 @@ export interface CurriculumModel {
     Jobs: EmploymentModel[];
     NonTechSkills: NonTechSkillsModel[];
     Achievements: string[];
-    Hobbies: string[];
+    Hobbies: HobbiesModel[];
 }
 
 export const Curriculum: CurriculumModel[] = [

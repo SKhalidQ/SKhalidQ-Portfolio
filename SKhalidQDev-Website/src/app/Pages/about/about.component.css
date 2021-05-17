@@ -12,14 +12,12 @@
     height: calc(100vh - 150px);
     display: flex;
     text-align: center;
-    align-items: center;
+    place-content: center center;
     flex-direction: column;
-    justify-content: center;
     background-color: linear;
 }
 
 .content {
-    margin: auto;
     animation: appear 1s ease-in-out;
 }
 
@@ -37,4 +35,10 @@ a:hover {
     background-position: 100% 0;
     background-size: 500% 250%;
     transition: .7s ease-in;
+}
+
+@media only screen and (max-height: 598px) {
+    .main {
+        margin: 20px 0 0;
+    }
 }

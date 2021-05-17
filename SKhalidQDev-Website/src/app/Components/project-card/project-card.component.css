@@ -21,8 +21,7 @@
 
 .error-icon {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    place-content: center center;
     margin: -20px 0 20px 0;
     font-size: 280px;
     height: 236px;
@@ -34,8 +33,7 @@
 
 .project-button-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    place-content: flex-end space-between;
     margin: 0 3px;
 }
 
@@ -57,9 +55,8 @@
 
 .project-button-container .github-link {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 3px 0;
+    place-content: center center;
+    margin: 0 0 6px 0;
     width: 37px;
     height: 37px;
 }
@@ -76,8 +73,7 @@
         
     .project-button-container {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
+        place-content: flex-end space-between;
         margin: 10px 3px 0;
     }
 }

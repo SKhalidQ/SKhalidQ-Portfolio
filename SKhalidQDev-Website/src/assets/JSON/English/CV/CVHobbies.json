@@ -1,7 +1,8 @@
 [
-    "movie_creation",
-    "sports_esports",
-    "library_music",
-    "code",
-    "fitness_center"
+    { "hobby": "video_library", "tooltip": "Movies & Series" },
+    { "hobby": "sports_esports", "tooltip": "Games" },
+    { "hobby": "library_music", "tooltip": "Music" },
+    { "hobby": "movie_creation", "tooltip": "Video editing" },
+    { "hobby": "code", "tooltip": "Code" },
+    { "hobby": "fitness_center", "tooltip": "Stay healthy" }
 ]

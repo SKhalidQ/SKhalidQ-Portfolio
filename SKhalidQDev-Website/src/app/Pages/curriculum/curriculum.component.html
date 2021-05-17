@@ -1,5 +1,14 @@
+<div class="toggle-container">
+    <div>
+        <span for="slideToggle" matPrefix>Classic</span>
+        <mat-slide-toggle #slideToggle color="warn" class="slide-toggle" [checked]="isModern" (toggleChange)="switchCV()"></mat-slide-toggle>
+        <span for="slideToggle" matSuffix>Modern</span>
+    </div>
+</div>
 <div [@fade] class="cv-container">
-    <app-curriculum-template [data]="curriculum" class="cv"></app-curriculum-template>
+
+    <app-curriculum-classic [data]="curriculum" class="cv" *ngIf="isModern"></app-curriculum-classic>
+    <app-curriculum-modern [data]="curriculum" class="cv" *ngIf="!isModern"></app-curriculum-modern>
 </div>
 
 <div *ngIf="curriculum.length <= 0" class="error-message">

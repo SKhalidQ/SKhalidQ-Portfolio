@@ -1,15 +1,30 @@
-div {
-  margin: 40px;
-  width: auto;
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 40px 0 0;
+}
+
+span {
+  font-size: medium;
+  margin: 0 10px 0 10px;
 }
 
 .cv-container {
   display: flex;
   justify-content: space-evenly;
+  margin: 40px;
+  width: auto;
 }
 
-app-curriculum-template {
-  padding: 40px;
+.slide-toggle {
+  margin: 20px auto;
+}
+
+app-curriculum-classic,
+app-curriculum-modern {
+  padding: 0 0 20px;
 }
 
 .error-message {

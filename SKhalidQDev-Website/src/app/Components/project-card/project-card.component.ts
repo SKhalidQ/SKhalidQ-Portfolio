@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { ThemeService } from 'src/app/Services/theme.service';
+import { HttpClient } from '@angular/common/http';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project-card',

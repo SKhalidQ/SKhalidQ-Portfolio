@@ -15,8 +15,21 @@ export class CurriculumComponent {
 
   curriculum: CurriculumModel[] = Curriculum;
 
+  isModern: boolean = false;
+  toggleText = "Modern";
+
   constructor(activePageService: ActivePageService) {
     activePageService.activePage.next(ActivePageEng.curriculum);
+  }
+
+  switchCV() {
+    if (this.isModern == true) {
+      this.toggleText = 'Modern';
+      this.isModern = false;
+    } else {
+      this.toggleText = "Classic";
+      this.isModern = true;
+    }
   }
 
 }

@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
 
   SetTabTitle(): any {
     const appTitle = this.titleService.getTitle();
-    let beta = environment.betaVersion;
+    let beta = /*environment.betaVersion || */"null";
     const title = 'title';
 
     this.router.events.pipe(filter(event => event instanceof NavigationEnd),
