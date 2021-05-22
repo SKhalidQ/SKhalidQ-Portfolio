@@ -1,4 +1,5 @@
 import { animate, keyframes, query, stagger, state, style, transition, trigger } from '@angular/animations';
+import { delay } from 'rxjs/operators';
 
 export const Animations = {
     topFadein: trigger('topFadeIn', [
@@ -53,5 +54,5 @@ export const Animations = {
         transition(':leave', [
             animate('1.5s ease-in-out', style({ opacity: 0 }))
         ])
-    ])
+    ]),
 };

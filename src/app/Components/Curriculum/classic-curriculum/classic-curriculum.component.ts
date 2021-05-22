@@ -1,21 +1,22 @@
-import { SnackbarService } from 'src/app/Services/snackbar.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { SnackbarService } from 'src/app/Services/snackbar.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-classic-curriculum',
   templateUrl: './classic-curriculum.component.html',
-  styleUrls: ['./classic-curriculum.component.scss']
+  styleUrls: ['./classic-curriculum.component.scss'],
+  animations: []
 })
 export class ClassicCurriculumComponent implements OnInit {
   @Output() isModern: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Input() data: any;
 
-  hideButtons: string | any;
-  emailstring = 'mailto:skhalidqdev@outlook.es';
-  smallScreen: boolean | any;
+  emailString = 'mailto:skhalidqdev@outlook.es';
   xSmallScreen: boolean | any;
+  smallScreen: boolean | any;
+  hideButtons: string | any;
 
   constructor(private snackbar: SnackbarService, private router: Router, private breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe((x) => {

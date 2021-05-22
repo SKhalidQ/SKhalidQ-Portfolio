@@ -4,5 +4,5 @@
     { "icon": "library_music", "tooltip": "Music" },
     { "icon": "movie_creation", "tooltip": "Video editing" },
     { "icon": "code", "tooltip": "Code" },
-    { "icon": "fitness_center", "tooltip": "Stay healthy" }
+    { "icon": "fitness_center", "tooltip": "Health" }
 ]
