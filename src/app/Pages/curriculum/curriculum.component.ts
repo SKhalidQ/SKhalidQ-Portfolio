@@ -15,7 +15,6 @@ export class CurriculumComponent {
   @Input() isModern: boolean | any;
 
   curriculum: CurriculumModel[] = Curriculum;
-  toggleText = 'Classic';
   triggerCount = 1;
 
   constructor(activePageService: ActivePageService) {

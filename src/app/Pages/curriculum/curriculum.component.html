@@ -1,15 +1,8 @@
-<!-- <div class="toggle-container">
-    <div>
-        <mat-slide-toggle #slideToggle color="warn" class="slide-toggle" [checked]="isModern" (toggleChange)="switchCV()"></mat-slide-toggle>
-        <span for="slideToggle">{{ toggleText }}</span>
-    </div>
-</div> -->
-
-<div class="cv-container" *ngIf="!isModern">
+<div class="cv-container classic" *ngIf="!isModern">
     <app-classic-curriculum [@fade-in-out] [data]="curriculum" class="cv" (isModern)="SwitchCV($event)"></app-classic-curriculum>
 </div>
 
-<div class="cv-container" *ngIf="isModern">
+<div class="cv-container modern" *ngIf="isModern">
     <app-modern-curriculum [@fade-in-out] [data]="curriculum" class="cv" (isModern)="SwitchCV($event)"></app-modern-curriculum>
 </div>
 

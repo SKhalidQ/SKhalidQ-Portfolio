@@ -18,6 +18,7 @@ import RoutesEng from 'src/assets/JSON/English/Routes.json';
 import RoutesCat from 'src/assets/JSON/Catala/Routes.json';
 
 import SocialMedia from 'src/assets/JSON/SocialMedia.json';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -49,6 +50,7 @@ export class HeaderComponent {
     public isSidenavActive: SidenavService,
     public easterEggService: EasterEggService,
     public themeService: ThemeService,
+    public router: Router,
     private languageService: LanguageService,
     private snackbarService: SnackbarService) {
     this.currentTheme = this.themeData[ThemeMode.LightMode];

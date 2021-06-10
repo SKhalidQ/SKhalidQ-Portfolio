@@ -1,25 +1,25 @@
-<div class="cv-container mat-elevation-z5">
-    <div class="top-container">
-        <div class="profile">
+<div class="cv-container mat-elevation-z5 ">
+    <div class="top-container ">
+        <div class="profile ">
             <img src="../../../assets/Images/logo.png" class="mat-elevation-z24" appDisableRightclick alt="profile_pic" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
         </div>
 
-        <div class="top-content">
-            <div class="info-container">
-                <div class="title-container">
-                    <p class="name">Sad Khalid Qayyum</p>
-                    <p class="subtitle">BSc (Hons) Computer Science</p>
+        <div class="top-content ">
+            <div class="info-container ">
+                <div class="title-container ">
+                    <p class="name ">Sad Khalid Qayyum</p>
+                    <p class="subtitle ">BSc (Hons) Computer Science</p>
                 </div>
                 
-                <mat-divider class="contact-divider"></mat-divider>
+                <mat-divider class="contact-divider "></mat-divider>
 
-                <div class="contact-container">
-                    <div class="contact" [cdkCopyToClipboard]="'SKhalidQDev@outlook.es'" mat-icon-button (click)="Notify()" [style]="hideButtons" matTooltip="Copy to clipboard" matTooltipShowDelay="600" matTooltipClass="toolTip">
+                <div class="contact-container ">
+                    <div class="contact " [cdkCopyToClipboard]="'SKhalidQDev@outlook.es'" mat-icon-button (click)="Notify()" [style]="hideButtons" matTooltip="Copy to clipboard" matTooltipShowDelay="600" matTooltipClass="toolTip">
                         <mat-icon #email>email</mat-icon>
                         <label for="email"> SKhalidQDev@outlook.es </label>
                     </div>
     
-                    <div class="contact" [cdkCopyToClipboard]="'https://www.skhalidq.dev'" mat-icon-button (click)="Notify()" [style]="hideButtons" matTooltip="Copy to clipboard" matTooltipShowDelay="600" matTooltipClass="toolTip">
+                    <div class="contact " [cdkCopyToClipboard]="'https://www.skhalidq.dev'" mat-icon-button (click)="Notify()" [style]="hideButtons" matTooltip="Copy to clipboard" matTooltipShowDelay="600" matTooltipClass="toolTip">
                         <mat-icon #website>web</mat-icon>
                         <label for="website"> SKhalidQ.Dev </label>
                     </div>
@@ -28,34 +28,34 @@
         </div>
     </div>
 
-    <div class="bottom-container">
+    <div class="bottom-container ">
 
-        <div class="bottom-content">
+        <div class="bottom-content ">
             
             <!-- Profile -->
 
-            <div class="section-container">
-                <div class="section-title">
-                    <p class="bold">{{ data[0].CVTitles[0].Profile }}</p>
+            <div class="section-container ">
+                <div class="section-title ">
+                    <p class="bold ">{{ data[0].CVTitles[0].Profile }}</p>
                 </div>
-                <p class="content">{{ data[0].Profile }}</p>
+                <p class="content ">{{ data[0].Profile }}</p>
             </div>
 
-            <mat-divider class="section-divider"></mat-divider>
+            <mat-divider class="section-divider "></mat-divider>
 
             <!-- Employment History -->
 
-            <div class="section-container">
-                <div class="section-title">
-                    <p class="bold">{{ data[0].CVTitles[0].WorkExp }}</p>
+            <div class="section-container ">
+                <div class="section-title ">
+                    <p class="bold ">{{ data[0].CVTitles[0].WorkExp }}</p>
                 </div>
 
-                <div class="employ-history">
-                    <ul class="content">
+                <div class="employ-history ">
+                    <ul class="content ">
                         <li *ngFor="let job of data[0].Jobs">
-                            <div class="date">{{ job.Year }}</div>
-                            <div class="info">
-                                <p class="semi-bold">{{ job.JobTitle }}</p>
+                            <div class="date ">{{ job.Year }}</div>
+                            <div class="info ">
+                                <p class="semi-bold ">{{ job.JobTitle }}</p>
                                 <p>{{ job.JobDescription }}</p>
                             </div>
                         </li>
@@ -63,22 +63,22 @@
                 </div>
             </div>
 
-            <mat-divider class="section-divider"></mat-divider>
+            <mat-divider class="section-divider "></mat-divider>
 
             <!-- Education -->
 
-            <div class="section-container">
+            <div class="section-container ">
 
-                <div class="section-title">
-                    <p class="bold">{{ data[0].CVTitles[0].Education }}</p>
+                <div class="section-title ">
+                    <p class="bold ">{{ data[0].CVTitles[0].Education }}</p>
                 </div>
 
-                <div class="education">
-                    <ul class="content">
+                <div class="education ">
+                    <ul class="content ">
                         <li *ngFor="let qualification of data[0].Education">
-                            <div class="date">{{ qualification.Year }}</div>
-                            <div class="info">
-                                <p class="semi-bold">{{ qualification.Qualification }}</p>
+                            <div class="date ">{{ qualification.Year }}</div>
+                            <div class="info ">
+                                <p class="semi-bold ">{{ qualification.Qualification }}</p>
                                 <p>{{ qualification.Modules }}</p>
                             </div>
                         </li>
@@ -87,70 +87,70 @@
     
             </div>
 
-            <mat-divider class="section-divider"></mat-divider>
+            <mat-divider class="section-divider "></mat-divider>
 
             <!-- Technical Skills -->
 
-            <div class="section-container">
-                <div class="section-title tech-skills">
-                    <p class="bold">{{ data[0].CVTitles[0].Skills }}</p>
+            <div class="section-container ">
+                <div class="section-title tech-skills ">
+                    <p class="bold ">{{ data[0].CVTitles[0].Skills }}</p>
                 </div>
 
-                <div class="list-container">
+                <div class="list-container ">
                     <div *ngFor="let skill of data[0].Skills">
-                        <div class="content list-content" (click)="isModern.emit(true)">{{ skill.Name }}</div>
+                        <div class="content list-content " (click)="SwitchToModern(skill.Name)">{{ skill.Name }}</div>
                     </div>
                 </div>
 
             </div>
             
-            <mat-divider class="section-divider"></mat-divider>
+            <mat-divider class="section-divider "></mat-divider>
 
             <!-- Non-Technical Skills -->
 
-            <div class="section-container">
-                <div class="section-title">
-                    <p class="bold">{{ data[0].CVTitles[0].NonTechSkills }}</p>
+            <div class="section-container ">
+                <div class="section-title ">
+                    <p class="bold ">{{ data[0].CVTitles[0].NonTechSkills }}</p>
                 </div>
 
-                <div class="nontech-skills">
+                <div class="nontech-skills ">
                     <ul>
                         <li *ngFor="let skill of data[0].NonTechSkills">
-                            <div class="info">
-                                <p class="section-subtitle">
+                            <div class="info ">
+                                <p class="section-subtitle ">
                                     {{ skill.Skill }} 
-                                    <mat-divider class="underline" [style]="UnderLine(skill.Skill)"></mat-divider>
+                                    <mat-divider class="underline " [style]="UnderLine(skill.Skill)"></mat-divider>
                                 </p>
-                                <p class="content">{{ skill.Description }}</p>
+                                <p class="content ">{{ skill.Description }}</p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <mat-divider class="section-divider"></mat-divider>
+            <mat-divider class="section-divider "></mat-divider>
 
             <!-- Languages -->
             
-            <div class="section-container">
-                <div class="section-title">
-                    <p class="bold">{{ data[0].CVTitles[0].Languages }}</p>
+            <div class="section-container ">
+                <div class="section-title ">
+                    <p class="bold ">{{ data[0].CVTitles[0].Languages }}</p>
                 </div>
                 
-                <div class="list-container">
+                <div class="list-container ">
                     <div *ngFor="let language of data[0].Languages">
-                        <div class="content list-content">{{ language.Language }}</div>
+                        <div class="content list-content ">{{ language.Language }}</div>
                     </div>
                 </div>
             </div>
 
-            <mat-divider class="section-divider"></mat-divider>
+            <mat-divider class="section-divider "></mat-divider>
 
             <!-- Hobbies -->
             
-            <div class="section-container hobbies">
-                <div class="section-title">
-                    <p class="bold">{{ data[0].CVTitles[0].Hobbies }}</p>
+            <div class="section-container hobbies ">
+                <div class="section-title ">
+                    <p class="bold ">{{ data[0].CVTitles[0].Hobbies }}</p>
                 </div>
                 
                 <ul>

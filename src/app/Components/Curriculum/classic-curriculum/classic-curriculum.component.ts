@@ -18,7 +18,7 @@ export class ClassicCurriculumComponent implements OnInit {
   smallScreen: boolean | any;
   hideButtons: string | any;
 
-  constructor(private snackbar: SnackbarService, private router: Router, private breakpointObserver: BreakpointObserver) {
+  constructor(private snackbar: SnackbarService, private router: Router, breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe((x) => {
       this.smallScreen = x.breakpoints[Breakpoints.Small] && !x.breakpoints[Breakpoints.XSmall];
       this.xSmallScreen = x.breakpoints[Breakpoints.XSmall];
@@ -39,6 +39,11 @@ export class ClassicCurriculumComponent implements OnInit {
     }
 
     return `width: ${underline}px;`;
+  }
+
+  SwitchToModern(skillName: string): void {
+    if (skillName === 'C#/.NET')
+      this.isModern.emit(true);
   }
 
   ngOnInit(): void {

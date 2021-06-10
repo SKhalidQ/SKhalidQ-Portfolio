@@ -4,22 +4,20 @@
     
         <div class="cv-container">
             <img [src]="themeService.themeMode.value === 'LightMode' ? lightCV : darkCV" class="preview mat-elevation-z2" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
-    
-            <!-- <app-classic-curriculum [data]="curriculum" class="preview mat-elevation-z1"></app-classic-curriculum> -->
-
-            <h3 class="description">
-                {{ homeData.CVText }}
+            
+            <div class="description">
+                <h3>{{ homeData.CVText }}</h3>
                 <button mat-raised-button color="basic" [routerLink]="routeData[0].route">{{ routeData[0].btnText }}</button>
-            </h3>
+            </div>
         </div>
     
         <div class="project-container">
             <img [src]="themeService.themeMode.value === 'LightMode' ? lightProject : darkProject" class="preview mat-elevation-z2" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
     
-            <h3 class="description">
-                {{ homeData.ProjectText }}
+            <div class="description">
+                <h3>{{ homeData.ProjectText }}</h3>
                 <button mat-raised-button color="basic" [routerLink]="routeData[1].route">{{ routeData[1].btnText }}</button>
-            </h3>
+            </div>
         </div>
     </main>
 </div>

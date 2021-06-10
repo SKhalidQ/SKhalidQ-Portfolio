@@ -207,24 +207,22 @@ mat-divider {
     border: 2px solid #f40b0b;
   }
   
+  .cv_education ul li:after,
   .cv_work ul li:after {
     content: "";
     position: absolute;
     top: 14px;
     left: -21px;
     width: 2px;
-    min-height: 20.5ch;
-    background: #f40b04;
+    background: #f40b0b;
+  }
+  
+  .cv_work ul li:after {
+    min-height: 168px;
   }
   
   .cv_education ul li:after {
-    content: "";
-    position: absolute;
-    top: 14px;
-    left: -21px;
-    width: 2px;
-    height: 110px;
-    background: #f40b04;
+    height: 148px;
   }
   
   .cv_hobby ul {
@@ -281,35 +279,8 @@ mat-divider {
 
 
 @media only screen and (max-width: 961px) {
-  .bold {
-    font-weight: 700;
-    font-size: 20px;
-  }
-
-  .semi-bold {
-    font-weight: 500;
-    font-size: 16px;
-  }
-
   .cv {
     width: 790px;
-  }
-  
-  mat-divider {
-    height: 2px;
-  }
-
-  .cv .cv_left .cv_item:last-child,
-  .cv .cv_right .cv_item:last-child {
-    border-bottom: 0px;
-  }
-
-  .cv .icon mat-icon,
-  .cv .cv_right .cv_hobby ul li mat-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 
   .cv .cv_left {
@@ -317,114 +288,36 @@ mat-divider {
     font-size: 13px;
   
     .cv_profile {
-      width: 100%;
       height: 280px;
-    }
-  
-    .cv_profile img {
-      width: 100%;
-      height: 100%;
     }
   
     .cv_content {
       padding: 0 25px;
     }
-
-    ul li {
-      display: flex;
-      margin-bottom: 10px;
-      align-items: center;
-    }
-  
-    ul li:last-child {
-      margin-bottom: 0;
-    }
-  
-    ul li .icon {
-      width: 35px;
-      height: 35px;
-      margin-right: 15px;
-      font-size: 16px;
-    }
     
-    .cv_skills ul li {
-      margin-bottom: 10px;
-      
-      .skill_name {
-        width: 25%;
-      }
-    
-      .skill_progress {
-        width: 50%;
-        margin: 0 5px;
-        height: 5px;
-        border-radius: 5px;
-      }
-    
+    .cv_skills ul li {      
       .skill_per {
         width: 15%;
       }
-    
-      .skill_progress span {
-        top: 0;
-        left: 0;
-        height: 100%;
-        border-radius: 5px;
-      }
-    }
-  
-    .cv_social .semi-bold {
-      margin-bottom: 3px;
     }
   }
 
   .cv .cv_right {
     width: 480px;
-    padding: 25px;
-    
-    .cv_work ul,
-    .cv_education ul {
-      padding-left: 40px;
-    }
-  
-    ul li .date {
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 15px;
-    }
   
     ul li .info {
       margin-bottom: 20px;
     }
   
-    ul li:last-child .info {
-      margin-bottom: 0;
-    }
-  
-    .cv_work ul li:before,
-    .cv_education ul li:before {
-      top: 5px;
-      left: -25px;
-      width: 6px;
-      height: 6px;
-    }
-  
     .cv_work ul li:after {
-      top: 14px;
-      left: -21px;
-      width: 2px;
-      min-height: 21.5ch;
+      min-height: 179px;
     }
   
     .cv_education ul li:after {
-      top: 14px;
-      left: -21px;
-      width: 2px;
-      height: 100px;
+      height: 159px;
     }
   
     .cv_hobby ul {
-      
       li {
         width: 60px;
         height: 60px;
@@ -439,11 +332,6 @@ mat-divider {
         top: 30px;
         right: -18px;
         width: 17px;
-        height: 2px;
-      }
-    
-      li:last-child:before {
-        display: none;
       }
     }
   }

@@ -1,5 +1,5 @@
-import { DialogComponent } from './Components/dialog/dialog.component';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { DialogComponent } from './Components/dialog/dialog.component';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { environment } from 'src/environments/environment.prod';
 import { ThemeService } from 'src/app/Services/theme.service';

@@ -1,8 +1,8 @@
 .card {
     min-width: 400px;
     max-width: 400px;
-    transition: all .3s ease-in-out;
     border: solid rgba(0, 0, 0, 0.151) 0.5px;
+    transition: all .3s ease-in-out;
 }
 
 .card:hover {
@@ -27,6 +27,7 @@
     background-size: cover;
     filter: blur(5px);
     animation: blur both 1s ease-in-out 1.5s;
+    transition: all 0.3s ease-in-out;
 }
 
 .error-icon {
@@ -38,7 +39,8 @@
 }
 
 .project-description {
-    height: 70px;
+    min-height: 70px;
+    max-height: 70px;
 }
 
 .project-button-container {
@@ -47,7 +49,8 @@
     margin: 0 3px;
 }
 
-.project-button-container .website-link-container {
+.project-button-container
+.website-link-container {
     width: 40px;
     margin: 0 0 2px 0;
 }
@@ -89,5 +92,37 @@
         display: flex;
         place-content: flex-end space-between;
         margin: 10px 3px 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .card {
+        min-width: 300px;
+        max-width: 300px;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+    
+    .subtitle {
+        font-size: 10px;
+    }
+
+    .project-preview {    
+        max-width: 381px;
+        min-width: 200px;
+        max-height: 181px;
+        min-height: 181px;
+    }
+    
+    .project-description {
+        font-size: 11px;
+    }
+    
+    .project-button-container {
+        display: flex;
+        place-content: flex-end space-between;
+        margin: 20px 3px 0;
     }
 }

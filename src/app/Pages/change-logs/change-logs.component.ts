@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { ActivePageService } from 'src/app/Services/active-page.service';
+import { LanguageService } from 'src/app/Services/language.service';
 import { MatAccordion } from '@angular/material/expansion';
 import { ChangeLogModel } from 'src/app/Models/changelogs';
 
@@ -8,7 +9,6 @@ import ActivePageEng from '../../../assets/JSON/English/ActivePage.json';
 import ActivePageCat from '../../../assets/JSON/Catala/ActivePage.json';
 
 import ChangelogJson from '../../../assets/JSON/English/Changelog.json';
-import { LanguageService } from 'src/app/Services/language.service';
 
 @Component({
   templateUrl: './change-logs.component.html',

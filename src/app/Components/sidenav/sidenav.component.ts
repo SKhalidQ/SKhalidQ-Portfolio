@@ -6,8 +6,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { ThemeService } from 'src/app/Services/theme.service';
 import { LanguagesList } from 'src/app/Models/language';
 
-import SocialMedia from 'src/assets/JSON/SocialMedia.json';
-
 import ThemeTextCast from 'src/assets/JSON/Castellano/ThemeMessage.json';
 import ThemeTextEng from 'src/assets/JSON/English/ThemeMessage.json';
 import ThemeTextCat from 'src/assets/JSON/Catala/ThemeMessage.json';
@@ -15,6 +13,8 @@ import ThemeTextCat from 'src/assets/JSON/Catala/ThemeMessage.json';
 import RoutesCast from 'src/assets/JSON/Castellano/Routes.json';
 import RoutesEng from 'src/assets/JSON/English/Routes.json';
 import RoutesCat from 'src/assets/JSON/Catala/Routes.json';
+
+import SocialMedia from 'src/assets/JSON/SocialMedia.json';
 
 @Component({
   selector: 'app-sidenav',

@@ -1,5 +1,5 @@
-import { SnackbarService } from 'src/app/Services/snackbar.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SnackbarService } from 'src/app/Services/snackbar.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -27,6 +27,11 @@ export class ModernCurriculumComponent implements OnInit {
     for (let { } of skill.split('')) { underline += 10.3; }
 
     return `width: ${underline}px;`;
+  }
+
+  SwitchToClassic(skillName: string): void {
+    if (skillName === 'C#/.NET')
+      this.isModern.emit(false);
   }
 
   ngOnInit(): void {

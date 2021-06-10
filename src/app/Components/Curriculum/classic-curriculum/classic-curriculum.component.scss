@@ -4,9 +4,9 @@
 }
 
 .mat-elevation-z5 {
-  transition: all 0.3s;
   border-radius: 2px;
   background-color: rgba(0, 0, 0, 0);
+  transition: all 0.3s, font-size 0.5s ease, width 0.5s ease;
 }
 
 .mat-elevation-z5:hover {
@@ -253,18 +253,22 @@ ul li:last-child .info {
   }
 }
 
-@media only screen and (max-width: 598px) {
+@media only screen and (max-width: 961px) {
   .cv-container {
-    width: 500px;
-    min-height: 2155px;
+    width: 590px;
+    min-height: 2170px;
   }
-  
+ 
   .profile img {
-    width: 100px;
+    width: 120px;
   }
   
   .name {
     font-size: 20px;
+  }
+  
+  .subtitle {
+    font-size: 15px;
   }
   
   .education-title,
@@ -273,19 +277,28 @@ ul li:last-child .info {
   }
   
   .contact-container {
-    font-size: 10px;
+    font-size: 14px;
     
-    .contact mat-icon {
-      font-size: 22px;
+    .contact {
+      margin: 0 15px 0 0;
+      
+      mat-icon {
+        margin: 0;
+        font-size: 19px;
+      }
+
+      label {
+        margin: 0 0 8px;
+      }
     }
   }
   
   .content {
-    font-size: x-small;
+    font-size: small;
   }
   
   .section-container {
-    max-width: 400px;
+    max-width: 600px;
   
     .section-title {
       font-size: large;
@@ -297,7 +310,7 @@ ul li:last-child .info {
   }
 
   .employ-history ul li:after {
-    min-height: 25.5ch;
+    min-height: 19.6ch;
   }
 
   .education ul li:after {
@@ -317,6 +330,37 @@ ul li:last-child .info {
       }  
     }
     
+    li:before {
+      top: 25px;
+      right: -26px;
+      width: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .cv-container {
+    width: 500px;
+    min-height: 2160px;
+  }
+  
+  .profile img {
+    width: 100px;
+  }
+    
+  .content {
+    font-size: x-small;
+  }
+  
+  .section-container {
+    max-width: 400px;
+  }
+
+  .employ-history ul li:after {
+    min-height: 25.5ch;
+  }
+   
+  .hobbies ul {
     li:before {
       top: 25px;
       right: -14px;

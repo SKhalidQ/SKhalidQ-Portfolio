@@ -1,11 +1,10 @@
 import { ActivePageService } from 'src/app/Services/active-page.service';
+import { LanguageService } from 'src/app/Services/language.service';
 import { Component } from '@angular/core';
 
 import ActivePageCast from '../../../assets/JSON/Castellano/ActivePage.json';
 import ActivePageEng from '../../../assets/JSON/English/ActivePage.json';
 import ActivePageCat from '../../../assets/JSON/Catala/ActivePage.json';
-
-import { LanguageService } from 'src/app/Services/language.service';
 
 @Component({
   templateUrl: './about.component.html',

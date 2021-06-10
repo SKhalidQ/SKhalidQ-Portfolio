@@ -3,6 +3,7 @@ import { Curriculum, CurriculumModel } from 'src/app/Models/curriculum';
 import { LanguageService } from 'src/app/Services/language.service';
 import { ThemeService } from 'src/app/Services/theme.service';
 import { RouteLinksModel } from 'src/app/Models/route-links';
+import { Animations } from 'src/app/app-animations';
 import { HomeModel } from 'src/app/Models/home';
 import { Component } from '@angular/core';
 
@@ -17,7 +18,6 @@ import ActivePageCat from '../../../assets/JSON/Catala/ActivePage.json';
 import HomeCast from '../../../assets/JSON/Castellano/Home.json';
 import HomeEng from '../../../assets/JSON/English/Home.json';
 import HomeCat from '../../../assets/JSON/Catala/Home.json';
-import { Animations } from 'src/app/app-animations';
 
 @Component({
   templateUrl: './home.component.html',

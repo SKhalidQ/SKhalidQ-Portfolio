@@ -49,9 +49,27 @@ section {
     justify-content: center;
     flex-direction: row;
     margin: 10px 0 0;
-    
-    img {
+
+    @keyframes shadow {
+        from {
+            box-shadow: unset;
+        }
+        to {
+            box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .imageContainer {
         width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 15px 0 0;
+        animation: shadow 1s ease-in-out 1s forwards;
+
+
+        img {
+            width: 80px;
+        }
     }
     
     h4 {

@@ -14,7 +14,7 @@ span {
 .cv-container {
   display: flex;
   justify-content: space-evenly;
-  margin: 40px;
+  margin: 40px 0;
   width: auto;
 }
   
@@ -40,6 +40,14 @@ mat-icon {
   
 @media only screen and (max-width: 961px) {
   .cv-container {
-    justify-content: flex-start;
+    margin: 40px auto;
+  }
+
+  .classic {
+    width: calc(500px + 80px);
+  }
+
+  .modern {
+    width: calc(700px + 140px);
   }
 }

@@ -45,17 +45,17 @@ import { environment } from '../environments/environment';
     AppComponent,
   ],
   imports: [
-    BrowserAnimationsModule,
-    LazyLoadImageModule,
-    AppRoutingModule,
-    MaterialModules,
-    BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
+    BrowserAnimationsModule,
+    LazyLoadImageModule,
+    AppRoutingModule,
+    MaterialModules,
+    BrowserModule,
   ],
   providers: [{ provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks }],
   bootstrap: [AppComponent]

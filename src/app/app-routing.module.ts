@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './Pages/about/about.component';
 import { ChangeLogsComponent } from './Pages/change-logs/change-logs.component';
 import { CurriculumComponent } from './Pages/curriculum/curriculum.component';
-import { HomeComponent } from './Pages/home/home.component';
 import { NotFoundComponent } from './Pages/not-found/not-found.component';
 import { ProjectsComponent } from './Pages/projects/projects.component';
+import { AboutComponent } from './Pages/about/about.component';
+import { HomeComponent } from './Pages/home/home.component';
+import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },

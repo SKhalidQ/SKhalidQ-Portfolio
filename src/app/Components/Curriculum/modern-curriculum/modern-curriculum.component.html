@@ -53,7 +53,7 @@
 
                 <ul *ngFor="let skill of data[0].Skills">
                     <li>
-                        <div class="skill_name" (click)="isModern.emit(false)">{{ skill.Name }}</div>
+                        <div class="skill_name" (click)="SwitchToClassic(skill.Name)">{{ skill.Name }}</div>
                         <div class="skill_progress">
                             <span [style]="'width: ' + skill.Percentage + ';'"></span>
                         </div>
