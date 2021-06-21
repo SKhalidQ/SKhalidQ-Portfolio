@@ -1,0 +1,50 @@
+[
+    {
+        "ID": "English",
+        "Title": "Education",
+        "Education": [
+            {
+                "Year": "2010 - 2013",
+                "Subtitle": "Web Designing (Texas University)",
+                "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!"
+            },
+            {
+                "Year": "2000 - 2010",
+                "Subtitle": "Texas International School",
+                "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!"
+            }
+        ]
+    },
+    {
+        "ID": "Spanish",
+        "Title": "Estudios",
+        "Education": [
+            {
+                "Year": "2010 - 2013",
+                "Subtitle": "Diseño Web (Universidad de Tejas)",
+                "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!"
+            },
+            {
+                "Year": "2000 - 2010",
+                "Subtitle": "Escuela Internacional de Texas",
+                "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!"
+            }
+        ]
+    },
+    {
+        "ID": "Catalan",
+        "Title": "Estudis",
+        "Education": [
+            {
+                "Year": "2010 - 2013",
+                "Subtitle": "Diseny Web (Universitat de Texas)",
+                "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!"
+            },
+            {
+                "Year": "2000 - 2010",
+                "Subtitle": "Escola Internacional de Texas",
+                "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!"
+            }
+        ]
+    }
+]

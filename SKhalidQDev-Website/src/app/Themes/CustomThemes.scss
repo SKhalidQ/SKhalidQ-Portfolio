@@ -1,0 +1,51 @@
+//Default Theme Path "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
+@import '~@angular/material/theming';
+@include mat-core();
+  
+//Default Theme
+$dark-app-primary: mat-palette($mat-indigo);
+$dark-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$dark-app-warn:    mat-palette($mat-red);
+
+$dark-app-theme: mat-dark-theme((
+  color: (
+    primary: $dark-app-primary,
+    accent: $dark-app-accent,
+    warn: $dark-app-warn,  
+    )
+  ));
+    
+@include angular-material-theme($dark-app-theme);
+ 
+//Dark Theme
+.DarkTheme {
+  $dark-app-primary: mat-palette($mat-indigo);
+  $dark-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+  $dark-app-warn:    mat-palette($mat-red);
+  
+  $dark-app-theme: mat-dark-theme((
+    color: (
+      primary: $dark-app-primary,
+      accent: $dark-app-accent,
+      warn: $dark-app-warn,  
+    )
+  ));
+  
+  @include angular-material-theme($dark-app-theme);
+}
+
+//Light Theme
+.LightTheme {
+  $light-app-primary: mat-palette($mat-indigo);
+  $light-app-accent:  mat-palette($mat-red, A200, A100, A400);
+  $light-app-warn:    mat-palette($mat-red);
+  
+  $light-app-theme: mat-light-theme((
+    color: (
+      primary: $light-app-primary,
+      accent: $light-app-accent,
+      warn: $light-app-warn,  
+    )
+  ));
+  @include angular-material-theme($light-app-theme);
+}

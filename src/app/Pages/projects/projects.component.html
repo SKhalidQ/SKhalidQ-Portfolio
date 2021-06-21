@@ -1,7 +1,0 @@
-<div [@topFadeIn] class="main">
-    <app-project-card *ngFor="let projectData of projects" [project]="projectData"></app-project-card>
-</div>
-
-<div *ngIf="projects.length <= 0" class="error-message">
-    <h1><mat-icon color="warn">error_outline</mat-icon> There seems to be a problem while getting all the data</h1>
-</div>
