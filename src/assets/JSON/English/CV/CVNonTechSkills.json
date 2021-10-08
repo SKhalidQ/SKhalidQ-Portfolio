@@ -1,10 +1,14 @@
 [
     {
-        "Skill": "Team Work",
-        "Description": "Worked in a fast-paced, technical environment at Greenwood Academies Trust as an IT technician, which involved collaborating with the team on solving critical situations. Undertook multiple group work projects during my education and overcame challenges by cooperating with the team to achieve the objectives."
+        "Skill": "Teamwork",
+        "Description": "Worked in a fast-paced, environment at Greenwood Academies Trust as an IT technician, which involved collaborating with the team on solving critical situations. Undertook multiple group work projects during my education and overcame challenges by cooperating with the team to achieve the objectives."
     },
     {
         "Skill": "Communication",
-        "Description": "Provided friendly, helpful support service and communicated with peers whilst working as an IT Technician. Helped raise awareness of a charity as a fundraiser. Presented technical information clearly and concisely for university presentations. Participated in plays to the public at college"
+        "Description": "Provided friendly, helpful support service and communicated with peers whilst working as an IT Technician. Helped raise awareness of a charity as a fundraiser. Presented technical information clearly and concisely for university presentations. Successfully participated and performed in various plays at college."
+    },
+    {
+        "Skill": "Organisation",
+        "Description": "Prioritized IT support cases by rearranging cases depending on the severity of the issue and provided help as fast as possible.  Delivered countless projects during university and college for specific deadlines by managing time and prioritizing important features."
     }
 ]

@@ -5,7 +5,7 @@
     "subtitle": "Personal Project",
     "image": "../../assets/Images/MyListPreview.png",
     "description": "A website which allows people to keep track of the series and movies they are watching. They can add a series and update the episode number and the minute they last left an episode. This project is built using Angular and ASP.NET Core.",
-    "website": false,
+    "website": true,
     "websiteURL": "",
     "publicRepo": false,
     "githubURL": ""
@@ -40,7 +40,7 @@
     "description": "ASP.NET Core Web API project with endpoints for various cryptographic functions using symmetric and asymmetric encryption. Uses claims-based authorization and Entity Framework Core.",
     "website": false,
     "websiteURL": "",
-    "publicRepo": true,
+    "publicRepo": false,
     "githubURL": "https://github.com/SKhalidQ/Distributed-RESTful-API"
   },
   {
@@ -82,7 +82,7 @@
     "subtitle": "Information Systems and Web Technologies - 2nd Year Module",
     "image": "../../assets/Images/WebTechPreview.png",
     "description": "A website built using HTML, CSS and PHP which allows tracking a student or staff' location by storing all the data in a SQL Database.",
-    "website": false,
+    "website": true,
     "websiteURL": "",
     "publicRepo": true,
     "githubURL": "https://github.com/SKhalidQ/WT-Location-Website"

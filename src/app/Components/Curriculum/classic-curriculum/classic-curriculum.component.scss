@@ -16,7 +16,7 @@
 
 .cv-container {
   width: 900px;
-  height: 2040px;
+  height: 2180px;
   border-radius: 2px;
 }
 
@@ -100,7 +100,7 @@
 
 .underline {
   margin: 2px 0 0 0;
-  background-color: #FAFAFA;
+  background-color: #7A7A7A;
 }
 
 .semi-bold {
@@ -256,8 +256,11 @@ ul li:last-child .info {
 @media only screen and (max-width: 961px) {
   .cv-container {
     width: 590px;
-    min-height: 2170px;
+    height: 2320px;
   }
+
+  //   width: 900px;
+  // height: 2180px;
  
   .profile img {
     width: 120px;

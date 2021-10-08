@@ -41,6 +41,16 @@ section {
     h3 {
         margin: 0 0 12px;
     }
+
+    .dark-theme {
+        text-decoration: initial;
+        color: white;
+    }
+
+    .light-theme {
+        text-decoration: initial;
+        color: black;
+    }
 }
 
 .copyright {
@@ -78,7 +88,7 @@ section {
     }
 }
 
-a:hover {
+.button:hover {
     background-image: linear-gradient(90deg, transparent 30%, #f5e5e44f 1%, #30303000);
     background-position: 100% 0;
     background-size: 500% 250%;

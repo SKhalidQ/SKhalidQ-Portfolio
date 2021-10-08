@@ -62,14 +62,29 @@ export class HeaderComponent {
 
     languageService.currentLanguage$.subscribe(
       (response: string) => {
-        if (response.startsWith('En')) {
-          this.routeData = RoutesEng;
-        } else if (response.startsWith('Cas')) {
-          this.routeData = RoutesCast;
-        } else if (response.startsWith('Cat')) {
-          this.routeData = RoutesCat;
-        } else {
-          this.routeData = RoutesEng;
+        switch (response) {
+          case 'English':
+            this.routeData = RoutesEng;
+            this.languageData[0].activeLang = true;
+            this.languageData[1].activeLang = false;
+            this.languageData[2].activeLang = false;
+          break;
+
+          case 'Castellano':
+            this.routeData = RoutesCast;
+            this.languageData[0].activeLang = false;
+            this.languageData[1].activeLang = true;
+            this.languageData[2].activeLang = false;
+          break;
+
+          case 'Català':
+            this.routeData = RoutesCat;
+            this.languageData[0].activeLang = false;
+            this.languageData[1].activeLang = false;
+            this.languageData[2].activeLang = true;
+          break;
+        
+          default: break;
         }
       }
     );
@@ -105,37 +120,48 @@ export class HeaderComponent {
     localStorage.setItem('ThemeMode', this.currentTheme.theme);
   }
 
+  GetIcon(socialMedia: any) {
+    if (socialMedia.btnText === 'GitHub' && this.themeService.themeMode.value === 'LightMode') {
+      return socialMedia.icon.replace('light', 'dark');
+    } else if (socialMedia.btnText === 'GitHub' && this.themeService.themeMode.value === 'DarkMode') {
+      return socialMedia.icon.replace('dark', 'light');
+    } else {
+      return socialMedia.icon;
+    }
+  }
+
   ChangeLanguage(language: string): void {
     let message = '';
     let button = '';
 
     switch (language) {
       case 'English':
-        this.routeData = RoutesEng;
+        this.languageService.currentLanguage.next('English');
         this.currentThemeText = ThemeTextEng;
         message = 'Language set to English';
         button = 'Dismiss';
         break;
-
+        
       case 'Castellano':
-        this.routeData = RoutesCast;
+        this.languageService.currentLanguage.next('Castellano');
         this.currentThemeText = ThemeTextCast;
         message = 'Idioma establecido a Castellano';
         button = 'Descartar';
-        break;
-
-      case 'Catala':
-        this.routeData = RoutesCat;
+      break;
+        
+      case 'Català':
+        this.languageService.currentLanguage.next('Català');
         this.currentThemeText = ThemeTextCat;
         message = 'Idioma definit a Català';
-        button = 'Descartar';
-        break;
+        button = 'Descartar';        
+      break;
     }
 
-    this.languageService.currentLanguage.next(language);
     this.snackbarService.OpenSnackbar(message, button);
     localStorage.setItem('Lang', language);
   }
 
-
+  disabled(isDisabled: boolean) {
+    return isDisabled ? 'disabled-flags' : '';
+  }
 }

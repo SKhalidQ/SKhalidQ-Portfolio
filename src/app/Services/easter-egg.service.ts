@@ -13,7 +13,7 @@ export class EasterEggService {
   soundtrack = new Audio('../../assets/Easter Eggs/Evolution.flac');
 
   Evolution(btn: string): void {
-    if (btn === 'About') {
+    if (btn === 'About' || btn === "Acerca de" || btn === "Sobre") {
       if (this.easterEggCount < 5) {
         this.easterEggCount++;
       } else if (this.easterEggCount === 5) {

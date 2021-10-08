@@ -33,9 +33,23 @@ export class ClassicCurriculumComponent implements OnInit {
     let underline = 0;
 
     if (this.smallScreen || this.xSmallScreen) {
-      for (let { } of skill) { underline += 8.5; }
+      for (let { } of skill) {
+        if (skill === "Teamwork")
+          underline += 9;
+        else if (skill === "Communication")
+          underline += 8.5;
+        else if (skill === "Organisation")
+          underline += 7.5;
+      }
     } else {
-      for (let { } of skill) { underline += 10.5; }
+      for (let { } of skill) {
+        if (skill === "Teamwork")
+          underline += 11;
+        else if (skill === "Communication")
+          underline += 10.5;
+        else if (skill === "Organisation")
+          underline += 9.1;
+      }
     }
 
     return `width: ${underline}px;`;

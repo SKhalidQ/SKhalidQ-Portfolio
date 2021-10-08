@@ -1,9 +1,24 @@
-interface Languages {
-    lang: string;
+export interface Languages {
+    name: string;
     flag: string;
     activeLang: boolean;
     disabled: boolean;
     tooltip: string;
+}
+
+export interface Language {
+    name: string;
+    flag: string;
+    activeLang: boolean;
+    disabled: boolean;
+    tooltip: string;
+}
+
+export interface LanguagesModel {
+    English: Language;
+    Castellano: Language;
+    Catala: Language;
+    Urdu: Language;
 }
 
 interface Buttons {
@@ -24,27 +39,65 @@ interface Buttons {
 
 export const LanguagesList: Languages[] = [
     {
-        lang: 'English',
+        name: 'English',
         flag: 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg',
         activeLang: true,
         disabled: false,
         tooltip: ''
     },
     {
-        lang: 'Castellano',
+        name: 'Castellano',
         flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg',
         activeLang: false,
-        disabled: true,
-        tooltip: 'Coming soon',
+        disabled: false,
+        tooltip: '',
     },
     {
-        lang: 'Catala',
+        name: 'Català',
         flag: 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg',
+        activeLang: false,
+        disabled: false,
+        tooltip: '',
+    },
+    {
+        name: 'اردو',
+        flag: 'https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg',
         activeLang: false,
         disabled: true,
         tooltip: 'Coming soon',
     },
 ];
+
+export const LanguageList: LanguagesModel = {
+    English: {
+        name: 'English',
+        flag: 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg',
+        activeLang: true,
+        disabled: false,
+        tooltip: ''
+    },
+    Castellano: {
+        name: 'Castellano',
+        flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg',
+        activeLang: false,
+        disabled: false,
+        tooltip: '',
+    },
+    Catala: {
+        name: 'Català',
+        flag: 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg',
+        activeLang: false,
+        disabled: false,
+        tooltip: '',
+    },
+    Urdu: {
+        name: 'اردو',
+        flag: 'https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg',
+        activeLang: false,
+        disabled: true,
+        tooltip: 'Coming soon',
+    }
+}
 
 export const ButtonText: Buttons[] = [
     {

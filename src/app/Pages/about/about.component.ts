@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import ActivePageCast from '../../../assets/JSON/Castellano/ActivePage.json';
 import ActivePageEng from '../../../assets/JSON/English/ActivePage.json';
 import ActivePageCat from '../../../assets/JSON/Catala/ActivePage.json';
+import { ThemeService } from 'src/app/Services/theme.service';
 
 @Component({
   templateUrl: './about.component.html',
@@ -14,7 +15,7 @@ export class AboutComponent {
 
   buttonText: string | any;
 
-  constructor(activePageService: ActivePageService, languageService: LanguageService) {
+  constructor(activePageService: ActivePageService, languageService: LanguageService, public themeService: ThemeService) {
 
     languageService.currentLanguage$.subscribe(
       (response: string) => {
@@ -30,5 +31,15 @@ export class AboutComponent {
         }
       }
     );
+  }
+
+  ChangeColour() {    
+    if (this.themeService.themeMode.getValue() == 'LightMode') {
+      return 'light-theme';
+    } else if (this.themeService.themeMode.getValue() == 'DarkMode') {
+      return 'dark-theme';
+    } else {
+      return '';
+    }
   }
 }

@@ -31,13 +31,13 @@
 
     <mat-menu #languages="matMenu" [class]="themeService.themeMode$ | async">
       <div class="langMenu">
-        <button mat-menu-item *ngFor="let languages of languageData" [matTooltip]="languages.tooltip"
+        <button mat-menu-item *ngFor="let language of languageData" [matTooltip]="language.tooltip"
           matTooltipShowDelay="600" matTooltipClass="toolTip" style="display: flex; align-items: center;"
-          (click)="ChangeLanguage(languages.lang)" [disabled]="languages.disabled">
-
-          <img class="banderas" *ngIf="languages.flag !== null" [src]="languages.flag"
+          (click)="ChangeLanguage(language.name)" [disabled]="language.disabled || language.activeLang">
+          <img class="banderas" *ngIf="language.flag !== null" [src]="language.flag"
             onerror="this.src='../../assets/Images/error_outline-14px.svg'">
-          {{ languages.lang }}
+          {{ language.name }}
+
         </button>
       </div>
     </mat-menu>
@@ -51,7 +51,7 @@
     <span class="spacer"></span>
 
     <a mat-icon-button *ngFor="let socialMediaLink of socialMediaData" [href]="socialMediaLink.route" target="_blank">
-      <img class="icon" *ngIf="socialMediaLink.icon !== null" [src]="socialMediaLink.icon"
+      <img class="icon" *ngIf="socialMediaLink.icon !== null" [src]="GetIcon(socialMediaLink)"
         onerror="this.src='../../assets/Images/error_outline-14px.svg'">
     </a>
 

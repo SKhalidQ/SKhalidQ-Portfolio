@@ -1,5 +1,4 @@
 import { ActivePageService } from 'src/app/Services/active-page.service';
-import { Curriculum, CurriculumModel } from 'src/app/Models/curriculum';
 import { LanguageService } from 'src/app/Services/language.service';
 import { ThemeService } from 'src/app/Services/theme.service';
 import { RouteLinksModel } from 'src/app/Models/route-links';
@@ -28,7 +27,6 @@ export class HomeComponent {
 
   homeData: HomeModel | any;
   routeData: RouteLinksModel | any;
-  curriculum: CurriculumModel[] = Curriculum;
 
   darkCV = '../../../assets/Images/CVPreviewDark.png';
   lightCV = '../../../assets/Images/CVPreviewLight.png';

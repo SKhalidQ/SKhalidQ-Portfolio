@@ -1,7 +1,7 @@
 import { ActivePageService } from 'src/app/Services/active-page.service';
 import { LanguageService } from 'src/app/Services/language.service';
 import { ProjectModel } from 'src/app/Models/projects';
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import ProjectsCast from '../../../assets/JSON/Castellano/Projects.json';
 import ProjectsEng from '../../../assets/JSON/English/Projects.json';
@@ -11,7 +11,6 @@ import ActivePageCast from '../../../assets/JSON/Castellano/ActivePage.json';
 import ActivePageEng from '../../../assets/JSON/English/ActivePage.json';
 import ActivePageCat from '../../../assets/JSON/Catala/ActivePage.json';
 import { Animations } from 'src/app/app-animations';
-import { fromEvent, merge, Observable } from 'rxjs';
 
 @Component({
   templateUrl: './projects.component.html',

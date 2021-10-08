@@ -19,7 +19,11 @@ export class ProjectCardComponent {
 
   constructor(public themeService: ThemeService) { }
 
-  GetTooltipText(publicRepo: boolean): string {
+  GetGithubTooltip(publicRepo: boolean): string {
     return !publicRepo ? 'Available at request' : 'GitHub Repository Link';
+  }
+
+  GetWebsiteTooltip(urlLength: number): string {
+    return (urlLength <= 0) ? 'Site Unavailable' : 'View Site';
   }
 }

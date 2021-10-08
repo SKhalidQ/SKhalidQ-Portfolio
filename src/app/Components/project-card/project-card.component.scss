@@ -15,18 +15,12 @@
 }
 
 .project-preview {
-    @keyframes blur {
-        from { filter: blur(5px); }
-        to   { filter: blur(0); }
-    }
-
     max-width: 432px;
     min-width: 382px;
     max-height: 236px;
     min-height: 209px;
     background-size: cover;
-    filter: blur(5px);
-    animation: blur both 1s ease-in-out 1.5s;
+    animation:  1s ease-in-out 1.5s;
     transition: all 0.3s ease-in-out;
 }
 
@@ -57,17 +51,15 @@
 
 .website-link {
     width: 70px;
+    position: relative;
+    z-index: 1;
 }
 
 .website-link:hover {
-    background-image: linear-gradient(90deg, transparent 30%, #f5e5e4 4% , red);
+    background-image: linear-gradient(90deg, transparent 30%, #f5e5e463 4% , rgba(255, 0, 0, 0.322));
     background-position: 100% 0;
     background-size: 500% 250%;
-    transition: all .7s ease-in;
-}
-
-.website-link mat-icon {
-    transform: rotate(-90deg);
+    transition: background-position .7s ease-in;
 }
 
 .project-button-container .github-link {

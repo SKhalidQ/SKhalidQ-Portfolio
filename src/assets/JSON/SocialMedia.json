@@ -8,5 +8,10 @@
         "btnText": "Linkedin",
         "icon": "/assets/Images/linkedin-in-brands.svg",
         "route": "https://uk.linkedin.com/in/sad-khalid-qayyum-74488015b/en-us"
+    },
+    {
+        "btnText": "GitHub",
+        "icon": "/assets/Images/github-brands-light.svg",
+        "route": "https://github.com/SKhalidQ"
     }
 ]

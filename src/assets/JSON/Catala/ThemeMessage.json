@@ -1,7 +1,7 @@
 {
     "message": {
-        "lightMode": "Mode clar activat",
-        "darkMode": "Mode fosc activat"
+        "lightMode": "Mode clar habilitat",
+        "darkMode": "Mode fosc habilitat"
     },
     "btnText": {
         "lightMode": "Mode clar",

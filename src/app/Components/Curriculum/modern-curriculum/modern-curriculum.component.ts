@@ -24,7 +24,14 @@ export class ModernCurriculumComponent implements OnInit {
   UnderLine(skill: string): string {
     let underline = 0;
 
-    for (let { } of skill.split('')) { underline += 10.3; }
+    for (let { } of skill.split('')) {
+      if (skill === "Teamwork")
+      underline += 9.5;
+      else if (skill === "Communication")
+        underline += 8.8;
+      else if (skill === "Organisation")
+        underline += 7.7;
+    }
 
     return `width: ${underline}px;`;
   }
