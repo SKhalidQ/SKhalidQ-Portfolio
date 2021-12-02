@@ -61,7 +61,7 @@ export class HeaderComponent {
     });
 
     languageService.currentLanguage$.subscribe(
-      (response: string) => {
+      (response: string) => {        
         switch (response) {
           case 'English':
             this.routeData = RoutesEng;

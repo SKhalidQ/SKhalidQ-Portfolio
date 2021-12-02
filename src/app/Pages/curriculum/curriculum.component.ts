@@ -4,6 +4,8 @@ import { Animations } from 'src/app/app-animations';
 import { Component, Input } from '@angular/core';
 
 import ActivePageEng from '../../../assets/JSON/English/ActivePage.json';
+import ActivePageCast from '../../../assets/JSON/Castellano/ActivePage.json';
+import ActivePageCat from '../../../assets/JSON/Catala/ActivePage.json';
 import { LanguageService } from 'src/app/Services/language.service';
 
 @Component({
@@ -19,16 +21,21 @@ export class CurriculumComponent {
   triggerCount = 1;
 
   constructor(activePageService: ActivePageService, languageService: LanguageService) {
-    activePageService.activePage.next(ActivePageEng.curriculum);
-
-    languageService.currentLanguage$.subscribe( response => {
+    languageService.currentLanguage$.subscribe( response => {      
       switch (response) {
         case 'English':
-          this.curriculum = CurriculumEng
+          this.curriculum = CurriculumEng;
+          activePageService.activePage.next(ActivePageEng.curriculum);
           break;
         
         case 'Castellano': 
           this.curriculum = CurriculumCast;
+          activePageService.activePage.next(ActivePageCast.curriculum);
+          break
+        
+        case 'Català': 
+          this.curriculum = CurriculumCast;
+          activePageService.activePage.next(ActivePageCat.curriculum);
           break
       
         default:
