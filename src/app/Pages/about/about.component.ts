@@ -6,6 +6,7 @@ import ActivePageCast from '../../../assets/JSON/Castellano/ActivePage.json';
 import ActivePageEng from '../../../assets/JSON/English/ActivePage.json';
 import ActivePageCat from '../../../assets/JSON/Catala/ActivePage.json';
 import { ThemeService } from 'src/app/Services/theme.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './about.component.html',
@@ -15,7 +16,7 @@ export class AboutComponent {
 
   buttonText: string | any;
 
-  constructor(activePageService: ActivePageService, languageService: LanguageService, public themeService: ThemeService) {
+  constructor(activePageService: ActivePageService, languageService: LanguageService, public themeService: ThemeService, private route: Router) {
 
     languageService.currentLanguage$.subscribe(
       (response: string) => {
@@ -41,5 +42,9 @@ export class AboutComponent {
     } else {
       return '';
     }
+  }
+
+  Navigate(): void {
+    window.location.href = 'https://www.skhalidq.dev';
   }
 }
