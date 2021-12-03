@@ -18,7 +18,7 @@
   </a>
 
   <a mat-list-item [matMenuTriggerFor]="languages">
-    <mat-icon class="routeBtn">language</mat-icon><span>Languages</span>
+    <mat-icon class="routeBtn">language</mat-icon><span>{{ languageText }}</span>
   </a>
   <mat-menu #languages="matMenu" [class]="themeService.themeMode$ | async">
     <div class="langMenu">

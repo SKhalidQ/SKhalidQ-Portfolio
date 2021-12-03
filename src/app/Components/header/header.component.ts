@@ -13,6 +13,10 @@ import ThemeTextCast from 'src/assets/JSON/Castellano/ThemeMessage.json';
 import ThemeTextEng from 'src/assets/JSON/English/ThemeMessage.json';
 import ThemeTextCat from 'src/assets/JSON/Catala/ThemeMessage.json';
 
+import LangTextCast from 'src/assets/JSON/Castellano/Language.json';
+import LangTextEng from 'src/assets/JSON/English/Language.json';
+import LangTextCat from 'src/assets/JSON/Catala/Language.json';
+
 import RoutesCast from 'src/assets/JSON/Castellano/Routes.json';
 import RoutesEng from 'src/assets/JSON/English/Routes.json';
 import RoutesCat from 'src/assets/JSON/Catala/Routes.json';
@@ -138,25 +142,26 @@ export class HeaderComponent {
       case 'English':
         this.languageService.currentLanguage.next('English');
         this.currentThemeText = ThemeTextEng;
-        message = 'Language set to English';
-        button = 'Dismiss';
+        message = LangTextEng.sbMessage.message;
+        button = LangTextEng.sbMessage.btnText;
         break;
         
       case 'Castellano':
         this.languageService.currentLanguage.next('Castellano');
         this.currentThemeText = ThemeTextCast;
-        message = 'Idioma establecido a Castellano';
-        button = 'Descartar';
+        message = LangTextCast.sbMessage.message;
+        button = LangTextCast.sbMessage.btnText;
       break;
         
       case 'Català':
         this.languageService.currentLanguage.next('Català');
         this.currentThemeText = ThemeTextCat;
-        message = 'Idioma definit a Català';
-        button = 'Descartar';        
+        message = LangTextCat.sbMessage.message;
+        button = LangTextCat.sbMessage.btnText;
       break;
     }
 
+    this.languageService.currentLanguage.next(language);
     this.snackbarService.OpenSnackbar(message, button);
     localStorage.setItem('Lang', language);
   }

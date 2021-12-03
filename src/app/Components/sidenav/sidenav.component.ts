@@ -10,6 +10,10 @@ import ThemeTextCast from 'src/assets/JSON/Castellano/ThemeMessage.json';
 import ThemeTextEng from 'src/assets/JSON/English/ThemeMessage.json';
 import ThemeTextCat from 'src/assets/JSON/Catala/ThemeMessage.json';
 
+import LangTextCast from 'src/assets/JSON/Castellano/Language.json';
+import LangTextEng from 'src/assets/JSON/English/Language.json';
+import LangTextCat from 'src/assets/JSON/Catala/Language.json';
+
 import RoutesCast from 'src/assets/JSON/Castellano/Routes.json';
 import RoutesEng from 'src/assets/JSON/English/Routes.json';
 import RoutesCat from 'src/assets/JSON/Catala/Routes.json';
@@ -26,6 +30,7 @@ export class SidenavComponent {
   @Output() toggle = new EventEmitter<void>();
 
   currentTheme: ThemeModel;
+  languageText: string = LangTextEng.btn;
   
   languageData = LanguagesList;
   themeData = Themes;
@@ -52,6 +57,7 @@ export class SidenavComponent {
             this.languageData[0].activeLang = true;
             this.languageData[1].activeLang = false;
             this.languageData[2].activeLang = false;
+            this.languageText = LangTextEng.btn;
           break;
 
           case 'Castellano':
@@ -59,6 +65,7 @@ export class SidenavComponent {
             this.languageData[0].activeLang = false;
             this.languageData[1].activeLang = true;
             this.languageData[2].activeLang = false;
+            this.languageText = LangTextCast.btn;
           break;
 
           case 'Català':
@@ -66,6 +73,7 @@ export class SidenavComponent {
             this.languageData[0].activeLang = false;
             this.languageData[1].activeLang = false;
             this.languageData[2].activeLang = true;
+            this.languageText = LangTextCat.btn;
           break;
         
           default: break;
@@ -117,24 +125,24 @@ export class SidenavComponent {
         this.languageService.currentLanguage.next('English');
         this.currentThemeText = ThemeTextEng;
         this.btnTheme = ThemeTextEng.btnText;
-        message = 'Language set to English';
-        button = 'Dismiss';
+        message = LangTextEng.sbMessage.message;
+        button = LangTextEng.sbMessage.btnText;
         break;
         
       case 'Castellano':
         this.languageService.currentLanguage.next('Castellano');
         this.currentThemeText = ThemeTextCast;
         this.btnTheme = ThemeTextCast.btnText;
-        message = 'Idioma establecido a Castellano';
-        button = 'Descartar';
+        message = LangTextCast.sbMessage.message;
+        button = LangTextCast.sbMessage.btnText;
       break;
         
       case 'Català':
         this.languageService.currentLanguage.next('Català');
         this.currentThemeText = ThemeTextCat;
         this.btnTheme = ThemeTextCat.btnText;
-        message = 'Idioma definit a Català';
-        button = 'Descartar';
+        message = LangTextCat.sbMessage.message;
+        button = LangTextCat.sbMessage.btnText;
       break;
     }
 

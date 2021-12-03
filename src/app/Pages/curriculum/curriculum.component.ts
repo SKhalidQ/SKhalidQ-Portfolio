@@ -1,5 +1,5 @@
 import { ActivePageService } from 'src/app/Services/active-page.service';
-import { CurriculumModel, CurriculumEng, CurriculumCast } from 'src/app/Models/curriculum';
+import { CurriculumModel, CurriculumEng, CurriculumCast, CurriculumCat } from 'src/app/Models/curriculum';
 import { Animations } from 'src/app/app-animations';
 import { Component, Input } from '@angular/core';
 
@@ -34,7 +34,7 @@ export class CurriculumComponent {
           break
         
         case 'Català': 
-          this.curriculum = CurriculumCast;
+          this.curriculum = CurriculumCat;
           activePageService.activePage.next(ActivePageCat.curriculum);
           break
       

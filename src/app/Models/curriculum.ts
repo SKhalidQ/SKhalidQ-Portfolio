@@ -25,6 +25,16 @@ import ProfileCast from '../../assets/JSON/Castellano/CV/CVProfile.json'
 import HobbiesCast from '../../assets/JSON/Castellano/CV/CVHobbies.json'
 import TitlesCast from '../../assets/JSON/Castellano/CV/CVTitles.json'
 
+import NonTechSkillsCat from '../../assets/JSON/Catala/CV/CVNonTechSkills.json'
+import TechnicalCat from '../../assets/JSON/Catala/CV/CVTechnicalSkills.json'
+import AchievementsCat from '../../assets/JSON/Catala/CV/CVAchievements.json'
+import EmploymentCat from '../../assets/JSON/Catala/CV/CVEmployment.json'
+import LanguagesCat from '../../assets/JSON/Catala/CV/CVLanguages.json'
+import EducationCat from '../../assets/JSON/Catala/CV/CVEducation.json'
+import ProfileCat from '../../assets/JSON/Catala/CV/CVProfile.json'
+import HobbiesCat from '../../assets/JSON/Catala/CV/CVHobbies.json'
+import TitlesCat from '../../assets/JSON/Catala/CV/CVTitles.json'
+
 export interface CurriculumModel {
     CVTitles: CVTitlesModel[];
     Profile: string[];
@@ -62,5 +72,19 @@ export const CurriculumCast: CurriculumModel[] = [
         NonTechSkills: NonTechSkillsCast,
         Achievements: AchievementsCast,
         Hobbies: HobbiesCast
+    }
+];
+
+export const CurriculumCat: CurriculumModel[] = [
+    {
+        CVTitles: TitlesCat,
+        Profile: ProfileCat,
+        Skills: TechnicalCat,
+        Languages: LanguagesCat,
+        Education: EducationCat,
+        Jobs: EmploymentCat,
+        NonTechSkills: NonTechSkillsCat,
+        Achievements: AchievementsCat,
+        Hobbies: HobbiesCat
     }
 ];
