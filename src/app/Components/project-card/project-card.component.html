@@ -9,7 +9,7 @@
     </mat-card-subtitle>
   </mat-card-header>
 
-  <img class="project-preview" mat-card-image [src]="project.image" appDisableRightclick
+  <img class="project-preview" alt="Project Preview" mat-card-image [src]="project.image" appDisableRightclick
     onerror="this.src='../../assets/Images/error_outline-14px.svg'">
 
   <mat-icon class="error-icon" color="warn" [inline]="true" *ngIf="project.image === null || project.image.length <= 0">

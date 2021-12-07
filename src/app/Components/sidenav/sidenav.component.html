@@ -25,7 +25,7 @@
       <button mat-menu-item *ngFor="let language of languageData" [matTooltip]="language.tooltip"
         (click)="toggle.emit()" (click)="ChangeLanguage(language.name)" style="display: flex; align-items: center;"
         [disabled]="language.disabled || language.activeLang">
-        <img class="banderas" *ngIf="language.flag !== null" [src]="language.flag"
+        <img class="banderas" alt="Flags" *ngIf="language.flag !== null" [src]="language.flag"
           onerror="this.src='../../assets/Images/error_outline-14px.svg'">
         {{ language.name }}
       </button>
@@ -38,7 +38,7 @@
   <div class="social-media-span">
     <mat-divider></mat-divider>
     <a mat-list-item [href]="socialMedia.route" target="_blank" *ngFor="let socialMedia of socialMediaData">
-      <img class="social-media-icons" *ngIf="socialMedia.icon !== null" 
+      <img class="social-media-icons" alt="Social Media" *ngIf="socialMedia.icon !== null" 
       [src]="GetIcon(socialMedia)" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
       <span>{{ socialMedia.btnText }}</span>
     </a>

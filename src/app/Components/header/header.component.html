@@ -9,7 +9,7 @@
     <div class="logo" routerLinkActive="mat-elevation-z3" matTooltip="Home" matTooltipShowDelay="600"
       matTooltipClass="toolTip" routerLink="/home"
       (click)=" (smallScreen && isSideNav || xSmallScreen && isSideNav) ? toggle.emit() : null;">
-      <img src="/assets/Images/logo_transparent.svg" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+      <img src="/assets/Images/logo_transparent.svg" alt="logo" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
       <h2 class="title">{{ title }}</h2>
     </div>
 
@@ -34,7 +34,7 @@
         <button mat-menu-item *ngFor="let language of languageData" [matTooltip]="language.tooltip"
           matTooltipShowDelay="600" matTooltipClass="toolTip" style="display: flex; align-items: center;"
           (click)="ChangeLanguage(language.name)" [disabled]="language.disabled || language.activeLang">
-          <img class="banderas" *ngIf="language.flag !== null" [src]="language.flag"
+          <img class="banderas" alt="Flags" *ngIf="language.flag !== null" [src]="language.flag"
             onerror="this.src='../../assets/Images/error_outline-14px.svg'">
           {{ language.name }}
 
@@ -51,7 +51,7 @@
     <span class="spacer"></span>
 
     <a mat-icon-button *ngFor="let socialMediaLink of socialMediaData" [href]="socialMediaLink.route" target="_blank">
-      <img class="icon" *ngIf="socialMediaLink.icon !== null" [src]="GetIcon(socialMediaLink)"
+      <img class="icon" alt="Social Media" *ngIf="socialMediaLink.icon !== null" [src]="GetIcon(socialMediaLink)"
         onerror="this.src='../../assets/Images/error_outline-14px.svg'">
     </a>
 
