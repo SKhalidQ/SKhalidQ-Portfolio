@@ -8,4 +8,5 @@ export interface ProjectModel {
     websiteURL: string;
     publicRepo: boolean;
     githubURL: string;
+    hidden?: boolean;
 }

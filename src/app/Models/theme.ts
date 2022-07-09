@@ -9,15 +9,19 @@ export interface ThemeTextModel {
 }
 
 export enum ThemeMode {
-    DarkMode, LightMode
+    DarkMode,
+    LightMode,
+    CustomMode
 }
 
 export const Themes = {
     [ThemeMode.DarkMode]: { theme: 'DarkMode', btnText: 'Light mode' },
-    [ThemeMode.LightMode]: { theme: 'LightMode', btnText: 'Dark mode' }
+    [ThemeMode.LightMode]: { theme: 'LightMode', btnText: 'Dark mode' },
+    [ThemeMode.CustomMode]: { theme: 'CustomMode', btnText: 'Custom mode' }
 };
 
 export const ThemesDemo = {
     [ThemeMode.DarkMode]: { theme: 'DarkMode' },
-    [ThemeMode.LightMode]: { theme: 'LightMode' }
+    [ThemeMode.LightMode]: { theme: 'LightMode' },
+    [ThemeMode.CustomMode]: { theme: 'CustomMode' }
 };

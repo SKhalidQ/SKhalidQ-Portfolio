@@ -22,7 +22,7 @@
     <span style="flex: 1 1 auto;"></span>
 
     <button mat-icon-button (click)="ChangeTheme()" *ngIf="!smallScreen && !xSmallScreen">
-      <mat-icon>{{ themeService.themeMode.value === 'LightMode' ? 'brightness_3' : 'wb_sunny' }}</mat-icon>
+      <mat-icon>{{ GetThemeIcon(themeService.themeMode.value) }}</mat-icon>
     </button>
 
     <button mat-icon-button class="navigationBtn" *ngIf="!isSideNav" [matMenuTriggerFor]="languages">

@@ -3,7 +3,7 @@
         <h1 class="title">{{ homeData.Title }}</h1>
     
         <div class="cv-container">
-            <img [src]="themeService.themeMode.value === 'LightMode' ? lightCV : darkCV" alt="CV Preview" class="preview mat-elevation-z2" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+            <img [src]="themeService.themeMode.value === 'LightMode' ? lightCV : darkCV" alt="CV Preview" class="preview mat-elevation-z2" appDisableRightclick onerror="this.src='../../assets/Images/error_outline-14px.svg'">
             
             <div class="description">
                 <h3>{{ homeData.CVText }}</h3>
@@ -12,7 +12,7 @@
         </div>
     
         <div class="project-container">
-            <img [src]="themeService.themeMode.value === 'LightMode' ? lightProject : darkProject" alt="Project Preview" class="preview mat-elevation-z2" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+            <img [src]="themeService.themeMode.value === 'LightMode' ? lightProject : darkProject" alt="Project Preview" class="preview mat-elevation-z2" appDisableRightclick onerror="this.src='../../assets/Images/error_outline-14px.svg'">
     
             <div class="description">
                 <h3>{{ homeData.ProjectText }}</h3>

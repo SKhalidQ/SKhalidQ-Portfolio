@@ -15,15 +15,17 @@
 }
 
 .cv-container {
+  display: flex;
+  flex-direction: column;
+
   width: 900px;
-  height: 2180px;
   border-radius: 2px;
 }
 
 .top-container {
   background-color: hsl(0, 89%, 36%);
   color: white;
-  height: 10%;
+  height: 13rem;
   border-radius: 2px 2px 0 0;
   display: flex;
   justify-content: center;
@@ -256,11 +258,7 @@ ul li:last-child .info {
 @media only screen and (max-width: 961px) {
   .cv-container {
     width: 590px;
-    height: 2320px;
   }
-
-  //   width: 900px;
-  // height: 2180px;
  
   .profile img {
     width: 120px;
@@ -344,7 +342,6 @@ ul li:last-child .info {
 @media only screen and (max-width: 610px) {
   .cv-container {
     width: 500px;
-    min-height: 2160px;
   }
   
   .profile img {

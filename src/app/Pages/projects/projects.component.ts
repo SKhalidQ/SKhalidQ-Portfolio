@@ -1,7 +1,7 @@
 import { ActivePageService } from 'src/app/Services/active-page.service';
 import { LanguageService } from 'src/app/Services/language.service';
+import { Component, ElementRef, OnDestroy } from '@angular/core';
 import { ProjectModel } from 'src/app/Models/projects';
-import { Component, OnInit } from '@angular/core';
 
 import ProjectsCast from '../../../assets/JSON/Castellano/Projects.json';
 import ProjectsEng from '../../../assets/JSON/English/Projects.json';
@@ -17,12 +17,10 @@ import { Animations } from 'src/app/app-animations';
   styleUrls: ['./projects.component.scss'],
   animations: [Animations.topFadein]
 })
-export class ProjectsComponent implements OnInit {
-
-  displaySize: string | any;
+export class ProjectsComponent implements OnDestroy {
   projects: ProjectModel[] = ProjectsEng;
 
-  constructor(activePageService: ActivePageService, languageService: LanguageService) {
+  constructor(activePageService: ActivePageService, languageService: LanguageService, private elementRef: ElementRef) {
     languageService.currentLanguage$.subscribe(
       (response: string) => {
         if (response.startsWith('En')) {
@@ -39,8 +37,8 @@ export class ProjectsComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {
-    this.displaySize = window.innerHeight + ' x ' + window.innerWidth.toString();
+  ngOnDestroy(): void {
+    this.elementRef.nativeElement.remove();    
   }
 
 }

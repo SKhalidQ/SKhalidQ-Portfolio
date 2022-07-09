@@ -1,5 +1,28 @@
 [
   {
+    "icon": "play_arrow",
+    "title": "Media Play (Alpha)",
+    "subtitle": "Personal Project",
+    "image": "../../assets/Images/ComingSoon v2.png",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolores vitae, suscipit autem sunt sint provident architecto maiores, possimus ea corrupti unde dignissimos ipsa, fugiat quod? Corporis doloremque culpa alias ea sint laboriosam. Eligendi ullam consectetur fugiat atque unde eveniet voluptates!",
+    "website": true,
+    "websiteURL": "",
+    "publicRepo": false,
+    "githubURL": "",
+    "hidden": true
+  },
+  {
+    "icon": "folder",
+    "title": "File Explorer (Alpha)",
+    "subtitle": "Personal Project",
+    "image": "../../assets/Images/ComingSoon v2.png",
+    "description": "Un explorador d'arxius modern que s'utilitza per administrar les meves unitats de xarxa de forma remota. Em permet afegir, editar o eliminar arxius, actualitzar l'ubicació i fins i tot compartir contingut. Client creat amb Angular i backend creat amb ASP.NET Core executant-se en un contenidor Docker.",
+    "website": true,
+    "websiteURL": "",
+    "publicRepo": false,
+    "githubURL": ""
+  },
+  {
     "icon": "list",
     "title": "MyList (Beta)",
     "subtitle": "Projecte Personal",

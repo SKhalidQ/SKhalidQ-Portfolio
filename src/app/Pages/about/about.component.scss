@@ -16,6 +16,7 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 10px;
 
     animation: appear 1s ease-in-out;
 }
@@ -25,21 +26,20 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    gap: 12px;
     
     img {
         width: 40px;
-        margin: 0 0 25px 0;
     }
 
     h2 {
         font-family: sans-serif;
         font-weight: bold;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin: auto;
     }
 
     h3 {
-        margin: 0 0 12px;
+        margin: auto;
     }
 
     .dark-theme {
@@ -60,13 +60,19 @@ section {
     }
 }
 
+.button:hover {
+    background-image: linear-gradient(90deg, transparent 30%, #f5e5e44f 1%, #30303000);
+    background-position: 100% 0;
+    background-size: 500% 250%;
+    transition: .7s ease-in;
+}
+
 .copyright {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: row;
-    margin: 10px 0 0;
-    cursor: pointer;
+    gap: 15px;
 
     @keyframes shadow {
         from {
@@ -80,10 +86,10 @@ section {
     .imageContainer {
         width: 80px;
         height: 80px;
+        margin: 0 0 0 10px;
         border-radius: 50%;
-        margin: 0 15px 0 0;
         animation: shadow 1s ease-in-out 1s forwards;
-
+        cursor: pointer;
 
         img {
             width: 80px;
@@ -94,14 +100,8 @@ section {
         padding: 0 40px 0 0;
         margin: 0 0 2px;
         font-family: 'Chintzy CPU', 'Segoe UI' !important;
+        letter-spacing: 0.09vw;
     }
-}
-
-.button:hover {
-    background-image: linear-gradient(90deg, transparent 30%, #f5e5e44f 1%, #30303000);
-    background-position: 100% 0;
-    background-size: 500% 250%;
-    transition: .7s ease-in;
 }
 
 @media only screen and (max-height: 598px) {

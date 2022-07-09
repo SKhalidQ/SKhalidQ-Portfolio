@@ -1,10 +1,12 @@
 {
     "message": {
         "lightMode": "Modo claro habilitado",
-        "darkMode": "Modo oscuro habilitado"
+        "darkMode": "Modo oscuro habilitado",
+        "customMode": "Modo customizado habilitado"
     },
     "btnText": {
         "lightMode": "Modo claro",
-        "darkMode": "Modo oscuro"
+        "darkMode": "Modo oscuro",
+        "customMode": "Modo customizado"
     }
 }

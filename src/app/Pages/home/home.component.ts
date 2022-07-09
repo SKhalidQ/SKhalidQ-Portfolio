@@ -4,7 +4,7 @@ import { ThemeService } from 'src/app/Services/theme.service';
 import { RouteLinksModel } from 'src/app/Models/route-links';
 import { Animations } from 'src/app/app-animations';
 import { HomeModel } from 'src/app/Models/home';
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnDestroy } from '@angular/core';
 
 import RouteCast from 'src/assets/JSON/Castellano/Routes.json';
 import RouteEng from 'src/assets/JSON/English/Routes.json';
@@ -23,7 +23,7 @@ import HomeCat from '../../../assets/JSON/Catala/Home.json';
   styleUrls: ['./home.component.scss'],
   animations: [Animations.topFadeIn2, Animations.fade]
 })
-export class HomeComponent {
+export class HomeComponent implements OnDestroy {
 
   homeData: HomeModel | any;
   routeData: RouteLinksModel | any;
@@ -33,10 +33,7 @@ export class HomeComponent {
   darkProject = '../../../assets/Images/ProjectPreviewDark.png';
   lightProject = '../../../assets/Images/ProjectPreviewLight.png';
 
-  constructor(
-    activePageService: ActivePageService,
-    public themeService: ThemeService,
-    languageService: LanguageService) {
+  constructor(activePageService: ActivePageService, public themeService: ThemeService, languageService: LanguageService, private elementRef: ElementRef) {
     activePageService.activePage.next(ActivePageEng.home);
 
     languageService.currentLanguage$.subscribe(
@@ -56,6 +53,10 @@ export class HomeComponent {
         }
       }
     );
+  }
+
+  ngOnDestroy(): void {
+    this.elementRef.nativeElement.remove();
   }
 
 }

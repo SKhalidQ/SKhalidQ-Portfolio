@@ -104,6 +104,7 @@ export class HeaderComponent {
 
   ChangeTheme(): void {
     let message: string | any;
+    console.log(this.themeService.themeMode.getValue());
 
     switch (this.themeService.themeMode.getValue()) {
       case this.themeData[ThemeMode.LightMode].theme:
@@ -116,12 +117,34 @@ export class HeaderComponent {
         this.currentTheme = this.themeData[ThemeMode.LightMode];
         break;
 
+      case this.themeData[ThemeMode.CustomMode].theme: {
+        break;
+        message = this.currentThemeText.message.customMode;
+        this.currentTheme = this.themeData[ThemeMode.LightMode];
+      }
+
       default: break;
     }
 
     this.themeService.themeMode.next(this.currentTheme.theme);
     this.snackbarService.OpenSnackbar(message, 'Dismiss');
     localStorage.setItem('ThemeMode', this.currentTheme.theme);
+  }
+
+  GetThemeIcon(themeMode: string) {
+    switch (themeMode) {
+      case 'LightMode':
+        return 'brightness_3';
+
+      case 'DarkMode': 
+        return 'wb_sunny';
+      
+      case 'CustomMode':
+        return 'build';
+      
+      default:
+        return 'error';
+    }
   }
 
   GetIcon(socialMedia: any) {

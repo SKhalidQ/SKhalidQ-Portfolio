@@ -81,6 +81,11 @@ body {
   color: #303030;
 }
 
+.customMode {
+  background: #fafafa;
+  color: #303030;
+}
+
 .icon {
   width: 30px;
 }
@@ -131,4 +136,18 @@ body {
 
 div.mat-drawer-backdrop.ng-star-inserted.mat-drawer-shown {
   background: rgba(0, 0, 0, 0.493);
+}
+
+@media (prefers-color-scheme: dark) {
+  .customMode {
+    background: #303030;
+    color: #FAFAFA;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .customMode {
+    background: #fafafa;
+    color: #303030;
+  }
 }

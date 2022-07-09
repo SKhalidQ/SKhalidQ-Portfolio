@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnDestroy, Output, ViewChild } from '@angular/core';
 import { ActivePageService } from 'src/app/Services/active-page.service';
 import { LanguageService } from 'src/app/Services/language.service';
 import { MatAccordion } from '@angular/material/expansion';
@@ -14,7 +14,7 @@ import ChangelogJson from '../../../assets/JSON/English/Changelog.json';
   templateUrl: './change-logs.component.html',
   styleUrls: ['./change-logs.component.scss']
 })
-export class ChangeLogsComponent {
+export class ChangeLogsComponent implements OnDestroy {
 
   @Output() expansionToggle = new EventEmitter<void>();
   @ViewChild(MatAccordion) accordion: MatAccordion | any;
@@ -29,7 +29,7 @@ export class ChangeLogsComponent {
   expansion = false;
   changelogs: ChangeLogModel[] = ChangelogJson;
 
-  constructor(public activePageService: ActivePageService, languageService: LanguageService) {
+  constructor(public activePageService: ActivePageService, languageService: LanguageService, private elementRef: ElementRef) {
     activePageService.activePage.next('Changelog');
 
     languageService.currentLanguage$.subscribe(
@@ -73,4 +73,9 @@ export class ChangeLogsComponent {
       return this.accordion.closeAll();
     }
   }
+
+  ngOnDestroy(): void {
+    this.elementRef.nativeElement.remove();
+  }
+
 }

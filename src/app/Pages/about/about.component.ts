@@ -1,6 +1,6 @@
 import { ActivePageService } from 'src/app/Services/active-page.service';
 import { LanguageService } from 'src/app/Services/language.service';
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnDestroy } from '@angular/core';
 
 import ActivePageCast from '../../../assets/JSON/Castellano/ActivePage.json';
 import ActivePageEng from '../../../assets/JSON/English/ActivePage.json';
@@ -12,11 +12,11 @@ import { Router } from '@angular/router';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent {
+export class AboutComponent implements OnDestroy {
 
   buttonText: string | any;
 
-  constructor(activePageService: ActivePageService, languageService: LanguageService, public themeService: ThemeService, private route: Router) {
+  constructor(activePageService: ActivePageService, languageService: LanguageService, public themeService: ThemeService, private route: Router, private elementRef: ElementRef) {
 
     languageService.currentLanguage$.subscribe(
       (response: string) => {
@@ -47,4 +47,9 @@ export class AboutComponent {
   Navigate(): void {
     window.location.href = 'https://www.skhalidq.dev';
   }
+
+  ngOnDestroy(): void {
+    this.elementRef.nativeElement.remove();
+  }
+
 }
