@@ -4,7 +4,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { environment } from 'src/environments/environment.prod';
 import { ThemeService } from 'src/app/Services/theme.service';
 import { ConnectionService } from 'ng-connection-service';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { SwUpdate } from '@angular/service-worker';
 import { ThemeMode, Themes } from './Models/theme';
 import { Component, OnInit } from '@angular/core';

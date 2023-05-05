@@ -40,7 +40,7 @@ interface Buttons {
 export const LanguagesList: Languages[] = [
     {
         name: 'English',
-        flag: 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg',
+        flag: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg',
         activeLang: true,
         disabled: false,
         tooltip: ''

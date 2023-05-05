@@ -28,10 +28,10 @@ export class HomeComponent {
   homeData: HomeModel | any;
   routeData: RouteLinksModel | any;
 
-  darkCV = '../../../assets/Images/CVPreviewDark.png';
-  lightCV = '../../../assets/Images/CVPreviewLight.png';
-  darkProject = '../../../assets/Images/ProjectPreviewDark.png';
-  lightProject = '../../../assets/Images/ProjectPreviewLight.png';
+  darkCV = 'https://drive.google.com/uc?export=view&id=1YRuP0d49ETPfLQLAE4Gy1PYIdYiAAyzq';
+  lightCV = 'https://drive.google.com/uc?export=view&id=1pvh1migpptljT8ZnDIokWrmGAzBOswlz';
+  darkProject = 'https://drive.google.com/uc?export=view&id=1pgwJ2B6kaw5zPpnWcqHFcGwvMDCjIrx3';
+  lightProject = 'https://drive.google.com/uc?export=view&id=1s13gdD_pafMo1uw50Ya18itFQYG-Ih4F';
 
   constructor(
     activePageService: ActivePageService,
