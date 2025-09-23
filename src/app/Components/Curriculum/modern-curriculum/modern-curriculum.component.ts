@@ -5,7 +5,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-modern-curriculum',
   templateUrl: './modern-curriculum.component.html',
-  styleUrls: ['./modern-curriculum.component.scss']
+  styleUrls: ['./modern-curriculum.component.scss'],
+  standalone: false
 })
 export class ModernCurriculumComponent implements OnInit {
   @Output() isModern: EventEmitter<boolean> = new EventEmitter<boolean>();

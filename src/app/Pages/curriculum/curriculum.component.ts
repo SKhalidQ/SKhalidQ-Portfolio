@@ -11,7 +11,8 @@ import { LanguageService } from 'src/app/Services/language.service';
 @Component({
   templateUrl: './curriculum.component.html',
   styleUrls: ['./curriculum.component.scss'],
-  animations: [Animations.fadeInOut]
+  animations: [Animations.fadeInOut],
+  standalone: false
 })
 export class CurriculumComponent implements OnDestroy {
 
@@ -21,23 +22,23 @@ export class CurriculumComponent implements OnDestroy {
   triggerCount = 1;
 
   constructor(activePageService: ActivePageService, languageService: LanguageService, private elementRef: ElementRef) {
-    languageService.currentLanguage$.subscribe( response => {      
+    languageService.currentLanguage$.subscribe( response => {
       switch (response) {
         case 'English':
           this.curriculum = CurriculumEng;
           activePageService.activePage.next(ActivePageEng.curriculum);
           break;
-        
-        case 'Castellano': 
+
+        case 'Castellano':
           this.curriculum = CurriculumCast;
           activePageService.activePage.next(ActivePageCast.curriculum);
           break
-        
-        case 'Català': 
+
+        case 'Català':
           this.curriculum = CurriculumCat;
           activePageService.activePage.next(ActivePageCat.curriculum);
           break
-      
+
         default:
           break;
       }

@@ -1,7 +1,8 @@
 import { Directive, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appDisableRightclick]'
+  selector: '[appDisableRightclick]',
+  standalone: false
 })
 export class DisableRightclickDirective {
 

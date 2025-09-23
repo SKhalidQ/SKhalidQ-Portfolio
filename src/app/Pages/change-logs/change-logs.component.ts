@@ -12,7 +12,8 @@ import ChangelogJson from '../../../assets/JSON/English/Changelog.json';
 
 @Component({
   templateUrl: './change-logs.component.html',
-  styleUrls: ['./change-logs.component.scss']
+  styleUrls: ['./change-logs.component.scss'],
+  standalone: false
 })
 export class ChangeLogsComponent implements OnDestroy {
 

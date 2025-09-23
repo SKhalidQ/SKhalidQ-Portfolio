@@ -23,7 +23,8 @@ import SocialMedia from 'src/assets/JSON/SocialMedia.json';
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.scss']
+  styleUrls: ['./sidenav.component.scss'],
+  standalone: false
 })
 export class SidenavComponent {
 
@@ -31,7 +32,7 @@ export class SidenavComponent {
 
   currentTheme: ThemeModel;
   languageText: string = LangTextEng.btn;
-  
+
   languageData = LanguagesList;
   themeData = Themes;
 
@@ -39,7 +40,7 @@ export class SidenavComponent {
   socialMediaData = SocialMedia;
   btnTheme = ThemeTextEng.btnText;
   currentThemeText = ThemeTextEng;
-  
+
   isSidenav = true;
 
   constructor(
@@ -75,13 +76,13 @@ export class SidenavComponent {
             this.languageData[2].activeLang = true;
             this.languageText = LangTextCat.btn;
           break;
-        
+
           default: break;
         }
       }
     );
   }
-  
+
   ChangeTheme(): void {
     let message: string | any;
 
@@ -128,7 +129,7 @@ export class SidenavComponent {
         message = LangTextEng.sbMessage.message;
         button = LangTextEng.sbMessage.btnText;
         break;
-        
+
       case 'Castellano':
         this.languageService.currentLanguage.next('Castellano');
         this.currentThemeText = ThemeTextCast;
@@ -136,7 +137,7 @@ export class SidenavComponent {
         message = LangTextCast.sbMessage.message;
         button = LangTextCast.sbMessage.btnText;
       break;
-        
+
       case 'Català':
         this.languageService.currentLanguage.next('Català');
         this.currentThemeText = ThemeTextCat;

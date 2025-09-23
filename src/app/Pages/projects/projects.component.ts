@@ -15,7 +15,8 @@ import { Animations } from 'src/app/app-animations';
 @Component({
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
-  animations: [Animations.topFadein]
+  animations: [Animations.topFadein],
+  standalone: false
 })
 export class ProjectsComponent implements OnDestroy {
   projects: ProjectModel[] = ProjectsEng;
@@ -38,7 +39,7 @@ export class ProjectsComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.elementRef.nativeElement.remove();    
+    this.elementRef.nativeElement.remove();
   }
 
 }

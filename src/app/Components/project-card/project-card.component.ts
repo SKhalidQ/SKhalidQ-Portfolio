@@ -6,7 +6,8 @@ import { Component, Input } from '@angular/core';
   selector: 'app-project-card',
   templateUrl: './project-card.component.html',
   styleUrls: ['./project-card.component.scss'],
-  animations: []
+  animations: [],
+  standalone: false
 })
 export class ProjectCardComponent {
 

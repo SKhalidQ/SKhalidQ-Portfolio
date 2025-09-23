@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   selector: 'app-classic-curriculum',
   templateUrl: './classic-curriculum.component.html',
   styleUrls: ['./classic-curriculum.component.scss'],
-  animations: []
+  animations: [],
+  standalone: false
 })
 export class ClassicCurriculumComponent implements OnInit {
   @Output() isModern: EventEmitter<boolean> = new EventEmitter<boolean>();

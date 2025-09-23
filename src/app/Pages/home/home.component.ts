@@ -21,7 +21,8 @@ import HomeCat from '../../../assets/JSON/Catala/Home.json';
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [Animations.topFadeIn2, Animations.fade]
+  animations: [Animations.topFadeIn2, Animations.fade],
+  standalone: false
 })
 export class HomeComponent implements OnDestroy {
 

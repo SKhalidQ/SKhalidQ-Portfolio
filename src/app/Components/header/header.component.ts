@@ -27,7 +27,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  standalone: false
 })
 export class HeaderComponent {
 
@@ -65,7 +66,7 @@ export class HeaderComponent {
     });
 
     languageService.currentLanguage$.subscribe(
-      (response: string) => {        
+      (response: string) => {
         switch (response) {
           case 'English':
             this.routeData = RoutesEng;
@@ -87,7 +88,7 @@ export class HeaderComponent {
             this.languageData[1].activeLang = false;
             this.languageData[2].activeLang = true;
           break;
-        
+
           default: break;
         }
       }
@@ -136,12 +137,12 @@ export class HeaderComponent {
       case 'LightMode':
         return 'brightness_3';
 
-      case 'DarkMode': 
+      case 'DarkMode':
         return 'wb_sunny';
-      
+
       case 'CustomMode':
         return 'build';
-      
+
       default:
         return 'error';
     }
@@ -168,14 +169,14 @@ export class HeaderComponent {
         message = LangTextEng.sbMessage.message;
         button = LangTextEng.sbMessage.btnText;
         break;
-        
+
       case 'Castellano':
         this.languageService.currentLanguage.next('Castellano');
         this.currentThemeText = ThemeTextCast;
         message = LangTextCast.sbMessage.message;
         button = LangTextCast.sbMessage.btnText;
       break;
-        
+
       case 'Català':
         this.languageService.currentLanguage.next('Català');
         this.currentThemeText = ThemeTextCat;

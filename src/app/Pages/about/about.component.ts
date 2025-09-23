@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: ['./about.component.scss'],
+  standalone: false
 })
 export class AboutComponent implements OnDestroy {
 
@@ -34,7 +35,7 @@ export class AboutComponent implements OnDestroy {
     );
   }
 
-  ChangeColour() {    
+  ChangeColour() {
     if (this.themeService.themeMode.getValue() == 'LightMode') {
       return 'light-theme';
     } else if (this.themeService.themeMode.getValue() == 'DarkMode') {

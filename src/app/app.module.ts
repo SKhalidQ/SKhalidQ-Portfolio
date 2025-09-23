@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 
-import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyload-image';
 import { MaterialModules } from './app-material';
 
 import { DisableRightclickDirective } from './Directives/disable-rightclick.directive';
@@ -52,12 +51,11 @@ import { environment } from '../environments/environment';
       registrationStrategy: 'registerWhenStable:30000'
     }),
     BrowserAnimationsModule,
-    LazyLoadImageModule,
     AppRoutingModule,
     MaterialModules,
     BrowserModule,
   ],
-  providers: [{ provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

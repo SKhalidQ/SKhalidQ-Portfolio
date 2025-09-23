@@ -16,7 +16,8 @@ import { filter, map } from 'rxjs/operators';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: []
+  animations: [],
+  standalone: false
 })
 export class AppComponent implements OnInit {
 
