@@ -1,0 +1,20 @@
+<div class="main-container">
+  <div class="title">
+    <p>{{ title | translate }}</p>
+  </div>
+
+  <div class="content-container">
+    <ul>
+      <li *ngFor="let point of points">
+        <div class="info">
+          <p class="subtitle">
+            {{ point.title | translate }}
+            <mat-divider class="underline" [style]="underLine(point.title | translate)"></mat-divider>
+          </p>
+
+          <p class="content">{{ point.description | translate }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,120 +1,147 @@
-.card {
-    min-width: 400px;
-    max-width: 400px;
-    border: solid rgba(0, 0, 0, 0.151) 0.5px;
-    transition: all .3s ease-in-out;
-}
+mat-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-}
+  height: 490px;
+  width: 28.125em;
+  transition: all .3s ease-in-out;
 
-.header .header-icon {
-    font-size: 40px;
-}
+  mat-card-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.275em;
 
-.project-preview {
-    max-width: 432px;
-    min-width: 382px;
-    max-height: 236px;
-    min-height: 209px;
+    mat-card-title {
+      width: 100%;
+      margin-top: -20px; // TODO: A pretty bad hack. Figure out if it's a Material issue or a design issue.
+    }
+
+    mat-card-subtitle {
+      font-size: 0.72625em;
+    }
+
+    mat-icon {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .poster {
+    max-width: 100%;
     background-size: cover;
+
     animation:  1s ease-in-out 1.5s;
     transition: all 0.3s ease-in-out;
-}
+  }
 
-.error-icon {
+  .error-icon {
     display: flex;
     place-content: center center;
     margin: -20px 0 20px 0;
-    font-size: 280px;
-    height: 236px;
-}
+    font-size: 252px; // Based on the height of the other cards
+    width: 100%;
+  }
 
-.project-description {
-    min-height: 80px;
-    max-height: 80px;
-}
+  mat-card-content {
+    font-size: 0.875em;
+    min-height: 100px;
+  }
 
-.project-button-container {
+  mat-card-actions {
     display: flex;
-    place-content: flex-end space-between;
-    margin: 0 3px;
-}
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
 
-.project-button-container
-.website-link-container {
-    width: 40px;
-    margin: 0 0 2px 0;
-}
+    width: 100%;
+    padding: 1em;
 
-.website-link {
-    width: 70px;
-    position: relative;
-    z-index: 1;
-}
-
-.website-link:hover {
-    background-image: linear-gradient(90deg, transparent 30%, #f5e5e463 4% , rgba(255, 0, 0, 0.322));
-    background-position: 100% 0;
-    background-size: 500% 250%;
-    transition: background-position .7s ease-in;
-}
-
-.project-button-container .github-link {
-    display: flex;
-    place-content: center center;
-    margin: 0 0 6px 0;
-    width: 37px;
-    height: 37px;
-}
-
-.project-button-container .github-link .github-image {
-    width: 37px;
-}
-
-@media only screen and (max-width: 451px) {
-    .card {
-        min-width: 350px;
-        max-width: 350px;
+    .page-button {
+      mat-icon {
+        margin: auto 10px auto auto;
+        transform: scale(1.25);
+      }
     }
-        
-    .project-button-container {
-        display: flex;
-        place-content: flex-end space-between;
-        margin: 10px 3px 0;
+
+
+    .github-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 37px;
+      height: 37px;
+
+      img {
+        margin: 5.5px 0 0 0;
+        width: 37px;
+        height: 37px;
+      }
     }
+  }
+}
+
+// Animations
+mat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.page-button:hover {
+  background-image: linear-gradient(90deg, transparent 30%, #f5e5e463 4% , rgba(255, 0, 0, 0.322));
+  background-position: 100% 0;
+  background-size: 500% 250%;
+  transition: background-position .7s ease-in;
+}
+
+// Media Queries
+@media only screen and (max-width: 500px) {
+  mat-card {
+    min-width: 21.875em;
+    max-width: 21.875em;
+    height: auto;
+
+    .poster {
+      max-width: 100%;
+    }
+
+    mat-card-actions {
+      display: flex;
+      place-content: flex-end space-between;
+      margin: 0.625em 0.1875em 0;
+    }
+  }
 }
 
 @media only screen and (max-width: 400px) {
-    .card {
-        min-width: 300px;
-        max-width: 300px;
+  mat-card {
+    min-width: 21em;
+    max-width: 21em;
+
+    .poster {
+      max-width: 100%;
     }
 
-    .title {
-        font-size: 15px;
-    }
-    
-    .subtitle {
-        font-size: 10px;
+    mat-card-title {
+      font-size: 0.9375em;
     }
 
-    .project-preview {    
-        max-width: 381px;
-        min-width: 200px;
-        max-height: 181px;
-        min-height: 181px;
+    mat-card-subtitle {
+      font-size: 10px;
     }
-    
-    .project-description {
-        font-size: 11px;
+
+    p {
+      font-size: 11px;
     }
-    
-    .project-button-container {
-        display: flex;
-        place-content: flex-end space-between;
-        margin: 20px 3px 0;
+
+    mat-card-actions {
+      display: flex;
+      place-content: flex-end space-between;
+      margin-top: 0;
+      padding-top: 0;
     }
+  }
 }

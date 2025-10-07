@@ -1,155 +1,103 @@
-import { EasterEggService } from 'src/app/Services/easter-egg.service';
-import { ThemeMode, ThemeModel, Themes } from 'src/app/Models/theme';
-import { SnackbarService } from 'src/app/Services/snackbar.service';
-import { LanguageService } from 'src/app/Services/language.service';
-import { Component, EventEmitter, Output } from '@angular/core';
-import { ThemeService } from 'src/app/Services/theme.service';
-import { LanguagesList } from 'src/app/Models/language';
-
-import ThemeTextCast from 'src/assets/JSON/Castellano/ThemeMessage.json';
-import ThemeTextEng from 'src/assets/JSON/English/ThemeMessage.json';
-import ThemeTextCat from 'src/assets/JSON/Catala/ThemeMessage.json';
-
-import LangTextCast from 'src/assets/JSON/Castellano/Language.json';
-import LangTextEng from 'src/assets/JSON/English/Language.json';
-import LangTextCat from 'src/assets/JSON/Catala/Language.json';
-
-import RoutesCast from 'src/assets/JSON/Castellano/Routes.json';
-import RoutesEng from 'src/assets/JSON/English/Routes.json';
-import RoutesCat from 'src/assets/JSON/Catala/Routes.json';
-
-import SocialMedia from 'src/assets/JSON/SocialMedia.json';
+import { Component, EventEmitter, inject, OnDestroy, OnInit, Output } from '@angular/core';
+import { LanguageMenuButton } from 'src/app/models/data/LanguageMenuButtons';
+import { NavigationButtons } from 'src/app/models/data/NavigationButtons';
+import { SocialMediaButtons } from 'src/app/models/data/SocialMediaButtons';
+import { ThemeMenuButton } from 'src/app/models/data/ThemeMenuButtons';
+import { Language } from 'src/app/models/enums/Language';
+import { ThemeMode } from 'src/app/models/enums/ThemeMode';
+import { MenuButton, MenuOption } from 'src/app/models/interfaces/Menu';
+import { NavigationButton } from 'src/app/models/interfaces/NavigationButton';
+import { EvolutionService } from 'src/app/services/easterEgg/evolution.service';
+import { LanguageService } from 'src/app/services/language/language.service';
+import { SnackbarService } from 'src/app/services/snackbar/snackbar.service';
+import { ThemeService } from 'src/app/services/theme/theme.service';
+import { TranslationService } from 'src/app/services/translation/translation.service';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.scss'],
-  standalone: false
+  styleUrls: ['./sidenav.component.scss']
 })
-export class SidenavComponent {
-
+export class SidenavComponent implements OnInit, OnDestroy {
   @Output() toggle = new EventEmitter<void>();
 
-  currentTheme: ThemeModel;
-  languageText: string = LangTextEng.btn;
+  public readonly themeService = inject(ThemeService);
+  private readonly languageService = inject(LanguageService);
+  private readonly translationService = inject(TranslationService);
+  private readonly snackbarService = inject(SnackbarService);
+  private readonly easterEggService = inject(EvolutionService);
 
-  languageData = LanguagesList;
-  themeData = Themes;
+  navigationButtons: NavigationButton[] = NavigationButtons;
+  themeMenu: MenuButton = ThemeMenuButton;
+  languageMenu: MenuButton = LanguageMenuButton;
+  socialMediaButtons: NavigationButton[] = SocialMediaButtons;
 
-  routeData = RoutesEng;
-  socialMediaData = SocialMedia;
-  btnTheme = ThemeTextEng.btnText;
-  currentThemeText = ThemeTextEng;
+  constructor() {}
 
-  isSidenav = true;
+  ngOnInit(): void {
+    this.themeMenu = {
+      ...ThemeMenuButton,
+      options: ThemeMenuButton.options?.map(opt => ({
+        ...opt,
+        isActive: opt.key === this.themeService.themeMode.getValue(),
+        method: () => this.updateTheme(opt.key)
+      }))
+    };
 
-  constructor(
-    public themeService: ThemeService,
-    private snackbarService: SnackbarService,
-    public easterEggService: EasterEggService,
-    private languageService: LanguageService) {
-    this.currentTheme = this.themeData[ThemeMode.LightMode];
+    this.languageMenu = {
+      ...LanguageMenuButton,
+      options: LanguageMenuButton.options?.map(opt => ({
+        ...opt,
+        isActive: opt.key === this.languageService.currentLanguage.getValue(),
+        method: () => this.updateLanguage(opt.key)
+      }))
+    };
 
-    languageService.currentLanguage$.subscribe(
-      (response: string) => {
-        switch (response) {
-          case 'English':
-            this.routeData = RoutesEng;
-            this.languageData[0].activeLang = true;
-            this.languageData[1].activeLang = false;
-            this.languageData[2].activeLang = false;
-            this.languageText = LangTextEng.btn;
-          break;
-
-          case 'Castellano':
-            this.routeData = RoutesCast;
-            this.languageData[0].activeLang = false;
-            this.languageData[1].activeLang = true;
-            this.languageData[2].activeLang = false;
-            this.languageText = LangTextCast.btn;
-          break;
-
-          case 'Català':
-            this.routeData = RoutesCat;
-            this.languageData[0].activeLang = false;
-            this.languageData[1].activeLang = false;
-            this.languageData[2].activeLang = true;
-            this.languageText = LangTextCat.btn;
-          break;
-
-          default: break;
+    this.navigationButtons = NavigationButtons.map(button => ({
+      ...button,
+      method: () => {
+        if (button.text === this.translationService.getTextPath('navigationButtons.about')) {
+          this.easterEggService.runEasterEgg();
         }
+
+        this.closeSidenav();
       }
-    );
+    }));
   }
 
-  ChangeTheme(): void {
-    let message: string | any;
+  closeSidenav = () => {
+    this.toggle.emit();
+  };
 
-    switch (this.themeService.themeMode.getValue()) {
-      case this.themeData[ThemeMode.LightMode].theme:
-        message = this.currentThemeText.message.darkMode;
-        this.currentTheme = this.themeData[ThemeMode.DarkMode];
-        this.socialMediaData[2].icon.replace('dark', 'light');
-        break;
+  updateTheme(theme: string) {
+    const newTheme: ThemeMode = ThemeMode[theme as keyof typeof ThemeMode] || ThemeMode.LightMode;
 
-      case this.themeData[ThemeMode.DarkMode].theme:
-        message = this.currentThemeText.message.lightMode;
-        this.currentTheme = this.themeData[ThemeMode.LightMode];
-        this.socialMediaData[2].icon.replace('light', 'dark');
-        break;
+    this.themeMenu.options?.map((option: MenuOption) => {
+      option.isActive = option.key === theme;
+    });
 
-      default: break;
-    }
+    this.themeService.setTheme(newTheme);
 
-    this.themeService.themeMode.next(this.currentTheme.theme);
-    this.snackbarService.OpenSnackbar(message, 'Dismiss');
-    localStorage.setItem('ThemeMode', this.currentTheme.theme);
+    const themeName = this.translationService.getTextPath(`themeMenu.options.${theme}` as any);
+    const dismissText = this.translationService.getTextPath(`snackbar.dismiss`);
+    const themeChangeMessage = this.translationService.getTextPath(`snackbar.themeChanged`, themeName.toLowerCase());
+    this.snackbarService.openSnackbar(themeChangeMessage, dismissText);
   }
 
-  GetIcon(socialMedia: any) {
-    if (socialMedia.btnText === 'GitHub' && this.themeService.themeMode.value === 'LightMode') {
-      return socialMedia.icon.replace('light', 'dark');
-    } else if (socialMedia.btnText === 'GitHub' && this.themeService.themeMode.value === 'DarkMode') {
-      return socialMedia.icon.replace('dark', 'light');
-    } else {
-      return socialMedia.icon;
-    }
+  updateLanguage(language: string) {
+    const newLanguage: Language = Language[language as keyof typeof Language] || Language.enGB;
+
+    this.languageMenu.options?.map((option: MenuOption) => {
+      option.isActive = option.key === language;
+    });
+
+    this.languageService.setLanguage(newLanguage);
+
+    const languageName = this.translationService.getTextPath(`languageMenu.options.${language}` as any);
+    const dismissText = this.translationService.getTextPath(`snackbar.dismiss`);
+    const languageChangeMessage = this.translationService.getTextPath(`snackbar.languageChanged`, languageName.toLowerCase());
+    this.snackbarService.openSnackbar(languageChangeMessage, dismissText);
   }
 
-  ChangeLanguage(language: string): void {
-    let message = '';
-    let button = '';
-
-    switch (language) {
-      case 'English':
-        this.languageService.currentLanguage.next('English');
-        this.currentThemeText = ThemeTextEng;
-        this.btnTheme = ThemeTextEng.btnText;
-        message = LangTextEng.sbMessage.message;
-        button = LangTextEng.sbMessage.btnText;
-        break;
-
-      case 'Castellano':
-        this.languageService.currentLanguage.next('Castellano');
-        this.currentThemeText = ThemeTextCast;
-        this.btnTheme = ThemeTextCast.btnText;
-        message = LangTextCast.sbMessage.message;
-        button = LangTextCast.sbMessage.btnText;
-      break;
-
-      case 'Català':
-        this.languageService.currentLanguage.next('Català');
-        this.currentThemeText = ThemeTextCat;
-        this.btnTheme = ThemeTextCat.btnText;
-        message = LangTextCat.sbMessage.message;
-        button = LangTextCat.sbMessage.btnText;
-      break;
-    }
-
-    this.languageService.currentLanguage.next(language);
-    this.snackbarService.OpenSnackbar(message, button);
-    localStorage.setItem('Lang', language);
-  }
-
+  ngOnDestroy(): void {}
 }

@@ -1,47 +1,31 @@
 <mat-nav-list>
-  <app-header [isSideNav]="isSidenav" (toggle)="toggle.emit()"></app-header>
+  <div class="top-container">
+    <app-header [isSideNav]="true" (toggle)="toggle.emit()"></app-header>
 
-  <mat-divider></mat-divider>
-
-  <a mat-list-item *ngFor="let route of routeData" [routerLink]="route.route" routerLinkActive="activeRoute"
-    (click)="toggle.emit()" (click)="easterEggService.Evolution(route.btnText)">
-    <mat-icon class="routeBtn">{{ route.icon}}</mat-icon>
-    <span>{{ route.btnText }}</span>
-  </a>
-
-  <mat-divider></mat-divider>
-
-  <a mat-list-item (click)="ChangeTheme()" (click)="toggle.emit()">
-    <mat-icon class="routeBtn">{{ themeService.themeMode.value === 'LightMode' ? 'brightness_3' : 'wb_sunny' }}
-    </mat-icon>
-    <span>{{ themeService.themeMode.value === 'LightMode' ? btnTheme.darkMode : btnTheme.lightMode }}</span>
-  </a>
-
-  <a mat-list-item [matMenuTriggerFor]="languages">
-    <mat-icon class="routeBtn">language</mat-icon><span>{{ languageText }}</span>
-  </a>
-  <mat-menu #languages="matMenu" [class]="themeService.themeMode$ | async">
-    <div class="langMenu">
-      <button mat-menu-item *ngFor="let language of languageData" [matTooltip]="language.tooltip"
-        (click)="toggle.emit()" (click)="ChangeLanguage(language.name)" style="display: flex; align-items: center;"
-        [disabled]="language.disabled || language.activeLang">
-        <img class="banderas" alt="Flags" *ngIf="language.flag !== null" [src]="language.flag"
-          onerror="this.src='../../assets/Images/error_outline-14px.svg'">
-        {{ language.name }}
-      </button>
-    </div>
-  </mat-menu>
-
-  <mat-divider></mat-divider>
-
-
-  <div class="social-media-span">
     <mat-divider></mat-divider>
-    <a mat-list-item [href]="socialMedia.route" target="_blank" *ngFor="let socialMedia of socialMediaData">
-      <img class="social-media-icons" alt="Social Media" *ngIf="socialMedia.icon !== null" 
-      [src]="GetIcon(socialMedia)" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
-      <span>{{ socialMedia.btnText }}</span>
+
+    <a *ngFor="let button of navigationButtons" mat-list-item [routerLink]="button.route" routerLinkActive="active-route" (click)="button.method?.()">
+      <div>
+        <mat-icon class="icon">{{ button.icon }}</mat-icon>
+        <span>{{ button.text | translate }}</span>
+      </div>
     </a>
   </div>
 
+  <div class="bottom-container">
+    <mat-divider></mat-divider>
+
+    <app-menu [menuButton]="themeMenu" [isList]="true" [onMenuClose]="closeSidenav" />
+
+    <app-menu [menuButton]="languageMenu" [isList]="true" [onMenuClose]="closeSidenav" />
+
+    <mat-divider></mat-divider>
+
+    <a mat-list-item [href]="socialMedia.route" target="_blank" *ngFor="let socialMedia of (socialMediaButtons | socialButtonLogo:(themeService.effectiveThemeMode$ | async))">
+      <div>
+        <img class="icon" alt="Social Media" *ngIf="socialMedia.icon !== null" [src]="socialMedia.icon" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+        <span>{{ socialMedia.text | translate }}</span>
+      </div>
+    </a>
+  </div>
 </mat-nav-list>

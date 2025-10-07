@@ -1,9 +1,9 @@
-<div [class]="themeService.themeMode$ | async">
+<main appDisableRightClick appDisableTextSelection [class]="themeService.themeMode$ | async">
   <mat-drawer-container class="container" autosize>
     <mat-drawer #drawer [class]="themeService.themeMode$ | async" mode="over">
       <app-sidenav (toggle)="drawer.toggle()"></app-sidenav>
     </mat-drawer>
-    
+
     <app-header (toggle)="drawer.toggle()"></app-header>
 
     <main>
@@ -11,4 +11,4 @@
     </main>
 
   </mat-drawer-container>
-</div>
+</main>

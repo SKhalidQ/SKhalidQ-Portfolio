@@ -1,30 +1,36 @@
-import { ThemeService } from 'src/app/Services/theme.service';
-import { ProjectModel } from 'src/app/Models/projects';
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { Project } from 'src/app/models/interfaces/Project';
+import { TranslationService } from 'src/app/services/translation/translation.service';
+import { ThemeService } from 'src/app/services/theme/theme.service';
 
 @Component({
   selector: 'app-project-card',
   templateUrl: './project-card.component.html',
-  styleUrls: ['./project-card.component.scss'],
-  animations: [],
-  standalone: false
+  styleUrls: ['./project-card.component.scss']
 })
 export class ProjectCardComponent {
+  @Input() project!: Project;
 
-  @Input() project: ProjectModel | any;
+  public readonly themeService = inject(ThemeService);
+  private readonly translationService = inject(TranslationService);
 
-  tooltipTxt: string | any;
-  lightGithub = '../assets/Images/github-brands-light.svg';
-  darkGithub = '../assets/Images/github-brands-dark.svg';
-  disabledGithub = '../assets/Images/github-brands-disabled.svg';
+  readonly tooltipClass: string = 'tooltip';
+  readonly tooltipShowDelay: number = 200;
+  constructor() { }
 
-  constructor(public themeService: ThemeService) { }
+  get getWebsiteTooltip(): string {
+    const websiteTooltip = 'projectCard.websiteTooltip';
+    const unavailableWebsiteTooltip = 'projectCard.unavailableWebsiteTooltip';
+    const tooltip = this.translationService.getTextPath(this.project.websiteUrl ? websiteTooltip : unavailableWebsiteTooltip);
 
-  GetGithubTooltip(publicRepo: boolean): string {
-    return !publicRepo ? 'Available at request' : 'GitHub Repository Link';
+    return tooltip;
   }
 
-  GetWebsiteTooltip(urlLength: number): string {
-    return (urlLength <= 0) ? 'Site Unavailable' : 'View Site';
+  get getRepoTooltip(): string {
+    const repoTooltip = 'projectCard.repoTooltip';
+    const privateRepoTooltip = 'projectCard.privateRepoTooltip';
+    const tooltip = this.translationService.getTextPath(this.project.isRepoPublic ? repoTooltip : privateRepoTooltip);
+
+    return tooltip;
   }
 }

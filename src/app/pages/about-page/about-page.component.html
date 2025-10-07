@@ -1,0 +1,25 @@
+<main>
+  <section>
+    <div *ngFor="let credit of aboutCredits" class="credit-container">
+      <img [src]="credit.imagePath" alt="{{ credit.title }} Logo" onerror="this.src='../../assets/images/icons/error_outline-14px.svg'">
+
+      <a [class]="changeColour" [href]="credit.pageUrl">
+        <h2>{{ credit.title }}</h2>
+      </a>
+
+      <h3>{{ credit.version }}</h3>
+    </div>
+
+    <div class="action-container">
+      <button mat-button disabled>{{ changelogText }}</button>
+    </div>
+
+    <div class="copyright">
+      <div class="logo-container">
+        <img [src]="logoPath" alt="Logo" onerror="this.src='../../assets/images/icons/error_outline-14px.svg'">
+      </div>
+
+      <h4>{{ copyright }}</h4>
+    </div>
+  </section>
+</main>

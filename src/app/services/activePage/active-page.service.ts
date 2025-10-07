@@ -1,0 +1,14 @@
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { Page } from 'src/app/models/enums/Page';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ActivePageService {
+
+  constructor() { }
+
+  activePage = new BehaviorSubject<string>(`pages.${Page[Page.Home]}`);
+  activePage$ = this.activePage.asObservable();
+}
