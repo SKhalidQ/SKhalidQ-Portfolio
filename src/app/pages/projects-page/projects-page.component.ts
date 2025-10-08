@@ -35,8 +35,6 @@ export class ProjectsPageComponent implements OnInit {
     ProjectTypeFilter.UniversityProject
   ];
 
-  constructor() {}
-
   ngOnInit(): void {
     this.activePageService.activePage.next(`pages.${Page[Page.Projects]}`);
   }

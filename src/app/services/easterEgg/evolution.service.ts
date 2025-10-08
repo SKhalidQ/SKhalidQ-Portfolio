@@ -7,9 +7,7 @@ import { SnackbarService } from '../snackbar/snackbar.service';
 export class EvolutionService {
   private readonly snackbarService = inject(SnackbarService);
 
-  private easterEggCounter: number = 1;
-
-  constructor() { }
+  private easterEggCounter = 1;
 
   public runEasterEgg(): void {
     if (this.easterEggCounter < 5) {

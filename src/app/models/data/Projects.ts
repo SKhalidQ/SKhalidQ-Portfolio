@@ -157,7 +157,7 @@ const AgentChatBot: Project = {
 };
 
 export const Projects: Project[] = [
-  // MediaPlay,
+  MediaPlay,
   FileExplorer,
   MyList,
   AdminCommands,

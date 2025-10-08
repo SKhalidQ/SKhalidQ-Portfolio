@@ -1,6 +1,6 @@
 <mat-toolbar>
   <mat-toolbar-row class="top-row mat-elevation-z5">
-    <button *ngIf="smallScreen || xSmallScreen" class="toggle-button" type="button" mat-icon-button color="basic" (click)="toggle.emit()" onclick="this.blur()">
+    <button *ngIf="smallScreen || xSmallScreen" class="toggle-button" type="button" mat-icon-button (click)="toggleSidenav.emit()" onclick="this.blur()">
       <mat-icon>{{ getSideNavToggleIcon }}</mat-icon>
     </button>
 

@@ -13,7 +13,16 @@
       <mat-divider class="divider"></mat-divider>
 
       <div class="contact-container">
-        <div *ngFor="let contact of curriculum.header.contactDetails" class="contact" [cdkCopyToClipboard]="contact.contact" mat-icon-button (click)="notify()" [style]="hideButtons" [matTooltip]="clipboardMessage | translate" matTooltipShowDelay="600" matTooltipClass="toolTip">
+        <div *ngFor="let contact of curriculum.header.contactDetails"
+             class="contact"
+             mat-icon-button
+             [cdkCopyToClipboard]="contact.contact"
+             (click)="notify()"
+             (keydown.enter)="notify()"
+             tabindex="0"
+             [matTooltip]="clipboardMessage | translate"
+             matTooltipShowDelay="600"
+             matTooltipClass="toolTip">
           <mat-icon #contactIcon>{{ contact.icon }}</mat-icon>
           <label for="contactIcon"> {{ contact.contact }} </label>
         </div>

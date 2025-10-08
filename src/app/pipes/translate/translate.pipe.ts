@@ -9,11 +9,9 @@ import { TranslationService } from '../../services/translation/translation.servi
 export class TranslatePipe implements PipeTransform {
   private readonly translationService = inject(TranslationService);
 
-  constructor() { }
-
   // path: dot notation string (e.g. "navigationButtons.home")
   // fallback (optional): value to return if lookup fails or points to an object
-  transform(path: string, fallbackOrReplacements?: string | Array<string | number>, ...restReplacements: Array<string | number>): string {
+  transform(path: string, fallbackOrReplacements?: string | (string | number)[], ...restReplacements: (string | number)[]): string {
     if (path == null || path === '') {
       return '';
     }
@@ -25,7 +23,7 @@ export class TranslatePipe implements PipeTransform {
     }
 
     let fallback: string | undefined;
-    let replacements: Array<string | number> | undefined;
+    let replacements: (string | number)[] | undefined;
 
     if (Array.isArray(fallbackOrReplacements)) {
       replacements = fallbackOrReplacements;
@@ -34,9 +32,9 @@ export class TranslatePipe implements PipeTransform {
       replacements = restReplacements && restReplacements.length ? restReplacements : undefined;
     }
 
-    const value: any = replacements
-      ? this.translationService.getTextPath(trimmed as any, replacements)
-      : this.translationService.getTextPath(trimmed as any);
+    const value: string = replacements
+      ? this.translationService.getTextPath(trimmed, replacements)
+      : this.translationService.getTextPath(trimmed);
 
     if ((value && typeof value === 'object') || value === trimmed) {
       return fallback ?? trimmed;

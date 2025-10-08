@@ -1,5 +1,6 @@
-import { Component, inject, Inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MAT_SNACK_BAR_DATA, MatSnackBarRef } from '@angular/material/snack-bar';
+import { SnackbarData } from 'src/app/models/interfaces/SnackbarData';
 
 @Component({
   selector: 'app-snackbar',
@@ -7,9 +8,8 @@ import { MAT_SNACK_BAR_DATA, MatSnackBarRef } from '@angular/material/snack-bar'
   styleUrls: ['./snackbar.component.scss']
 })
 export class SnackbarComponent {
-  private readonly snackRef = inject(MatSnackBarRef<any>);
-
-  constructor(@Inject(MAT_SNACK_BAR_DATA) public data: any) { }
+  private readonly snackRef = inject(MatSnackBarRef<SnackbarComponent>);
+  public readonly data = inject<SnackbarData>(MAT_SNACK_BAR_DATA);
 
   public dismiss(): void {
     this.snackRef.dismiss();

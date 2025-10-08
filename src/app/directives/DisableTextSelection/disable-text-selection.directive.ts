@@ -7,8 +7,6 @@ export class DisableTextSelectionDirective implements OnInit {
   private readonly el = inject(ElementRef);
   private readonly renderer = inject(Renderer2);
 
-  constructor() {}
-
   ngOnInit(): void {
     this.renderer.setStyle(this.el.nativeElement, 'user-select', 'none');
     this.renderer.setStyle(this.el.nativeElement, '-webkit-user-select', 'none');

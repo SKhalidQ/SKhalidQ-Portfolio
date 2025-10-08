@@ -3,6 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ThemeMode } from 'src/app/models/enums/ThemeMode';
 import { ThemeService } from '../theme/theme.service';
 import { SnackbarComponent } from 'src/app/components/snackbar/snackbar.component';
+import { SnackbarData } from 'src/app/models/interfaces/SnackbarData';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,6 @@ import { SnackbarComponent } from 'src/app/components/snackbar/snackbar.componen
 export class SnackbarService {
   private readonly snackbar = inject(MatSnackBar);
   private readonly themeService = inject(ThemeService);
-
-  constructor() { }
 
   openSnackbar(message: string, action: string): void {
     const snackbarStyleClass = this.themeMenuIcon;
@@ -28,12 +27,14 @@ export class SnackbarService {
   }
 
   EVOLUTION(): void {
+    const snackbarData: SnackbarData = {
+      message: 'EVOLUTION!',
+      action: 'EVOLUTION',
+      class: 'EVOLUTION'
+    };
+
     this.snackbar.openFromComponent(SnackbarComponent, {
-      data: {
-        message: 'EVOLUTION!',
-        action: 'EVOLUTION',
-        class: 'EVOLUTION'
-      },
+      data: snackbarData,
       duration: 1500,
       panelClass: 'EVOLUTION',
     });

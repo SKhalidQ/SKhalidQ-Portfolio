@@ -9,8 +9,6 @@ export class LanguageService {
   private readonly localStorageLangKey = 'Language';
   private readonly defaultLanguage: Language = this.getInitialLanguage;
 
-  constructor() { }
-
   private get getInitialLanguage(): Language {
     const storedLanguage = localStorage.getItem(this.localStorageLangKey);
     if (storedLanguage && Language[storedLanguage as keyof typeof Language]) {

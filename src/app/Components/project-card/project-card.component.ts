@@ -16,7 +16,6 @@ export class ProjectCardComponent {
 
   readonly tooltipClass: string = 'tooltip';
   readonly tooltipShowDelay: number = 200;
-  constructor() { }
 
   get getWebsiteTooltip(): string {
     const websiteTooltip = 'projectCard.websiteTooltip';

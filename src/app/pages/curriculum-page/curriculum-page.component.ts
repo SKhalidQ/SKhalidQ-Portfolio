@@ -14,7 +14,7 @@ import { ActivePageService } from 'src/app/services/activePage/active-page.servi
 export class CurriculumPageComponent implements OnInit {
   readonly activePageService = inject(ActivePageService);
 
-  isModern: boolean = false;
+  isModern = false;
   curriculum: Curriculum = CurriculumInfo;
 
   ngOnInit(): void {

@@ -16,8 +16,7 @@ export class AboutPageComponent implements OnInit {
 
   readonly logoPath = '../../../assets/images/logos/group_logo_transparent.png';
   readonly aboutCredits = AboutCredits;
-
-  constructor() { }
+  readonly changelogText = 'Changelog';
 
   ngOnInit(): void {
     this.activePageService.activePage.next(`pages.${Page[Page.About]}`);
@@ -41,9 +40,5 @@ export class AboutPageComponent implements OnInit {
   get copyright(): string {
     // TODO: Get version number
     return `Copyright SKhalidQ ©${this.currentYear} v1.3.0`;
-  }
-
-  get changelogText(): string {
-    return 'Changelog';
   }
 }

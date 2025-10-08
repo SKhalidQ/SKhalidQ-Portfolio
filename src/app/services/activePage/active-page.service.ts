@@ -7,8 +7,6 @@ import { Page } from 'src/app/models/enums/Page';
 })
 export class ActivePageService {
 
-  constructor() { }
-
   activePage = new BehaviorSubject<string>(`pages.${Page[Page.Home]}`);
   activePage$ = this.activePage.asObservable();
 }

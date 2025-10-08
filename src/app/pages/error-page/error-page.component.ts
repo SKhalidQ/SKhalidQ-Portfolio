@@ -12,7 +12,7 @@ export class ErrorPageComponent implements OnInit {
   private readonly activePageService = inject(ActivePageService);
   private readonly activatedRoute = inject(ActivatedRoute);
 
-  errorMessage: string = '';
+  errorMessage = '';
 
   ngOnInit(): void {
     this.activePageService.activePage.next('Error');

@@ -8,5 +8,5 @@ import { History } from 'src/app/models/interfaces/Curriculum';
 })
 export class HistoryComponent {
   @Input() history: History[] = [];
-  @Input() title: string = '';
+  @Input() title = '';
 }

@@ -22,8 +22,8 @@ import { ThemeService } from 'src/app/services/theme/theme.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  @Output() toggle = new EventEmitter<void>();
-  @Input() isSideNav: boolean | any;
+  @Output() toggleSidenav = new EventEmitter<void>();
+  @Input() isSideNav = false;
 
   private readonly breakpointObserver = inject(BreakpointObserver);
   public readonly themeService = inject(ThemeService);
@@ -39,8 +39,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   languageMenu: MenuButton = LanguageMenuButton;
   socialMediaButtons: NavigationButton[] = SocialMediaButtons;
 
-  smallScreen: boolean = false;
-  xSmallScreen: boolean = false;
+  smallScreen = false;
+  xSmallScreen = false;
 
   /** Latest resolved (effective) theme (DarkMode / LightMode). Useful when SystemDefault is selected. */
   private lastEffectiveTheme: ThemeMode = this.themeService.getSystemPreferredTheme();
@@ -108,9 +108,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     this.themeService.setTheme(newTheme);
 
-    const themeName = this.translationService.getTextPath(`themeMenu.options.${theme}` as any);
+    const themeName = this.translationService.getTextPath(`themeMenu.options.${theme}`);
     const dismissText = this.translationService.getTextPath(`snackbar.dismiss`);
-    const themeChangeMessage = this.translationService.getTextPath(`snackbar.themeChanged`, themeName.toLowerCase());
+    const themeChangeMessage = this.translationService.getTextPath(`snackbar.themeChanged`, [themeName.toLowerCase()]);
     this.snackbarService.openSnackbar(themeChangeMessage, dismissText);
   }
 
@@ -123,9 +123,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     this.languageService.setLanguage(newLanguage);
 
-    const languageName = this.translationService.getTextPath(`languageMenu.options.${language}` as any);
+    const languageName = this.translationService.getTextPath(`languageMenu.options.${language}`);
     const dismissText = this.translationService.getTextPath(`snackbar.dismiss`);
-    const languageChangeMessage = this.translationService.getTextPath(`snackbar.languageChanged`, languageName.toLowerCase());
+    const languageChangeMessage = this.translationService.getTextPath(`snackbar.languageChanged`, [languageName.toLowerCase()]);
     this.snackbarService.openSnackbar(languageChangeMessage, dismissText);
   }
 

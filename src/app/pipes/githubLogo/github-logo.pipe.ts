@@ -7,7 +7,7 @@ import { ThemeMode } from 'src/app/models/enums/ThemeMode';
 })
 export class GithubLogoPipe implements PipeTransform {
 
-  transform(isRepoPublic: boolean, effectiveTheme: ThemeMode | null | undefined, basePath: string = '../../../assets/images/icons'): string {
+  transform(isRepoPublic: boolean, effectiveTheme: ThemeMode | null | undefined, basePath = '../../../assets/images/icons'): string {
     if (!isRepoPublic) {
       return `${basePath}/github-brands-disabled.svg`;
     }

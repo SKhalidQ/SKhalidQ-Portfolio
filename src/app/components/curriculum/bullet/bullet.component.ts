@@ -9,12 +9,12 @@ import { BulletPoints } from 'src/app/models/interfaces/Curriculum';
 })
 export class BulletComponent {
   @Input() points: BulletPoints[] = [];
-  @Input() title: string = '';
+  @Input() title = '';
 
   private readonly breakpointObserver = inject(BreakpointObserver);
 
-  smallScreen: boolean = false;
-  xSmallScreen: boolean = false;
+  smallScreen = false;
+  xSmallScreen = false;
 
   constructor() {
     this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe((x) => {

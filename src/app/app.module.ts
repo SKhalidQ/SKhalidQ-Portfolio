@@ -1,6 +1,7 @@
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModules } from './app.material';
 
@@ -29,7 +30,6 @@ import { TranslatePipe } from './pipes/translate/translate.pipe';
 
 import { DisableRightClickDirective } from './directives/DisableRightClick/disable-right-click.directive';
 import { DisableTextSelectionDirective } from './directives/DisableTextSelection/disable-text-selection.directive';
-import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [

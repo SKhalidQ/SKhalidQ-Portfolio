@@ -15,10 +15,7 @@ export class HomePageComponent implements OnInit {
   private readonly activePageService = inject(ActivePageService);
 
   private readonly baseImagePath = './assets/images/previews';
-
   readonly homeData = HomeContentData;
-
-  constructor() { }
 
   ngOnInit(): void {
     this.activePageService.activePage.next(`pages.${Page[Page.Home]}`);
@@ -31,10 +28,12 @@ export class HomePageComponent implements OnInit {
       case ThemeMode.LightMode:
         return `${this.baseImagePath}/ProjectPreviewLight.png`;
       case ThemeMode.SystemDefault:
-        const systemTheme = this.themeService.getSystemPreferredTheme();
-        return systemTheme === ThemeMode.DarkMode
-          ? `${this.baseImagePath}/ProjectPreviewDark.png`
-          : `${this.baseImagePath}/ProjectPreviewLight.png`;
+        {
+          const systemTheme = this.themeService.getSystemPreferredTheme();
+          return systemTheme === ThemeMode.DarkMode
+            ? `${this.baseImagePath}/ProjectPreviewDark.png`
+            : `${this.baseImagePath}/ProjectPreviewLight.png`;
+        }
     }
   }
 
@@ -45,10 +44,12 @@ export class HomePageComponent implements OnInit {
       case ThemeMode.LightMode:
         return `${this.baseImagePath}/CVPreviewLight.png`;
       case ThemeMode.SystemDefault:
-        const systemTheme = this.themeService.getSystemPreferredTheme();
-        return systemTheme === ThemeMode.DarkMode
-          ? `${this.baseImagePath}/CVPreviewDark.png`
-          : `${this.baseImagePath}/CVPreviewLight.png`;
+        {
+          const systemTheme = this.themeService.getSystemPreferredTheme();
+          return systemTheme === ThemeMode.DarkMode
+            ? `${this.baseImagePath}/CVPreviewDark.png`
+            : `${this.baseImagePath}/CVPreviewLight.png`;
+        }
     }
   }
 }

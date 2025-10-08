@@ -1,6 +1,6 @@
-import { Component, inject, Input, OnDestroy } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { ThemeMode } from 'src/app/models/enums/ThemeMode';
-import { MenuButton } from 'src/app/models/interfaces/Menu';
+import { MenuButton, MenuOption } from 'src/app/models/interfaces/Menu';
 import { ThemeService } from 'src/app/services/theme/theme.service';
 
 @Component({
@@ -10,16 +10,14 @@ import { ThemeService } from 'src/app/services/theme/theme.service';
 })
 export class MenuComponent {
   @Input() menuButton!: MenuButton;
-  @Input() isList: boolean = false;
-  @Input() onMenuClose: () => void = (): void => {};
+  @Input() isList = false;
+  @Input() onMenuClose: () => void = (): void => {/* no-op */ };
 
   public readonly themeService = inject(ThemeService);
 
   ThemeMode = ThemeMode;
 
-  constructor() {}
-
-  onMenuOptionClick(option: any, event?: MouseEvent): void {
+  onMenuOptionClick(option: MenuOption): void {
     if (typeof this.onMenuClose === 'function') {
       this.onMenuClose();
     }

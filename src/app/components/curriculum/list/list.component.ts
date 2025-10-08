@@ -8,5 +8,5 @@ import { TechnicalSkill } from 'src/app/models/interfaces/Curriculum';
 })
 export class ListComponent {
   @Input() list: TechnicalSkill[] = [];
-  @Input() title: string = '';
+  @Input() title = '';
 }

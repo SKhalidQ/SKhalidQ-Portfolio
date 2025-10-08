@@ -1,5 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ThemeService } from './services/theme/theme.service';
+import { MetaThemeService } from './services/meta-theme/meta-theme.service';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { Title } from '@angular/platform-browser';
@@ -10,10 +11,9 @@ import { Page } from './models/enums/Page';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'SKhalidQ-Portfolio';
-
+export class AppComponent implements OnInit {
   themeService = inject(ThemeService);
+  metaThemeService = inject(MetaThemeService);
   activatedRoute = inject(ActivatedRoute);
   router = inject(Router);
   titleService = inject(Title);
@@ -22,7 +22,7 @@ export class AppComponent {
     this.setTabTitle();
   }
 
-  setTabTitle(): any {
+  setTabTitle(): void {
     const appTitle = this.titleService.getTitle();
     const title = 'pageTitle';
 

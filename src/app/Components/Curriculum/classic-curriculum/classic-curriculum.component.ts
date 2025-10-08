@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, inject, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Curriculum } from 'src/app/models/interfaces/Curriculum';
 import { SnackbarService } from 'src/app/services/snackbar/snackbar.service';
 
 @Component({
@@ -11,24 +11,20 @@ import { SnackbarService } from 'src/app/services/snackbar/snackbar.service';
   ]
 })
 export class ClassicCurriculumComponent {
-  @Input() curriculum: any;
+  @Input() curriculum!: Curriculum;
 
   private readonly snackbar = inject(SnackbarService);
   private readonly breakpointObserver = inject(BreakpointObserver);
+  readonly clipboardMessage = 'curriculumPage.copyToClipboard';
 
-  hideButtons: any;
-  smallScreen: boolean = false;
-  xSmallScreen: boolean = false;
+  smallScreen = false;
+  xSmallScreen = false;
 
   constructor() {
     this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe((x) => {
       this.smallScreen = x.breakpoints[Breakpoints.Small] && !x.breakpoints[Breakpoints.XSmall];
       this.xSmallScreen = x.breakpoints[Breakpoints.XSmall];
     });
-  }
-
-  get clipboardMessage(): string {
-    return 'curriculumPage.copyToClipboard';
   }
 
   notify(): void {

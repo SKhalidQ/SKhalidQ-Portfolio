@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { caESLanguage } from 'src/app/languages/caES';
 import { enGBLanguage, LanguageStrings } from 'src/app/languages/enGB';
 import { esESLanguage } from 'src/app/languages/esES';
@@ -44,32 +44,40 @@ export class TranslationService {
     return (val ?? key) as LanguageStrings[K];
   }
 
-  // Overloads for type safety (top-level or one nested level)
-  public getTextPath<K extends keyof LanguageStrings>(path: K): LanguageStrings[K];
-  public getTextPath<K extends keyof LanguageStrings>(path: K, replacements: Array<string | number>): string;
-  public getTextPath<P1 extends keyof LanguageStrings, P2 extends keyof LanguageStrings[P1]>(path: `${Extract<P1,string>}.${Extract<P2,string>}`): LanguageStrings[P1][P2];
-  public getTextPath<P1 extends keyof LanguageStrings, P2 extends keyof LanguageStrings[P1]>(path: `${Extract<P1,string>}.${Extract<P2,string>}`, replacements: Array<string | number>): string;
-  public getTextPath(path: string, replacements?: Array<string | number>): any {
+  // Simple string-based interface - all type logic handled internally
+  public getTextPath(path: string): string;
+  public getTextPath(path: string, replacements: (string | number)[]): string;
+  public getTextPath(path: string, replacements?: (string | number)[]): string {
     const segments = path.split('.');
-    let current: any = this.languageString;
+    let current: unknown = this.languageString;
 
     for (const seg of segments) {
       if (current && typeof current === 'object' && seg in current) {
-        current = current[seg];
+        current = (current as Record<string, unknown>)[seg];
       } else {
         return path; // fallback (or return undefined)
       }
     }
+
     if (typeof current === 'string') {
       return this.applyReplacements(current, replacements);
     }
-    return current; // object or other
+
+    // If it's not a string, convert to string or return the path as fallback
+    return typeof current === 'object' ? path : String(current);
   }
 
-  private applyReplacements(template: string, replacements?: Array<string | number> | string | number): string {
-    if (replacements == null) return template;
+  private applyReplacements(template: string, replacements?: (string | number)[] | string | number): string {
+    if (replacements == null) {
+      return template;
+    }
+
     const array = Array.isArray(replacements) ? replacements : [replacements];
-    if (array.length === 0) return template;
+
+    if (array.length === 0) {
+      return template;
+    }
+
     return array.reduce<string>((acc, val, idx) => acc.replace(new RegExp(`\\{${idx}\\}`,'g'), String(val)), template);
   }
 }

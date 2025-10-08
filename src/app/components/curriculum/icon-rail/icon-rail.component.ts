@@ -8,5 +8,5 @@ import { Hobbies } from 'src/app/models/interfaces/Curriculum';
 })
 export class IconRailComponent {
   @Input() hobbies: Hobbies[] = [];
-  @Input() title: string = '';
+  @Input() title = '';
 }
