@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DisableTextSelectionDirective } from './disable-text-selection.directive';
 
 @Component({
-  template: `<div id="target" appDisableTextSelection>Text</div>`
+  template: '<div id="target" appDisableTextSelection>Text</div>'
 })
 class HostComponent {}
 

@@ -1,5 +1,5 @@
-import { ThemeMode } from "../enums/ThemeMode";
-import { MenuButton, MenuOption } from "../interfaces/Menu";
+import { ThemeMode } from '../enums/ThemeMode';
+import { MenuButton, MenuOption } from '../interfaces/Menu';
 
 export const ThemeMenuOptions: MenuOption[] = [
   { key: ThemeMode.LightMode, text: `themeMenu.options.${ThemeMode[ThemeMode.LightMode]}`, icon: 'light_mode', iconType: 'icon', method: (): void => {/* no-op */ } },

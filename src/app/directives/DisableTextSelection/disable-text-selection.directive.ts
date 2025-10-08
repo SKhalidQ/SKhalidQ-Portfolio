@@ -17,12 +17,12 @@ export class DisableTextSelectionDirective implements OnInit {
   @HostListener('mousedown', ['$event'])
   @HostListener('selectstart', ['$event'])
   @HostListener('dragstart', ['$event'])
-  blockSelection(event: Event) {
+  blockSelection(event: Event): void {
     event.preventDefault();
   }
 
   @HostListener('keydown', ['$event'])
-  blockKeySelection(event: KeyboardEvent) {
+  blockKeySelection(event: KeyboardEvent): void {
     if (event.shiftKey && ['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End','PageUp','PageDown'].includes(event.key)) {
       event.preventDefault();
     }

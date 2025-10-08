@@ -30,6 +30,31 @@ module.exports = tseslint.config(
           style: "kebab-case",
         },
       ],
+      "semi": [
+          "error",
+          "always"
+        ],
+        "quotes": [
+          "error",
+          "single"
+        ],
+        "template-curly-spacing": [
+          "error",
+          "never"
+        ],
+        "object-curly-spacing": [
+          "error",
+          "always"
+        ],
+        "no-unreachable": [
+          "error"
+        ],
+        "@typescript-eslint/explicit-function-return-type": "error",
+        "no-multi-spaces": "error",
+        "no-multiple-empty-lines": [
+          "error", { "max": 1 }
+        ],
+        "no-trailing-spaces": "error"
     },
   },
   {

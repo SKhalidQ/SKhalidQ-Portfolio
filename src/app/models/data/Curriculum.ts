@@ -1,4 +1,4 @@
-import { BulletPoints, Curriculum, History, Header, Hobbies, Profile, TechnicalSkill } from "../interfaces/Curriculum";
+import { BulletPoints, Curriculum, History, Header, Hobbies, Profile, TechnicalSkill } from '../interfaces/Curriculum';
 
 const header: Header = {
   name: 'curriculumPage.header.name',
@@ -37,7 +37,7 @@ const employmentHistory: History[] = [
     title: 'curriculumPage.employmentHistory.jobs.homeFundraising.title',
     description: 'curriculumPage.employmentHistory.jobs.homeFundraising.description'
   }
-]
+];
 
 const education: History[] = [
   {

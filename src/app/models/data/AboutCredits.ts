@@ -1,4 +1,4 @@
-import { AboutCredit } from "../interfaces/AboutCredit";
+import { AboutCredit } from '../interfaces/AboutCredit';
 
 export const AboutCredits: AboutCredit[] = [
   {

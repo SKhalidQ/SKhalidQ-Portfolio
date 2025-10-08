@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DisableRightClickDirective } from './disable-right-click.directive';
 
 @Component({
-  template: `<div id="ctx" appDisableRightClick>Right click me</div>`
+  template: '<div id="ctx" appDisableRightClick>Right click me</div>'
 })
 class HostComponent {}
 

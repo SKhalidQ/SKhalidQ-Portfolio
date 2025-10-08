@@ -27,7 +27,7 @@ export class ThemeService implements OnDestroy {
     if (typeof window !== 'undefined' && window.matchMedia) {
       this.systemPreferenceMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       this.systemTheme.next(this.systemPreferenceMediaQuery.matches ? ThemeMode.DarkMode : ThemeMode.LightMode);
-      this.systemPreferenceListener = (e: MediaQueryListEvent) => {
+      this.systemPreferenceListener = (e: MediaQueryListEvent): void => {
         this.systemTheme.next(e.matches ? ThemeMode.DarkMode : ThemeMode.LightMode);
       };
       if (this.systemPreferenceMediaQuery.addEventListener) {

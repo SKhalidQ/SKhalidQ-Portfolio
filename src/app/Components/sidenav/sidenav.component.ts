@@ -38,7 +38,7 @@ export class SidenavComponent implements OnInit {
       options: ThemeMenuButton.options?.map(opt => ({
         ...opt,
         isActive: opt.key === this.themeService.themeMode.getValue(),
-        method: () => this.updateTheme(opt.key)
+        method: (): void => this.updateTheme(opt.key)
       }))
     };
 
@@ -47,13 +47,13 @@ export class SidenavComponent implements OnInit {
       options: LanguageMenuButton.options?.map(opt => ({
         ...opt,
         isActive: opt.key === this.languageService.currentLanguage.getValue(),
-        method: () => this.updateLanguage(opt.key)
+        method: (): void => this.updateLanguage(opt.key)
       }))
     };
 
     this.navigationButtons = NavigationButtons.map(button => ({
       ...button,
-      method: () => {
+      method: (): void => {
         if (button.text === this.translationService.getTextPath('navigationButtons.about')) {
           this.easterEggService.runEasterEgg();
         }
@@ -63,11 +63,11 @@ export class SidenavComponent implements OnInit {
     }));
   }
 
-  closeSidenav = () => {
+  closeSidenav = (): void => {
     this.toggleSidenav.emit();
   };
 
-  updateTheme(theme: string) {
+  updateTheme(theme: string): void {
     const newTheme: ThemeMode = ThemeMode[theme as keyof typeof ThemeMode] || ThemeMode.LightMode;
 
     this.themeMenu.options?.map((option: MenuOption) => {
@@ -77,12 +77,12 @@ export class SidenavComponent implements OnInit {
     this.themeService.setTheme(newTheme);
 
     const themeName = this.translationService.getTextPath(`themeMenu.options.${theme}`);
-    const dismissText = this.translationService.getTextPath(`snackbar.dismiss`);
-    const themeChangeMessage = this.translationService.getTextPath(`snackbar.themeChanged`, [themeName.toLowerCase()]);
+    const dismissText = this.translationService.getTextPath('snackbar.dismiss');
+    const themeChangeMessage = this.translationService.getTextPath('snackbar.themeChanged', [themeName.toLowerCase()]);
     this.snackbarService.openSnackbar(themeChangeMessage, dismissText);
   }
 
-  updateLanguage(language: string) {
+  updateLanguage(language: string): void {
     const newLanguage: Language = Language[language as keyof typeof Language] || Language.enGB;
 
     this.languageMenu.options?.map((option: MenuOption) => {
@@ -92,8 +92,8 @@ export class SidenavComponent implements OnInit {
     this.languageService.setLanguage(newLanguage);
 
     const languageName = this.translationService.getTextPath(`languageMenu.options.${language}`);
-    const dismissText = this.translationService.getTextPath(`snackbar.dismiss`);
-    const languageChangeMessage = this.translationService.getTextPath(`snackbar.languageChanged`, [languageName.toLowerCase()]);
+    const dismissText = this.translationService.getTextPath('snackbar.dismiss');
+    const languageChangeMessage = this.translationService.getTextPath('snackbar.languageChanged', [languageName.toLowerCase()]);
     this.snackbarService.openSnackbar(languageChangeMessage, dismissText);
   }
 }

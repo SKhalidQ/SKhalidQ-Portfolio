@@ -1,4 +1,4 @@
-import { LanguageStrings } from "./enGB";
+import { LanguageStrings } from './enGB';
 
 export const urPKLanguage: LanguageStrings = {
   navigationButtons: {
