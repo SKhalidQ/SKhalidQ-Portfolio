@@ -30,6 +30,7 @@ import { TranslatePipe } from './pipes/translate/translate.pipe';
 
 import { DisableRightClickDirective } from './directives/DisableRightClick/disable-right-click.directive';
 import { DisableTextSelectionDirective } from './directives/DisableTextSelection/disable-text-selection.directive';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { DisableTextSelectionDirective } from './directives/DisableTextSelection
     SnackbarComponent,
     ErrorPageComponent,
     SocialButtonLogoPipe,
-    GithubLogoPipe
+    GithubLogoPipe,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

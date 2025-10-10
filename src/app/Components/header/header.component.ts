@@ -1,5 +1,5 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Component, EventEmitter, inject, Input, OnInit, OnDestroy, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { Subject } from 'rxjs';
 import { LanguageMenuButton } from 'src/app/models/data/LanguageMenuButtons';
 import { NavigationButtons } from 'src/app/models/data/NavigationButtons';
@@ -12,9 +12,9 @@ import { NavigationButton } from 'src/app/models/interfaces/NavigationButton';
 import { ActivePageService } from 'src/app/services/activePage/active-page.service';
 import { EvolutionService } from 'src/app/services/easterEgg/evolution.service';
 import { LanguageService } from 'src/app/services/language/language.service';
-import { TranslationService } from 'src/app/services/translation/translation.service';
 import { SnackbarService } from 'src/app/services/snackbar/snackbar.service';
 import { ThemeService } from 'src/app/services/theme/theme.service';
+import { TranslationService } from 'src/app/services/translation/translation.service';
 
 @Component({
   selector: 'app-header',
@@ -26,14 +26,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
   @Input() isSideNav = false;
 
   private readonly breakpointObserver = inject(BreakpointObserver);
+  private readonly translationService = inject(TranslationService);
+  private readonly easterEggService = inject(EvolutionService);
   public readonly themeService = inject(ThemeService);
   public readonly languageService = inject(LanguageService);
-  private readonly translationService = inject(TranslationService);
   public readonly activePageService = inject(ActivePageService);
   public readonly snackbarService = inject(SnackbarService);
-  private readonly easterEggService = inject(EvolutionService);
 
-  logo: { text: string, icon: string } = { text: 'My Portfolio', icon: './assets/images/logos/logo_transparent.svg' };
+  readonly logo: { text: string, icon: string } = { text: 'My Portfolio', icon: './assets/images/logos/logo_transparent.svg' };
   navigationButtons: NavigationButton[] = NavigationButtons;
   themeMenu: MenuButton = ThemeMenuButton;
   languageMenu: MenuButton = LanguageMenuButton;

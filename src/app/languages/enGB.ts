@@ -59,6 +59,32 @@ export const enGBLanguage = {
       UniversityProject: 'University Projects'
     }
   },
+  aboutPage: {
+    changelog: 'Changelog',
+    checkUpdates: 'Check for Updates',
+    checkUpdatesDialog: {
+      newUpdate: {
+        title: 'New Update!',
+        message: 'New content is available on this page. Would you like to update?',
+        action: 'Update'
+      },
+      disabledUpdate: {
+        title: 'Update Disabled',
+        message: 'Automatic updates are not enabled in this environment.',
+        close: 'Close'
+      },
+      noNewUpdate: {
+        title: 'No Updates Available',
+        message: 'You are already running the latest version of this application.',
+        close: 'Close'
+      },
+      updateError: {
+        title: 'Update Check Failed',
+        message: 'Unable to check for updates at this time. Please try again later.',
+        action: 'Close'
+      }
+    }
+  },
   projects: {
     mediaPlay: {
       title: 'MediaPlay',

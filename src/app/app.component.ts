@@ -5,6 +5,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { Title } from '@angular/platform-browser';
 import { Page } from './models/enums/Page';
+import { SiteStatusService } from './services/siteStatus/site-status.service';
 
 @Component({
   selector: 'app-root',
@@ -12,14 +13,16 @@ import { Page } from './models/enums/Page';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  themeService = inject(ThemeService);
-  metaThemeService = inject(MetaThemeService);
-  activatedRoute = inject(ActivatedRoute);
-  router = inject(Router);
-  titleService = inject(Title);
+  readonly themeService = inject(ThemeService);
+  private readonly metaThemeService = inject(MetaThemeService);
+  private readonly activatedRoute = inject(ActivatedRoute);
+  private readonly router = inject(Router);
+  private readonly titleService = inject(Title);
+  private readonly siteStatusService = inject(SiteStatusService);
 
   ngOnInit(): void {
     this.setTabTitle();
+    this.siteStatusService.checkUpdates();
   }
 
   setTabTitle(): void {

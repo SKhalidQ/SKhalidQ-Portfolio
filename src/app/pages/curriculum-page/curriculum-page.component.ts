@@ -12,7 +12,7 @@ import { ActivePageService } from 'src/app/services/activePage/active-page.servi
   animations: [Animations.fadeInOut]
 })
 export class CurriculumPageComponent implements OnInit {
-  readonly activePageService = inject(ActivePageService);
+  private readonly activePageService = inject(ActivePageService);
 
   isModern = false;
   curriculum: Curriculum = CurriculumInfo;

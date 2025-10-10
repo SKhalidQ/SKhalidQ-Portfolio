@@ -59,6 +59,32 @@ export const caESLanguage: LanguageStrings = {
     notFound: 'Sembla que la pàgina que buscaves no existeix o l\'enllaç està trencat.',
     genericError: 'Alguna cosa ha anat malament al nostre costat. Si us plau, torna-ho a intentar més tard.'
   },
+  aboutPage: {
+    changelog: 'Registre de canvis',
+    checkUpdates: 'Comprovar Actualitzacions',
+    checkUpdatesDialog: {
+      newUpdate: {
+        title: 'Nova Actualització!',
+        message: 'Hi ha nou contingut disponible en aquesta pàgina. Vols actualitzar?',
+        action: 'Actualitzar'
+      },
+      disabledUpdate: {
+        title: 'Actualització Desactivada',
+        message: 'Les actualitzacions automàtiques no estan habilitades en aquest entorn.',
+        close: 'Tancar'
+      },
+      noNewUpdate: {
+        title: 'Cap Actualització Disponible',
+        message: 'Ja estàs executant la versió més recent d\'aquesta aplicació.',
+        close: 'Tancar'
+      },
+      updateError: {
+        title: 'Error en Comprovar Actualitzacions',
+        message: 'No s\'ha pogut comprovar si hi ha actualitzacions en aquest moment. Si us plau, torna-ho a intentar més tard.',
+        action: 'Tancar'
+      }
+    }
+  },
   projects: {
     mediaPlay: {
       title: 'Media Play (Alpha)',

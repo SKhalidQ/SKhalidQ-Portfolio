@@ -9,7 +9,7 @@ import { SnackbarData } from 'src/app/models/interfaces/SnackbarData';
 })
 export class SnackbarComponent {
   private readonly snackRef = inject(MatSnackBarRef<SnackbarComponent>);
-  public readonly data = inject<SnackbarData>(MAT_SNACK_BAR_DATA);
+  readonly data = inject<SnackbarData>(MAT_SNACK_BAR_DATA);
 
   public dismiss(): void {
     this.snackRef.dismiss();

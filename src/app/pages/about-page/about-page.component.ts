@@ -3,6 +3,7 @@ import { AboutCredits } from 'src/app/models/data/AboutCredits';
 import { Page } from 'src/app/models/enums/Page';
 import { ThemeMode } from 'src/app/models/enums/ThemeMode';
 import { ActivePageService } from 'src/app/services/activePage/active-page.service';
+import { SiteStatusService } from 'src/app/services/siteStatus/site-status.service';
 import { ThemeService } from 'src/app/services/theme/theme.service';
 
 @Component({
@@ -11,12 +12,17 @@ import { ThemeService } from 'src/app/services/theme/theme.service';
   styleUrls: ['./about-page.component.scss']
 })
 export class AboutPageComponent implements OnInit {
-  readonly themeService = inject(ThemeService);
-  readonly activePageService = inject(ActivePageService);
+  private readonly themeService = inject(ThemeService);
+  private readonly activePageService = inject(ActivePageService);
+  private readonly siteStatusService = inject(SiteStatusService);
 
   readonly logoPath = '../../../assets/images/logos/group_logo_transparent.png';
   readonly aboutCredits = AboutCredits;
-  readonly changelogText = 'Changelog';
+  readonly changelogText = 'aboutPage.changelog';
+  readonly checkUpdate = {
+    text: 'aboutPage.checkUpdates',
+    icon: 'system_update'
+  };
 
   ngOnInit(): void {
     this.activePageService.activePage.next(`pages.${Page[Page.About]}`);
@@ -40,5 +46,9 @@ export class AboutPageComponent implements OnInit {
   get copyright(): string {
     // TODO: Get version number
     return `Copyright SKhalidQ ©${this.currentYear} v1.3.0`;
+  }
+
+  checkForUpdates(): void {
+    this.siteStatusService.manualUpdateCheck();
   }
 }

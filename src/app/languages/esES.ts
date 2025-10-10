@@ -59,6 +59,32 @@ export const esESLanguage: LanguageStrings = {
       UniversityProject: 'Proyectos Universitarios'
     }
   },
+  aboutPage: {
+    changelog: 'Registro de cambios',
+    checkUpdates: 'Comprobar Actualizaciones',
+    checkUpdatesDialog: {
+      newUpdate: {
+        title: 'Nueva Actualización!',
+        message: 'Hay nuevo contenido disponible en esta página. ¿Quieres actualizar?',
+        action: 'Actualizar'
+      },
+      disabledUpdate: {
+        title: 'Actualización Desactivada',
+        message: 'Las actualizaciones automáticas no están habilitadas en este entorno.',
+        close: 'Cerrar'
+      },
+      noNewUpdate: {
+        title: 'No hay Actualizaciones Disponibles',
+        message: 'Ya estás ejecutando la versión más reciente de esta aplicación.',
+        close: 'Cerrar'
+      },
+      updateError: {
+        title: 'Error al Comprobar Actualizaciones',
+        message: 'No se ha podido comprobar si hay actualizaciones en este momento. Por favor, inténtalo de nuevo más tarde.',
+        action: 'Cerrar'
+      }
+    }
+  },
   projects: {
     mediaPlay: {
       title: 'MediaPlay',
