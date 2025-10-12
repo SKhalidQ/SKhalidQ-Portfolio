@@ -1,9 +1,9 @@
 import { inject, Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ThemeMode } from 'src/app/models/enums/ThemeMode';
+import { ThemeMode } from 'src/app/models/enums/theme-mode';
 import { ThemeService } from '../theme/theme.service';
 import { SnackbarComponent } from 'src/app/components/snackbar/snackbar.component';
-import { SnackbarData } from 'src/app/models/interfaces/SnackbarData';
+import { SnackbarData } from 'src/app/models/interfaces/snackbar-data';
 
 @Injectable({
   providedIn: 'root'

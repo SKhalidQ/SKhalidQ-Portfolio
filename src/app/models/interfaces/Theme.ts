@@ -1,4 +1,4 @@
-import { ThemeMode } from '../enums/ThemeMode';
+import { ThemeMode } from '../enums/theme-mode';
 
 export interface ThemeModel {
   theme: string;

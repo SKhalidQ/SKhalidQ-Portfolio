@@ -1,5 +1,5 @@
-import { ProjectType } from '../enums/ProjectType';
-import { Project } from '../interfaces/Project';
+import { ProjectType } from '../enums/project-type';
+import { Project } from '../interfaces/project';
 
 // https://4kwallpapers.com/images/wallpapers/windows-11-dark-mode-blue-stock-official-1920x1080-5630.jpg
 
@@ -8,7 +8,7 @@ const MediaPlay: Project = {
   subtitle: 'projects.mediaPlay.subtitle',
   icon: 'play_arrow',
   projectType: ProjectType.PersonalProject,
-  imagePath: './assets/images/projects/ComingSoon/ComingSoon v2.png',
+  imagePath: './assets/images/projects/coming-soon/ComingSoon v2.png',
   description: 'projects.mediaPlay.description',
   hasWebsite: true,
   websiteUrl: undefined,
@@ -22,7 +22,7 @@ const FileExplorer: Project = {
   subtitle: 'projects.fileExplorer.subtitle',
   icon: 'folder',
   projectType: ProjectType.PersonalProject,
-  imagePath: './assets/images/projects/ComingSoon/ComingSoon v2.png',
+  imagePath: './assets/images/projects/coming-soon/ComingSoon v2.png',
   description:'projects.fileExplorer.description',
   hasWebsite: true,
   websiteUrl: undefined,

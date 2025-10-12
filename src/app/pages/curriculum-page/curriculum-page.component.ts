@@ -1,9 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Animations } from 'src/app/app.animations';
-import { CurriculumInfo } from 'src/app/models/data/Curriculum';
-import { Page } from 'src/app/models/enums/Page';
-import { Curriculum } from 'src/app/models/interfaces/Curriculum';
-import { ActivePageService } from 'src/app/services/activePage/active-page.service';
+import { CurriculumInfo } from 'src/app/models/data/curriculum-info';
+import { Page } from 'src/app/models/enums/page';
+import { Curriculum } from 'src/app/models/interfaces/curriculum';
+import { ActivePageService } from 'src/app/services/active-page/active-page.service';
 
 @Component({
   selector: 'app-curriculum-page',

@@ -1,6 +1,6 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject, combineLatest, distinctUntilChanged, map } from 'rxjs';
-import { ThemeMode } from 'src/app/models/enums/ThemeMode';
+import { ThemeMode } from 'src/app/models/enums/theme-mode';
 
 @Injectable({
   providedIn: 'root'

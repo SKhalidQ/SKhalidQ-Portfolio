@@ -1,4 +1,4 @@
-import { BulletPoints, Curriculum, History, Header, Hobbies, Profile, TechnicalSkill } from '../interfaces/Curriculum';
+import { BulletPoints, Curriculum, History, Header, Hobbies, Profile, TechnicalSkill } from '../interfaces/curriculum';
 
 const header: Header = {
   name: 'curriculumPage.header.name',

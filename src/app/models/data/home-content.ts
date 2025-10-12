@@ -1,4 +1,4 @@
-import { HomeContent } from '../interfaces/HomeContent';
+import { HomeContent } from '../interfaces/home-content';
 
 export const HomeContentData: HomeContent = {
   title: 'homePage.title',

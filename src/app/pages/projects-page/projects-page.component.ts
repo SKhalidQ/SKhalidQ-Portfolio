@@ -1,9 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Animations } from 'src/app/app.animations';
-import { Projects } from 'src/app/models/data/Projects';
-import { Page } from 'src/app/models/enums/Page';
-import { Project } from 'src/app/models/interfaces/Project';
-import { ActivePageService } from 'src/app/services/activePage/active-page.service';
+import { Projects } from 'src/app/models/data/projects-info';
+import { Page } from 'src/app/models/enums/page';
+import { Project } from 'src/app/models/interfaces/project';
+import { ActivePageService } from 'src/app/services/active-page/active-page.service';
 import { TranslationService } from 'src/app/services/translation/translation.service';
 import { ThemeService } from 'src/app/services/theme/theme.service';
 

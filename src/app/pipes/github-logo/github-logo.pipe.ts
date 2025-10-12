@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ThemeMode } from 'src/app/models/enums/ThemeMode';
+import { ThemeMode } from 'src/app/models/enums/theme-mode';
 
 @Pipe({
   name: 'githubLogo',

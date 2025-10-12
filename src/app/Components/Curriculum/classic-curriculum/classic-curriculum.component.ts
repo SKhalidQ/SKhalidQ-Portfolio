@@ -1,14 +1,12 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, inject, Input } from '@angular/core';
-import { Curriculum } from 'src/app/models/interfaces/Curriculum';
+import { Curriculum } from 'src/app/models/interfaces/curriculum';
 import { SnackbarService } from 'src/app/services/snackbar/snackbar.service';
 
 @Component({
   selector: 'app-classic-curriculum',
   templateUrl: './classic-curriculum.component.html',
-  styleUrls: [
-    './classic-curriculum.component.scss'
-  ]
+  styleUrls: ['./classic-curriculum.component.scss']
 })
 export class ClassicCurriculumComponent {
   @Input() curriculum!: Curriculum;

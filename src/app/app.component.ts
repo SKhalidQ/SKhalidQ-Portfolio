@@ -4,8 +4,8 @@ import { MetaThemeService } from './services/meta-theme/meta-theme.service';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { Title } from '@angular/platform-browser';
-import { Page } from './models/enums/Page';
-import { SiteStatusService } from './services/siteStatus/site-status.service';
+import { Page } from './models/enums/page';
+import { SiteStatusService } from './services/site-status/site-status.service';
 
 @Component({
   selector: 'app-root',

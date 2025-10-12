@@ -16,7 +16,7 @@ export class EvolutionService {
       return;
     }
 
-    const soundtrack = new Audio('../../../assets/easterEggs/Evolution.flac');
+    const soundtrack = new Audio('../../../assets/easter-eggs/Evolution.flac');
 
     soundtrack.volume = 1.0;
     soundtrack.play();

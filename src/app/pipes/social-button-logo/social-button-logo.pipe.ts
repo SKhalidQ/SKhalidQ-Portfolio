@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ThemeMode } from 'src/app/models/enums/ThemeMode';
-import { NavigationButton } from 'src/app/models/interfaces/NavigationButton';
+import { ThemeMode } from 'src/app/models/enums/theme-mode';
+import { NavigationButton } from 'src/app/models/interfaces/navigation-button';
 
 @Pipe({
   name: 'socialButtonLogo'

@@ -1,8 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { HomeContentData } from 'src/app/models/data/HomeContent';
-import { Page } from 'src/app/models/enums/Page';
-import { ThemeMode } from 'src/app/models/enums/ThemeMode';
-import { ActivePageService } from 'src/app/services/activePage/active-page.service';
+import { HomeContentData } from 'src/app/models/data/home-content';
+import { Page } from 'src/app/models/enums/page';
+import { ThemeMode } from 'src/app/models/enums/theme-mode';
+import { ActivePageService } from 'src/app/services/active-page/active-page.service';
 import { ThemeService } from 'src/app/services/theme/theme.service';
 
 @Component({

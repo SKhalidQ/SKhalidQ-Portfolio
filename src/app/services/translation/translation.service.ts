@@ -3,7 +3,7 @@ import { caESLanguage } from 'src/app/languages/caES';
 import { enGBLanguage, LanguageStrings } from 'src/app/languages/enGB';
 import { esESLanguage } from 'src/app/languages/esES';
 import { urPKLanguage } from 'src/app/languages/urPK';
-import { Language } from 'src/app/models/enums/Language';
+import { Language } from 'src/app/models/enums/language';
 import { LanguageService } from '../language/language.service';
 
 @Injectable({

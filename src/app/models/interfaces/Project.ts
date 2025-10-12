@@ -1,4 +1,4 @@
-import { ProjectType } from '../enums/ProjectType';
+import { ProjectType } from '../enums/project-type';
 
 export interface Project {
   title: string;

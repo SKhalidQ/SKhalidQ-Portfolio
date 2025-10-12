@@ -1,6 +1,6 @@
 
-import { Language } from '../enums/Language';
-import { MenuButton, MenuOption } from '../interfaces/Menu';
+import { Language } from '../enums/language';
+import { MenuButton, MenuOption } from '../interfaces/menu';
 
 export const LanguageMenuOptions: MenuOption[] = [
   { key: Language.enGB, text: `languageMenu.options.${Language[Language.enGB]}`, icon: '../../assets/images/flags/Britain.svg', iconType: 'image', method: (): void => { /* no-op */ }, isActive: true },

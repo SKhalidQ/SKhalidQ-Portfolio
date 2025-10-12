@@ -1,7 +1,7 @@
 import { HttpStatusCode } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ActivePageService } from 'src/app/services/activePage/active-page.service';
+import { ActivePageService } from 'src/app/services/active-page/active-page.service';
 
 @Component({
   selector: 'app-error-page',

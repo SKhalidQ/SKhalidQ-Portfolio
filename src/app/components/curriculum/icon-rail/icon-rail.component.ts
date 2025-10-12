@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Hobbies } from 'src/app/models/interfaces/Curriculum';
+import { Hobbies } from 'src/app/models/interfaces/curriculum';
 
 @Component({
   selector: 'app-icon-rail',

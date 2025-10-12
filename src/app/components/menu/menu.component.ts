@@ -1,6 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
-import { ThemeMode } from 'src/app/models/enums/ThemeMode';
-import { MenuButton, MenuOption } from 'src/app/models/interfaces/Menu';
+import { ThemeMode } from 'src/app/models/enums/theme-mode';
+import { MenuButton, MenuOption } from 'src/app/models/interfaces/menu';
 import { ThemeService } from 'src/app/services/theme/theme.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { ThemeService } from 'src/app/services/theme/theme.service';
 export class MenuComponent {
   @Input() menuButton!: MenuButton;
   @Input() isList = false;
-  @Input() onMenuClose: () => void = (): void => {/* no-op */ };
+  @Input() onMenuClose: () => void = (): void => { /* no-op */ };
 
   public readonly themeService = inject(ThemeService);
 

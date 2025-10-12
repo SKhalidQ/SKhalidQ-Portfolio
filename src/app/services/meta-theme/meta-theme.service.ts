@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
-import { ThemeMode } from 'src/app/models/enums/ThemeMode';
+import { ThemeMode } from 'src/app/models/enums/theme-mode';
 import { ThemeService } from '../theme/theme.service';
 
 @Injectable({

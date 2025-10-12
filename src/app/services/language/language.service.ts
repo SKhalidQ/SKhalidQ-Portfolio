@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Language } from 'src/app/models/enums/Language';
+import { Language } from 'src/app/models/enums/language';
 
 @Injectable({
   providedIn: 'root'

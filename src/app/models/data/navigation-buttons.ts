@@ -1,4 +1,4 @@
-import { NavigationButton } from '../interfaces/NavigationButton';
+import { NavigationButton } from '../interfaces/navigation-button';
 
 export const NavigationButtons: NavigationButton[] = [
   { text: 'navigationButtons.home', icon: 'home', route: '/home' },

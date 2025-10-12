@@ -1,4 +1,4 @@
-import { NavigationButton } from '../interfaces/NavigationButton';
+import { NavigationButton } from '../interfaces/navigation-button';
 
 export const SocialMediaButtons: NavigationButton[] = [
   { text: 'Twitter', icon: '../assets/images/logos/twitter-brands.svg', route: 'https://www.twitter.com' },

@@ -24,12 +24,12 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 
-import { GithubLogoPipe } from './pipes/githubLogo/github-logo.pipe';
-import { SocialButtonLogoPipe } from './pipes/socialButtonLogo/social-button-logo.pipe';
+import { GithubLogoPipe } from './pipes/github-logo/github-logo.pipe';
+import { SocialButtonLogoPipe } from './pipes/social-button-logo/social-button-logo.pipe';
 import { TranslatePipe } from './pipes/translate/translate.pipe';
 
-import { DisableRightClickDirective } from './directives/DisableRightClick/disable-right-click.directive';
-import { DisableTextSelectionDirective } from './directives/DisableTextSelection/disable-text-selection.directive';
+import { DisableRightClickDirective } from './directives/disable-right-click/disable-right-click.directive';
+import { DisableTextSelectionDirective } from './directives/disable-text-selection/disable-text-selection.directive';
 import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({

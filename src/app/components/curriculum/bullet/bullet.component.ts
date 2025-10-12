@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, inject, Input } from '@angular/core';
-import { BulletPoints } from 'src/app/models/interfaces/Curriculum';
+import { BulletPoints } from 'src/app/models/interfaces/curriculum';
 
 @Component({
   selector: 'app-bullet',
