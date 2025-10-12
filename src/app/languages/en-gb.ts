@@ -1,6 +1,6 @@
-export type LanguageStrings = typeof enGBLanguage;
+export type LanguageStrings = typeof enGB;
 
-export const enGBLanguage = {
+export const enGB = {
   navigationButtons: {
     home: 'Home',
     curriculum: 'Curriculum',

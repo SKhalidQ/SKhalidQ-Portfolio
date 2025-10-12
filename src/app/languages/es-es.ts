@@ -1,6 +1,6 @@
-import { LanguageStrings } from './enGB';
+import { LanguageStrings } from './en-gb';
 
-export const esESLanguage: LanguageStrings = {
+export const esES: LanguageStrings = {
   navigationButtons: {
     home: 'Inicio',
     curriculum: 'Currículum',

@@ -1,6 +1,6 @@
-import { LanguageStrings } from './enGB';
+import { LanguageStrings } from './en-gb';
 
-export const caESLanguage: LanguageStrings = {
+export const caES: LanguageStrings = {
   navigationButtons: {
     home: 'Inici',
     curriculum: 'Currículum',

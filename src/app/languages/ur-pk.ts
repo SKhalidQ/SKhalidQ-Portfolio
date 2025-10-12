@@ -1,6 +1,6 @@
-import { LanguageStrings } from './enGB';
+import { LanguageStrings } from './en-gb';
 
-export const urPKLanguage: LanguageStrings = {
+export const urPK: LanguageStrings = {
   navigationButtons: {
     home: 'ہوم', // Home
     curriculum: 'نصاب', // Nisaab

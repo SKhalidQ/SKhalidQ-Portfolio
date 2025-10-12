@@ -1,8 +1,8 @@
 import { inject, Injectable } from '@angular/core';
-import { caESLanguage } from 'src/app/languages/caES';
-import { enGBLanguage, LanguageStrings } from 'src/app/languages/enGB';
-import { esESLanguage } from 'src/app/languages/esES';
-import { urPKLanguage } from 'src/app/languages/urPK';
+import { caES } from 'src/app/languages/ca-es';
+import { enGB, LanguageStrings } from 'src/app/languages/en-gb';
+import { esES } from 'src/app/languages/es-es';
+import { urPK } from 'src/app/languages/ur-pk';
 import { Language } from 'src/app/models/enums/language';
 import { LanguageService } from '../language/language.service';
 
@@ -10,7 +10,7 @@ import { LanguageService } from '../language/language.service';
   providedIn: 'root'
 })
 export class TranslationService {
-  private languageString: LanguageStrings = enGBLanguage;
+  private languageString: LanguageStrings = enGB;
 
   private readonly languageService = inject(LanguageService);
 
@@ -24,17 +24,17 @@ export class TranslationService {
   public setLanguageStrings(language: Language): void {
     switch (language) {
       case Language.esES:
-        this.languageString = esESLanguage;
+        this.languageString = esES;
         break;
       case Language.caES:
-        this.languageString = caESLanguage;
+        this.languageString = caES;
         break;
       case Language.urPK:
-        this.languageString = urPKLanguage;
+        this.languageString = urPK;
         break;
       case Language.enGB:
       default:
-        this.languageString = enGBLanguage;
+        this.languageString = enGB;
         break;
     }
   }
