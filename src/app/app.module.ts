@@ -1,63 +1,76 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NgModule } from '@angular/core';
-
-import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyload-image';
-import { MaterialModules } from './app-material';
-
-import { DisableRightclickDirective } from './Directives/disable-rightclick.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { AppRoutingModule } from './app-routing.module';
+import { MaterialModules } from './app.material';
 
-import { ClassicCurriculumComponent } from './Components/Curriculum/classic-curriculum/classic-curriculum.component';
-import { ModernCurriculumComponent } from './Components/Curriculum/modern-curriculum/modern-curriculum.component';
-import { ExpansionPanelsComponent } from './Components/expansion-panels/expansion-panels.component';
-import { ProjectCardComponent } from './Components/project-card/project-card.component';
-import { ChangeLogsComponent } from './Pages/change-logs/change-logs.component';
-import { CurriculumComponent } from './Pages/curriculum/curriculum.component';
-import { NotFoundComponent } from './Pages/not-found/not-found.component';
-import { SidenavComponent } from './Components/sidenav/sidenav.component';
-import { ProjectsComponent } from './Pages/projects/projects.component';
-import { DialogComponent } from './Components/dialog/dialog.component';
-import { HeaderComponent } from './Components/header/header.component';
-import { AboutComponent } from './Pages/about/about.component';
-import { HomeComponent } from './Pages/home/home.component';
-import { environment } from '../environments/environment';
+import { AppComponent } from './app.component';
+import { BulletComponent } from './components/curriculum/bullet/bullet.component';
+import { ClassicCurriculumComponent } from './components/curriculum/classic-curriculum/classic-curriculum.component';
+import { HistoryComponent } from './components/curriculum/history/history.component';
+import { IconRailComponent } from './components/curriculum/icon-rail/icon-rail.component';
+import { ListComponent } from './components/curriculum/list/list.component';
+import { ProfileComponent } from './components/curriculum/profile/profile.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { SnackbarComponent } from './components/snackbar/snackbar.component';
 
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { CurriculumPageComponent } from './pages/curriculum-page/curriculum-page.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
+
+import { GithubLogoPipe } from './pipes/github-logo/github-logo.pipe';
+import { SocialButtonLogoPipe } from './pipes/social-button-logo/social-button-logo.pipe';
+import { TranslatePipe } from './pipes/translate/translate.pipe';
+
+import { DisableRightClickDirective } from './directives/disable-right-click/disable-right-click.directive';
+import { DisableTextSelectionDirective } from './directives/disable-text-selection/disable-text-selection.directive';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
-    DisableRightclickDirective,
-    ClassicCurriculumComponent,
-    ModernCurriculumComponent,
-    ExpansionPanelsComponent,
-    ProjectCardComponent,
-    ChangeLogsComponent,
-    CurriculumComponent,
-    NotFoundComponent,
-    ProjectsComponent,
-    SidenavComponent,
-    DialogComponent,
-    HeaderComponent,
-    AboutComponent,
-    HomeComponent,
     AppComponent,
+    HeaderComponent,
+    SidenavComponent,
+    ProjectCardComponent,
+    ProjectsPageComponent,
+    MenuComponent,
+    TranslatePipe,
+    HomePageComponent,
+    CurriculumPageComponent,
+    AboutPageComponent,
+    DisableRightClickDirective,
+    DisableTextSelectionDirective,
+    ClassicCurriculumComponent,
+    HistoryComponent,
+    BulletComponent,
+    IconRailComponent,
+    ListComponent,
+    ProfileComponent,
+    SnackbarComponent,
+    ErrorPageComponent,
+    SocialButtonLogoPipe,
+    GithubLogoPipe,
+    DialogComponent
   ],
   imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModules,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-      // Register the ServiceWorker as soon as the app is stable
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    }),
-    BrowserAnimationsModule,
-    LazyLoadImageModule,
-    AppRoutingModule,
-    MaterialModules,
-    BrowserModule,
+    })
   ],
-  providers: [{ provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

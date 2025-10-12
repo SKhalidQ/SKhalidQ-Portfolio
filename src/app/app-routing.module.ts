@@ -1,25 +1,24 @@
-import { ChangeLogsComponent } from './Pages/change-logs/change-logs.component';
-import { CurriculumComponent } from './Pages/curriculum/curriculum.component';
-import { NotFoundComponent } from './Pages/not-found/not-found.component';
-import { ProjectsComponent } from './Pages/projects/projects.component';
-import { AboutComponent } from './Pages/about/about.component';
-import { HomeComponent } from './Pages/home/home.component';
-import { RouterModule, Routes } from '@angular/router';
+import { HttpStatusCode } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { Page } from './models/enums/page';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { CurriculumPageComponent } from './pages/curriculum-page/curriculum-page.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, data: { title: 'Home | SKhalidQ' } },
-  { path: 'curriculum', component: CurriculumComponent, data: { title: 'Curriculum Vitae | SKhalidQ' } },
-  { path: 'projects', component: ProjectsComponent, data: { title: 'Projects | SKhalidQ' } },
-  { path: 'about', component: AboutComponent, data: { title: 'About | SKhalidQ' } },
-  // { path: 'test', component: TestComponent, data: { title: 'Test | SKhalidQ' } },
-  { path: 'changelog', component: ChangeLogsComponent, data: { title: 'Changelog | SKhalidQ' } },
-  { path: '**', component: NotFoundComponent, data: { title: '404 Not Found | SKhalidQ' } },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomePageComponent, data: { pageTitle: Page.Home } },
+  { path: 'curriculum', component: CurriculumPageComponent, data: { pageTitle: Page.Curriculum } },
+  { path: 'projects', component: ProjectsPageComponent, data: { pageTitle: Page.Projects } },
+  { path: 'about', component: AboutPageComponent, data: { pageTitle: Page.About } },
+  { path: '**', component: ErrorPageComponent, data: { pageTitle: Page.Error, statusCode: HttpStatusCode.NotFound } },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top', anchorScrolling: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

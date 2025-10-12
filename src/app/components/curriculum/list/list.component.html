@@ -1,0 +1,9 @@
+<div class="main-container">
+  <div class="title">
+    <p class="bold">{{ title | translate }}</p>
+  </div>
+
+  <div class="list-container">
+    <p *ngFor="let item of list" class="element">{{ item.title | translate }}</p>
+  </div>
+</div>

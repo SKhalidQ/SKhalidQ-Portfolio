@@ -1,74 +1,39 @@
+import { Component, inject, OnInit } from '@angular/core';
+import { ThemeService } from './services/theme/theme.service';
+import { MetaThemeService } from './services/meta-theme/meta-theme.service';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { DialogComponent } from './Components/dialog/dialog.component';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { environment } from 'src/environments/environment.prod';
-import { ThemeService } from 'src/app/Services/theme.service';
-import { ConnectionService } from 'ng-connection-service';
-import { MatDialog } from '@angular/material/dialog';
-import { SwUpdate } from '@angular/service-worker';
-import { ThemeMode, Themes } from './Models/theme';
-import { Component, OnInit } from '@angular/core';
+import { filter, map } from 'rxjs';
 import { Title } from '@angular/platform-browser';
-import { Platform } from '@angular/cdk/platform';
-import { filter, map } from 'rxjs/operators';
+import { Page } from './models/enums/page';
+import { SiteStatusService } from './services/site-status/site-status.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  animations: []
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
-  title = 'SKhalidQ Portfolio';
-  versionNumber = environment.appVersion;
-  showFiller = false;
-  smallScreen: boolean | any;
-  xSmallScreen: boolean | any;
-  currentTheme: ThemeMode | any;
-  themeData = Themes;
-
-  updateContent = false;
-
-  constructor(
-    public breakpointObserver: BreakpointObserver,
-    public themeService: ThemeService,
-    public platform: Platform,
-    private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private titleService: Title,
-    private dialog: MatDialog,
-    private update: SwUpdate,
-    private connectionService: ConnectionService) {
-
-    breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe((x) => {
-      this.smallScreen = x.breakpoints[Breakpoints.Small] && !x.breakpoints[Breakpoints.XSmall];
-      this.xSmallScreen = x.breakpoints[Breakpoints.XSmall];
-    });
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-      const newColorScheme = event.matches ? "dark" : "light";
-      localStorage.setItem('ThemeMode', newColorScheme == "dark" ? Themes[ThemeMode.DarkMode].theme : Themes[ThemeMode.LightMode].theme);
-    });
-
-    this.CheckConnection();
-
-    this.CheckUpdates();
-  }
+  readonly themeService = inject(ThemeService);
+  private readonly metaThemeService = inject(MetaThemeService);
+  private readonly activatedRoute = inject(ActivatedRoute);
+  private readonly router = inject(Router);
+  private readonly titleService = inject(Title);
+  private readonly siteStatusService = inject(SiteStatusService);
 
   ngOnInit(): void {
-    this.SetTabTitle();
+    this.setTabTitle();
+    this.siteStatusService.checkUpdates();
   }
 
-  SetTabTitle(): any {
+  setTabTitle(): void {
     const appTitle = this.titleService.getTitle();
-    const title = 'title';
+    const title = 'pageTitle';
 
     this.router.events.pipe(filter(event => event instanceof NavigationEnd),
       map(() => {
-        const child: any = this.activatedRoute.firstChild;
-        if (child.snapshot.data[title]) {
-          return child.snapshot.data[title];
+        const child: ActivatedRoute | null = this.activatedRoute.firstChild;
+        if (child && child.snapshot.data[title]) {
+          return Page[child.snapshot.data[title]] + ' | SKhalidQ';
         }
 
         return appTitle;
@@ -76,37 +41,5 @@ export class AppComponent implements OnInit {
         this.titleService.setTitle(ttl);
       }
     );
-  }
-
-  CheckUpdates(): void {
-    this.update.available.subscribe(() => {
-      this.dialog.open(DialogComponent, {
-        data: {
-          Title: `New update!`,
-          Message: 'There is new content available on this page. Would you like to update?',
-          Action: 'Refresh'
-        },
-        panelClass: [this.themeService.themeMode.value],
-      }).afterClosed().subscribe(() => {
-        document.location.reload();
-      });
-    });
-  }
-
-  CheckConnection(): void {
-    this.connectionService.monitor().subscribe(isConnected => {
-      if (!isConnected) {
-        this.dialog.open(DialogComponent, {
-          data: {
-            Title: `Lost connection`,
-            Message: 'It seems like you have lost connection. Some features might not be accessible.',
-            Action: 'Close'
-          },
-          panelClass: [this.themeService.themeMode.value],
-        })
-      } else {
-        this.dialog.closeAll();
-      }
-    });
   }
 }

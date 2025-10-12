@@ -1,0 +1,31 @@
+// TODO: Need to find a proper fix for these styles. Maybe Material now lets you do it in a fancy way?
+
+.snackbar-dark {
+  background-color: #303030 !important;
+  color: #FAFAFA !important;
+}
+
+.snackbar-light {
+  background-color: #FAFAFA !important;
+  color: black !important;
+}
+
+.EVOLUTION {
+  background-color: black !important;
+  color: green !important;
+  font-weight: 700 !important;
+  border-radius: 5px !important;
+  font-size: 14px !important;
+
+  button {
+    font-weight: 700;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    color: red !important;
+  }
+}
+
+.mdc-snackbar__surface,
+ng-tns-c3293340843-6 {
+  background-color: transparent !important;
+  height: 48px !important;
+}

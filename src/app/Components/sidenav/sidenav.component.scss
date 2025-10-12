@@ -1,67 +1,41 @@
+// TODO: Revisit these styles.
+// TODO: Find a way to make the header sticky
+
 mat-nav-list {
-    padding-top: 0px;
-    transition: background-color .3s ease-in-out;
-}
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
 
-app-header {
+  padding: 0px;
+  transition: background-color .3s ease-in-out;
+
+  app-header {
     width: 20px;
-}
+  }
 
-.logo {
-    height: 50px;
-    margin-right: 10px;
-}
+  .bottom-container {
+    margin-bottom: 20px;
+  }
 
-.logo:hover {
-    background-color: #2a2a2a52;
-    border-radius: 5px;
-    cursor: pointer;
-}
+  a {
+    div {
+      display: flex;
 
-.logo:focus {
-    outline: 0;
-}
+      span {
+        margin: auto auto auto 30px;
+        font-size: 15px;
+      }
 
-.notFoundDiv {
-    text-align: center;
-    margin: 0 3px;
-}
+      .icon {
+        margin-left: 10px;
+        width: 27px;
+        height: 27px;
+      }
+    }
+  }
 
-.noImage {
-    margin: 0 4px;
-    transform: scale(2);
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.routeBtn {
-    margin-left: 10px;
-}
-
-button:hover, button:active {
-    color: lightgray;
-}
-
-span {
-    margin-left: 30px;
-    font-size: 15px;
-}
-
-.social-media-span {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin: 0 0 20px;
-}
-
-mat-divider {
-    margin: 20px;
-}
-
-.social-media-icons {
-    margin-left: 10px;
-    width: 25px;
+  mat-divider {
+    margin: 1em;
+  }
 }
