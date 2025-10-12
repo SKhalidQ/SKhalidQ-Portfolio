@@ -34,7 +34,8 @@ export const urPK: LanguageStrings = {
     dismiss: 'ختم کریں', // Khatam karein
     themeChanged: 'تھیم تبدیل کر دی گئی ہے {0}', // Theme tabdeel kar di gayi hai {0}
     languageChanged: 'زبان تبدیل کر دی گئی ہے {0}', // Zubaan tabdeel kar di gayi hai {0}
-    copiedToClipboard: 'کاپی کیا گیا ہے' // Copy kiya gaya hai
+    copiedToClipboard: 'کاپی کیا گیا ہے', // Copy kiya gaya hai
+    connectionRestored: 'کنکشن بحال ہو گیا ہے' // Connection bahal ho gaya hai
   },
   projectCard: {
     repoTooltip: 'GitHub ریپوزٹری کا لنک', // GitHub repository ka link

@@ -34,7 +34,8 @@ export const enGB = {
     dismiss: 'Dismiss',
     themeChanged: 'Theme changed to {0}',
     languageChanged: 'Language changed to {0}',
-    copiedToClipboard: 'Copied to clipboard'
+    copiedToClipboard: 'Copied to clipboard',
+    connectionRestored: 'Connection restored'
   },
   projectCard: {
     repoTooltip: 'GitHub Repository Link',

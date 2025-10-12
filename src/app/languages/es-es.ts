@@ -34,7 +34,8 @@ export const esES: LanguageStrings = {
     dismiss: 'Descartar',
     themeChanged: 'Tema cambiado a {0}',
     languageChanged: 'Idioma cambiado a {0}',
-    copiedToClipboard: 'Copiado al portapapeles'
+    copiedToClipboard: 'Copiado al portapapeles',
+    connectionRestored: 'Conexión restaurada'
   },
   projectCard: {
     repoTooltip: 'Enlace al repositorio de GitHub',

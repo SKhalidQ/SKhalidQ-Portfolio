@@ -34,7 +34,8 @@ export const caES: LanguageStrings = {
     dismiss: 'Descartar',
     themeChanged: 'Tema canviat a {0}',
     languageChanged: 'Idioma canviat a {0}',
-    copiedToClipboard: 'Copiat al portapapers'
+    copiedToClipboard: 'Copiat al portapapers',
+    connectionRestored: 'Connexió restaurada'
   },
   projectCard: {
     repoTooltip: 'Enllaç al repositori de GitHub',

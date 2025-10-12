@@ -5,6 +5,7 @@ import { DialogComponent } from 'src/app/components/dialog/dialog.component';
 import { DialogData } from 'src/app/models/interfaces/dialog-data';
 import { ThemeService } from '../theme/theme.service';
 import { SwUpdate } from '@angular/service-worker';
+import { SnackbarService } from '../snackbar/snackbar.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class SiteStatusService {
   private readonly swUpdate = inject(SwUpdate);
   private readonly dialog = inject(MatDialog);
   private readonly themeService = inject(ThemeService);
+  private readonly snackbarService = inject(SnackbarService);
 
   private readonly isOnline$ = new BehaviorSubject<boolean>(navigator.onLine);
   private dialogRef!: MatDialogRef<DialogComponent>;
@@ -33,6 +35,7 @@ export class SiteStatusService {
         this.showOfflineDialog();
       } else if (isOnline && this.dialogRef) {
         this.closeOfflineDialog();
+        this.snackbarService.openSnackbar('Connection restored', 'Dismiss');
       }
     });
   }
