@@ -1,5 +1,6 @@
 export type LanguageStrings = typeof enGB;
 
+// TODO: Sort alphabetically, except for enums.
 export const enGB = {
   navigationButtons: {
     home: 'Home',
