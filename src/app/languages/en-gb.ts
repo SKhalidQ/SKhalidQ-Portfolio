@@ -72,12 +72,12 @@ export const enGB = {
       disabledUpdate: {
         title: 'Update Disabled',
         message: 'Automatic updates are not enabled in this environment.',
-        close: 'Close'
+        action: 'Close'
       },
       noNewUpdate: {
         title: 'No Updates Available',
         message: 'You are already running the latest version of this application.',
-        close: 'Close'
+        action: 'Close'
       },
       updateError: {
         title: 'Update Check Failed',

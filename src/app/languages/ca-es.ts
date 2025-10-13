@@ -72,12 +72,12 @@ export const caES: LanguageStrings = {
       disabledUpdate: {
         title: 'Actualització Desactivada',
         message: 'Les actualitzacions automàtiques no estan habilitades en aquest entorn.',
-        close: 'Tancar'
+        action: 'Tancar'
       },
       noNewUpdate: {
         title: 'Cap Actualització Disponible',
         message: 'Ja estàs executant la versió més recent d\'aquesta aplicació.',
-        close: 'Tancar'
+        action: 'Tancar'
       },
       updateError: {
         title: 'Error en Comprovar Actualitzacions',

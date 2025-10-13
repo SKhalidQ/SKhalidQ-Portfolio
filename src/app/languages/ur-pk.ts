@@ -72,12 +72,12 @@ export const urPK: LanguageStrings = {
       disabledUpdate: {
         title: 'اپ ڈیٹ غیر فعال ہیں', // Update ghair faal hain
         message: 'خودکار اپ ڈیٹس اس ماحول میں فعال نہیں ہیں۔', // Khudkar updates is mahol mein faal nahin hain.
-        close: 'بند کریں' // Band karein
+        action: 'بند کریں' // Band karein
       },
       noNewUpdate: {
         title: 'کوئی نئی اپ ڈیٹ دستیاب نہیں ہے', // Koi nayi update dastiyab nahin hai
         message: 'آپ پہلے ہی اس ایپلیکیشن کا تازہ ترین ورژن چلا رہے ہیں۔', // Aap pehle hi is application ka taza tareen version chala rahe hain.
-        close: 'بند کریں' // Band karein
+        action: 'بند کریں' // Band karein
       },
       updateError: {
         title: 'اپ ڈیٹ چیک کرنے میں ناکامی', // Update check karne mein nakami

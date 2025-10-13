@@ -72,12 +72,12 @@ export const esES: LanguageStrings = {
       disabledUpdate: {
         title: 'Actualización Desactivada',
         message: 'Las actualizaciones automáticas no están habilitadas en este entorno.',
-        close: 'Cerrar'
+        action: 'Cerrar'
       },
       noNewUpdate: {
         title: 'No hay Actualizaciones Disponibles',
         message: 'Ya estás ejecutando la versión más reciente de esta aplicación.',
-        close: 'Cerrar'
+        action: 'Cerrar'
       },
       updateError: {
         title: 'Error al Comprobar Actualizaciones',
