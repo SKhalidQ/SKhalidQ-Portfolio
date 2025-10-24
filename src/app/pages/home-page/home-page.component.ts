@@ -18,7 +18,7 @@ export class HomePageComponent implements OnInit {
   readonly homeData = HomeContentData;
 
   ngOnInit(): void {
-    this.activePageService.activePage.next(`pages.${Page[Page.Home]}`);
+    this.activePageService.setActivePage({ page: `pages.${Page[Page.Home]}` });
   }
 
   get projectImagePath(): string {

@@ -28,6 +28,7 @@ export const urPK: LanguageStrings = {
     Home: 'ہوم', // Home
     Curriculum: 'نصاب', // Nisaab
     Projects: 'پروجیکٹس', // Projects
+    Project: 'پروجیکٹ', // Project
     About: 'کے بارے میں' // Ke baare mein
   },
   snackbar: {
@@ -41,12 +42,18 @@ export const urPK: LanguageStrings = {
     repoTooltip: 'GitHub ریپوزٹری کا لنک', // GitHub repository ka link
     privateRepoTooltip: 'درخواست پر دستیاب', // Darkhwast par dastiyab
     websiteTooltip: 'پروجیکٹ کی ویب سائٹ دیکھیں', // Project ki web site dekhein
-    unavailableWebsiteTooltip: 'ویب سائٹ دستیاب نہیں ہے' // Web site dastiyab nahin hai
+    unavailableWebsiteTooltip: 'ویب سائٹ دستیاب نہیں ہے', // Web site dastiyab nahin hai
+    visitSite: 'ویب سائٹ پر جائیں', // Web site par jayen
+    readMore: 'مزید پڑھیں' // Mazeed parhein
+  },
+  errorPage: {
+    forbidden: 'آپ کو اس پیج تک رسائی کی اجازت نہیں ہے۔', // Aap ko is page tak rasayi ki ijazat nahin hai
+    notFound: 'پہلے سے موجود صفحہ نہیں ملا یا لنک ٹوٹ گیا ہے۔', // Pehle se mojood safha nahin mila ya link toot gaya hai
+    genericError: 'ہمارے طرف سے کچھ غلط ہو گیا۔ براہ کرم بعد میں دوبارہ کوشش کریں۔' // Hamare taraf se kuch ghalat ho gaya. Barah karm baad mein dobara koshish karein
   },
   projectsPage: {
     filter: 'پروجیکٹ کی قسم کے لحاظ سے فلٹر کریں', // Project ki qism ke lehaz se filter karein
     noProjectsError: 'تمام ڈیٹا حاصل کرنے میں کوئی مسئلہ لگ رہا ہے۔', // Tamam data hasil karne mein koi masla lag raha hai
-    visitSite: 'ویب سائٹ پر جائیں', // Web site par jayen
 
     ProjectTypeFilter: {
       All: 'سب', // Sab
@@ -55,10 +62,7 @@ export const urPK: LanguageStrings = {
       UniversityProject: 'یونیورسٹی پروجیکٹس' // University projects
     }
   },
-  errorPage: {
-    forbidden: 'آپ کو اس پیج تک رسائی کی اجازت نہیں ہے۔', // Aap ko is page tak rasayi ki ijazat nahin hai
-    notFound: 'پہلے سے موجود صفحہ نہیں ملا یا لنک ٹوٹ گیا ہے۔', // Pehle se mojood safha nahin mila ya link toot gaya hai
-    genericError: 'ہمارے طرف سے کچھ غلط ہو گیا۔ براہ کرم بعد میں دوبارہ کوشش کریں۔' // Hamare taraf se kuch ghalat ho gaya. Barah karm baad mein dobara koshish karein
+  readMorePage: {
   },
   aboutPage: {
     changelog: 'تبدیلی کا لاگ', // Tabdeeli ka log

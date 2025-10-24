@@ -12,6 +12,7 @@ import { HistoryComponent } from './components/curriculum/history/history.compon
 import { IconRailComponent } from './components/curriculum/icon-rail/icon-rail.component';
 import { ListComponent } from './components/curriculum/list/list.component';
 import { ProfileComponent } from './components/curriculum/profile/profile.component';
+import { DialogComponent } from './components/dialog/dialog.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
@@ -23,6 +24,7 @@ import { CurriculumPageComponent } from './pages/curriculum-page/curriculum-page
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
+import { ReadMorePageComponent } from './pages/read-more-page/read-more-page.component';
 
 import { GithubLogoPipe } from './pipes/github-logo/github-logo.pipe';
 import { SocialButtonLogoPipe } from './pipes/social-button-logo/social-button-logo.pipe';
@@ -30,7 +32,6 @@ import { TranslatePipe } from './pipes/translate/translate.pipe';
 
 import { DisableRightClickDirective } from './directives/disable-right-click/disable-right-click.directive';
 import { DisableTextSelectionDirective } from './directives/disable-text-selection/disable-text-selection.directive';
-import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { DialogComponent } from './components/dialog/dialog.component';
     ErrorPageComponent,
     SocialButtonLogoPipe,
     GithubLogoPipe,
-    DialogComponent
+    DialogComponent,
+    ReadMorePageComponent
   ],
   imports: [
     BrowserModule,

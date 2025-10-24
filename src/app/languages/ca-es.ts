@@ -28,6 +28,7 @@ export const caES: LanguageStrings = {
     Home: 'Inici',
     Curriculum: 'Currículum',
     Projects: 'Projectes',
+    Project: 'Projecte',
     About: 'Sobre'
   },
   snackbar: {
@@ -41,12 +42,18 @@ export const caES: LanguageStrings = {
     repoTooltip: 'Enllaç al repositori de GitHub',
     privateRepoTooltip: 'Disponible a petició',
     websiteTooltip: 'Veure pàgina',
-    unavailableWebsiteTooltip: 'Pàgina no disponible'
+    unavailableWebsiteTooltip: 'Pàgina no disponible',
+    visitSite: 'Visitar Pàgina',
+    readMore: 'Llegir Més'
+  },
+  errorPage: {
+    forbidden: 'No tens permís per accedir a aquesta pàgina.',
+    notFound: 'Sembla que la pàgina que buscaves no existeix o l\'enllaç està trencat.',
+    genericError: 'Alguna cosa ha anat malament al nostre costat. Si us plau, torna-ho a intentar més tard.'
   },
   projectsPage: {
     filter: 'Filtrar per Tipus de Projecte',
     noProjectsError: 'Sembla que hi ha un problema a l\'hora d\'obtenir totes les dades.',
-    visitSite: 'Visitar Pàgina',
 
     ProjectTypeFilter: {
       All: 'Tots',
@@ -55,10 +62,7 @@ export const caES: LanguageStrings = {
       UniversityProject: 'Projectes Universitaris'
     }
   },
-  errorPage: {
-    forbidden: 'No tens permís per accedir a aquesta pàgina.',
-    notFound: 'Sembla que la pàgina que buscaves no existeix o l\'enllaç està trencat.',
-    genericError: 'Alguna cosa ha anat malament al nostre costat. Si us plau, torna-ho a intentar més tard.'
+  readMorePage: {
   },
   aboutPage: {
     changelog: 'Registre de canvis',

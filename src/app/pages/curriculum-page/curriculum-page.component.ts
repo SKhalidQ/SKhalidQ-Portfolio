@@ -18,6 +18,6 @@ export class CurriculumPageComponent implements OnInit {
   curriculum: Curriculum = CurriculumInfo;
 
   ngOnInit(): void {
-    this.activePageService.activePage.next(`pages.${Page[Page.Curriculum]}`);
+    this.activePageService.setActivePage({ page: `pages.${Page[Page.Curriculum]}` });
   }
 }

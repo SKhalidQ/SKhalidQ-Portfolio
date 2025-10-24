@@ -8,8 +8,10 @@ export interface Project {
   imagePath: string;
   description: string;
   hasWebsite: boolean;
-  websiteUrl?: string | null;
+  websiteUrl?: string;
   isRepoPublic: boolean;
-  githubUrl?: string | null;
+  canReadMore: boolean;
+  readMoreUrl?: string;
+  githubUrl?: string;
   isHidden: boolean;
 }

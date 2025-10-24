@@ -7,6 +7,7 @@ import { SocialMediaButtons } from 'src/app/models/data/social-media-buttons';
 import { ThemeMenuButton } from 'src/app/models/data/theme-menu-buttons';
 import { Language } from 'src/app/models/enums/language';
 import { ThemeMode } from 'src/app/models/enums/theme-mode';
+import { ActivePage } from 'src/app/models/interfaces/active-page';
 import { MenuButton, MenuOption } from 'src/app/models/interfaces/menu';
 import { NavigationButton } from 'src/app/models/interfaces/navigation-button';
 import { ActivePageService } from 'src/app/services/active-page/active-page.service';
@@ -97,6 +98,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   get hideMenuButtons(): boolean {
     return !this.isSideNav && !(this.smallScreen || this.xSmallScreen);
+  }
+
+  getActivePage(pageName: ActivePage): string {
+    return pageName.subPage ?
+      `${this.translationService.getTextPath(`${pageName.page}`)} | ${this.translationService.getTextPath(pageName.subPage)}` :
+      this.translationService.getTextPath(`${pageName.page}`);
   }
 
   updateTheme(theme: string): void {

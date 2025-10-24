@@ -28,6 +28,7 @@ export const esES: LanguageStrings = {
     Home: 'Inicio',
     Curriculum: 'Currículum',
     Projects: 'Proyectos',
+    Project: 'Proyecto',
     About: 'Acerca de'
   },
   snackbar: {
@@ -41,7 +42,9 @@ export const esES: LanguageStrings = {
     repoTooltip: 'Enlace al repositorio de GitHub',
     privateRepoTooltip: 'Disponible a petición',
     websiteTooltip: 'Ver sitio',
-    unavailableWebsiteTooltip: 'Página no disponible'
+    unavailableWebsiteTooltip: 'Página no disponible',
+    visitSite: 'Visitar Sitio',
+    readMore: 'Leer Más'
   },
   errorPage: {
     forbidden: 'No tienes permiso para acceder a esta página.',
@@ -51,7 +54,6 @@ export const esES: LanguageStrings = {
   projectsPage: {
     filter: 'Filtrar por Tipo de Proyecto',
     noProjectsError: 'Parece que hay un problema al obtener todos los datos.',
-    visitSite: 'Visitar Sitio',
 
     ProjectTypeFilter: {
       All: 'Todos',
@@ -59,6 +61,8 @@ export const esES: LanguageStrings = {
       PersonalProject: 'Proyectos Personales',
       UniversityProject: 'Proyectos Universitarios'
     }
+  },
+  readMorePage: {
   },
   aboutPage: {
     changelog: 'Registro de cambios',

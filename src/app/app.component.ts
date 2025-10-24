@@ -5,7 +5,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { Title } from '@angular/platform-browser';
 import { Page } from './models/enums/page';
-import { SiteStatusService } from './services/site-status/site-status.service';
+// import { SiteStatusService } from './services/site-status/site-status.service';
 
 @Component({
   selector: 'app-root',
@@ -18,11 +18,11 @@ export class AppComponent implements OnInit {
   private readonly activatedRoute = inject(ActivatedRoute);
   private readonly router = inject(Router);
   private readonly titleService = inject(Title);
-  private readonly siteStatusService = inject(SiteStatusService);
+  // private readonly siteStatusService = inject(SiteStatusService);
 
   ngOnInit(): void {
     this.setTabTitle();
-    this.siteStatusService.checkUpdates();
+    // this.siteStatusService.checkUpdates();
   }
 
   setTabTitle(): void {

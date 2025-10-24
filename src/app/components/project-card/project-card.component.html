@@ -5,7 +5,7 @@
     <mat-card-subtitle>{{ project.subtitle | translate }}</mat-card-subtitle>
   </mat-card-header>
 
-  <img *ngIf="project.imagePath" class="poster" mat-card-image [src]="project.imagePath" [alt]="project.title" onerror="this.src='../../assets/images/icons/error_outline-14px.svg'">
+  <img *ngIf="project.imagePath" class="poster" mat-card-image [src]="project.imagePath" alt="{{project.title}}" onerror="this.src='../../assets/images/icons/error_outline-14px.svg'">
 
   <mat-icon *ngIf="!project.imagePath" class="error-icon" color="warn" mat-card-image [inline]="true">error_outline</mat-icon>
 
@@ -15,8 +15,13 @@
 
   <mat-card-actions>
     <div>
+      <button *ngIf="currentEnvironment === environment.Alpha" class="page-button" mat-flat-button color="warn" type="button" (click)="setSelectedProject()" [routerLink]="readMoreUrl" [disabled]="!project.canReadMore">
+        {{ "projectCard.readMore" | translate }}
+        <mat-icon>open_in_browser</mat-icon>
+      </button>
+
       <a *ngIf="project.hasWebsite" class="page-button" mat-flat-button color="warn" [disabled]="!project.websiteUrl" [href]="project.websiteUrl">
-        {{ "projectsPage.visitSite" | translate }}
+        {{ "projectCard.visitSite" | translate }}
         <mat-icon>open_in_browser</mat-icon>
       </a>
     </div>

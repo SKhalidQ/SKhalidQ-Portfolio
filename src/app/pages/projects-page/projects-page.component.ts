@@ -36,7 +36,7 @@ export class ProjectsPageComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    this.activePageService.activePage.next(`pages.${Page[Page.Projects]}`);
+    this.activePageService.setActivePage({ page: `pages.${Page[Page.Projects]}` });
   }
 
   get filteredProjects(): Project[] {

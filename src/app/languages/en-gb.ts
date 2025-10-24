@@ -29,6 +29,7 @@ export const enGB = {
     Home: 'Home',
     Curriculum: 'Curriculum',
     Projects: 'Projects',
+    Project: 'Project',
     About: 'About'
   },
   snackbar: {
@@ -42,7 +43,9 @@ export const enGB = {
     repoTooltip: 'GitHub Repository Link',
     privateRepoTooltip: 'Available at request',
     websiteTooltip: 'View site',
-    unavailableWebsiteTooltip: 'Site unavailable'
+    unavailableWebsiteTooltip: 'Site unavailable',
+    visitSite: 'Visit Site',
+    readMore: 'Read More'
   },
   errorPage: {
     forbidden: 'You do not have permission to access this page.',
@@ -52,7 +55,6 @@ export const enGB = {
   projectsPage: {
     filter: 'Filter by Project Type',
     noProjectsError: 'There seems to be a problem while getting all the data.',
-    visitSite: 'Visit Site',
 
     ProjectTypeFilter: {
       All: 'All',
@@ -60,6 +62,8 @@ export const enGB = {
       PersonalProject: 'Personal Projects',
       UniversityProject: 'University Projects'
     }
+  },
+  readMorePage: {
   },
   aboutPage: {
     changelog: 'Changelog',

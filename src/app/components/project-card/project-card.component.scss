@@ -60,13 +60,17 @@ mat-card {
     width: 100%;
     padding: 1em;
 
+    div {
+      display: flex;
+      gap: 1em;
+    }
+
     .page-button {
       mat-icon {
         margin: auto 10px auto auto;
         transform: scale(1.25);
       }
     }
-
 
     .github-button {
       display: flex;

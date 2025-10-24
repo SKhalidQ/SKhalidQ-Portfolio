@@ -25,8 +25,8 @@
   </mat-toolbar-row>
 
   <mat-toolbar-row *ngIf="!isSideNav" class="bottom-row mat-elevation-z6">
-    <ng-container *ngIf="activePageService.activePage$ | async as pageKey">
-      <h3>{{ pageKey | translate }}</h3>
+    <ng-container *ngIf="activePageService.activePage$ | async as activePage">
+      <h3>{{ getActivePage(activePage) }}</h3>
     </ng-container>
 
     <span class="spacer"></span>

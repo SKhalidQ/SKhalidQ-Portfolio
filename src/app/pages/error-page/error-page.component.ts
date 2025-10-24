@@ -15,7 +15,7 @@ export class ErrorPageComponent implements OnInit {
   errorMessage = '';
 
   ngOnInit(): void {
-    this.activePageService.activePage.next('Error');
+    this.activePageService.setActivePage({ page: 'Error' });
   }
 
   get statusCode(): { statusCode: number; title: string } {

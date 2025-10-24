@@ -25,7 +25,7 @@ export class AboutPageComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    this.activePageService.activePage.next(`pages.${Page[Page.About]}`);
+    this.activePageService.setActivePage({ page: `pages.${Page[Page.About]}` });
   }
 
   get changeColour(): string {

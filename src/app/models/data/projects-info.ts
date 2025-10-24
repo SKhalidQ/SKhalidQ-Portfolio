@@ -12,6 +12,8 @@ const MediaPlay: Project = {
   description: 'projects.mediaPlay.description',
   hasWebsite: true,
   websiteUrl: undefined,
+  canReadMore: false,
+  readMoreUrl: '/media-play',
   isRepoPublic: false,
   githubUrl: undefined,
   isHidden: true
@@ -26,6 +28,8 @@ const FileExplorer: Project = {
   description:'projects.fileExplorer.description',
   hasWebsite: true,
   websiteUrl: undefined,
+  canReadMore: false,
+  readMoreUrl: '/file-explorer',
   isRepoPublic: false,
   githubUrl: undefined,
   isHidden: true
@@ -40,6 +44,8 @@ const MyList: Project = {
   description: 'projects.myList.description',
   hasWebsite: true,
   websiteUrl: 'https://beta-myList.skhalidq.dev/',
+  canReadMore: false,
+  readMoreUrl: 'my-list',
   isRepoPublic: false,
   githubUrl: 'https://github.com/user/project1',
   isHidden: false
@@ -53,6 +59,8 @@ const AdminCommands: Project = {
   imagePath: './assets/images/projects/AdminCommandsPreview.png',
   description: 'projects.adminCommands.description',
   hasWebsite: false,
+  canReadMore: false,
+  readMoreUrl: '/admin-commands',
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/Comandos-Administrativos',
   isHidden: false
@@ -67,6 +75,8 @@ const BBISA: Project = {
   description: 'projects.bbisa.description',
   hasWebsite: true,
   websiteUrl: 'https://bbis.skhalidq.dev/Home',
+  canReadMore: false,
+  readMoreUrl: '/bbisa',
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/',
   isHidden: false
@@ -81,6 +91,8 @@ const DistributedSystems: Project = {
   description: 'projects.distributedSystems.description',
   hasWebsite: false,
   websiteUrl: '',
+  canReadMore: false,
+  readMoreUrl: '/distributed-systems',
   isRepoPublic: false,
   githubUrl: 'https://github.com/SKhalidQ/Distributed-RESTful-API',
   isHidden: false
@@ -94,7 +106,8 @@ const Jumble: Project = {
   imagePath: '../../assets/images/projects/JumblePreview.png',
   description: 'projects.jumble.description',
   hasWebsite: false,
-  websiteUrl: '',
+  canReadMore: false,
+  readMoreUrl: '/jumble',
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/Jumble-Mobile-App',
   isHidden: false
@@ -108,7 +121,8 @@ const DataMining: Project = {
   imagePath: '../../assets/images/projects/DataMiningPreview.png',
   description: 'projects.dataMining.description',
   hasWebsite: false,
-  websiteUrl: '',
+  canReadMore: false,
+  readMoreUrl: '/data-mining',
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/Medical-Data-Analysis',
   isHidden: false
@@ -123,6 +137,8 @@ const Networking: Project = {
   description: 'projects.networking.description',
   hasWebsite: false,
   websiteUrl: '',
+  canReadMore: false,
+  readMoreUrl: '/networking',
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/Networking',
   isHidden: false
@@ -137,6 +153,8 @@ const WebTech: Project = {
   description: 'projects.webTech.description',
   hasWebsite: true,
   websiteUrl: 'https://wt-location.skhalidq.dev/',
+  canReadMore: false,
+  readMoreUrl: '/web-tech',
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/WT-Location-Website',
   isHidden: false
@@ -151,6 +169,8 @@ const AgentChatBot: Project = {
   description: 'projects.agentChatBot.description',
   hasWebsite: false,
   websiteUrl: '',
+  canReadMore: false,
+  readMoreUrl: '/agent-chat-bot',
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/Artificial-Intelligence',
   isHidden: false
