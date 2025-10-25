@@ -32,6 +32,8 @@ import { TranslatePipe } from './pipes/translate/translate.pipe';
 
 import { DisableRightClickDirective } from './directives/disable-right-click/disable-right-click.directive';
 import { DisableTextSelectionDirective } from './directives/disable-text-selection/disable-text-selection.directive';
+import { environment } from 'src/environments/environment';
+import { Environment } from './models/enums/environment';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,7 @@ import { DisableTextSelectionDirective } from './directives/disable-text-selecti
     BrowserAnimationsModule,
     MaterialModules,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: !isDevMode(),
+      enabled: !isDevMode() && environment.environment === Environment.Production,
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'

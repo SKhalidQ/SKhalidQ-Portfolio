@@ -16,7 +16,8 @@ export class SelectedProjectService {
   public selectedProject$ = this.selectedProject.asObservable();
 
   constructor() {
-    const savedProject = JSON.parse(sessionStorage.getItem(this.selectedProjectKey) || 'undefined') as Project;
+    const storedProject = sessionStorage.getItem(this.selectedProjectKey);
+    const savedProject: Project | undefined = storedProject ? JSON.parse(storedProject) : undefined;
 
     if (savedProject && savedProject.readMoreUrl === this.activatedRoute.snapshot.queryParamMap.get('projectId')) {
       this.selectedProject.next(savedProject);
