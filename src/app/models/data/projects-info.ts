@@ -17,6 +17,20 @@ const MediaPlay: Project = {
   isHidden: true
 };
 
+const AngularI18n: Project = {
+  title: 'projects.angularI18n.title',
+  subtitle: 'projects.angularI18n.subtitle',
+  icon: 'translate',
+  projectType: ProjectType.PersonalProject,
+  imagePath: './assets/images/projects/coming-soon/ComingSoon v2.png',
+  description: 'projects.angularI18n.description',
+  hasWebsite: true,
+  websiteUrl: 'https://i18n-demo.skhalidq.dev/',
+  isRepoPublic: false,
+  githubUrl: undefined,
+  isHidden: false
+};
+
 const FileExplorer: Project = {
   title: 'projects.fileExplorer.title',
   subtitle: 'projects.fileExplorer.subtitle',
@@ -158,6 +172,7 @@ const AgentChatBot: Project = {
 
 export const Projects: Project[] = [
   MediaPlay,
+  AngularI18n,
   FileExplorer,
   MyList,
   AdminCommands,

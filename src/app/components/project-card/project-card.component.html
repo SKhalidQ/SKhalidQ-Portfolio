@@ -1,6 +1,8 @@
 <mat-card>
   <mat-card-header>
-    <mat-icon mat-card-avatar color="warn">{{ project.icon }}</mat-icon>
+    <div mat-card-avatar class="project-icon">
+      <mat-icon color="warn">{{ project.icon }}</mat-icon>
+    </div>
     <mat-card-title>{{ project.title | translate }}</mat-card-title>
     <mat-card-subtitle>{{ project.subtitle | translate }}</mat-card-subtitle>
   </mat-card-header>

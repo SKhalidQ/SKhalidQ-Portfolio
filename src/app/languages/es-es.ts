@@ -92,6 +92,11 @@ export const esES: LanguageStrings = {
       subtitle: 'Proyecto Personal',
       description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, quo voluptates? Quas placeat fugiat libero eveniet saepe et minima veniam quisquam doloremque. Quia esse autem fugit odio tenetur saepe delectus.'
     },
+    angularI18n: {
+      title: 'Angular Library - i18n',
+      subtitle: 'Proyecto Personal',
+      description: 'Una biblioteca de i18n para Angular con claves de traducción seguras para tipos y cambio de idioma reactivo para que la IU se actualice instantáneamente en toda la aplicación. Soporta interpolación y pluralización, persistencia de idioma, traducciones de respaldo y carga diferida opcional de paquetes de idioma para paquetes iniciales más pequeños.'
+    },
     fileExplorer: {
       title: 'File Explorer (Alpha)',
       subtitle: 'Proyecto Personal',

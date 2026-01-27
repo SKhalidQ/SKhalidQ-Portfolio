@@ -93,6 +93,11 @@ export const enGB = {
       subtitle: 'Personal Project',
       description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, quo voluptates? Quas placeat fugiat libero eveniet saepe et minima veniam quisquam doloremque. Quia esse autem fugit odio tenetur saepe delectus.'
     },
+    angularI18n: {
+      title: 'Angular Library - i18n',
+      subtitle: 'Personal Project',
+      description: 'An Angular i18n library with type-safe translation keys and reactive language switching so the UI updates instantly across the application. Supports interpolation and pluralisation, language persistence, fallback translations, and optional lazy-loading of language packs for smaller initial bundles.'
+    },
     fileExplorer: {
       title: 'File Explorer (Alpha)',
       subtitle: 'Personal Project',

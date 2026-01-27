@@ -92,6 +92,11 @@ export const urPK: LanguageStrings = {
       subtitle: 'ذاتی پروجیکٹ', // Zaati project
       description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, quo voluptates? Quas placeat fugiat libero eveniet saepe et minima veniam quisquam doloremque. Quia esse autem fugit odio tenetur saepe delectus.'
     },
+    angularI18n: {
+      title: 'Angular Library - i18n',
+      subtitle: 'ذاتی پروجیکٹ', // Zaati project
+      description: 'ایک Angular i18n لائبریری جس میں قسم محفوظ ترجمہ کیز اور ری ایکٹیو زبان کی تبدیلی ہے تاکہ UI ایپلیکیشن میں فوری طور پر اپ ڈیٹ ہو جائے۔ انٹرپولیشن اور جمعیت، زبان کی مستقل مزاجی، بیک اپ ترجمے، اور چھوٹے ابتدائی بنڈلز کے لیے زبان کے پیکجز کے اختیاری سست لوڈنگ کی حمایت کرتا ہے۔' // Ek Angular i18n library jis mein type-safe tarjuma keys aur reactive zaban ki tabdeeli hai taque UI application mein fori tor par update ho jaye. Interpolation aur jamaayat, zaban ki mustaqil mizaji, back up tarjume, aur chotay ibtidaai bundles ke liye zaban ke packages ke ikhtiyari sust loading ki himayat karta hai.
+    },
     fileExplorer: {
       title: 'File Explorer (Alpha)',
       subtitle: 'ذاتی پروجیکٹ', // Zaati project

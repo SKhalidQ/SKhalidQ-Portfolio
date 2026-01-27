@@ -92,6 +92,11 @@ export const caES: LanguageStrings = {
       subtitle: 'Projecte Personal',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolores vitae, suscipit autem sunt sint provident architecto maiores, possimus ea corrupti unde dignissimos ipsa, fugiat quod? Corporis doloremque culpa alias ea sint laboriosam. Eligendi ullam consectetur fugiat atque unde eveniet voluptates!'
     },
+    angularI18n: {
+      title: 'Angular Library - i18n',
+      subtitle: 'Projecte Personal',
+      description: 'Una biblioteca de i18n per a Angular amb claus de traducció segures per tipus i canvi d\'idioma reactiu perquè la IU s\'actualitzi instantàniament a tota l\'aplicació. Suporta interpolació i pluralització, persistència d\'idioma, traduccions de suport i càrrega diferida opcional de paquets d\'idioma per a paquets inicials més petits.'
+    },
     fileExplorer: {
       title: 'File Explorer (Alpha)',
       subtitle: 'Projecte Personal',
