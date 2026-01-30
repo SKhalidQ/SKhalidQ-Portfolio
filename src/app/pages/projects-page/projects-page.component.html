@@ -2,7 +2,7 @@
   <mat-form-field appearance="outline" color="primary">
     <mat-label>{{ 'projectsPage.filter' | translate }}</mat-label>
 
-    <mat-select [(value)]="selectedProjectType" [panelClass]="themeService.themeMode.value">
+    <mat-select [(value)]="selectedProjectType" [panelClass]="themeService.getEffectiveThemeMode()">
       <mat-option *ngFor="let type of projectTypes" [value]="type" [disabled]="isTypeDisabled(type)" color="accent">
         {{ projectTypeLabel(type) | translate }}
       </mat-option>

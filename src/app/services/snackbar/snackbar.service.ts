@@ -41,7 +41,7 @@ export class SnackbarService {
   }
 
   get themeMenuIcon(): string {
-    const currentTheme = this.themeService.themeMode.value;
+    const currentTheme = this.themeService.getEffectiveThemeMode();
 
     switch (currentTheme) {
       case ThemeMode.DarkMode:

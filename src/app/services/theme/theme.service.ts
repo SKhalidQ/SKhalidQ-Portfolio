@@ -53,6 +53,11 @@ export class ThemeService implements OnDestroy {
     this.themeMode.next(theme);
   }
 
+  public getEffectiveThemeMode(): ThemeMode {
+    const selected = this.themeMode.value;
+    return selected === ThemeMode.SystemDefault ? this.systemTheme.value : selected;
+  }
+
   public getSystemPreferredTheme(): ThemeMode {
     if (typeof window === 'undefined' || !window.matchMedia) {
       return ThemeMode.LightMode;

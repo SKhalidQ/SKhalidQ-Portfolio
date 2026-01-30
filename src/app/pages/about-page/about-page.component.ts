@@ -29,13 +29,13 @@ export class AboutPageComponent implements OnInit {
   }
 
   get changeColour(): string {
-    switch (this.themeService.themeMode.value) {
+    switch (this.themeService.getEffectiveThemeMode()) {
       case ThemeMode.DarkMode:
         return 'dark-theme';
       case ThemeMode.LightMode:
         return 'light-theme';
       default:
-        return this.themeService.getSystemPreferredTheme() === ThemeMode.DarkMode ? 'dark-theme' : 'light-theme';
+        return 'light-theme';
     }
   }
 

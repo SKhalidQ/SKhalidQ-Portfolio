@@ -12,7 +12,7 @@
     </a>
   </div>
 
-  <mat-menu #menu="matMenu" [class]="themeService.themeMode.value">
+  <mat-menu #menu="matMenu" [class]="themeService.getEffectiveThemeMode()">
     <button mat-menu-item *ngFor="let option of menuButton.options" (click)="onMenuOptionClick(option)" [disabled]="option.isDisabled || option.isActive">
       <mat-icon *ngIf="option.iconType === 'icon'">
         {{ option.icon }}

@@ -31,6 +31,14 @@
       min-width: 80px;
       padding: 0 15px;
     }
+
+    // This is a bug in the Angular Material typography mixin where it adds
+    // margin to the paragraph inside the button. This removes that margin.
+    button {
+      p {
+        margin: 0;
+      }
+    }
   }
 
   .menu-buttons-container {

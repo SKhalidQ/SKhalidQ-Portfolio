@@ -49,7 +49,7 @@ export class SiteStatusService {
 
     this.dialogRef = this.dialog.open(DialogComponent, {
       disableClose: true,
-      panelClass: [this.themeService.themeMode.value],
+      panelClass: [this.themeService.getEffectiveThemeMode()],
       data: dialogData
     });
   }
@@ -84,7 +84,7 @@ export class SiteStatusService {
 
         this.dialog.open(DialogComponent, {
           data: dialogData,
-          panelClass: [this.themeService.themeMode.value],
+          panelClass: [this.themeService.getEffectiveThemeMode()],
         }).afterClosed().subscribe(() => {
           this.swUpdate.activateUpdate().then(() => document.location.reload());
         });
@@ -116,7 +116,7 @@ export class SiteStatusService {
 
     const dialogRef = this.dialog.open(DialogComponent, {
       data: dialogData,
-      panelClass: [this.themeService.themeMode.value],
+      panelClass: [this.themeService.getEffectiveThemeMode()],
     });
 
     if (shouldReload) {
