@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppRoutingModule } from './app-routing.module';
-import { MaterialModules } from './app.material';
+import { AppMaterialModule } from './app.material';
 
 import { AppComponent } from './app.component';
 import { BulletComponent } from './components/curriculum/bullet/bullet.component';
@@ -62,7 +62,7 @@ import { DisableTextSelectionDirective } from './directives/disable-text-selecti
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModules,
+    AppMaterialModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable

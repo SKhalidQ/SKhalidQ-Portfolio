@@ -1,3 +1,4 @@
+import { NgModule } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -18,7 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 
-export const MaterialModules = [
+const MATERIAL_MODULES = [
   MatProgressSpinnerModule,
   MatProgressBarModule,
   MatSlideToggleModule,
@@ -39,3 +40,9 @@ export const MaterialModules = [
   MatListModule,
   MatMenuModule,
 ];
+
+@NgModule({
+  imports: MATERIAL_MODULES,
+  exports: MATERIAL_MODULES,
+})
+export class AppMaterialModule {}

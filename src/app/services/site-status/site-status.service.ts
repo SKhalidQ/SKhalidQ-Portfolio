@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { SwUpdate } from '@angular/service-worker';
-import { BehaviorSubject, fromEvent, map, merge, Observable } from 'rxjs';
+import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
+import { BehaviorSubject, filter, fromEvent, map, merge, Observable } from 'rxjs';
 import { DialogComponent } from 'src/app/components/dialog/dialog.component';
 import { DialogData } from 'src/app/models/interfaces/dialog-data';
 import { SnackbarService } from '../snackbar/snackbar.service';
@@ -69,26 +69,32 @@ export class SiteStatusService {
   }
 
   checkUpdates(): void {
-    this.swUpdate.available.subscribe(() => {
-      const dialogData: DialogData = {
-        title: 'New update!',
-        message: 'There is new content available on this page. Would you like to update?',
-        action: 'Refresh'
-      };
+    if (!this.swUpdate.isEnabled) {
+      return;
+    }
 
-      this.dialog.open(DialogComponent, {
-        data: dialogData,
-        panelClass: [this.themeService.themeMode.value],
-      }).afterClosed().subscribe(() => {
-        document.location.reload();
-      });
+    this.swUpdate.versionUpdates
+      .pipe(filter((event): event is VersionReadyEvent => event.type === 'VERSION_READY'))
+      .subscribe(() => {
+        const dialogData: DialogData = {
+          title: 'aboutPage.checkUpdatesDialog.newUpdate.title',
+          message: 'aboutPage.checkUpdatesDialog.newUpdate.message',
+          action: 'aboutPage.checkUpdatesDialog.newUpdate.action'
+        };
+
+        this.dialog.open(DialogComponent, {
+          data: dialogData,
+          panelClass: [this.themeService.themeMode.value],
+        }).afterClosed().subscribe(() => {
+          this.swUpdate.activateUpdate().then(() => document.location.reload());
+        });
     });
   }
 
   // Method to manually check for updates
   manualUpdateCheck(): void {
     if (!this.swUpdate.isEnabled) {
-      this.showUpdateDialog('aboutPage.checkUpdatesDialog.disabledUpdate.title', 'aboutPage.checkUpdatesDialog.disabledUpdate.message', 'aboutPage.checkUpdatesDialog.disabledUpdate.close');
+      this.showUpdateDialog('aboutPage.checkUpdatesDialog.disabledUpdate.title', 'aboutPage.checkUpdatesDialog.disabledUpdate.message', 'aboutPage.checkUpdatesDialog.disabledUpdate.action');
       return;
     }
 
