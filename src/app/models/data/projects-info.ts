@@ -42,7 +42,7 @@ const FileExplorer: Project = {
   websiteUrl: undefined,
   isRepoPublic: false,
   githubUrl: undefined,
-  isHidden: true
+  isHidden: false
 };
 
 const MyList: Project = {

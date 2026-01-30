@@ -1,7 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { Project } from 'src/app/models/interfaces/project';
-import { TranslationService } from 'src/app/services/translation/translation.service';
 import { ThemeService } from 'src/app/services/theme/theme.service';
+import { TranslationService } from 'src/app/services/translation/translation.service';
 
 @Component({
   selector: 'app-project-card',

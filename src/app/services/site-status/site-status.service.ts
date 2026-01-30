@@ -1,11 +1,11 @@
-import { Injectable, inject } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { SwUpdate } from '@angular/service-worker';
 import { BehaviorSubject, fromEvent, map, merge, Observable } from 'rxjs';
 import { DialogComponent } from 'src/app/components/dialog/dialog.component';
 import { DialogData } from 'src/app/models/interfaces/dialog-data';
-import { ThemeService } from '../theme/theme.service';
-import { SwUpdate } from '@angular/service-worker';
 import { SnackbarService } from '../snackbar/snackbar.service';
+import { ThemeService } from '../theme/theme.service';
 
 @Injectable({
   providedIn: 'root'

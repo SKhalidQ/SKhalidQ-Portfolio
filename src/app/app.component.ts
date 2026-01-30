@@ -1,11 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ThemeService } from './services/theme/theme.service';
-import { MetaThemeService } from './services/meta-theme/meta-theme.service';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
-import { Title } from '@angular/platform-browser';
 import { Page } from './models/enums/page';
+import { MetaThemeService } from './services/meta-theme/meta-theme.service';
 import { SiteStatusService } from './services/site-status/site-status.service';
+import { ThemeService } from './services/theme/theme.service';
 
 @Component({
   selector: 'app-root',

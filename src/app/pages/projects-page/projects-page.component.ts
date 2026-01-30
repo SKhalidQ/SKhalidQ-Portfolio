@@ -4,8 +4,8 @@ import { Projects } from 'src/app/models/data/projects-info';
 import { Page } from 'src/app/models/enums/page';
 import { Project } from 'src/app/models/interfaces/project';
 import { ActivePageService } from 'src/app/services/active-page/active-page.service';
-import { TranslationService } from 'src/app/services/translation/translation.service';
 import { ThemeService } from 'src/app/services/theme/theme.service';
+import { TranslationService } from 'src/app/services/translation/translation.service';
 
 enum ProjectTypeFilter {
   All = -1,
@@ -41,8 +41,8 @@ export class ProjectsPageComponent implements OnInit {
 
   get filteredProjects(): Project[] {
     return this.selectedProjectType === ProjectTypeFilter.All
-      ? this.allProjects
-      : this.allProjects.filter(p => (p.projectType as number) === this.selectedProjectType);
+      ? this.allProjects.filter(p => !p.isHidden)
+      : this.allProjects.filter(p => (p.projectType as number) === this.selectedProjectType && !p.isHidden);
   }
 
   projectTypeLabel(type: ProjectTypeFilter): string {
