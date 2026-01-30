@@ -1,10 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -20,13 +15,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 
 const MATERIAL_MODULES = [
-  MatProgressSpinnerModule,
-  MatProgressBarModule,
-  MatSlideToggleModule,
-  MatExpansionModule,
   MatFormFieldModule,
   MatSnackBarModule,
-  MatGridListModule,
   MatToolbarModule,
   MatTooltipModule,
   MatSidenavModule,

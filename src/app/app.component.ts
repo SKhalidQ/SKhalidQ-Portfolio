@@ -31,9 +31,13 @@ export class AppComponent implements OnInit {
 
     this.router.events.pipe(filter(event => event instanceof NavigationEnd),
       map(() => {
-        const child: ActivatedRoute | null = this.activatedRoute.firstChild;
-        if (child && child.snapshot.data[title]) {
-          return Page[child.snapshot.data[title]] + ' | SKhalidQ';
+        let route: ActivatedRoute | null = this.activatedRoute.firstChild;
+        while (route?.firstChild) {
+          route = route.firstChild;
+        }
+
+        if (route?.snapshot.data[title]) {
+          return Page[route.snapshot.data[title]] + ' | SKhalidQ';
         }
 
         return appTitle;
