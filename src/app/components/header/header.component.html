@@ -1,5 +1,5 @@
 <mat-toolbar>
-  <mat-toolbar-row class="top-row mat-elevation-z5">
+  <mat-toolbar-row class="top-row">
     <button *ngIf="smallScreen || xSmallScreen" class="toggle-button" type="button" mat-icon-button (click)="toggleSidenav.emit()" onclick="this.blur()">
       <mat-icon>{{ getSideNavToggleIcon }}</mat-icon>
     </button>
@@ -10,7 +10,7 @@
     </div>
 
     <section *ngIf="!isSideNav" class="navigation-buttons">
-      <button *ngFor="let button of navigationButtons" mat-button [routerLink]="button.route" routerLinkActive="active-route mat-elevation-z5" (click)="button.method?.()">
+      <button *ngFor="let button of navigationButtons" mat-button [routerLink]="button.route" routerLinkActive="active-route" (click)="button.method?.()">
         <p>{{ button.text | translate }}</p>
       </button>
     </section>
@@ -24,7 +24,7 @@
     </div>
   </mat-toolbar-row>
 
-  <mat-toolbar-row *ngIf="!isSideNav" class="bottom-row mat-elevation-z6">
+  <mat-toolbar-row *ngIf="!isSideNav" class="bottom-row">
     <ng-container *ngIf="activePageService.activePage$ | async as pageKey">
       <h3>{{ pageKey | translate }}</h3>
     </ng-container>

@@ -1,9 +1,13 @@
+@use '@angular/material' as mat;
+
 @keyframes shadow {
   from { box-shadow: unset; }
   to { box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.2); }
 }
 
 .cv-container {
+  @include mat.elevation(5);
+
   display: flex;
   flex-direction: column;
 
@@ -28,6 +32,8 @@
 
     .profile {
       img {
+        @include mat.elevation(24);
+
         width: 9.375em;
         border-radius: 50%;
         box-shadow: unset;
