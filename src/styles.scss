@@ -1,0 +1,97 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+@import './app/fonts/app.fonts.scss';
+@import './app/styles/scrollbar.scss';
+@import './app/styles/tooltip.scss';
+@import './app/styles/snackbar.scss';
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$SKhalidQ-Portfolio-primary: mat.define-palette(mat.$gray-palette, 300, 400, 500);
+$SKhalidQ-Portfolio-accent: mat.define-palette(mat.$red-palette, 800, 700, 600);
+
+// The warn palette is optional (defaults to red).
+$SKhalidQ-Portfolio-warn: mat.define-palette(mat.$red-palette);
+
+$my-typography: mat.define-typography-config(
+  $font-family: 'Roboto, "Helvetica Neue", sans-serif',
+  $headline-1: mat.define-typography-level(112px, 112px, 300, $letter-spacing: normal),
+  $headline-2: mat.define-typography-level(56px, 56px, 400, $letter-spacing: normal),
+  $headline-3: mat.define-typography-level(45px, 48px, 400, $letter-spacing: normal),
+  $headline-4: mat.define-typography-level(34px, 40px, 400, $letter-spacing: normal),
+  $headline-5: mat.define-typography-level(24px, 32px, 400, $letter-spacing: normal),
+  $headline-6: mat.define-typography-level(20px, 32px, 500, $letter-spacing: normal),
+  $subtitle-1: mat.define-typography-level(16px, 28px, 400, $letter-spacing: normal),
+  $subtitle-2: mat.define-typography-level(14px, 22px, 500, $letter-spacing: normal),
+  $body-1: mat.define-typography-level(16px, 24px, 400, $letter-spacing: normal),
+  $body-2: mat.define-typography-level(14px, 20px, 400, $letter-spacing: normal),
+  $caption: mat.define-typography-level(12px, 20px, 400, $letter-spacing: normal),
+  $button: mat.define-typography-level(14px, 14px, 500, $letter-spacing: normal),
+);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$SKhalidQ-Portfolio-light-theme: mat.define-light-theme((
+  color: (
+    primary: $SKhalidQ-Portfolio-primary,
+    accent: $SKhalidQ-Portfolio-accent,
+    warn: $SKhalidQ-Portfolio-warn,
+  ),
+  typography: $my-typography
+));
+
+$SKhalidQ-Portfolio-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $SKhalidQ-Portfolio-primary,
+    accent: $SKhalidQ-Portfolio-accent,
+    warn: $SKhalidQ-Portfolio-warn,
+  ),
+  typography: $my-typography
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+.DarkMode {
+  @include mat.all-component-themes($SKhalidQ-Portfolio-dark-theme);
+}
+
+.LightMode {
+  @include mat.all-component-themes($SKhalidQ-Portfolio-light-theme);
+}
+
+.SystemDefault {
+  @media (prefers-color-scheme: light) {
+    @include mat.all-component-themes($SKhalidQ-Portfolio-light-theme);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include mat.all-component-themes($SKhalidQ-Portfolio-dark-theme);
+  }
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100vh; }
+body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
+
+.active-route {
+  transform: translateY(-2px);
+  background: #b400003d !important;
+}
+
+div.mat-drawer-backdrop.ng-star-inserted.mat-drawer-shown {
+  background: rgba(0, 0, 0, 0.493);
+}
+
+mat-tooltip { background-color: #00ff2a; color: #fff; }

@@ -1,0 +1,31 @@
+<mat-nav-list>
+  <div class="top-container">
+    <app-header [isSideNav]="true" (toggleSidenav)="toggleSidenav.emit()"></app-header>
+
+    <mat-divider></mat-divider>
+
+    <a *ngFor="let button of navigationButtons" mat-list-item [routerLink]="button.route" routerLinkActive="active-route" (click)="button.method?.()">
+      <div>
+        <mat-icon class="icon">{{ button.icon }}</mat-icon>
+        <span>{{ button.text | translate }}</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="bottom-container">
+    <mat-divider></mat-divider>
+
+    <app-menu [menuButton]="themeMenu" [isList]="true" [onMenuClose]="closeSidenav" />
+
+    <app-menu [menuButton]="languageMenu" [isList]="true" [onMenuClose]="closeSidenav" />
+
+    <mat-divider></mat-divider>
+
+    <a mat-list-item [href]="socialMedia.route" target="_blank" *ngFor="let socialMedia of (socialMediaButtons | socialButtonLogo:(themeService.effectiveThemeMode$ | async))">
+      <div>
+        <img class="icon" alt="Social Media" *ngIf="socialMedia.icon !== null" [src]="socialMedia.icon" onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+        <span>{{ socialMedia.text | translate }}</span>
+      </div>
+    </a>
+  </div>
+</mat-nav-list>

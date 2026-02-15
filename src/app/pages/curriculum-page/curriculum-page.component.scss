@@ -1,0 +1,24 @@
+.main-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px 0;
+}
+
+.slide-toggle {
+  margin: 20px auto;
+}
+
+app-curriculum-classic {
+  padding: 0 0 20px;
+}
+
+.error-message {
+  display: flex;
+  justify-content: space-around;
+}
+
+mat-icon {
+  vertical-align: text-top;
+  margin-right: 10px;
+  font-size: 30px;
+}

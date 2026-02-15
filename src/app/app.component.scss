@@ -1,0 +1,32 @@
+.container {
+  padding-top: 128px;
+  height: 100dvh;
+  transition: background-color .3s ease-in-out;
+}
+
+.DarkMode {
+  background: #212121;
+}
+
+mat-drawer {
+  width: 260px;
+}
+
+app-header {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+}
+
+@media only screen and (max-width: 598px) {
+  .container {
+    padding-top: 112px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .SystemDefault {
+    background: #212121;
+  }
+}
