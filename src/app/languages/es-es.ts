@@ -178,7 +178,7 @@ export const esES: LanguageStrings = {
       jobs: {
         weatherford: {
           title: 'Ingeniero Informático - Weatherford Ltd (Reeves Wireline Technologies)',
-          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic sit magnam fugiat illo sapiente fuga rem quae. Qui similique laboriosam, esse eum blanditiis fugiat ducimus dolorum perferendis aspernatur, quas quibusdam consectetur odio excepturi, veniam odit ut tenetur quidem totam repellat?',
+          description: 'Trabajo en la división de Wireline de Weatherford, desarrollando software para la adquisición de datos en el fondo del pozo, gestión de archivos y visualización de registros en tiempo real en proyectos CAPEX y OPEX en apoyo a las operaciones petroleras.',
           dates: 'Dic 2021 - Presente'
         },
         greenwood: {

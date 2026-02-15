@@ -178,7 +178,7 @@ export const urPK: LanguageStrings = {
       jobs: {
         weatherford: {
           title: 'سافٹ ویئر انجینئر - Weatherford Ltd (Reeves Wireline Technologies)', // Software engineer - Weatherford Ltd (Reeves Wireline Technologies)
-          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic sit magnam fugiat illo sapiente fuga rem quae. Qui similique laboriosam, esse eum blanditiis fugiat ducimus dolorum perferendis aspernatur, quas quibusdam consectetur odio excepturi, veniam odit ut tenetur quidem totam repellat?',
+          description: 'Weatherford کی Wireline ڈویژن میں کام کرتا ہوں، جو ڈاؤن ہول ڈیٹا حاصل کرنے، فائل مینجمنٹ، اور ریئل ٹائم لاگ ویژولائزیشن کے لیے سافٹ ویئر تیار کرتا ہے، دونوں CAPEX اور OPEX پروجیکٹس میں تیل کے میدان کی کارروائیوں کی حمایت کے لیے۔', // Weatherford ki Wireline division mein kaam karta hoon, jo downhole data hasil karne, file management, aur real-time log visualisation ke liye software tayar karta hai, dono CAPEX aur OPEX projects mein tail ke maidan ki karwaiyon ki himayat ke liye.
           dates: 'دسمبر 2021 - موجودہ' // December 2021 - mojoodah
         },
         greenwood: {
