@@ -1,0 +1,143 @@
+mat-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  height: 490px;
+  width: 28.125em;
+  transition: all .3s ease-in-out;
+
+  mat-card-header {
+    mat-card-title {
+      width: 100%;
+    }
+
+    mat-card-subtitle {
+      font-size: 0.72625em;
+    }
+
+    .project-icon {
+      mat-icon {
+        height: 60px;
+        width: 60px;
+        font-size: 38px;
+      }
+    }
+  }
+
+  .poster {
+    max-width: 100%;
+    background-size: cover;
+
+    animation:  1s ease-in-out 1.5s;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .error-icon {
+    display: flex;
+    place-content: center center;
+    margin: -20px 0 20px 0;
+    font-size: 252px; // Based on the height of the other cards
+    width: 100%;
+  }
+
+  mat-card-content {
+    font-size: 0.875em;
+    min-height: 100px;
+  }
+
+  mat-card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    width: 100%;
+    padding: 1em;
+
+    .page-button {
+      mat-icon {
+        margin: auto 10px auto auto;
+        transform: scale(1.25);
+      }
+    }
+
+
+    .github-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 37px;
+      height: 37px;
+
+      img {
+        margin: 5.5px 0 0 0;
+        width: 37px;
+        height: 37px;
+      }
+    }
+  }
+}
+
+// Animations
+mat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.page-button:hover {
+  background-image: linear-gradient(90deg, transparent 30%, #f5e5e463 4% , rgba(255, 0, 0, 0.322));
+  background-position: 100% 0;
+  background-size: 500% 250%;
+  transition: background-position .7s ease-in;
+}
+
+// Media Queries
+@media only screen and (max-width: 500px) {
+  mat-card {
+    min-width: 21.875em;
+    max-width: 21.875em;
+    height: auto;
+
+    .poster {
+      max-width: 100%;
+    }
+
+    mat-card-actions {
+      display: flex;
+      place-content: flex-end space-between;
+      margin: 0.625em 0.1875em 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  mat-card {
+    min-width: 21em;
+    max-width: 21em;
+
+    .poster {
+      max-width: 100%;
+    }
+
+    mat-card-title {
+      font-size: 0.9375em;
+    }
+
+    mat-card-subtitle {
+      font-size: 10px;
+    }
+
+    p {
+      font-size: 11px;
+    }
+
+    mat-card-actions {
+      display: flex;
+      place-content: flex-end space-between;
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+}

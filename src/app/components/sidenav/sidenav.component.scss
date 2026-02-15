@@ -1,0 +1,41 @@
+// TODO: Revisit these styles.
+// TODO: Find a way to make the header sticky
+
+mat-nav-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+
+  padding: 0px;
+  transition: background-color .3s ease-in-out;
+
+  app-header {
+    width: 20px;
+  }
+
+  .bottom-container {
+    margin-bottom: 20px;
+  }
+
+  a {
+    div {
+      display: flex;
+
+      span {
+        margin: auto auto auto 30px;
+        font-size: 15px;
+      }
+
+      .icon {
+        margin-left: 10px;
+        width: 27px;
+        height: 27px;
+      }
+    }
+  }
+
+  mat-divider {
+    margin: 1em;
+  }
+}

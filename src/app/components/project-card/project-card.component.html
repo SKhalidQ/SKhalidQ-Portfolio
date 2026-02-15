@@ -1,0 +1,32 @@
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar class="project-icon">
+      <mat-icon color="warn">{{ project.icon }}</mat-icon>
+    </div>
+    <mat-card-title>{{ project.title | translate }}</mat-card-title>
+    <mat-card-subtitle>{{ project.subtitle | translate }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <img *ngIf="project.imagePath" class="poster" mat-card-image [src]="project.imagePath" [alt]="project.title" onerror="this.src='../../assets/images/icons/error_outline-14px.svg'">
+
+  <mat-icon *ngIf="!project.imagePath" class="error-icon" color="warn" mat-card-image [inline]="true">error_outline</mat-icon>
+
+  <mat-card-content>
+    <p>{{ project.description | translate }}</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <div>
+      <a *ngIf="project.hasWebsite" class="page-button" mat-flat-button color="warn" [disabled]="!project.websiteUrl" [href]="project.websiteUrl">
+        {{ "projectsPage.visitSite" | translate }}
+        <mat-icon>open_in_browser</mat-icon>
+      </a>
+    </div>
+
+    <div [matTooltipShowDelay]="tooltipShowDelay" [matTooltipClass]="tooltipClass" [matTooltip]="getRepoTooltip">
+      <a mat-icon-button class="github-button" [disabled]="!project.isRepoPublic" [href]="project.githubUrl">
+        <img [src]="project.isRepoPublic | githubLogo:(themeService.effectiveThemeMode$ | async):'../../../assets/images/icons'" alt="GitHub Image" onerror="this.src='../../assets/images/icons/error_outline-14px.svg'">
+      </a>
+    </div>
+  </mat-card-actions>
+</mat-card>
