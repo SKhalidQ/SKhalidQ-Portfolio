@@ -89,6 +89,14 @@ $SKhalidQ-Portfolio-dark-theme: mat.define-dark-theme((
   @include mat.snack-bar-color($SKhalidQ-Portfolio-dark-theme);
   @include mat.toolbar-color($SKhalidQ-Portfolio-dark-theme);
   @include mat.tooltip-color($SKhalidQ-Portfolio-dark-theme);
+
+  .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+    --mat-option-selected-state-label-text-color: #e0e0e0;
+  }
+
+  .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
+    --mat-option-selected-state-layer-color: rgba(255, 255, 255, .08);
+  }
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -108,3 +116,15 @@ div.mat-drawer-backdrop.ng-star-inserted.mat-drawer-shown {
 }
 
 mat-tooltip { background-color: #00ff2a; color: #fff; }
+
+.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after, .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-indeterminate::after {
+  color: red !important;
+}
+
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+  --mat-option-selected-state-label-text-color: #e0e0e0;
+}
+
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
+  --mat-option-selected-state-layer-color: rgba(0, 0, 0, .04);
+}

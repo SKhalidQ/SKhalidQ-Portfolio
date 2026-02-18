@@ -62,6 +62,7 @@ export class ThemeService implements OnDestroy {
     if (typeof window === 'undefined' || !window.matchMedia) {
       return ThemeMode.LightMode;
     }
+
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     return prefersDark ? ThemeMode.DarkMode : ThemeMode.LightMode;
   }
