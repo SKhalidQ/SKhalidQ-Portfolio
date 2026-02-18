@@ -6,6 +6,8 @@ import { Page } from './models/enums/page';
 import { MetaThemeService } from './services/meta-theme/meta-theme.service';
 import { SiteStatusService } from './services/site-status/site-status.service';
 import { ThemeService } from './services/theme/theme.service';
+import { Environment } from './models/enums/environment';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +24,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.setTabTitle();
-    this.siteStatusService.checkUpdates();
   }
 
   setTabTitle(): void {
@@ -37,7 +38,7 @@ export class AppComponent implements OnInit {
         }
 
         if (route?.snapshot.data[title]) {
-          return Page[route.snapshot.data[title]] + ' | SKhalidQ';
+          return `${Page[route.snapshot.data[title]]} | Porfolio - ${Environment[environment.environment]} | SKhalidQ`;
         }
 
         return appTitle;

@@ -22,6 +22,7 @@ export class SiteStatusService {
   constructor() {
     this.initializeConnectionListener();
     this.checkUpdates();
+    this.clearStaleServiceWorker();
   }
 
   private initializeConnectionListener(): void {
@@ -66,6 +67,16 @@ export class SiteStatusService {
 
   isOnline(): boolean {
     return this.isOnline$.value;
+  }
+
+  private clearStaleServiceWorker(): void {
+    if (this.swUpdate.isEnabled || !('serviceWorker' in navigator)) {
+      return;
+    }
+
+    navigator.serviceWorker.getRegistrations().then(registrations => {
+      registrations.forEach(registration => registration.unregister());
+    });
   }
 
   checkUpdates(): void {
