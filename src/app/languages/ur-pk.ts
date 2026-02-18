@@ -83,6 +83,11 @@ export const urPK: LanguageStrings = {
         title: 'اپ ڈیٹ چیک کرنے میں ناکامی', // Update check karne mein nakami
         message: 'اس وقت اپ ڈیٹس چیک کرنے میں ناکامی ہوئی ہے۔ براہ کرم بعد میں دوبارہ کوشش کریں۔', // Is waqt updates check karne mein nakami hui hai. Barah karam baad mein dobara koshish karein.
         action: 'بند کریں' // Band karein
+      },
+      lostConnection: {
+        title: 'کنکشن کھو گیا', // Connection kho gaya
+        message: 'لگتا ہے کہ آپ کا کنکشن منقطع ہو گیا ہے۔ ہو سکتا ہے کہ کچھ فیچرز کام نہ کریں۔', // Lagta hai ke aap ka connection munqata ho gaya hai. Ho sakta hai ke kuch features kaam na karen.
+        action: 'بند کریں' // Band karein
       }
     }
   },

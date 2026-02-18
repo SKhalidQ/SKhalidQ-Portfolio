@@ -84,6 +84,11 @@ export const enGB = {
         title: 'Update Check Failed',
         message: 'Unable to check for updates at this time. Please try again later.',
         action: 'Close'
+      },
+      lostConnection: {
+        title: 'Lost Connection',
+        message: 'It seems like you have lost connection. Some features might not be accessible.',
+        action: 'Close'
       }
     }
   },

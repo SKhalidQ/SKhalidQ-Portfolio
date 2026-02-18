@@ -83,6 +83,11 @@ export const caES: LanguageStrings = {
         title: 'Error en Comprovar Actualitzacions',
         message: 'No s\'ha pogut comprovar si hi ha actualitzacions en aquest moment. Si us plau, torna-ho a intentar més tard.',
         action: 'Tancar'
+      },
+      lostConnection: {
+        title: 'Sense Connexió',
+        message: 'Sembla que has perdut la connexió. Algunes funcions podrien no estar accessibles.',
+        action: 'Tancar'
       }
     }
   },

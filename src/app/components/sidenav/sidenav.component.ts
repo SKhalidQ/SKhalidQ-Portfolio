@@ -18,6 +18,13 @@ import { TranslationService } from 'src/app/services/translation/translation.ser
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })
+/**
+ * @description
+ * Smart component that renders the slide-in side navigation panel.
+ * Mirrors the theme and language controls from the header and adds
+ * navigation links. Emits {@link toggleSidenav} to request the sidenav
+ * to close (delegated to the parent layout component).
+ */
 export class SidenavComponent implements OnInit {
   @Output() toggleSidenav = new EventEmitter<void>();
 
@@ -32,6 +39,12 @@ export class SidenavComponent implements OnInit {
   languageMenu: MenuButton = LanguageMenuButton;
   socialMediaButtons: NavigationButton[] = SocialMediaButtons;
 
+  /**
+   * @description
+   * Initialises theme menu, language menu, and navigation button options with
+   * their active states, bound action callbacks, and sidenav-close integration.
+   * @returns {void}
+   */
   ngOnInit(): void {
     this.themeMenu = {
       ...ThemeMenuButton,
@@ -64,14 +77,35 @@ export class SidenavComponent implements OnInit {
     }));
   }
 
+  /**
+   * @description
+   * Emits the {@link toggleSidenav} output to request the parent to close
+   * the sidenav. Stored as an arrow function so it can be passed as a callback
+   * reference to child components without losing `this` context.
+   * @returns {void}
+   */
   closeSidenav = (): void => {
     this.toggleSidenav.emit();
   };
 
+  /**
+   * @description
+   * Computes the Material icon name for the theme menu trigger button.
+   * Delegates to {@link ThemeService.getEffectiveThemeMode} to correctly
+   * resolve `SystemDefault` to the actual OS preference.
+   * @returns {string} `'dark_mode'` or `'light_mode'`.
+   */
   get themeMenuIcon(): string {
     return this.themeService.getEffectiveThemeMode() === ThemeMode.DarkMode ? 'dark_mode' : 'light_mode';
   }
 
+  /**
+   * @description
+   * Applies a new theme selection, updates active states on the options,
+   * refreshes the menu trigger icon, and shows a confirmation snackbar.
+   * @param {string} theme - The string key of the {@link ThemeMode} enum value to apply.
+   * @returns {void}
+   */
   updateTheme(theme: string): void {
     const newTheme: ThemeMode = ThemeMode[theme as keyof typeof ThemeMode] || ThemeMode.LightMode;
 
@@ -88,6 +122,13 @@ export class SidenavComponent implements OnInit {
     this.snackbarService.openSnackbar(themeChangeMessage, dismissText);
   }
 
+  /**
+   * @description
+   * Applies a new language selection, updates active states on the options,
+   * and shows a confirmation snackbar.
+   * @param {string} language - The string key of the {@link Language} enum value to apply.
+   * @returns {void}
+   */
   updateLanguage(language: string): void {
     const newLanguage: Language = Language[language as keyof typeof Language] || Language.enGB;
 

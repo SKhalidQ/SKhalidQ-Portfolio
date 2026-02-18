@@ -83,6 +83,11 @@ export const esES: LanguageStrings = {
         title: 'Error al Comprobar Actualizaciones',
         message: 'No se ha podido comprobar si hay actualizaciones en este momento. Por favor, inténtalo de nuevo más tarde.',
         action: 'Cerrar'
+      },
+      lostConnection: {
+        title: 'Sin Conexión',
+        message: 'Parece que has perdido la conexión. Algunas funciones podrían no estar accesibles.',
+        action: 'Cerrar'
       }
     }
   },

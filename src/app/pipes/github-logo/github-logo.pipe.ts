@@ -5,8 +5,23 @@ import { ThemeMode } from 'src/app/models/enums/theme-mode';
   name: 'githubLogo',
   pure: true
 })
+/**
+ * @description
+ * Pure pipe that resolves the correct GitHub logo icon path based on
+ * repository visibility and the current effective theme.
+ * - Private repositories always use the disabled (greyed-out) icon.
+ * - Public repositories use the light or dark variant to contrast with the
+ *   current background.
+ */
 export class GithubLogoPipe implements PipeTransform {
 
+  /**
+   * @description Returns the path to the appropriate GitHub logo SVG asset.
+   * @param {boolean} isRepoPublic - Whether the project repository is publicly accessible.
+   * @param {ThemeMode | null | undefined} effectiveTheme - The current resolved theme from `effectiveThemeMode$`.
+   * @param {string} [basePath='../../../assets/images/icons'] - Base asset directory path.
+   * @returns {string} The resolved SVG asset path.
+   */
   transform(isRepoPublic: boolean, effectiveTheme: ThemeMode | null | undefined, basePath = '../../../assets/images/icons'): string {
     if (!isRepoPublic) {
       return `${basePath}/github-brands-disabled.svg`;
@@ -17,6 +32,6 @@ export class GithubLogoPipe implements PipeTransform {
     }
 
     const isDark = effectiveTheme === ThemeMode.DarkMode;
-    return isDark ? `${basePath}/github-brands-light.svg` : `${basePath}/github-brands-dark.svg`;
+    return `${basePath}/github-brands-${isDark ? 'dark' : 'light'}.svg`;
   }
 }

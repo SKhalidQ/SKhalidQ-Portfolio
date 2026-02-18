@@ -21,6 +21,14 @@ import { TranslationService } from 'src/app/services/translation/translation.ser
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+/**
+ * @description
+ * Smart component that renders the application top bar.
+ * Handles theme selection, language selection, navigation, and responsive
+ * breakpoint switching between full header and sidenav-toggle mode.
+ * When used inside the sidenav (`isSideNav = true`), menu buttons are hidden
+ * and a close icon is shown instead of the hamburger.
+ */
 export class HeaderComponent implements OnInit, OnDestroy {
   @Output() toggleSidenav = new EventEmitter<void>();
   @Input() isSideNav = false;
@@ -56,6 +64,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
   this.themeService.effectiveThemeMode$.subscribe(eff => this.lastEffectiveTheme = eff);
   }
 
+  /**
+   * @description
+   * Initialises theme menu, language menu, and navigation button options with
+   * their active states and bound action callbacks.
+   * @returns {void}
+   */
   ngOnInit(): void {
     this.themeMenu = {
       ...ThemeMenuButton,
@@ -82,10 +96,21 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }));
   }
 
+  /**
+   * @description Returns the appropriate Material icon name for the sidenav toggle button.
+   * @returns {string} `'clear'` when the sidenav is open, `'menu'` when closed.
+   */
   get getSideNavToggleIcon(): string {
     return this.isSideNav ? 'clear' : 'menu';
   }
 
+  /**
+   * @description
+   * Computes the Material icon name for the theme menu trigger button.
+   * Resolves `SystemDefault` using the last known effective theme so the icon
+   * always reflects the actual rendered appearance.
+   * @returns {string} `'dark_mode'` or `'light_mode'`.
+   */
   get themeMenuIcon(): string {
     const currentTheme = this.themeService.themeMode.value;
     if (currentTheme === ThemeMode.SystemDefault) {
@@ -95,10 +120,24 @@ export class HeaderComponent implements OnInit, OnDestroy {
     return currentTheme === ThemeMode.DarkMode ? 'dark_mode' : 'light_mode';
   }
 
+  /**
+   * @description
+   * Returns `true` when the icon-only menu buttons should be hidden.
+   * Menu buttons are hidden when rendered inside the sidenav, or on small/extra-small screens
+   * (where the full sidenav is used instead).
+   * @returns {boolean} `true` if menu buttons should not be rendered.
+   */
   get hideMenuButtons(): boolean {
     return !this.isSideNav && !(this.smallScreen || this.xSmallScreen);
   }
 
+  /**
+   * @description
+   * Applies a new theme selection, updates the active state on the options,
+   * refreshes the menu trigger icon, and shows a confirmation snackbar.
+   * @param {string} theme - The string key of the {@link ThemeMode} enum value to apply.
+   * @returns {void}
+   */
   updateTheme(theme: string): void {
     const newTheme: ThemeMode = ThemeMode[theme as keyof typeof ThemeMode] || ThemeMode.LightMode;
 
@@ -115,6 +154,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.snackbarService.openSnackbar(themeChangeMessage, dismissText);
   }
 
+  /**
+   * @description
+   * Applies a new language selection, updates the active state on the options,
+   * and shows a confirmation snackbar.
+   * @param {string} language - The string key of the {@link Language} enum value to apply.
+   * @returns {void}
+   */
   updateLanguage(language: string): void {
     const newLanguage: Language = Language[language as keyof typeof Language] || Language.enGB;
 
@@ -130,6 +176,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.snackbarService.openSnackbar(languageChangeMessage, dismissText);
   }
 
+  /**
+   * @description
+   * Completes the `destroy$` subject to clean up any subscriptions
+   * using `takeUntil(this.destroy$)`.
+   * @returns {void}
+   */
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
