@@ -107,6 +107,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     });
 
     this.themeService.setTheme(newTheme);
+    this.themeMenu = { ...this.themeMenu, icon: this.themeMenuIcon };
 
     const themeName = this.translationService.getTextPath(`themeMenu.options.${theme}`);
     const dismissText = this.translationService.getTextPath('snackbar.dismiss');

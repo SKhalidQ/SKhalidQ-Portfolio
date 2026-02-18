@@ -35,6 +35,7 @@ export class SidenavComponent implements OnInit {
   ngOnInit(): void {
     this.themeMenu = {
       ...ThemeMenuButton,
+      icon: this.themeMenuIcon,
       options: ThemeMenuButton.options?.map(opt => ({
         ...opt,
         isActive: opt.key === this.themeService.themeMode.getValue(),
@@ -54,7 +55,7 @@ export class SidenavComponent implements OnInit {
     this.navigationButtons = NavigationButtons.map(button => ({
       ...button,
       method: (): void => {
-        if (button.text === this.translationService.getTextPath('navigationButtons.about')) {
+        if (button.text.includes('about')) {
           this.easterEggService.runEasterEgg();
         }
 
@@ -67,6 +68,10 @@ export class SidenavComponent implements OnInit {
     this.toggleSidenav.emit();
   };
 
+  get themeMenuIcon(): string {
+    return this.themeService.getEffectiveThemeMode() === ThemeMode.DarkMode ? 'dark_mode' : 'light_mode';
+  }
+
   updateTheme(theme: string): void {
     const newTheme: ThemeMode = ThemeMode[theme as keyof typeof ThemeMode] || ThemeMode.LightMode;
 
@@ -75,6 +80,7 @@ export class SidenavComponent implements OnInit {
     });
 
     this.themeService.setTheme(newTheme);
+    this.themeMenu = { ...this.themeMenu, icon: this.themeMenuIcon };
 
     const themeName = this.translationService.getTextPath(`themeMenu.options.${theme}`);
     const dismissText = this.translationService.getTextPath('snackbar.dismiss');
