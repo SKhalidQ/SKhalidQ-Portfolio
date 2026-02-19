@@ -80,6 +80,14 @@ mat-card {
   }
 }
 
+.poster.img--fallback {
+  display: flex;
+  place-content: center center;
+  margin: -20px 0 20px 0;
+  font-size: 252px; // Based on the height of the other cards
+  width: 100%;
+}
+
 // Animations
 mat-card:hover {
   transform: translateY(-4px);
