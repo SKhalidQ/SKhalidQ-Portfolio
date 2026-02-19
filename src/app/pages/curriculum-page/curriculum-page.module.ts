@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
-import { Page } from 'src/app/models/enums/page';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 import { BulletComponent } from 'src/app/components/curriculum/bullet/bullet.component';
@@ -25,9 +23,6 @@ import { CurriculumPageComponent } from './curriculum-page.component';
   ],
   imports: [
     SharedModule,
-    RouterModule.forChild([
-      { path: '', component: CurriculumPageComponent, data: { pageTitle: Page.Curriculum } },
-    ]),
   ],
 })
 export class CurriculumPageModule {}

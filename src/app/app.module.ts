@@ -5,6 +5,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 
+import { HomePageModule } from './pages/home-page/home-page.module';
+import { CurriculumPageModule } from './pages/curriculum-page/curriculum-page.module';
+import { ProjectsPageModule } from './pages/projects-page/projects-page.module';
+import { AboutPageModule } from './pages/about-page/about-page.module';
+import { ErrorPageModule } from './pages/error-page/error-page.module';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -14,6 +20,11 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     SharedModule,
+    HomePageModule,
+    CurriculumPageModule,
+    ProjectsPageModule,
+    AboutPageModule,
+    ErrorPageModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
