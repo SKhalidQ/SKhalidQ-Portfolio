@@ -16,29 +16,48 @@
       }
     },
     {
-      "name": "assets",
-      "installMode": "lazy",
-      "updateMode": "prefetch",
-      "resources": {
-        "files": [
-          "/assets/**",
-          "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
-        ],
-        "urls": [
-          "https://fonts.googleapis.com/**",
-          "https://fonts.gstatic.com/**"
-        ]
-      }
-    },
-    {
       "name": "large-assets",
       "installMode": "lazy",
       "updateMode": "lazy",
       "resources": {
         "files": [
-          "/assets/images/previews/**",
           "/assets/easter-eggs/**"
         ]
+      }
+    },
+    {
+      "name": "assets",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "google-fonts-stylesheets",
+      "urls": [
+        "https://fonts.googleapis.com/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 10,
+        "maxAge": "365d",
+        "strategy": "performance"
+      }
+    },
+    {
+      "name": "google-fonts-webfonts",
+      "urls": [
+        "https://fonts.gstatic.com/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 30,
+        "maxAge": "365d",
+        "strategy": "performance"
       }
     }
   ]
