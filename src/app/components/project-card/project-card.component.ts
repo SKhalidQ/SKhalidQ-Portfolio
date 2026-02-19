@@ -53,4 +53,14 @@ export class ProjectCardComponent {
 
     return tooltip;
   }
+
+  public onImageError(imageElement: HTMLImageElement): void {
+    if ((imageElement.dataset)['fallbackApplication']) {
+      return;
+    }
+
+    (imageElement.dataset)['fallbackApplied'] = '1';
+    imageElement.src = 'assets/images/icons/error_outline-14px.svg';
+    imageElement.classList.add('img--fallback');
+  }
 }

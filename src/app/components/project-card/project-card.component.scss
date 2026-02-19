@@ -34,7 +34,7 @@ mat-card {
     transition: all 0.3s ease-in-out;
   }
 
-  .error-icon {
+  .error-icon, .poster.img--fallback {
     display: flex;
     place-content: center center;
     margin: -20px 0 20px 0;
