@@ -7,7 +7,7 @@
     <mat-card-subtitle>{{ project.subtitle | translate }}</mat-card-subtitle>
   </mat-card-header>
 
-  <img *ngIf="project.imagePath" #poster class="poster" mat-card-image [src]="project.imagePath" [alt]="project.title" (error)="onImageError(poster)" onerror="this.src='../../assets/images/icons/error_outline-14px.svg'">
+  <img *ngIf="project.imagePath" #poster class="poster" mat-card-image [src]="project.imagePath" [alt]="project.title" (error)="onImageError(poster)">
 
   <mat-icon *ngIf="!project.imagePath" class="error-icon" color="warn" mat-card-image [inline]="true">error_outline</mat-icon>
 
