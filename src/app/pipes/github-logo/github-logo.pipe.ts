@@ -32,6 +32,6 @@ export class GithubLogoPipe implements PipeTransform {
     }
 
     const isDark = effectiveTheme === ThemeMode.DarkMode;
-    return `${basePath}/github-brands-${isDark ? 'dark' : 'light'}.svg`;
+    return `${basePath}/github-brands-${isDark ? 'light' : 'dark'}.svg`;
   }
 }

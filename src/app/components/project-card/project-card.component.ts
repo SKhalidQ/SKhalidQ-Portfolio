@@ -54,7 +54,13 @@ export class ProjectCardComponent {
     return tooltip;
   }
 
-  public onImageError(imageElement: HTMLImageElement): void {
+  /**
+   * @description
+   * Handles image load errors by applying a fallback image and styling.
+   * @param imageElement The image element that encountered an error.
+   * @returns void
+   */
+  onImageError(imageElement: HTMLImageElement): void {
     if ((imageElement.dataset)['fallbackApplication']) {
       return;
     }

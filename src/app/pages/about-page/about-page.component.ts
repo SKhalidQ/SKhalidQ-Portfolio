@@ -85,4 +85,20 @@ export class AboutPageComponent implements OnInit {
   checkForUpdates(): void {
     this.siteStatusService.manualUpdateCheck();
   }
+
+    /**
+   * @description
+   * Handles image load errors by applying a fallback image and styling.
+   * @param imageElement The image element that encountered an error.
+   * @returns void
+   */
+  public onImageError(imageElement: HTMLImageElement): void {
+    if ((imageElement.dataset)['fallbackApplication']) {
+      return;
+    }
+
+    (imageElement.dataset)['fallbackApplied'] = '1';
+    imageElement.src = 'assets/images/icons/error_outline-14px.svg';
+    imageElement.classList.add('img--fallback');
+  }
 }

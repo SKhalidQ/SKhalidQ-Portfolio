@@ -5,13 +5,13 @@
     </button>
 
     <div class="logo">
-      <img [src]="logo.icon" alt="Logo" onerror="this.src='../../assets/images/icons/error_outline-14px.svg'">
+      <img #poster [src]="logo.icon" alt="Logo" (error)="onImageError(poster)">
       <h2 class="title">{{ logo.text }}</h2>
     </div>
 
     <section *ngIf="!isSideNav" class="navigation-buttons">
-      <button *ngFor="let button of navigationButtons" mat-button [routerLink]="button.route" routerLinkActive="active-route" (click)="button.method?.()">
-        <p>{{ button.text | translate }}</p>
+      <button *ngFor="let button of navigationButtons" type="button" mat-button [routerLink]="button.route" routerLinkActive="active-route" (click)="button.method?.()">
+          {{ button.text | translate }}
       </button>
     </section>
 
@@ -32,7 +32,7 @@
     <span class="spacer"></span>
 
     <a *ngFor="let socialMedia of (socialMediaButtons | socialButtonLogo:(themeService.effectiveThemeMode$ | async))" mat-icon-button [href]="socialMedia.route" target="_blank">
-      <img class="icon" alt="Social Media" *ngIf="socialMedia.icon !== null" [src]="socialMedia.icon" onerror="this.src='../../assets/images/icons/error_outline-14px.svg'">
+      <img *ngIf="socialMedia.icon !== null" #socialMediaLogo class="icon" alt="Social Media" [src]="socialMedia.icon" (error)="onImageError(socialMediaLogo)">
     </a>
   </mat-toolbar-row>
 </mat-toolbar>

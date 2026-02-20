@@ -7,7 +7,9 @@
     <mat-card-subtitle>{{ project.subtitle | translate }}</mat-card-subtitle>
   </mat-card-header>
 
-  <img *ngIf="project.imagePath" #poster class="poster" mat-card-image [src]="project.imagePath" [alt]="project.title | translate" [title]="project.title | translate" (error)="onImageError(poster)">
+  <div class="poster-container">
+    <img *ngIf="project.imagePath" #poster class="poster" mat-card-image [src]="project.imagePath" [alt]="project.title | translate" [title]="project.title | translate" (error)="onImageError(poster)">
+  </div>
 
   <mat-icon *ngIf="!project.imagePath" class="error-icon" color="warn" mat-card-image [inline]="true">error_outline</mat-icon>
 
@@ -19,13 +21,13 @@
     <div>
       <a *ngIf="project.hasWebsite" class="page-button" mat-flat-button color="accent" [disabled]="!project.websiteUrl" [href]="project.websiteUrl">
         {{ "projectsPage.visitSite" | translate }}
-        <mat-icon>open_in_browser</mat-icon>
+        <mat-icon>arrow_forward</mat-icon>
       </a>
     </div>
 
     <div [matTooltipShowDelay]="tooltipShowDelay" [matTooltipClass]="tooltipClass" [matTooltip]="getRepoTooltip">
       <a mat-icon-button class="github-button" [disabled]="!project.isRepoPublic" [href]="project.githubUrl">
-        <img [src]="project.isRepoPublic | githubLogo:(themeService.effectiveThemeMode$ | async):'../../../assets/images/icons'" alt="GitHub Image" onerror="this.src='../../assets/images/icons/error_outline-14px.svg'">
+        <img #githubLogo [src]="project.isRepoPublic | githubLogo:(themeService.effectiveThemeMode$ | async):'../../../assets/images/icons'" alt="GitHub Image" (error)="onImageError(githubLogo)">
       </a>
     </div>
   </mat-card-actions>

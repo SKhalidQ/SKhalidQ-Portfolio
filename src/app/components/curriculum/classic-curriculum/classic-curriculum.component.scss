@@ -31,13 +31,23 @@
     color: white;
 
     .profile {
-      img {
-        @include mat.elevation(24);
+      @include mat.elevation(24);
 
-        width: 9.375em;
-        border-radius: 50%;
-        box-shadow: unset;
-        animation: shadow 1s ease-in-out 1s both;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 9.375em;
+      width: 9.375em;
+      border-radius: 50%;
+
+      overflow: hidden;
+      box-shadow: unset;
+
+      animation: shadow 1s ease-in-out 1s both;
+
+      img {
+        width: 100%;
       }
     }
 

@@ -26,6 +26,14 @@ mat-card {
     }
   }
 
+  .poster-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+  }
+
   .poster {
     max-width: 100%;
     background-size: cover;
