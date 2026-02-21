@@ -4,7 +4,7 @@
 
     <mat-divider></mat-divider>
 
-    <a *ngFor="let button of navigationButtons" mat-list-item [routerLink]="button.route" routerLinkActive="active-route" (click)="button.method?.()">
+    <a *ngFor="let button of navigationButtons" mat-list-item [routerLink]="button.route" routerLinkActive="active-route" (click)="button.method?.(); closeSidenav()">
       <div>
         <mat-icon class="icon">{{ button.icon }}</mat-icon>
         <span>{{ button.text | translate }}</span>
@@ -21,7 +21,12 @@
 
     <mat-divider></mat-divider>
 
-    <a mat-list-item [href]="socialMedia.route" target="_blank" *ngFor="let socialMedia of (socialMediaButtons | socialButtonLogo:(themeService.effectiveThemeMode$ | async))">
+    <a mat-list-item
+       [href]="socialMedia.route"
+       target="_blank"
+       *ngFor="let socialMedia of (socialMediaButtons | socialButtonLogo:(themeService.effectiveThemeMode$ | async))"
+       (click)="closeSidenav()"
+      >
       <div>
         <img class="icon" #socialMediaLogo alt="Social Media" *ngIf="socialMedia.icon !== null" [src]="socialMedia.icon" (error)="onImageError(socialMediaLogo)">
         <span>{{ socialMedia.text | translate }}</span>

@@ -1,8 +1,0 @@
-# Prevent Netlify (or any CDN/proxy) from caching the Angular service worker
-# script and its manifest. If these files are served stale, the browser will
-# never detect that a new version of the app has been deployed.
-/ngsw-worker.js
-  Cache-Control: no-cache
-
-/ngsw.json
-  Cache-Control: no-cache
