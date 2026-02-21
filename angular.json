@@ -29,6 +29,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/_redirects",
+              "src/_headers",
               "src/manifest.webmanifest"
             ],
             "styles": [

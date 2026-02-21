@@ -29,9 +29,10 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
+      // Register the ServiceWorker immediately so the install + prefetch
+      // phase starts as early as possible, ensuring all assets are cached
+      // before the user closes the window.
+      registrationStrategy: 'registerImmediately'
     })
   ],
   providers: [],
