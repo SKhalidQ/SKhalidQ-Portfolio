@@ -3,7 +3,7 @@
     <h1 class="title">{{ homeData.title | translate }}</h1>
 
     <div class="cv-container">
-      <img [src]="cvImagePath" alt="CV Preview" class="preview" appDisableRightclick onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+      <img [src]="cvImagePath" alt="CV Preview" class="preview" appDisableRightclick onerror="this.src='assets/images/icons/error_outline-14px.svg'">
 
       <div class="description">
         <p>{{ homeData.cvHighlight.description | translate }}</p>
@@ -12,7 +12,7 @@
     </div>
 
     <div class="project-container">
-      <img [src]="projectImagePath" alt="Project Preview" class="preview" appDisableRightclick onerror="this.src='../../assets/Images/error_outline-14px.svg'">
+      <img [src]="projectImagePath" alt="Project Preview" class="preview" appDisableRightclick onerror="this.src='assets/images/icons/error_outline-14px.svg'">
 
       <div class="description">
         <p>{{ homeData.projectsHighlight.description | translate }}</p>
