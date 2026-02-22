@@ -184,7 +184,7 @@ export const enGB = {
       jobs: {
         weatherford: {
           title: 'Software Engineer - Weatherford Ltd (Reeves Wireline Technologies)',
-          description: 'Worked in Weatherford\'s Wireline division, developing software for downhole data acquisition, file management, and real-time log visualisation across both CAPEX and OPEX projects in support of oilfield operations.',
+          description: 'Work in Weatherford’s Wireline division, developing software for downhole data acquisition, file management, and real-time log visualisation across both CAPEX and OPEX projects in support of oilfield operations.',
           dates: 'Dec 2021 - Present'
         },
         greenwood: {

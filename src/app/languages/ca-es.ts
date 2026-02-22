@@ -183,7 +183,7 @@ export const caES: LanguageStrings = {
       jobs: {
         weatherford: {
           title: 'Enginyer Informàtic - Weatherford Ltd (Reeves Wireline Technologies)',
-          description: 'Vaig treballar a la divisió de Wireline de Weatherford, desenvolupant programari per a l\'adquisició de dades en profunditat, gestió de fitxers i visualització de registres en temps real en projectes CAPEX i OPEX en suport a les operacions petrolieres.',
+          description: 'Treballo a la divisió de Wireline de Weatherford, desenvolupant programari per a l\'adquisició de dades en el fons del pou, gestió de fitxers i visualització de registres en temps real en projectes CAPEX i OPEX en suport a les operacions petrolieres.',
           dates: 'Dec 2021 - Present'
         },
         greenwood: {
