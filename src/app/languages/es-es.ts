@@ -176,14 +176,14 @@ export const esES: LanguageStrings = {
     },
     profile: {
       title: 'Perfil',
-      description: 'Recientemente graduado en Ciencias de la Computación con una Segunda Clase (División 1), buscando un trabajo en la industria del desarrollo de software. Listo para utilizar mis habilidades que he adquirido durante mi educación y en mi tiempo libre. Emocionado por aprender más y probar nuevas tecnologías.'
+      description: 'Desarrollador Full Stack con cuatro años de experiencia en la construcción y mantenimiento de aplicaciones web e infraestructura en la nube en equipos ágiles y multifuncionales. Dedicado a entregar software escalable y de alta calidad, con una sólida base en desarrollo web y una pasión por el aprendizaje continuo.'
     },
     employmentHistory: {
       title: 'Historial Laboral',
       jobs: {
         weatherford: {
           title: 'Ingeniero Informático - Weatherford Ltd (Reeves Wireline Technologies)',
-          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic sit magnam fugiat illo sapiente fuga rem quae. Qui similique laboriosam, esse eum blanditiis fugiat ducimus dolorum perferendis aspernatur, quas quibusdam consectetur odio excepturi, veniam odit ut tenetur quidem totam repellat?',
+          description: 'Trabajé en la división de Wireline de Weatherford, desarrollando software para la adquisición de datos en pozos, gestión de archivos y visualización de registros en tiempo real en proyectos CAPEX y OPEX en apoyo a las operaciones petroleras.',
           dates: 'Dic 2021 - Presente'
         },
         greenwood: {

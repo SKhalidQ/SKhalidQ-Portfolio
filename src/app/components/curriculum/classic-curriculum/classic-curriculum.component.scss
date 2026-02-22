@@ -47,7 +47,7 @@
       animation: shadow 1s ease-in-out 1s both;
 
       img {
-        width: 9.375em;
+        width: 100%;
       }
     }
 
@@ -124,9 +124,8 @@
 
     .header {
       .profile {
-        img {
-          width: 120px;
-        }
+        height: 7.5em;
+        width: 7.5em;
       }
 
       .info-container {
@@ -169,9 +168,8 @@
       height: 10rem;
 
       .profile {
-        img {
-          width: 100px;
-        }
+        height: 6.25em;
+        width: 6.25em;
       }
 
       .info-container {

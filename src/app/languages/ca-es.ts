@@ -176,14 +176,14 @@ export const caES: LanguageStrings = {
     },
     profile: {
       title: 'Perfil',
-      description: 'Recent graduat en Ciències de la Computació amb una Segona Classe (Divisió 1), buscant una feina en la indústria del desenvolupament de programari. Preparat per utilitzar les meves habilitats que he adquirit durant la meva educació i en el meu temps lliure. Emocionat per aprendre més i provar noves tecnologies.'
+      description: 'Desenvolupador Full Stack amb quatre anys d\'experiència en la construcció i manteniment d\'aplicacions web i infraestructura en el núvol en equips àgils i multifuncionals. Dedicat a lliurar programari escalable i d\'alta qualitat, amb una sòlida base en desenvolupament web i una passió per l\'aprenentatge continu.'
     },
     employmentHistory: {
       title: 'Historial Laboral',
       jobs: {
         weatherford: {
           title: 'Enginyer Informàtic - Weatherford Ltd (Reeves Wireline Technologies)',
-          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic sit magnam fugiat illo sapiente fuga rem quae. Qui similique laboriosam, esse eum blanditiis fugiat ducimus dolorum perferendis aspernatur, quas quibusdam consectetur odio excepturi, veniam odit ut tenetur quidem totam repellat?',
+          description: 'Vaig treballar a la divisió de Wireline de Weatherford, desenvolupant programari per a l\'adquisició de dades en profunditat, gestió de fitxers i visualització de registres en temps real en projectes CAPEX i OPEX en suport a les operacions petrolieres.',
           dates: 'Dec 2021 - Present'
         },
         greenwood: {

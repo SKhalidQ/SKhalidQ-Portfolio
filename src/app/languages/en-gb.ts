@@ -177,14 +177,14 @@ export const enGB = {
     },
     profile: {
       title: 'Profile',
-      description: 'Recently graduated in Computer Science with a Second Class (Division 1), looking for a job in the software development industry. Ready to use my skills which I have gained during my education and in my spare time. Excited to learn more and to try new technologies.'
+      description: 'Full stack developer with four years of experience in building and maintaining web applications and cloud infrastructure in Agile, cross-functional teams. Dedicated to delivering scalable, high-quality software, with a strong foundation in web development and a passion for continuous learning.'
     },
     employmentHistory: {
       title: 'Employment History',
       jobs: {
         weatherford: {
           title: 'Software Engineer - Weatherford Ltd (Reeves Wireline Technologies)',
-          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic sit magnam fugiat illo sapiente fuga rem quae. Qui similique laboriosam, esse eum blanditiis fugiat ducimus dolorum perferendis aspernatur, quas quibusdam consectetur odio excepturi, veniam odit ut tenetur quidem totam repellat?',
+          description: 'Worked in Weatherford\'s Wireline division, developing software for downhole data acquisition, file management, and real-time log visualisation across both CAPEX and OPEX projects in support of oilfield operations.',
           dates: 'Dec 2021 - Present'
         },
         greenwood: {

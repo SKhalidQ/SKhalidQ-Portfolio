@@ -13,6 +13,8 @@
 @import './app/styles/scrollbar.scss';
 @import './app/styles/tooltip.scss';
 @import './app/styles/snackbar.scss';
+@import './app/styles/menu.scss';
+@import './app/styles/dropdown.scss';
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -89,14 +91,6 @@ $SKhalidQ-Portfolio-dark-theme: mat.define-dark-theme((
   @include mat.snack-bar-color($SKhalidQ-Portfolio-dark-theme);
   @include mat.toolbar-color($SKhalidQ-Portfolio-dark-theme);
   @include mat.tooltip-color($SKhalidQ-Portfolio-dark-theme);
-
-  .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
-    --mat-option-selected-state-label-text-color: #e0e0e0;
-  }
-
-  .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
-    --mat-option-selected-state-layer-color: rgba(255, 255, 255, .08);
-  }
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -105,26 +99,17 @@ html, body { height: 100vh; }
 body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
 
 .active-route {
+  @include mat.elevation(5);
+
   transform: translateY(-2px);
-  background: #b400003d !important;
+  background: #b40000ba !important;
+  color: white !important;
 
-   @include mat.elevation(5);
-}
+  span {
+    color: white !important;
+  }
 
-div.mat-drawer-backdrop.ng-star-inserted.mat-drawer-shown {
-  background: rgba(0, 0, 0, 0.493);
-}
-
-mat-tooltip { background-color: #00ff2a; color: #fff; }
-
-.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after, .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-indeterminate::after {
-  color: red !important;
-}
-
-.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
-  --mat-option-selected-state-label-text-color: #e0e0e0;
-}
-
-.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
-  --mat-option-selected-state-layer-color: rgba(0, 0, 0, .04);
+  .DarkMode & {
+    background: #b400003d !important;
+  }
 }

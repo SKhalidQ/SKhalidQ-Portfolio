@@ -39,7 +39,7 @@ const FileExplorer: Project = {
   imagePath: './assets/images/projects/coming-soon/ComingSoon v2.png',
   description:'projects.fileExplorer.description',
   hasWebsite: true,
-  websiteUrl: undefined,
+  websiteUrl: 'https://alpha-explorer.skhalidq.dev/',
   isRepoPublic: false,
   githubUrl: undefined,
   isHidden: false

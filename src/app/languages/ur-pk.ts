@@ -176,14 +176,14 @@ export const urPK: LanguageStrings = {
     },
     profile: {
       title: 'پروفائل', // Profile
-      description: 'حال ہی میں کمپیوٹر سائنس میں دوسری کلاس (ڈویژن 1) کے ساتھ فارغ التحصیل، سافٹ ویئر کی ترقی کی صنعت میں ملازمت کی تلاش میں۔ اپنی مہارتوں کو استعمال کرنے کے لیے تیار ہوں جو میں نے اپنی تعلیم اور اپنے فارغ وقت میں حاصل کی ہیں۔ مزید سیکھنے اور نئی ٹیکنالوجیز آزمانے کے لیے پرجوش۔' // Haal hi mein computer science mein doosri class (division 1) ke sath farigh ut tahseel, software ki taraqqi ki sanaat mein mulazmat ki talash mein. Apni maharaton ko istemal karne ke liye tayyar hon jo main ne apni taleem aur apne farigh waqt mein hasil ki hain. Mazeed seekhne aur nayi technologies azmaane ke liye purjosh.
+      description: 'فل اسٹیک ڈویلپر جس کے پاس ایجائل، کراس فنکشنل ٹیموں میں ویب ایپلیکیشنز اور کلاؤڈ انفراسٹرکچر کی تعمیر اور دیکھ بھال کا چار سالہ تجربہ ہے۔ اسکیل ایبل، اعلی معیار کے سافٹ ویئر کی فراہمی کے لیے پرعزم، ویب ڈویلپمنٹ میں مضبوط بنیاد کے ساتھ اور مسلسل سیکھنے کا جذبہ رکھتا ہے۔' // Full stack developer jis ke paas Agile, cross-functional teams mein web applications aur cloud infrastructure ki tameer aur dekh bhaal ka char saal ka tajurba hai. Scalable, aala mayaar ke software ki farahmi ke liye par azm, web development mein mazboot bunyaad ke sath aur musalsal seekhne ka jazba rakhta hai.
     },
     employmentHistory: {
       title: 'ملازمت کی تاریخ', // Mulazmat ki tareekh
       jobs: {
         weatherford: {
           title: 'سافٹ ویئر انجینئر - Weatherford Ltd (Reeves Wireline Technologies)', // Software engineer - Weatherford Ltd (Reeves Wireline Technologies)
-          description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic sit magnam fugiat illo sapiente fuga rem quae. Qui similique laboriosam, esse eum blanditiis fugiat ducimus dolorum perferendis aspernatur, quas quibusdam consectetur odio excepturi, veniam odit ut tenetur quidem totam repellat?',
+          description: 'Weatherford کی Wireline ڈویژن میں کام کیا، ڈاؤن ہول ڈیٹا حاصل کرنے، فائل مینجمنٹ، اور ریئل ٹائم لاگ ویژولائزیشن کے لیے سافٹ ویئر تیار کیا، دونوں CAPEX اور OPEX پروجیکٹس میں تیل کے میدان کی آپریشنز کی حمایت کے لیے۔', // Weatherford ki Wireline division mein kaam kiya, downhole data hasil karne, file management, aur real-time log visualization ke liye software tayar kiya, dono CAPEX aur OPEX projects mein tail ke maidan ki operations ki support ke liye.
           dates: 'دسمبر 2021 - موجودہ' // December 2021 - mojoodah
         },
         greenwood: {
