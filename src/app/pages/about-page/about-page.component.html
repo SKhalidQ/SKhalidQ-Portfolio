@@ -21,10 +21,10 @@
     </div>
 
     <div class="copyright">
-      <div class="logo-container">
+      <div class="logo-container" role="button" tabindex="0" (click)="navigateToHomeSite()" (keydown.enter)="navigateToHomeSite()" aria-label="Home">
         <img [src]="logoPath" #logo alt="Logo" (error)="onImageError(logo)">
       </div>
-
+  
       <h4>{{ copyright }}</h4>
     </div>
   </section>
