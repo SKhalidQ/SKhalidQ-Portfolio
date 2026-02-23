@@ -1,35 +1,37 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+
 import { DisableRightClickDirective } from './disable-right-click.directive';
 
-@Component({
-  template: '<div id="ctx" appDisableRightClick>Right click me</div>'
-})
-class HostComponent {}
+@Component({ template: '<div id="host" appDisableRightClick>content</div>' })
+class TestHostComponent {}
 
-describe('DisableRightClickDirective', () => {
-  let fixture: ComponentFixture<HostComponent>;
+describe('onRightClick - DisableRightClickDirective', () => {
+  let fixture: ComponentFixture<TestHostComponent>;
+  let hostEl: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HostComponent, DisableRightClickDirective]
+      declarations: [TestHostComponent, DisableRightClickDirective]
     }).compileComponents();
-    fixture = TestBed.createComponent(HostComponent);
+
+    fixture = TestBed.createComponent(TestHostComponent);
     fixture.detectChanges();
+    hostEl = fixture.debugElement.query(By.css('#host')).nativeElement as HTMLElement;
   });
 
-  it('should create host with directive', () => {
-    const el = fixture.debugElement.query(By.directive(DisableRightClickDirective));
-    expect(el).toBeTruthy();
-  });
+  describe('when contextmenu event occurs', () => {
+    it('should prevent the native context menu (defaultPrevented)', () => {
+      // Arrange
+      const ev = new MouseEvent('contextmenu', { bubbles: true, cancelable: true, button: 2 });
 
-  it('should prevent default on contextmenu', () => {
-    const el: HTMLElement = fixture.debugElement.query(By.css('#ctx')).nativeElement;
-    const event = new MouseEvent('contextmenu', { bubbles: true, cancelable: true, button: 2 });
-    const preventedBefore = event.defaultPrevented;
-    el.dispatchEvent(event);
-    expect(event.defaultPrevented).toBeTrue();
-    expect(preventedBefore).toBeFalse();
+      // Act
+      const canceled = !hostEl.dispatchEvent(ev);
+
+      // Assert
+      expect(ev.defaultPrevented || canceled).toBeTrue();
+    });
   });
 });
+
