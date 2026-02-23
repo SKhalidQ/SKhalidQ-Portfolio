@@ -26,7 +26,7 @@ export const esES: LanguageStrings = {
   },
   pages: {
     Home: 'Inicio',
-    Curriculum: 'Currículum',
+    Curriculum: 'Currículum Vitae',
     Projects: 'Proyectos',
     About: 'Acerca de'
   },

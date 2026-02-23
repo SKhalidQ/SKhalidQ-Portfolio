@@ -27,7 +27,7 @@ export const enGB = {
   },
   pages: {
     Home: 'Home',
-    Curriculum: 'Curriculum',
+    Curriculum: 'Curriculum Vitae',
     Projects: 'Projects',
     About: 'About'
   },

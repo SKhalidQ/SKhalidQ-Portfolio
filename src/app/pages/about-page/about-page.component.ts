@@ -73,7 +73,7 @@ export class AboutPageComponent implements OnInit {
    */
   get copyright(): string {
     // TODO: Get version number
-    return `Copyright SKhalidQ ©${this.currentYear} v1.3.0`;
+    return `Copyright SKhalidQ ©${this.currentYear} v1.4.0`;
   }
 
   /**
@@ -86,14 +86,23 @@ export class AboutPageComponent implements OnInit {
     this.siteStatusService.manualUpdateCheck();
   }
 
-    /**
+  /**
+   * @description
+   * Navigates to the home site when the logo is clicked.
+   * @returns {void}
+   */
+  navigateToHomeSite(): void {
+    window.location.href = 'https://www.skhalidq.dev';
+  }
+
+  /**
    * @description
    * Handles image load errors by applying a fallback image and styling.
    * @param imageElement The image element that encountered an error.
    * @returns void
    */
   public onImageError(imageElement: HTMLImageElement): void {
-    if ((imageElement.dataset)['fallbackApplication']) {
+    if ((imageElement.dataset)['fallbackApplied']) { // Old: fallbackApplication
       return;
     }
 

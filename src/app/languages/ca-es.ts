@@ -26,7 +26,7 @@ export const caES: LanguageStrings = {
   },
   pages: {
     Home: 'Inici',
-    Curriculum: 'Currículum',
+    Curriculum: 'Currículum Vitae',
     Projects: 'Projectes',
     About: 'Sobre'
   },
