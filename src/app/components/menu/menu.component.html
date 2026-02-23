@@ -1,5 +1,5 @@
 <ng-container>
-  <button *ngIf="!isList" mat-icon-button class="menu-button" [matMenuTriggerFor]="menu">
+  <button *ngIf="!isList" type="button" mat-icon-button class="menu-button" [matMenuTriggerFor]="menu">
     <mat-icon>{{ menuButton.icon }}</mat-icon>
   </button>
 
@@ -12,13 +12,13 @@
     </a>
   </div>
 
-  <mat-menu #menu="matMenu" [class]="themeService.themeMode.value">
+  <mat-menu #menu="matMenu" [class]="themeService.getEffectiveThemeMode()">
     <button mat-menu-item *ngFor="let option of menuButton.options" (click)="onMenuOptionClick(option)" [disabled]="option.isDisabled || option.isActive">
       <mat-icon *ngIf="option.iconType === 'icon'">
         {{ option.icon }}
       </mat-icon>
 
-      <img *ngIf="option.iconType === 'image'" class="icon" alt="image" [src]="option.icon" onerror="this.src='../../assets/images/error_outline-14px.svg'">
+      <img *ngIf="option.iconType === 'image'" class="icon" alt="image" [src]="option.icon" onerror="this.src='assets/images/icons/error_outline-14px.svg'">
 
       {{ option.text | translate }}
     </button>

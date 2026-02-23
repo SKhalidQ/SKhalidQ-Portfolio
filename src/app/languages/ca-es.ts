@@ -26,7 +26,7 @@ export const caES: LanguageStrings = {
   },
   pages: {
     Home: 'Inici',
-    Curriculum: 'Currículum',
+    Curriculum: 'Currículum Vitae',
     Projects: 'Projectes',
     About: 'Sobre'
   },
@@ -82,6 +82,11 @@ export const caES: LanguageStrings = {
       updateError: {
         title: 'Error en Comprovar Actualitzacions',
         message: 'No s\'ha pogut comprovar si hi ha actualitzacions en aquest moment. Si us plau, torna-ho a intentar més tard.',
+        action: 'Tancar'
+      },
+      lostConnection: {
+        title: 'Sense Connexió',
+        message: 'Sembla que has perdut la connexió. Algunes funcions podrien no estar accessibles.',
         action: 'Tancar'
       }
     }
@@ -171,7 +176,7 @@ export const caES: LanguageStrings = {
     },
     profile: {
       title: 'Perfil',
-      description: 'Recent graduat en Ciències de la Computació amb una Segona Classe (Divisió 1), buscant una feina en la indústria del desenvolupament de programari. Preparat per utilitzar les meves habilitats que he adquirit durant la meva educació i en el meu temps lliure. Emocionat per aprendre més i provar noves tecnologies.'
+      description: 'Desenvolupador Full Stack amb quatre anys d\'experiència en la construcció i manteniment d\'aplicacions web i infraestructura en el núvol en equips àgils i multifuncionals. Dedicat a lliurar programari escalable i d\'alta qualitat, amb una sòlida base en desenvolupament web i una passió per l\'aprenentatge continu.'
     },
     employmentHistory: {
       title: 'Historial Laboral',

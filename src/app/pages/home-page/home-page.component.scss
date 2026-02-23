@@ -1,3 +1,5 @@
+@use '@angular/material' as mat;
+
 $translate-X: -600px;
 
 @keyframes preview-animation {
@@ -50,6 +52,8 @@ $translate-X: -600px;
       margin: 25px 0;
 
       .preview {
+         @include mat.elevation(2);
+
         margin: 0 15px 0 0;
         max-width: 800px;
         border-radius: 2px;

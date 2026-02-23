@@ -27,7 +27,7 @@ export const enGB = {
   },
   pages: {
     Home: 'Home',
-    Curriculum: 'Curriculum',
+    Curriculum: 'Curriculum Vitae',
     Projects: 'Projects',
     About: 'About'
   },
@@ -83,6 +83,11 @@ export const enGB = {
       updateError: {
         title: 'Update Check Failed',
         message: 'Unable to check for updates at this time. Please try again later.',
+        action: 'Close'
+      },
+      lostConnection: {
+        title: 'Lost Connection',
+        message: 'It seems like you have lost connection. Some features might not be accessible.',
         action: 'Close'
       }
     }
@@ -172,7 +177,7 @@ export const enGB = {
     },
     profile: {
       title: 'Profile',
-      description: 'Recently graduated in Computer Science with a Second Class (Division 1), looking for a job in the software development industry. Ready to use my skills which I have gained during my education and in my spare time. Excited to learn more and to try new technologies.'
+      description: 'Full stack developer with four years of experience in building and maintaining web applications and cloud infrastructure in Agile, cross-functional teams. Dedicated to delivering scalable, high-quality software, with a strong foundation in web development and a passion for continuous learning.'
     },
     employmentHistory: {
       title: 'Employment History',

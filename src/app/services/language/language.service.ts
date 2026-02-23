@@ -5,10 +5,22 @@ import { Language } from 'src/app/models/enums/language';
 @Injectable({
   providedIn: 'root'
 })
+/**
+ * @description
+ * Service responsible for managing the application's active language.
+ * Resolves the initial language from `localStorage` or the browser locale,
+ * and exposes a reactive observable for consumers to subscribe to changes.
+ */
 export class LanguageService {
   private readonly localStorageLangKey = 'Language';
   private readonly defaultLanguage: Language = this.getInitialLanguage;
 
+  /**
+   * @description
+   * Determines the initial language on first load.
+   * Priority: persisted `localStorage` value → browser locale → fallback to English.
+   * @returns {Language} The resolved {@link Language} for the current session.
+   */
   private get getInitialLanguage(): Language {
     const storedLanguage = localStorage.getItem(this.localStorageLangKey);
     if (storedLanguage && Language[storedLanguage as keyof typeof Language]) {
@@ -33,6 +45,13 @@ export class LanguageService {
     return Language.enGB;
   }
 
+  /**
+   * @description
+   * Persists and applies a new language selection.
+   * Updates `localStorage` and emits through {@link currentLanguage}.
+   * @param {Language} language - The {@link Language} to apply.
+   * @returns {void}
+   */
   public setLanguage(language: Language): void {
     localStorage.setItem(this.localStorageLangKey, language);
     this.currentLanguage.next(language);

@@ -83,6 +83,11 @@ export const urPK: LanguageStrings = {
         title: 'اپ ڈیٹ چیک کرنے میں ناکامی', // Update check karne mein nakami
         message: 'اس وقت اپ ڈیٹس چیک کرنے میں ناکامی ہوئی ہے۔ براہ کرم بعد میں دوبارہ کوشش کریں۔', // Is waqt updates check karne mein nakami hui hai. Barah karam baad mein dobara koshish karein.
         action: 'بند کریں' // Band karein
+      },
+      lostConnection: {
+        title: 'کنکشن کھو گیا', // Connection kho gaya
+        message: 'لگتا ہے کہ آپ کا کنکشن منقطع ہو گیا ہے۔ ہو سکتا ہے کہ کچھ فیچرز کام نہ کریں۔', // Lagta hai ke aap ka connection munqata ho gaya hai. Ho sakta hai ke kuch features kaam na karen.
+        action: 'بند کریں' // Band karein
       }
     }
   },
@@ -171,7 +176,7 @@ export const urPK: LanguageStrings = {
     },
     profile: {
       title: 'پروفائل', // Profile
-      description: 'حال ہی میں کمپیوٹر سائنس میں دوسری کلاس (ڈویژن 1) کے ساتھ فارغ التحصیل، سافٹ ویئر کی ترقی کی صنعت میں ملازمت کی تلاش میں۔ اپنی مہارتوں کو استعمال کرنے کے لیے تیار ہوں جو میں نے اپنی تعلیم اور اپنے فارغ وقت میں حاصل کی ہیں۔ مزید سیکھنے اور نئی ٹیکنالوجیز آزمانے کے لیے پرجوش۔' // Haal hi mein computer science mein doosri class (division 1) ke sath farigh ut tahseel, software ki taraqqi ki sanaat mein mulazmat ki talash mein. Apni maharaton ko istemal karne ke liye tayyar hon jo main ne apni taleem aur apne farigh waqt mein hasil ki hain. Mazeed seekhne aur nayi technologies azmaane ke liye purjosh.
+      description: 'فل اسٹیک ڈویلپر جس کے پاس ایجائل، کراس فنکشنل ٹیموں میں ویب ایپلیکیشنز اور کلاؤڈ انفراسٹرکچر کی تعمیر اور دیکھ بھال کا چار سالہ تجربہ ہے۔ اسکیل ایبل، اعلی معیار کے سافٹ ویئر کی فراہمی کے لیے پرعزم، ویب ڈویلپمنٹ میں مضبوط بنیاد کے ساتھ اور مسلسل سیکھنے کا جذبہ رکھتا ہے۔' // Full stack developer jis ke paas Agile, cross-functional teams mein web applications aur cloud infrastructure ki tameer aur dekh bhaal ka char saal ka tajurba hai. Scalable, aala mayaar ke software ki farahmi ke liye par azm, web development mein mazboot bunyaad ke sath aur musalsal seekhne ka jazba rakhta hai.
     },
     employmentHistory: {
       title: 'ملازمت کی تاریخ', // Mulazmat ki tareekh

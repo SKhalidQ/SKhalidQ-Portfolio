@@ -91,16 +91,16 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "SKhalidQ-Portfolio:build:production"
+              "buildTarget": "SKhalidQ-Portfolio:build:production"
             },
             "alpha": {
-              "browserTarget": "SKhalidQ-Portfolio:build:alpha"
+              "buildTarget": "SKhalidQ-Portfolio:build:alpha"
             },
             "beta": {
-              "browserTarget": "SKhalidQ-Portfolio:build:beta"
+              "buildTarget": "SKhalidQ-Portfolio:build:beta"
             },
             "development": {
-              "browserTarget": "SKhalidQ-Portfolio:build:development"
+              "buildTarget": "SKhalidQ-Portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -108,7 +108,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SKhalidQ-Portfolio:build"
+            "buildTarget": "SKhalidQ-Portfolio:build"
           }
         },
         "test": {

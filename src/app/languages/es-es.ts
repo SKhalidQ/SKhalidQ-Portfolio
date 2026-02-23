@@ -26,7 +26,7 @@ export const esES: LanguageStrings = {
   },
   pages: {
     Home: 'Inicio',
-    Curriculum: 'Currículum',
+    Curriculum: 'Currículum Vitae',
     Projects: 'Proyectos',
     About: 'Acerca de'
   },
@@ -82,6 +82,11 @@ export const esES: LanguageStrings = {
       updateError: {
         title: 'Error al Comprobar Actualizaciones',
         message: 'No se ha podido comprobar si hay actualizaciones en este momento. Por favor, inténtalo de nuevo más tarde.',
+        action: 'Cerrar'
+      },
+      lostConnection: {
+        title: 'Sin Conexión',
+        message: 'Parece que has perdido la conexión. Algunas funciones podrían no estar accesibles.',
         action: 'Cerrar'
       }
     }
@@ -171,7 +176,7 @@ export const esES: LanguageStrings = {
     },
     profile: {
       title: 'Perfil',
-      description: 'Recientemente graduado en Ciencias de la Computación con una Segunda Clase (División 1), buscando un trabajo en la industria del desarrollo de software. Listo para utilizar mis habilidades que he adquirido durante mi educación y en mi tiempo libre. Emocionado por aprender más y probar nuevas tecnologías.'
+      description: 'Desarrollador Full Stack con cuatro años de experiencia en la construcción y mantenimiento de aplicaciones web e infraestructura en la nube en equipos ágiles y multifuncionales. Dedicado a entregar software escalable y de alta calidad, con una sólida base en desarrollo web y una pasión por el aprendizaje continuo.'
     },
     employmentHistory: {
       title: 'Historial Laboral',

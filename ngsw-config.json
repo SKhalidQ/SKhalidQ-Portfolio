@@ -16,9 +16,18 @@
       }
     },
     {
+      "name": "large-assets",
+      "installMode": "prefetch",
+      "updateMode": "lazy",
+      "resources": {
+        "files": [
+          "/assets/easter-eggs/**"
+        ]
+      }
+    },
+    {
       "name": "assets",
-      "installMode": "lazy",
-      "updateMode": "prefetch",
+      "installMode": "prefetch",
       "resources": {
         "files": [
           "/assets/**",
@@ -27,17 +36,6 @@
         "urls": [
           "https://fonts.googleapis.com/**",
           "https://fonts.gstatic.com/**"
-        ]
-      }
-    },
-    {
-      "name": "large-assets",
-      "installMode": "lazy",
-      "updateMode": "lazy",
-      "resources": {
-        "files": [
-          "/assets/images/previews/**",
-          "/assets/easter-eggs/**"
         ]
       }
     }

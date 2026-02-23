@@ -1,7 +1,7 @@
-<div class="cv-container mat-elevation-z5">
+<div class="cv-container">
   <div class="header">
     <div class="profile">
-      <img src="./assets/images/logos/group_logo.png" class="mat-elevation-z24" appDisableRightclick alt="profile_pic" onerror="this.src='./assets/images/icons/error_outline-14px.svg'">
+      <img src="./assets/images/logos/group_logo.png" #logo appDisableRightclick alt="profile_pic" (error)="onImageError(logo)">
     </div>
 
     <div class="info-container">

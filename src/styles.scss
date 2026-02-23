@@ -13,6 +13,8 @@
 @import './app/styles/scrollbar.scss';
 @import './app/styles/tooltip.scss';
 @import './app/styles/snackbar.scss';
+@import './app/styles/menu.scss';
+@import './app/styles/dropdown.scss';
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -59,25 +61,36 @@ $SKhalidQ-Portfolio-dark-theme: mat.define-dark-theme((
   typography: $my-typography
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
+// Include theme styles for only the components actually used in this app.
+// This significantly reduces CSS bundle size compared to mat.all-component-themes()
+@include mat.button-theme($SKhalidQ-Portfolio-light-theme);
+@include mat.card-theme($SKhalidQ-Portfolio-light-theme);
+@include mat.dialog-theme($SKhalidQ-Portfolio-light-theme);
+@include mat.divider-theme($SKhalidQ-Portfolio-light-theme);
+@include mat.form-field-theme($SKhalidQ-Portfolio-light-theme);
+@include mat.icon-theme($SKhalidQ-Portfolio-light-theme);
+@include mat.list-theme($SKhalidQ-Portfolio-light-theme);
+@include mat.menu-theme($SKhalidQ-Portfolio-light-theme);
+@include mat.select-theme($SKhalidQ-Portfolio-light-theme);
+@include mat.sidenav-theme($SKhalidQ-Portfolio-light-theme);
+@include mat.snack-bar-theme($SKhalidQ-Portfolio-light-theme);
+@include mat.toolbar-theme($SKhalidQ-Portfolio-light-theme);
+@include mat.tooltip-theme($SKhalidQ-Portfolio-light-theme);
+
 .DarkMode {
-  @include mat.all-component-themes($SKhalidQ-Portfolio-dark-theme);
-}
-
-.LightMode {
-  @include mat.all-component-themes($SKhalidQ-Portfolio-light-theme);
-}
-
-.SystemDefault {
-  @media (prefers-color-scheme: light) {
-    @include mat.all-component-themes($SKhalidQ-Portfolio-light-theme);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    @include mat.all-component-themes($SKhalidQ-Portfolio-dark-theme);
-  }
+  @include mat.button-color($SKhalidQ-Portfolio-dark-theme);
+  @include mat.card-color($SKhalidQ-Portfolio-dark-theme);
+  @include mat.dialog-color($SKhalidQ-Portfolio-dark-theme);
+  @include mat.divider-color($SKhalidQ-Portfolio-dark-theme);
+  @include mat.form-field-color($SKhalidQ-Portfolio-dark-theme);
+  @include mat.icon-color($SKhalidQ-Portfolio-dark-theme);
+  @include mat.list-color($SKhalidQ-Portfolio-dark-theme);
+  @include mat.menu-color($SKhalidQ-Portfolio-dark-theme);
+  @include mat.select-color($SKhalidQ-Portfolio-dark-theme);
+  @include mat.sidenav-color($SKhalidQ-Portfolio-dark-theme);
+  @include mat.snack-bar-color($SKhalidQ-Portfolio-dark-theme);
+  @include mat.toolbar-color($SKhalidQ-Portfolio-dark-theme);
+  @include mat.tooltip-color($SKhalidQ-Portfolio-dark-theme);
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -86,12 +99,17 @@ html, body { height: 100vh; }
 body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
 
 .active-route {
+  @include mat.elevation(5);
+
   transform: translateY(-2px);
-  background: #b400003d !important;
-}
+  background: #b40000ba !important;
+  color: white !important;
 
-div.mat-drawer-backdrop.ng-star-inserted.mat-drawer-shown {
-  background: rgba(0, 0, 0, 0.493);
-}
+  span {
+    color: white !important;
+  }
 
-mat-tooltip { background-color: #00ff2a; color: #fff; }
+  .DarkMode & {
+    background: #b400003d !important;
+  }
+}
