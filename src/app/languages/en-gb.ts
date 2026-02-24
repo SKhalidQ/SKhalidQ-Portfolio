@@ -290,12 +290,12 @@ export const enGB = {
     hobbies: {
       title: 'Hobbies',
       hobbies: {
-        movies: 'Movies & Series',
+        badminton: 'Badminton',
+        fitness: 'Fitness',
         gaming: 'Gaming',
-        music: 'Music',
+        code: 'Programming',
+        designing: 'Designing Interfaces',
         videoEditing: 'Video Editing',
-        code: 'Code',
-        fitness: 'Fitness'
       }
     }
   }

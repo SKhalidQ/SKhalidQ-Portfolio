@@ -289,12 +289,12 @@ export const esES: LanguageStrings = {
     hobbies: {
       title: 'Aficiones',
       hobbies: {
-        movies: 'Películas y Series',
+        badminton: 'Badminton',
+        fitness: 'Fitness',
         gaming: 'Videojuegos',
-        music: 'Música',
-        videoEditing: 'Edición de Video',
         code: 'Programación',
-        fitness: 'Fitness'
+        designing: 'Diseño de Interfaces',
+        videoEditing: 'Edición de Video',
       }
     }
   }

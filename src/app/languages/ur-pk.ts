@@ -290,12 +290,12 @@ export const urPK: LanguageStrings = {
     hobbies: {
       title: 'مشاغل', // Mashaghal
       hobbies: {
-        movies: 'فلمیں اور سیریز', // Filmein aur series
+        badminton: 'بیڈمنٹن', // Badminton
+        fitness: 'فٹنس', // Fitness
         gaming: 'ویڈیو گیمز', // Video games
-        music: 'موسیقی', // Musiqi
-        videoEditing: 'ویڈیو ایڈیٹنگ', // Video editing
         code: 'کوڈنگ', // Coding
-        fitness: 'فٹنس' // Fitness
+        designing: 'انٹرفیس ڈیزائننگ', // Designing Interfaces
+        videoEditing: 'ویڈیو ایڈیٹنگ', // Video Editing
       }
     }
   }

@@ -289,12 +289,12 @@ export const caES: LanguageStrings = {
     hobbies: {
       title: 'Aficions',
       hobbies: {
-        movies: 'Pel·lícules i Sèries',
-        gaming: 'Videojocs',
-        music: 'Música',
-        videoEditing: 'Edició de Vídeo',
+        badminton: 'Badminton',
+        fitness: 'Fitness',
+        gaming: 'Gaming',
         code: 'Programació',
-        fitness: 'Fitness'
+        designing: 'Disseny d\'Interfícies',
+        videoEditing: 'Edició de Vídeo',
       }
     }
   }

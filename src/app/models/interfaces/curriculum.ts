@@ -61,5 +61,6 @@ export interface TechnicalSkill {
 export interface Hobbies {
   name: string;
   icon: string;
+  path?: string;
 }
 

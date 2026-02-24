@@ -125,28 +125,29 @@ const language: string[] = [
 
 const hobbies: Hobbies[] = [
   {
-    name: 'curriculumPage.hobbies.hobbies.movies',
-    icon: 'video_library'
+    name: 'curriculumPage.hobbies.hobbies.badminton',
+    icon: 'badminton',
+    path: '../../../../assets/images/icons/badminton_24dp.svg'
+  },
+  {
+    name: 'curriculumPage.hobbies.hobbies.fitness',
+    icon: 'fitness_center'
   },
   {
     name: 'curriculumPage.hobbies.hobbies.gaming',
     icon: 'sports_esports'
   },
   {
-    name: 'curriculumPage.hobbies.hobbies.music',
-    icon: 'library_music'
-  },
-  {
-    name: 'curriculumPage.hobbies.hobbies.videoEditing',
-    icon: 'movie_creation'
-  },
-  {
     name: 'curriculumPage.hobbies.hobbies.code',
     icon: 'code'
   },
   {
-    name: 'curriculumPage.hobbies.hobbies.fitness',
-    icon: 'fitness_center'
+    name: 'curriculumPage.hobbies.hobbies.designing',
+    icon: 'design_services'
+  },
+  {
+    name: 'curriculumPage.hobbies.hobbies.videoEditing',
+    icon: 'movie_creation'
   }
 ];
 
