@@ -10,7 +10,6 @@ import { ListComponent } from 'src/app/components/curriculum/list/list.component
 import { ProfileComponent } from 'src/app/components/curriculum/profile/profile.component';
 
 import { CurriculumPageComponent } from './curriculum-page.component';
-import { ExtendedBulletPointComponent } from 'src/app/components/curriculum/extended-bullet-point/extended-bullet-point.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { ExtendedBulletPointComponent } from 'src/app/components/curriculum/exte
     ClassicCurriculumComponent,
     HistoryComponent,
     BulletComponent,
-    ExtendedBulletPointComponent,
     IconRailComponent,
     ListComponent,
     ProfileComponent,

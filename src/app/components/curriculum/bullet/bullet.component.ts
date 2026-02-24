@@ -1,6 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, inject, Input } from '@angular/core';
-import { BulletPoints } from 'src/app/models/interfaces/curriculum';
+import { BulletPoints, ExtendedBulletPoints } from 'src/app/models/interfaces/curriculum';
 
 @Component({
   selector: 'app-bullet',
@@ -9,6 +9,7 @@ import { BulletPoints } from 'src/app/models/interfaces/curriculum';
 })
 export class BulletComponent {
   @Input() points: BulletPoints[] = [];
+  @Input() sections: ExtendedBulletPoints[] = [];
   @Input() title = '';
 
   private readonly breakpointObserver = inject(BreakpointObserver);

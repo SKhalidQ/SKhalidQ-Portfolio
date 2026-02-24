@@ -104,7 +104,7 @@ const extendedTechnicalSkills: ExtendedBulletPoints[] = [
     sectionTitle: 'Backend Development',
     points: [
       {
-        title: '•	C#/.Net, ASP.NET Core, Entity Framework',
+        title: 'C#/.Net, ASP.NET Core, Entity Framework',
         description: 'Extensive professional experience building APIs, UI applications, and console tools, applying OOP principles, dependency injection, and common design patterns, along with writing automated tests using NUnit.'
       },
       {
