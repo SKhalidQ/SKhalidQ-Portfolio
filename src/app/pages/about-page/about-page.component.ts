@@ -73,7 +73,7 @@ export class AboutPageComponent implements OnInit {
    */
   get copyright(): string {
     // TODO: Get version number
-    return `Copyright SKhalidQ ©${this.currentYear} v1.4.0`;
+    return `Copyright SKhalidQ ©${this.currentYear} v1.4.1`;
   }
 
   /**
