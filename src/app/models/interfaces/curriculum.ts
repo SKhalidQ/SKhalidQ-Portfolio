@@ -13,6 +13,10 @@ export interface Curriculum {
     title: string;
     skills: TechnicalSkill[];
   };
+  extendedTechnicalSkills: {
+    title: string;
+    skills: ExtendedBulletPoints[];
+  };
   nonTechnicalSkills: {
     title: string;
     skills: BulletPoints[];
@@ -56,6 +60,11 @@ export interface BulletPoints {
   title: string;
   year?: string;
   description: string;
+}
+
+export interface ExtendedBulletPoints {
+  sectionTitle: string;
+  points: BulletPoints[];
 }
 
 export interface Hobbies {

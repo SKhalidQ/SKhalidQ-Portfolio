@@ -1,4 +1,4 @@
-import { BulletPoints, Curriculum, History, Header, Hobbies, Profile, TechnicalSkill } from '../interfaces/curriculum';
+import { BulletPoints, Curriculum, History, Header, Hobbies, Profile, TechnicalSkill, ExtendedBulletPoints } from '../interfaces/curriculum';
 
 const header: Header = {
   name: 'curriculumPage.header.name',
@@ -99,6 +99,61 @@ const technicalSkill: TechnicalSkill[] = [
   }
 ];
 
+const extendedTechnicalSkills: ExtendedBulletPoints[] = [
+  {
+    sectionTitle: 'Backend Development',
+    points: [
+      {
+        title: '•	C#/.Net, ASP.NET Core, Entity Framework',
+        description: 'Extensive professional experience building APIs, UI applications, and console tools, applying OOP principles, dependency injection, and common design patterns, along with writing automated tests using NUnit.'
+      },
+      {
+        title: 'SQL',
+        description: 'Strong experience designing relational models, writing queries, and working with production databases.'
+      }
+    ]
+  },
+  {
+    sectionTitle: 'Frontend Development',
+    points: [
+      {
+        title: 'Angular',
+        description: 'Personal experience across multiple personal projects; familiar with component architecture, routing, services, guards, and more.'
+      },
+      {
+        title: 'React',
+        description: 'Professional experience building component-based UIs, writing unit tests and developing a reusable visualisation library.'
+      },
+      {
+        title: 'Javascript/TypeScript, CSS/SCSS',
+        description: 'Used across different frameworks to build UI tools and interactive applications.'
+      }
+    ]
+  },
+  {
+    sectionTitle: 'Cloud & Infrastructure',
+    points: [
+      {
+        title: 'Microsoft Azure',
+        description: 'Experience maintaining the cloud infrastructure for production applications, including creating and updating services, monitoring hosted applications, and provisioning cloud resources with terraform using infrastructure as services.'
+      },
+      {
+        title: 'Docker/Kubernetes',
+        description: 'Experience deploying and maintaining containerised applications including both custom projects and publicly available images.'
+      }
+    ]
+  },
+  {
+    sectionTitle: 'DevOps & Tooling',
+    points: [
+      {
+        title: 'Azure DevOps, Git, GitHub',
+        description: 'Working with Azure DevOps for boards, backlogs, sprint planning and CI/CD pipelines; with GitHub for personal projects with workflow automation and releases; and with Git across both platforms for repository management, branching, pull requests and code reviews.'
+      }
+    ]
+  }
+];
+
 const nonTechnicalSkill: BulletPoints[] = [
   {
     title: 'curriculumPage.nonTechnicalSkills.skills.teamwork.title',
@@ -163,6 +218,10 @@ export const CurriculumInfo: Curriculum = {
   technicalSkills: {
     title: 'curriculumPage.technicalSkills.title',
     skills: technicalSkill
+  },
+  extendedTechnicalSkills: {
+    title: 'curriculumPage.technicalSkills.title',
+    skills: extendedTechnicalSkills
   },
   nonTechnicalSkills: {
     title: 'curriculumPage.nonTechnicalSkills.title',
