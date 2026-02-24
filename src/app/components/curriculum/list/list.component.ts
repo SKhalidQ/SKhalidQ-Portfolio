@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { TechnicalSkill } from 'src/app/models/interfaces/curriculum';
 
 @Component({
   selector: 'app-list',
@@ -7,6 +6,6 @@ import { TechnicalSkill } from 'src/app/models/interfaces/curriculum';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
-  @Input() list: TechnicalSkill[] = [];
+  @Input() list: string[] = [];
   @Input() title = '';
 }

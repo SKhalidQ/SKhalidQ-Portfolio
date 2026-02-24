@@ -176,7 +176,7 @@ export const caES: LanguageStrings = {
     },
     profile: {
       title: 'Perfil',
-      description: 'Desenvolupador Full Stack amb quatre anys d\'experiència en la construcció i manteniment d\'aplicacions web i infraestructura en el núvol en equips àgils i multifuncionals. Dedicat a lliurar programari escalable i d\'alta qualitat, amb una sòlida base en desenvolupament web i una passió per l\'aprenentatge continu.'
+      description: 'Desenvolupador Full Stack amb quatre anys d\'experiència en la construcció i manteniment d\'aplicacions web i infraestructura en el cloud en equips àgils i multifuncionals. Dedicat a lliurar programari escalable i d\'alta qualitat, amb una sòlida base en desenvolupament web i una passió per l\'aprenentatge continu.'
     },
     employmentHistory: {
       title: 'Historial Laboral',
@@ -212,24 +212,69 @@ export const caES: LanguageStrings = {
       }
     },
     technicalSkills: {
-      title: 'Habilitats Tècniques'
-    },
-    nonTechnicalSkills: {
-      title: 'Habilitats No Tècniques',
-      skills: {
-        teamwork: {
-          title: 'Treball en equip',
-          description: 'Vaig treballar en un entorn molt ocupat a Greenwood Academies Trust com a tècnic d\'IT, fet que va implicar col·laborar amb l\'equip per resoldre situacions crítiques. Vaig realitzar múltiples projectes de treball en grup durant la meva educació i vaig superar desafiaments treballant en equip per assolir els objectius.'
+      title: 'Habilitats Tècniques',
+      sections: {
+        backendDevelopment: {
+          title: 'Desenvolupador Backend',
+          skills: {
+            dotNet: {
+              title: 'C#/.Net, ASP.NET Core, Entity Framework',
+              description: 'Experiència professional extensa construint APIs, aplicacions UI i eines de consola, aplicant principis OOP, injecció de dependències i patrons de disseny comuns, juntament amb l\'escriptura de proves automatitzades utilitzant NUnit.'
+            },
+            sql: {
+              title: 'SQL',
+              description: 'Experiència sòlida dissenyant models relacionals, escrivint consultes i treballant amb bases de dades de producció.'
+            }
+          }
         },
-        communication: {
-          title: 'Comunicació',
-          description: 'Vaig proporcionar un servei de suport amigable i útil, vaig comunicar amb els meus companys durant la meva feina com a tècnic d\'IT. Vaig ajudar a crear consciència com una organització benèfica per recaptar fons. Vaig presentar informació tècnica de forma clara i concisa per a presentacions universitàries. Vaig participar i vaig actuar amb èxit en diverses obres de teatre a la universitat.'
+        frontendDevelopment: {
+          title: 'Desenvolupador Frontend',
+          skills: {
+            angular: {
+              title: 'Angular',
+              description: 'Experiència personal en diversos projectes personals; familiaritzat amb l\'arquitectura de components, rutes, serveis, guards i més.'
+            },
+            react: {
+              title: 'React',
+              description: 'Experiència professional construint interfícies d\'usuari basades en components, escrivint proves unitàries i desenvolupant una biblioteca de visualització reutilitzable.'
+            },
+            others: {
+              title: 'Javascript/TypeScript, CSS/SCSS',
+              description: 'Utilitzat en diferents frameworks per construir eines d\'interfície d\'usuari i aplicacions interactives.'
+            }
+          }
         },
-        organisation: {
-          title: 'Organització',
-          description: 'Vaig prioritzar els casos de suport d\'IT reorganitzant els casos segons la gravetat del problema i vaig proporcionar suport el més ràpid possible. Vaig lliurar innombrables projectes durant la universitat i l\'institut per a dates límits específiques administrant el temps i prioritzant funcions importants.'
+        cloudAndInfrastructure: {
+          title: 'Cloud i Infraestructura',
+          skills: {
+            msAzure: {
+              title: 'Microsoft Azure',
+              description: 'Experiència mantenint la infraestructura al cloud per a aplicacions de producció, incloent la creació i actualització de serveis, la supervisió d\'aplicacions allotjades i la provisió de recursos al cloud amb terraform utilitzant infraestructura com a servei.'
+            },
+            docker: {
+              title: 'Docker/Kubernetes',
+              description: 'Experiència desplegant i mantenint aplicacions en contenidors, incloent tant projectes personalitzats com imatges disponibles públicament.'
+            }
+          }
+        },
+        devOpsAndTooling: {
+          title: 'DevOps i Eines',
+          skills: {
+            devOpsAndSourceControl: {
+              title: 'Azure DevOps, Git, GitHub',
+              description: 'Experiència treballant amb Azure DevOps per a taulers, backlogs, planificació de sprints i pipelines CI/CD; amb GitHub per a projectes personals amb automatització de fluxos de treball i llançaments; i amb Git a través de ambdues plataformes per a la gestió de repositoris, branques, pull requests i revisions de codi.'
+            }
+          }
         }
       }
+    },
+    languages: {
+      title: 'Idiomes',
+      english: 'Anglès (Professional)',
+      spanish: 'Castellà (Natiu)',
+      catalan: 'Català (Natiu)',
+      urdu: 'Urdu (Natiu)',
+      punjabi: 'Panjabi (Natiu)'
     },
     achievements: {
       title: 'Assoliments',

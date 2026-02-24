@@ -212,22 +212,59 @@ export const esES: LanguageStrings = {
       }
     },
     technicalSkills: {
-      title: 'Habilidades Técnicas'
-    },
-    nonTechnicalSkills: {
-      title: 'Habilidades No Técnicas',
-      skills: {
-        teamwork: {
-          title: 'Trabajo en Equipo',
-          description: 'Trabajé en un entorno muy ocupado en Greenwood Academies Trust como Técnico de IT, lo que implicó colaborar con el equipo para resolver situaciones críticas. Realicé múltiples proyectos de trabajo en grupo durante mi educación y superé desafíos trabajando en equipo para lograr los objetivos.'
+      title: 'Habilidades Técnicas',
+      sections: {
+        backendDevelopment: {
+          title: 'Desarrollador Backend',
+          skills: {
+            dotNet: {
+              title: 'C#/.Net, ASP.NET Core, Entity Framework',
+              description: 'Extensa experiencia profesional construyendo APIs, aplicaciones de UI y herramientas de consola, aplicando principios de OOP, inyección de dependencias y patrones de diseño comunes, junto con la escritura de pruebas automatizadas usando NUnit.'
+            },
+            sql: {
+              title: 'SQL',
+              description: 'Amplia experiencia diseñando modelos relacionales, escribiendo consultas y trabajando con bases de datos en producción.'
+            }
+          }
         },
-        communication: {
-          title: 'Comunicación',
-          description: 'Proporcioné un servicio de soporte amigable y útil, me comuniqué con mis compañeros durante mi trabajo como técnico de IT. Ayudé a crear conciencia como una organización benéfica para recaudar fondos. Presenté información técnica de forma clara y concisa para presentaciones universitarias. Participé y actué con éxito en varias obras de teatro en la universidad.'
+        frontendDevelopment: {
+          title: 'Desarrollador Frontend',
+          skills: {
+            angular: {
+              title: 'Angular',
+              description: 'Experiencia personal en varios proyectos personales; familiarizado con la arquitectura de componentes, enrutamiento, servicios, guards y más.'
+            },
+            react: {
+              title: 'React',
+              description: 'Experiencia profesional construyendo interfaces de usuario basadas en componentes, escribiendo pruebas unitarias y desarrollando una biblioteca de visualización reutilizable.'
+            },
+            others: {
+              title: 'Javascript/TypeScript, CSS/SCSS',
+              description: 'Experiencia utilizando diferentes frameworks para construir herramientas de UI y aplicaciones interactivas.'
+            }
+          }
         },
-        organisation: {
-          title: 'Organización',
-          description: 'Priorizé los casos de soporte de IT reorganizándolos según la gravedad del problema y proporcioné soporte lo más rápido posible. Entregué innumerables proyectos durante la universidad y el instituto para fechas límites específicas administrando el tiempo y priorizando funciones importantes.'
+        cloudAndInfrastructure: {
+          title: 'Cloud & Infraestructura',
+          skills: {
+            msAzure: {
+              title: 'Microsoft Azure',
+              description: 'Experiencia manteniendo la infraestructura en la nube para aplicaciones de producción, incluyendo la creación y actualización de servicios, monitoreo de aplicaciones alojadas y aprovisionamiento de recursos en la nube con Terraform utilizando infraestructura como servicio.'
+            },
+            docker: {
+              title: 'Docker/Kubernetes',
+              description: 'Experiencia desplegando y manteniendo aplicaciones en contenedores, incluyendo tanto proyectos personalizados como imágenes disponibles públicamente.'
+            }
+          }
+        },
+        devOpsAndTooling: {
+          title: 'DevOps & Herramientas',
+          skills: {
+            devOpsAndSourceControl: {
+              title: 'Azure DevOps, Git, GitHub',
+              description: 'Experiencia trabajando con Azure DevOps para tableros, backlogs, planificación de sprints y pipelines de CI/CD; con GitHub para proyectos personales con automatización de flujo de trabajo y lanzamientos; y con Git en ambas plataformas para la gestión de repositorios, ramificación, pull requests y revisiones de código.'
+            }
+          }
         }
       }
     },
@@ -240,6 +277,14 @@ export const esES: LanguageStrings = {
           description: 'Completé la certificación AZ-900 que demuestra un conocimiento básico de los servicios en la nube y cómo se proporcionan esos servicios con Microsoft Azure.'
         }
       }
+    },
+    languages: {
+      title: 'Idiomas',
+      english: 'Inglés (Profesional)',
+      spanish: 'Castellano (Nativo)',
+      catalan: 'Catalán (Nativo)',
+      urdu: 'Urdú (Nativo)',
+      punjabi: 'Panyabí (Nativo)'
     },
     hobbies: {
       title: 'Aficiones',

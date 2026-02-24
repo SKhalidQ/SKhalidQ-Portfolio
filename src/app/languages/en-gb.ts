@@ -184,7 +184,7 @@ export const enGB = {
       jobs: {
         weatherford: {
           title: 'Software Engineer - Weatherford Ltd (Reeves Wireline Technologies)',
-          description: 'Work in Weatherford’s Wireline division, developing software for downhole data acquisition, file management, and real-time log visualisation across both CAPEX and OPEX projects in support of oilfield operations.',
+          description: 'Work in Weatherford\'s Wireline division, developing software for downhole data acquisition, file management, and real-time log visualisation across both CAPEX and OPEX projects in support of oilfield operations.',
           dates: 'Dec 2021 - Present'
         },
         greenwood: {
@@ -208,27 +208,64 @@ export const enGB = {
         },
         academy: {
           title: 'Nottingham Academy',
-          description: 'A-Level Spanish and BTEC Level 3 Diploma in Business,\n5 GCSEs Including Mathematics and English, 3 BTECs Including Sciences'
+          description: 'A-Level Spanish and BTEC Level 3 Diploma in Business, 5 GCSEs Inc. Maths and English, 3 BTECs Inc. Science'
         }
       }
     },
     technicalSkills: {
-      title: 'Technical Skills'
-    },
-    nonTechnicalSkills: {
-      title: 'Non-Technical Skills',
-      skills: {
-        teamwork: {
-          title: 'Teamwork',
-          description: 'Worked in a fast-paced environment at Greenwood Academies Trust as an IT technician, which involved collaborating with the team on solving critical situations. Undertook multiple group work projects during my education and overcame challenges by cooperating with the team to achieve the objectives.'
+      title: 'Technical Skills',
+      sections: {
+        backendDevelopment: {
+          title: 'Backend Development',
+          skills: {
+            dotNet: {
+              title: 'C#/.Net, ASP.NET Core, Entity Framework',
+              description: 'Extensive professional experience building APIs, UI applications, and console tools, applying OOP principles, dependency injection, and common design patterns, along with writing automated tests using NUnit.'
+            },
+            sql: {
+              title: 'SQL',
+              description: 'Strong experience designing relational models, writing queries, and working with production databases.'
+            }
+          }
         },
-        communication: {
-          title: 'Communication',
-          description: 'Provided friendly, helpful support service and communicated with peers whilst working as an IT Technician. Helped raise awareness of a charity as a fundraiser. Presented technical information clearly and concisely for university presentations. Successfully participated and performed in various plays at college.'
+        frontendDevelopment: {
+          title: 'Frontend Development',
+          skills: {
+            angular: {
+              title: 'Angular',
+              description: 'Personal experience across multiple personal projects; familiar with component architecture, routing, services, guards, and more.'
+            },
+            react: {
+              title: 'React',
+              description: 'Professional experience building component-based UIs, writing unit tests and developing a reusable visualisation library.'
+            },
+            others: {
+              title: 'Javascript/TypeScript, CSS/SCSS',
+              description: 'Used across different frameworks to build UI tools and interactive applications.'
+            }
+          }
         },
-        organisation: {
-          title: 'Organisation',
-          description: 'Prioritized IT support cases by rearranging cases depending on the severity of the issue and provided help as fast as possible. Delivered countless projects during university and college for specific deadlines by managing time and prioritizing important features.'
+        cloudAndInfrastructure: {
+          title: 'Cloud & Infrastructure',
+          skills: {
+            msAzure: {
+              title: 'Microsoft Azure',
+              description: 'Experience maintaining the cloud infrastructure for production applications, including creating and updating services, monitoring hosted applications, and provisioning cloud resources with terraform using infrastructure as services.'
+            },
+            docker: {
+              title: 'Docker/Kubernetes',
+              description: 'Experience deploying and maintaining containerised applications including both custom projects and publicly available images.'
+            }
+          }
+        },
+        devOpsAndTooling: {
+          title: 'DevOps & Tooling',
+          skills: {
+            devOpsAndSourceControl: {
+              title: 'Azure DevOps, Git, GitHub',
+              description: 'Working with Azure DevOps for boards, backlogs, sprint planning and CI/CD pipelines; with GitHub for personal projects with workflow automation and releases; and with Git across both platforms for repository management, branching, pull requests and code reviews.'
+            }
+          }
         }
       }
     },
@@ -241,6 +278,14 @@ export const enGB = {
           description: 'Completed the AZ-900 certification which demonstrates foundational level knowledge of cloud services and how those services are provided with Microsoft Azure.'
         }
       }
+    },
+    languages: {
+      title: 'Languages',
+      english: 'English (Professional)',
+      spanish: 'Spanish (Native)',
+      catalan: 'Catalan (Native)',
+      urdu: 'Urdu (Native)',
+      punjabi: 'Punjabi (Native)'
     },
     hobbies: {
       title: 'Hobbies',

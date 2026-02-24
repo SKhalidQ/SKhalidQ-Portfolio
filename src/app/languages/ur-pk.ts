@@ -214,21 +214,58 @@ export const urPK: LanguageStrings = {
     },
     technicalSkills: {
       title: 'تکنیکی مہارتیں', // Takneeki maharatein
-    },
-    nonTechnicalSkills: {
-      title: 'غیر تکنیکی مہارتیں', // Ghair takneeki maharatein
-      skills: {
-        teamwork: {
-          title: 'ٹیم ورک', // Team work
-          description: 'تیز رفتار ماحول میں گرین ووڈ اکیڈمیز ٹرسٹ میں آئی ٹی ٹیکنیشن کے طور پر کام کیا، جس میں اہم حالات کو حل کرنے کے لیے ٹیم کے ساتھ تعاون کرنا شامل تھا۔ اپنی تعلیم کے دوران متعدد گروپ ورک پروجیکٹس کیے اور ٹیم کے ساتھ تعاون کرکے چیلنجز پر قابو پایا تاکہ مقاصد حاصل کیے جا سکیں۔' // Tez raftar mahaul mein Green Wood Academies Trust mein IT technician ke tor par kaam kiya, jis mein ahem haalat ko hal karne ke liye team ke sath taawun karna shamil tha. Apni taleem ke doran mutadid group work projects kiye aur team ke sath taawun karke challenges par qaabu paya taque maqasid hasil kiye ja sakein.
+      sections: {
+        backendDevelopment: {
+          title: 'بیک اینڈ ڈویلپمنٹ', // Back end development
+          skills: {
+            dotNet: {
+              title: 'C#/.Net, ASP.NET Core, Entity Framework',
+              description: 'تجربہ کار بیک اینڈ ڈویلپر جو C# اور ASP.NET Core میں مہارت رکھتا ہے، جس میں Entity Framework کے ساتھ ڈیٹا بیس انٹریکشن شامل ہے۔ پروڈکشن ایپلیکیشنز کے لیے مضبوط اور اسکیل ایبل APIs بنانے کا تجربہ ہے۔' // Tajurba kar back end developer jo C# aur ASP.NET Core mein maharat rakhta hai, jis mein Entity Framework ke sath database interaction shamil hai. Production applications ke liye mazboot aur scalable APIs banane ka tajurba hai.
+            },
+            sql: {
+              title: 'SQL',
+              description: 'ریلیشنل ماڈلز ڈیزائن کرنے، کوئریز لکھنے، اور پروڈکشن ڈیٹا بیسز کے ساتھ کام کرنے کا مضبوط تجربہ۔' // Relational models design karne, queries likhne, aur production databases ke sath kaam karne ka mazboot tajurba.
+            }
+          }
         },
-        communication: {
-          title: 'مواصلات', // Muwasilat
-          description: 'دوستانہ، مددگار سپورٹ سروس فراہم کی اور آئی ٹی ٹیکنیشن کے طور پر کام کرتے ہوئے ساتھیوں کے ساتھ بات چیت کی۔ فنڈ ریزر کے طور پر ایک خیراتی ادارے کے بارے میں آگاہی بڑھانے میں مدد کی۔ یونیورسٹی کی پیشکشوں کے لیے تکنیکی معلومات کو واضح اور مختصر طور پر پیش کیا۔ کالج میں مختلف ڈراموں میں کامیابی کے ساتھ شرکت اور پرفارم کیا۔' // Dostana, madadgar support service faraham ki aur IT technician ke tor par kaam karte hue sathiyon ke sath baat cheet ki. Fund raiser ke tor par ek khairati idare ke baare mein agahi barhaane mein madad ki. University ki peshkashon ke liye takneeki malomat ko waazeh aur mukhtasar tor par pesh kiya. College mein mukhtalif dramon mein kamyabi ke sath shirkat aur perform kiya.
+        frontendDevelopment: {
+          title: 'فرنٹ اینڈ ڈویلپمنٹ', // Front end development
+          skills: {
+            angular: {
+              title: 'Angular',
+              description: 'متعدد ذاتی منصوبوں میں ذاتی تجربہ؛ کمپوننٹ آرکیٹیکچر، روٹنگ، سروسز، گارڈز، اور مزید سے واقف۔' // Mutadid zaati mansoobon mein zaati tajurba; component architecture, routing, services, guards, aur mazeed se waqif.
+            },
+            react: {
+              title: 'React',
+              description: 'پیشہ ورانہ تجربہ کمپوننٹ پر مبنی UI بنانے، یونٹ ٹیسٹ لکھنے اور دوبارہ قابل استعمال ویژولائزیشن لائبریری تیار کرنے میں۔' // Pesha warana tajurba component-based UI banane, unit tests likhne aur reusable visualization library tayar karne mein.
+            },
+            others: {
+              title: 'Javascript/TypeScript, CSS/SCSS',
+              description: 'مختلف فریم ورکز میں UI ٹولز اور انٹرایکٹو ایپلیکیشنز بنانے کے لیے استعمال کیا گیا۔' // Mukhtalif frameworks mein UI tools aur interactive applications banane ke liye istemal kiya gaya.
+            }
+          }
         },
-        organisation: {
-          title: 'تنظیم', // Tanzeem
-          description: 'IT سپورٹ کے معاملات کو ان کی شدت کے لحاظ سے دوبارہ ترتیب دے کر ترجیح دی اور جتنا ممکن ہو سکے جلد مدد فراہم کی۔ وقت کا انتظام کرکے اور اہم خصوصیات کو ترجیح دے کر یونیورسٹی اور کالج کے دوران بے شمار منصوبے مخصوص ڈیڈ لائنز کے لیے فراہم کیے۔' // IT support ke mamlat ko un ki shiddat ke lehaz se dobara tarteeb de kar tarjeeh di aur jitna mumkin ho sake jald madad faraham ki. Waqt ka intizam karke aur ahem khasusiyat ko tarjeeh de kar university aur college ke doran be shumar mansobe makhsoos deadlines ke liye faraham kiye.
+        cloudAndInfrastructure: {
+          title: 'کلاؤڈ اور انفراسٹرکچر', // Cloud & Infrastructure
+          skills: {
+            msAzure: {
+              title: 'Microsoft Azure',
+              description: 'پروڈکشن ایپلیکیشنز کے لیے کلاؤڈ انفراسٹرکچر کو برقرار رکھنے کا تجربہ، جس میں سروسز بنانا اور اپ ڈیٹ کرنا، ہوسٹ کی گئی ایپلیکیشنز کی نگرانی کرنا، اور انفراسٹرکچر کو بطور سروس استعمال کرتے ہوئے ٹیررا فارم کے ساتھ کلاؤڈ وسائل فراہم کرنا شامل ہے۔' // Production applications ke liye cloud infrastructure ko barqarar rakhne ka tajurba, jis mein services banana aur update karna, hosted applications ki nigrani karna, aur infrastructure ko as a service istemal karte hue terraform ke sath cloud resources faraham karna shamil hai.
+            },
+            docker: {
+              title: 'Docker/Kubernetes',
+              description: 'کنٹینرائزڈ ایپلیکیشنز کو ڈپلائے اور برقرار رکھنے کا تجربہ، جس میں دونوں کسٹم پروجیکٹس اور عوامی طور پر دستیاب امیجز شامل ہیں۔' // Containerized applications ko deploy aur barqarar rakhne ka tajurba, jis mein dono custom projects aur publicly available images shamil hain.
+            }
+          }
+        },
+        devOpsAndTooling: {
+          title: 'ڈیو اوپس اور ٹولنگ', // DevOps & Tooling
+          skills: {
+            devOpsAndSourceControl: {
+              title: 'Azure DevOps, Git, GitHub',
+              description: 'Azure DevOps کے ساتھ بورڈز، بیک لاگز، سپرنٹ پلاننگ اور CI/CD پائپ لائنز پر کام کرنے کا تجربہ؛ GitHub کے ساتھ ذاتی منصوبوں کے لیے ورک فلو آٹومیشن اور ریلیزز؛ اور دونوں پلیٹ فارمز پر ریپوزٹری مینجمنٹ، برانچنگ، پل ریکویسٹ اور کوڈ ریویوز کے لیے Git کے ساتھ کام کرنے کا تجربہ۔' // Azure DevOps ke sath boards, backlogs, sprint planning aur CI/CD pipelines par kaam karne ka tajurba; GitHub ke sath zaati mansoobon ke liye workflow automation aur releases; aur dono platforms par repository management, branching, pull requests aur code reviews ke liye Git ke sath kaam karne ka tajurba.
+            }
+          }
         }
       }
     },
@@ -241,6 +278,14 @@ export const urPK: LanguageStrings = {
           description: 'میں نے AZ-900 کی سند مکمل کی جو کلاؤڈ سروسز کے بنیادی علم اور یہ سروسز Microsoft Azure کے ساتھ کیسے فراہم کی جاتی ہیں، کو ظاہر کرتی ہے۔' // Main ne AZ-900 ki sanad mukammal ki jo cloud services ke bunyaadi ilm aur yeh services Microsoft Azure ke sath kaise faraham ki jaati hain, ko zahir karti hai.
         }
       }
+    },
+    languages: {
+      title: 'زبانیں', // Zubaanen
+      english: 'انگریزی (پیشہ ورانہ)', // Angrezi (Pesha warana)
+      spanish: 'ہسپانوی (مادری)', // Hispanvi (Madri)
+      catalan: 'کاتالان (مادری)', // Katalan (Madri)
+      urdu: 'اردو (مادری)', // Urdu (Madri)
+      punjabi: 'پنجابی (مادری)' // Punjabi (Madri)
     },
     hobbies: {
       title: 'مشاغل', // Mashaghal

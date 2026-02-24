@@ -11,19 +11,15 @@ export interface Curriculum {
   };
   technicalSkills: {
     title: string;
-    skills: TechnicalSkill[];
-  };
-  extendedTechnicalSkills: {
-    title: string;
-    skills: ExtendedBulletPoints[];
-  };
-  nonTechnicalSkills: {
-    title: string;
-    skills: BulletPoints[];
+    sections: TechnicalSkill[];
   };
   achievements: {
     title: string;
     achievements: BulletPoints[];
+  };
+  languages: {
+    title: string;
+    languages: string[];
   };
   hobbies: {
     title: string;
@@ -51,23 +47,19 @@ export interface History {
   description: string;
 }
 
-export interface TechnicalSkill {
-  title: string;
-  percentage: number;
-}
-
 export interface BulletPoints {
   title: string;
   year?: string;
   description: string;
 }
 
-export interface ExtendedBulletPoints {
-  sectionTitle: string;
-  points: BulletPoints[];
+export interface TechnicalSkill {
+  title: string;
+  skills: BulletPoints[];
 }
 
 export interface Hobbies {
   name: string;
   icon: string;
 }
+

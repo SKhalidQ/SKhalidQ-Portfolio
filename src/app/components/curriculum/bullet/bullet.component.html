@@ -3,33 +3,31 @@
     <p>{{ title | translate }}</p>
   </div>
 
-  <!-- Flat bullet points -->
-  <div class="content-container" *ngIf="points.length > 0">
-    <ul>
+  <div class="content-container">
+    <!-- Flat bullet points -->
+    <ul *ngIf="points">
       <li *ngFor="let point of points">
         <div class="info">
           <p class="subtitle">
             {{ point.title | translate }}
-            <mat-divider class="underline" [style]="underLine(point.title | translate)"></mat-divider>
+            <mat-divider class="underline"></mat-divider>
           </p>
 
           <p class="content">{{ point.description | translate }}</p>
         </div>
       </li>
     </ul>
-  </div>
 
-  <!-- Grouped sections -->
-  <div class="content-container sections-container" *ngIf="sections.length > 0">
-    <ul class="sections">
+    <!-- Grouped sections -->
+    <ul class="sections" *ngIf="sections">
       <li *ngFor="let section of sections" class="section">
         <div class="section-title">
-          {{ section.sectionTitle | translate }}
+          {{ section.title | translate }}
           <mat-divider class="underline"></mat-divider>
         </div>
 
         <div class="points">
-          <p *ngFor="let point of section.points" class="point">
+          <p *ngFor="let point of section.skills" class="point">
             <span class="point-title">{{ point.title | translate }}</span>
             <span class="point-description"> - {{ point.description | translate }}</span>
           </p>

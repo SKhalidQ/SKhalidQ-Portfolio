@@ -1,4 +1,4 @@
-import { BulletPoints, Curriculum, History, Header, Hobbies, Profile, TechnicalSkill, ExtendedBulletPoints } from '../interfaces/curriculum';
+import { BulletPoints, Curriculum, History, Header, Hobbies, Profile, TechnicalSkill } from '../interfaces/curriculum';
 
 const header: Header = {
   name: 'curriculumPage.header.name',
@@ -54,118 +54,56 @@ const education: History[] = [
 
 const technicalSkill: TechnicalSkill[] = [
   {
-    title: 'C#/.NET',
-    percentage: 90
-  },
-  {
-    title: 'ASP.NET Core',
-    percentage: 80
-  },
-  {
-    title: 'Entity Framework Core',
-    percentage: 90
-  },
-  {
-    title: 'Angular',
-    percentage: 90
-  },
-  {
-    title: 'TypeScript',
-    percentage: 70
-  },
-  {
-    title: 'SQL',
-    percentage: 80
-  },
-  {
-    title: 'Azure',
-    percentage: 60
-  },
-  {
-    title: 'HTML/CSS',
-    percentage: 90
-  },
-  {
-    title: 'Docker/Kubernetes',
-    percentage: 60
-  },
-  {
-    title: 'NGINX',
-    percentage: 60
-  },
-  {
-    title: 'Git',
-    percentage: 75
-  }
-];
-
-const extendedTechnicalSkills: ExtendedBulletPoints[] = [
-  {
-    sectionTitle: 'Backend Development',
-    points: [
+    title: 'curriculumPage.technicalSkills.sections.backendDevelopment.title',
+    skills: [
       {
-        title: 'C#/.Net, ASP.NET Core, Entity Framework',
-        description: 'Extensive professional experience building APIs, UI applications, and console tools, applying OOP principles, dependency injection, and common design patterns, along with writing automated tests using NUnit.'
+        title: 'curriculumPage.technicalSkills.sections.backendDevelopment.skills.dotNet.title',
+        description: 'curriculumPage.technicalSkills.sections.backendDevelopment.skills.dotNet.description'
       },
       {
-        title: 'SQL',
-        description: 'Strong experience designing relational models, writing queries, and working with production databases.'
+        title: 'curriculumPage.technicalSkills.sections.backendDevelopment.skills.sql.title',
+        description: 'curriculumPage.technicalSkills.sections.backendDevelopment.skills.sql.description'
       }
     ]
   },
   {
-    sectionTitle: 'Frontend Development',
-    points: [
+    title: 'curriculumPage.technicalSkills.sections.frontendDevelopment.title',
+    skills: [
       {
-        title: 'Angular',
-        description: 'Personal experience across multiple personal projects; familiar with component architecture, routing, services, guards, and more.'
+        title: 'curriculumPage.technicalSkills.sections.frontendDevelopment.skills.angular.title',
+        description: 'curriculumPage.technicalSkills.sections.frontendDevelopment.skills.angular.description'
       },
       {
-        title: 'React',
-        description: 'Professional experience building component-based UIs, writing unit tests and developing a reusable visualisation library.'
+        title: 'curriculumPage.technicalSkills.sections.frontendDevelopment.skills.react.title',
+        description: 'curriculumPage.technicalSkills.sections.frontendDevelopment.skills.react.description'
       },
       {
-        title: 'Javascript/TypeScript, CSS/SCSS',
-        description: 'Used across different frameworks to build UI tools and interactive applications.'
+        title: 'curriculumPage.technicalSkills.sections.frontendDevelopment.skills.others.title',
+        description: 'curriculumPage.technicalSkills.sections.frontendDevelopment.skills.others.description'
       }
     ]
   },
   {
-    sectionTitle: 'Cloud & Infrastructure',
-    points: [
+    title: 'curriculumPage.technicalSkills.sections.cloudAndInfrastructure.title',
+    skills: [
       {
-        title: 'Microsoft Azure',
-        description: 'Experience maintaining the cloud infrastructure for production applications, including creating and updating services, monitoring hosted applications, and provisioning cloud resources with terraform using infrastructure as services.'
+        title: 'curriculumPage.technicalSkills.sections.cloudAndInfrastructure.skills.msAzure.title',
+        description: 'curriculumPage.technicalSkills.sections.cloudAndInfrastructure.skills.msAzure.description'
       },
       {
-        title: 'Docker/Kubernetes',
-        description: 'Experience deploying and maintaining containerised applications including both custom projects and publicly available images.'
+        title: 'curriculumPage.technicalSkills.sections.cloudAndInfrastructure.skills.docker.title',
+        description: 'curriculumPage.technicalSkills.sections.cloudAndInfrastructure.skills.docker.description'
       }
     ]
   },
   {
-    sectionTitle: 'DevOps & Tooling',
-    points: [
+    title: 'curriculumPage.technicalSkills.sections.devOpsAndTooling.title',
+    skills: [
       {
-        title: 'Azure DevOps, Git, GitHub',
-        description: 'Working with Azure DevOps for boards, backlogs, sprint planning and CI/CD pipelines; with GitHub for personal projects with workflow automation and releases; and with Git across both platforms for repository management, branching, pull requests and code reviews.'
+        title: 'curriculumPage.technicalSkills.sections.devOpsAndTooling.skills.devOpsAndSourceControl.title',
+        description: 'curriculumPage.technicalSkills.sections.devOpsAndTooling.skills.devOpsAndSourceControl.description'
       }
     ]
-  }
-];
-
-const nonTechnicalSkill: BulletPoints[] = [
-  {
-    title: 'curriculumPage.nonTechnicalSkills.skills.teamwork.title',
-    description: 'curriculumPage.nonTechnicalSkills.skills.teamwork.description'
-  },
-  {
-    title: 'curriculumPage.nonTechnicalSkills.skills.communication.title',
-    description: 'curriculumPage.nonTechnicalSkills.skills.communication.description'
-  },
-  {
-    title: 'curriculumPage.nonTechnicalSkills.skills.organisation.title',
-    description: 'curriculumPage.nonTechnicalSkills.skills.organisation.description'
   }
 ];
 
@@ -175,6 +113,14 @@ const achievement: BulletPoints[] = [
     year: 'curriculumPage.achievements.list.azureFundamentals.year',
     description: 'curriculumPage.achievements.list.azureFundamentals.description'
   }
+];
+
+const language: string[] = [
+  'curriculumPage.languages.english',
+  'curriculumPage.languages.spanish',
+  'curriculumPage.languages.catalan',
+  'curriculumPage.languages.urdu',
+  'curriculumPage.languages.punjabi'
 ];
 
 const hobbies: Hobbies[] = [
@@ -217,19 +163,15 @@ export const CurriculumInfo: Curriculum = {
   },
   technicalSkills: {
     title: 'curriculumPage.technicalSkills.title',
-    skills: technicalSkill
-  },
-  extendedTechnicalSkills: {
-    title: 'curriculumPage.technicalSkills.title',
-    skills: extendedTechnicalSkills
-  },
-  nonTechnicalSkills: {
-    title: 'curriculumPage.nonTechnicalSkills.title',
-    skills: nonTechnicalSkill
+    sections: technicalSkill
   },
   achievements: {
     title: 'curriculumPage.achievements.title',
     achievements: achievement
+  },
+  languages: {
+    title: 'curriculumPage.languages.title',
+    languages: language
   },
   hobbies: {
     title: 'curriculumPage.hobbies.title',
