@@ -5,28 +5,28 @@ export const enGB = {
     changelog: 'Changelog',
     checkUpdates: 'Check for Updates',
     checkUpdatesDialog: {
+      action : {
+        cancel: 'Cancel',
+        close: 'Close',
+        update: 'Update'
+      },
       disabledUpdate: {
-        action: 'Close',
         message: 'Automatic updates are not enabled in this environment.',
         title: 'Update Disabled'
       },
       lostConnection: {
-        action: 'Close',
         message: 'It seems like you have lost connection. Some features might not be accessible.',
         title: 'Lost Connection'
       },
       newUpdate: {
-        action: 'Update',
         message: 'New content is available on this page. Would you like to update?',
         title: 'New Update!'
       },
       noNewUpdate: {
-        action: 'Close',
         message: 'You are already running the latest version of this application.',
         title: 'No Updates Available'
       },
       updateError: {
-        action: 'Close',
         message: 'Unable to check for updates at this time. Please try again later.',
         title: 'Update Check Failed'
       }
@@ -187,6 +187,7 @@ export const enGB = {
       caES: 'Catalan',
       enGB: 'English',
       esES: 'Spanish',
+      paPK: 'Punjabi',
       urPK: 'Urdu'
     },
     title: 'Language'

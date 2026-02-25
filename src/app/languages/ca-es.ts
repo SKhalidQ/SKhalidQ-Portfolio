@@ -5,28 +5,28 @@ export const caES: LanguageStrings = {
     changelog: 'Registre de canvis',
     checkUpdates: 'Comprovar Actualitzacions',
     checkUpdatesDialog: {
+      action : {
+        cancel: 'Cancel·lar',
+        close: 'Tancar',
+        update: 'Actualitzar'
+      },
       disabledUpdate: {
-        action: 'Tancar',
         message: 'Les actualitzacions automàtiques no estan habilitades en aquest entorn.',
         title: 'Actualització Desactivada'
       },
       lostConnection: {
-        action: 'Tancar',
         message: 'Sembla que has perdut la connexió. Algunes funcions podrien no estar accessibles.',
         title: 'Sense Connexió'
       },
       newUpdate: {
-        action: 'Actualitzar',
         message: 'Hi ha nou contingut disponible en aquesta pàgina. Vols actualitzar?',
         title: 'Nova Actualització!'
       },
       noNewUpdate: {
-        action: 'Tancar',
         message: 'Ja estàs executant la versió més recent d\'aquesta aplicació.',
         title: 'Cap Actualització Disponible'
       },
       updateError: {
-        action: 'Tancar',
         message: 'No s\'ha pogut comprovar si hi ha actualitzacions en aquest moment. Si us plau, torna-ho a intentar més tard.',
         title: 'Error en Comprovar Actualitzacions'
       }
@@ -187,6 +187,7 @@ export const caES: LanguageStrings = {
       caES: 'Català',
       enGB: 'Anglès',
       esES: 'Castellà',
+      paPK: 'Panjabi',
       urPK: 'Urdú'
     },
     title: 'Idioma'

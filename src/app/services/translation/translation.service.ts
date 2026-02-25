@@ -2,6 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { caES } from 'src/app/languages/ca-es';
 import { enGB, LanguageStrings } from 'src/app/languages/en-gb';
 import { esES } from 'src/app/languages/es-es';
+import { paPK } from 'src/app/languages/pa-pk';
 import { urPK } from 'src/app/languages/ur-pk';
 import { Language } from 'src/app/models/enums/language';
 import { LanguageService } from '../language/language.service';
@@ -50,6 +51,9 @@ export class TranslationService {
         break;
       case Language.urPK:
         this.languageString = urPK;
+        break;
+      case Language.paPK:
+        this.languageString = paPK;
         break;
       case Language.enGB:
       default:

@@ -5,28 +5,28 @@ export const esES: LanguageStrings = {
     changelog: 'Registro de cambios',
     checkUpdates: 'Comprobar Actualizaciones',
     checkUpdatesDialog: {
+      action : {
+        cancel: 'Cancelar',
+        close: 'Cerrar',
+        update: 'Actualizar'
+      },
       disabledUpdate: {
-        action: 'Cerrar',
         message: 'Las actualizaciones automáticas no están habilitadas en este entorno.',
         title: 'Actualización Desactivada'
       },
       lostConnection: {
-        action: 'Cerrar',
         message: 'Parece que has perdido la conexión. Algunas funciones podrían no estar accesibles.',
         title: 'Sin Conexión'
       },
       newUpdate: {
-        action: 'Actualizar',
         message: 'Hay nuevo contenido disponible en esta página. ¿Quieres actualizar?',
         title: 'Nueva Actualización!'
       },
       noNewUpdate: {
-        action: 'Cerrar',
         message: 'Ya estás ejecutando la versión más reciente de esta aplicación.',
         title: 'No hay Actualizaciones Disponibles'
       },
       updateError: {
-        action: 'Cerrar',
         message: 'No se ha podido comprobar si hay actualizaciones en este momento. Por favor, inténtalo de nuevo más tarde.',
         title: 'Error al Comprobar Actualizaciones'
       }
@@ -187,6 +187,7 @@ export const esES: LanguageStrings = {
       caES: 'Catalán',
       enGB: 'Inglés',
       esES: 'Castellano',
+      paPK: 'Panyabí',
       urPK: 'Urdú'
     },
     title: 'Idioma'
