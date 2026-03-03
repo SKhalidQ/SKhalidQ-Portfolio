@@ -1,9 +1,5 @@
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { NgModule } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -13,19 +9,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { ClipboardModule } from '@angular/cdk/clipboard';
+import { MatBadgeModule } from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 
-export const MaterialModules = [
-  MatProgressSpinnerModule,
-  MatProgressBarModule,
-  MatSlideToggleModule,
-  MatExpansionModule,
+const MATERIAL_MODULES = [
   MatFormFieldModule,
   MatSnackBarModule,
-  MatGridListModule,
   MatToolbarModule,
   MatTooltipModule,
   MatSidenavModule,
@@ -34,8 +26,15 @@ export const MaterialModules = [
   MatDialogModule,
   MatSelectModule,
   ClipboardModule,
+  MatBadgeModule,
   MatCardModule,
   MatIconModule,
   MatListModule,
   MatMenuModule,
 ];
+
+@NgModule({
+  imports: MATERIAL_MODULES,
+  exports: MATERIAL_MODULES,
+})
+export class AppMaterialModule {}

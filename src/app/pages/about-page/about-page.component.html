@@ -1,7 +1,7 @@
 <main>
   <section>
     <div *ngFor="let credit of aboutCredits" class="credit-container">
-      <img [src]="credit.imagePath" alt="{{ credit.title }} Logo" onerror="this.src='../../assets/images/icons/error_outline-14px.svg'">
+      <img [src]="credit.imagePath" alt="{{ credit.title }} Logo" #logo (error)="onImageError(logo)">
 
       <a [class]="changeColour" [href]="credit.pageUrl">
         <h2>{{ credit.title }}</h2>
@@ -21,8 +21,8 @@
     </div>
 
     <div class="copyright">
-      <div class="logo-container">
-        <img [src]="logoPath" alt="Logo" onerror="this.src='../../assets/images/icons/error_outline-14px.svg'">
+      <div class="logo-container" role="button" tabindex="0" (click)="navigateToHomeSite()" (keydown.enter)="navigateToHomeSite()" aria-label="Home">
+        <img [src]="logoPath" #logo alt="Logo" (error)="onImageError(logo)">
       </div>
 
       <h4>{{ copyright }}</h4>

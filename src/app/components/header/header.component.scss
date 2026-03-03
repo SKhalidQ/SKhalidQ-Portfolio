@@ -1,4 +1,8 @@
+@use '@angular/material' as mat;
+
 .top-row {
+  @include mat.elevation(5);
+
   .toggle-button {
     margin-right: 10px;
   }
@@ -44,6 +48,8 @@
 }
 
 .bottom-row {
+  @include mat.elevation(6);
+
   .icon {
     scale: 1.3;
   }

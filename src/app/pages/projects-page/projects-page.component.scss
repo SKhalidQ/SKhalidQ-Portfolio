@@ -7,8 +7,12 @@ main {
   margin: 40px 0 30px;
 
   mat-form-field {
-    margin-bottom: 50px;
     min-width: 250px;
+  }
+
+  mat-divider {
+    width: 95%;
+    margin: 20px 0 40px;
   }
 
   section {
