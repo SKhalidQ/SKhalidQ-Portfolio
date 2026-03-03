@@ -9,6 +9,8 @@
     </mat-select>
   </mat-form-field>
 
+  <mat-divider />
+
   <section [@topFadeIn]>
     <app-project-card *ngFor="let project of filteredProjects;" [project]="project" />
   </section>

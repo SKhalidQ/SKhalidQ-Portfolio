@@ -4,15 +4,33 @@
   </div>
 
   <div class="content-container">
-    <ul>
+    <!-- Flat bullet points -->
+    <ul *ngIf="points">
       <li *ngFor="let point of points">
         <div class="info">
           <p class="subtitle">
             {{ point.title | translate }}
-            <mat-divider class="underline" [style]="underLine(point.title | translate)"></mat-divider>
+            <mat-divider class="underline"></mat-divider>
           </p>
 
           <p class="content">{{ point.description | translate }}</p>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Grouped sections -->
+    <ul class="sections" *ngIf="sections">
+      <li *ngFor="let section of sections" class="section">
+        <div class="section-title">
+          {{ section.title | translate }}
+          <mat-divider class="underline"></mat-divider>
+        </div>
+
+        <div class="points">
+          <p *ngFor="let point of section.skills" class="point">
+            <span class="point-title">{{ point.title | translate }}</span>
+            <span class="point-description"> - {{ point.description | translate }}</span>
+          </p>
         </div>
       </li>
     </ul>

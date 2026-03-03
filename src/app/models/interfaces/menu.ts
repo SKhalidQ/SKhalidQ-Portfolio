@@ -13,5 +13,6 @@ export interface MenuOption {
   iconType: 'icon' | 'image';
   isDisabled?: boolean;
   isActive?: boolean;
+  isHidden?: boolean;
   method: (identifier: string) => void;
 }

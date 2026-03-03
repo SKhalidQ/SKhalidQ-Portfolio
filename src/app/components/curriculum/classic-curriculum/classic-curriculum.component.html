@@ -51,19 +51,19 @@
 
     <!-- Technical Skills -->
 
-    <app-list [list]="curriculum.technicalSkills.skills" [title]="curriculum.technicalSkills.title"></app-list>
-
-    <mat-divider class="section-divider"></mat-divider>
-
-    <!-- Non-Technical Skills -->
-
-    <app-bullet [title]="curriculum.nonTechnicalSkills.title" [points]="curriculum.nonTechnicalSkills.skills" />
+    <app-bullet [title]="curriculum.technicalSkills.title" [sections]="curriculum.technicalSkills.sections"></app-bullet>
 
     <mat-divider class="section-divider"></mat-divider>
 
     <!-- Achievements -->
 
     <app-bullet [title]="curriculum.achievements.title" [points]="curriculum.achievements.achievements" />
+
+    <mat-divider class="section-divider"></mat-divider>
+
+    <!-- Languages -->
+
+    <app-list [title]="curriculum.languages.title" [list]="curriculum.languages.languages"></app-list>
 
     <mat-divider class="section-divider"></mat-divider>
 

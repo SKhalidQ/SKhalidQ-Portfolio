@@ -23,6 +23,7 @@ import { ThemeService } from '../theme/theme.service';
  *   (i.e. in development mode) to prevent spurious reload loops.
  */
 export class SiteStatusService {
+  private readonly baseTranslationKey = 'aboutPage.checkUpdatesDialog';
   private readonly swUpdate = inject(SwUpdate);
   private readonly dialog = inject(MatDialog);
   private readonly themeService = inject(ThemeService);
@@ -75,11 +76,12 @@ export class SiteStatusService {
    * @returns {void}
    */
   private showOfflineDialog(): void {
-    const baseKey = 'aboutPage.checkUpdatesDialog.lostConnection';
     const dialogData: DialogData = {
-      title: `${baseKey}.title`,
-      message: `${baseKey}.message`,
-      action: `${baseKey}.action`
+      title: `${this.baseTranslationKey}.lostConnection.title`,
+      message: `${this.baseTranslationKey}.lostConnection.message`,
+      actions: {
+        negative: `${this.baseTranslationKey}.action.close`
+      }
     };
 
     this.dialogRef = this.dialog.open(DialogComponent, {
@@ -155,17 +157,15 @@ export class SiteStatusService {
       .pipe(filter((event): event is VersionReadyEvent => event.type === 'VERSION_READY'))
       .subscribe(() => {
         const dialogData: DialogData = {
-          title: 'aboutPage.checkUpdatesDialog.newUpdate.title',
-          message: 'aboutPage.checkUpdatesDialog.newUpdate.message',
-          action: 'aboutPage.checkUpdatesDialog.newUpdate.action'
+          title: `${this.baseTranslationKey}.newUpdate.title`,
+          message: `${this.baseTranslationKey}.newUpdate.message`,
+          actions: {
+            negative: `${this.baseTranslationKey}.action.cancel`,
+            positive: `${this.baseTranslationKey}.action.update`
+          }
         };
 
-        this.dialog.open(DialogComponent, {
-          data: dialogData,
-          panelClass: [this.themeService.getEffectiveThemeMode()],
-        }).afterClosed().subscribe(() => {
-          this.swUpdate.activateUpdate().then(() => document.location.reload());
-        });
+        this.showUpdateDialog(dialogData);
     });
   }
 
@@ -181,44 +181,65 @@ export class SiteStatusService {
    * @returns {void}
    */
   manualUpdateCheck(): void {
-    const baseKey = 'aboutPage.checkUpdatesDialog';
-
     if (!this.swUpdate.isEnabled) {
-      this.showUpdateDialog(`${baseKey}.disabledUpdate.title`, `${baseKey}.disabledUpdate.message`, `${baseKey}.disabledUpdate.action`);
+      const dialogData: DialogData = {
+        title: `${this.baseTranslationKey}.disabledUpdate.title`,
+        message: `${this.baseTranslationKey}.disabledUpdate.message`,
+        actions: {
+          negative: `${this.baseTranslationKey}.action.close`
+        }
+      };
+      this.showUpdateDialog(dialogData);
 
       return;
     }
 
     this.swUpdate.checkForUpdate()
       .then(updateAvailable => {
-        const dialogConfig = updateAvailable
-          ? { title: `${baseKey}.newUpdate.title`, message: `${baseKey}.newUpdate.message`, action: `${baseKey}.newUpdate.action`, reload: true }
-          : { title: `${baseKey}.noNewUpdate.title`, message: `${baseKey}.noNewUpdate.message`, action: `${baseKey}.noNewUpdate.action` };
-        this.showUpdateDialog(dialogConfig.title, dialogConfig.message, dialogConfig.action, dialogConfig.reload);
+        const updateKey = updateAvailable ? `${this.baseTranslationKey}.newUpdate` : `${this.baseTranslationKey}.noNewUpdate`;
+
+        const dialogData: DialogData = {
+          title: `${updateKey}.title`,
+          message: `${updateKey}.message`,
+          actions: {
+            negative: `${this.baseTranslationKey}.action.cancel`,
+            positive: updateAvailable ? `${this.baseTranslationKey}.action.update` : undefined
+          },
+          reloadOnClose: updateAvailable
+        };
+
+        this.showUpdateDialog(dialogData);
       })
       .catch(() => {
-        this.showUpdateDialog(`${baseKey}.updateError.title`, `${baseKey}.updateError.message`, `${baseKey}.updateError.action`);
+        const errorKey = `${this.baseTranslationKey}.updateError`;
+        const dialogData: DialogData = {
+          title: `${errorKey}.title`,
+          message: `${errorKey}.message`,
+          actions: {
+            negative: `${this.baseTranslationKey}.action.close`
+          }
+        };
+        this.showUpdateDialog(dialogData);
       });
   }
 
   /**
    * @description Opens an informational dialog with optional reload-on-close behaviour.
-   * @param {string} title - Translation key for the dialog title.
-   * @param {string} message - Translation key for the dialog message body.
-   * @param {string} [action='Close'] - Translation key for the dismiss action label.
-   * @param {boolean} [shouldReload=false] - When `true`, triggers a full page reload after the dialog is closed.
+   * @param {DialogData} dialogData - Data for the dialog including title, message, actions and optional reloadOnClose flag.
    * @returns {void}
    */
-  private showUpdateDialog(title: string, message: string, action = 'Close', shouldReload = false): void {
-    const dialogData: DialogData = { title, message, action };
-
+  private showUpdateDialog(dialogData: DialogData): void {
     const dialogRef = this.dialog.open(DialogComponent, {
       data: dialogData,
       panelClass: [this.themeService.getEffectiveThemeMode()],
     });
 
-    if (shouldReload) {
-      dialogRef.afterClosed().subscribe(() => document.location.reload());
+    if (dialogData.reloadOnClose) {
+      dialogRef.afterClosed().subscribe((result: boolean) => {
+        if (result) {
+          document.location.reload();
+        }
+      });
     }
   }
 }
