@@ -1,0 +1,12 @@
+<div class="main-container">
+  <div class="title">
+    <p class="bold">{{ title | translate }}</p>
+  </div>
+
+  <ul>
+    <li *ngFor="let hobby of hobbies">
+      <mat-icon *ngIf="!hobby.path" [inline]="true" [matTooltip]="hobby.name | translate" matTooltipClass="tooltip">{{ hobby.icon }}</mat-icon>
+      <img *ngIf="hobby.path" [src]="hobby.path" [alt]="hobby.name | translate" matTooltip="{{ hobby.name | translate }}" class="hobby-icon">
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,71 @@
+@use '@angular/material' as mat;
+
+.top-row {
+  @include mat.elevation(5);
+
+  .toggle-button {
+    margin-right: 10px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 10px 0 0;
+    border-radius: 5px;
+
+    img {
+      padding: 0 10px;
+      height: 27px;
+      width: 27px;
+    }
+
+    h2 {
+      margin: 0 10px 0 2.5px;
+    }
+  }
+
+  .navigation-buttons {
+    display: flex;
+    gap: 11px;
+    margin-left: 10px;
+
+    button {
+      min-width: 80px;
+      padding: 0 15px;
+    }
+  }
+
+  .menu-buttons-container {
+    display: flex;
+    gap: 4px;
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.bottom-row {
+  @include mat.elevation(6);
+
+  .icon {
+    scale: 1.3;
+  }
+}
+
+@media (max-width: 960px) {
+  .navigation-buttons, .menu-button {
+    visibility: hidden;
+  }
+
+  .logo:hover {
+    background-color: unset;
+    cursor: pointer;
+  }
+
+  .logo:focus {
+    outline: 0;
+  }
+}

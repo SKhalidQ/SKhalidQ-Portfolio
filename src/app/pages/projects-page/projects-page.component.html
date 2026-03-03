@@ -1,0 +1,21 @@
+<main>
+  <mat-form-field appearance="outline" color="primary">
+    <mat-label>{{ 'projectsPage.filter' | translate }}</mat-label>
+
+    <mat-select [(value)]="selectedProjectType" [panelClass]="themeService.getEffectiveThemeMode()">
+      <mat-option *ngFor="let type of projectTypes" [value]="type" [disabled]="isTypeDisabled(type)" color="accent">
+        {{ projectTypeLabel(type) | translate }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-divider />
+
+  <section [@topFadeIn]>
+    <app-project-card *ngFor="let project of filteredProjects;" [project]="project" />
+  </section>
+
+  <h1 *ngIf="filteredProjects.length === 0">
+    <mat-icon color="warn">error_outline</mat-icon> {{ errorMessage }}
+  </h1>
+</main>

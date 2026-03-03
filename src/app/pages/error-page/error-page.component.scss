@@ -1,0 +1,23 @@
+main {
+  text-align: center;
+  margin-top: 40vh;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+
+    p {
+      margin: 10px 0;
+      font-size: 1.5em;
+    }
+
+    mat-icon {
+      vertical-align: top;
+      scale: 1.2;
+      margin: 0 15px 0;
+    }
+  }
+}

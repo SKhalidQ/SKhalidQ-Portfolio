@@ -1,0 +1,38 @@
+<mat-toolbar>
+  <mat-toolbar-row class="top-row">
+    <button *ngIf="smallScreen || xSmallScreen" class="toggle-button" type="button" mat-icon-button (click)="toggleSidenav.emit()" onclick="this.blur()">
+      <mat-icon>{{ getSideNavToggleIcon }}</mat-icon>
+    </button>
+
+    <div class="logo">
+      <img #poster [src]="logo.icon" alt="Logo" (error)="onImageError(poster)">
+      <h2 class="title">{{ logo.text }}</h2>
+    </div>
+
+    <section *ngIf="!isSideNav" class="navigation-buttons">
+      <button *ngFor="let button of navigationButtons" type="button" mat-button [routerLink]="button.route" routerLinkActive="active-route" (click)="button.method?.()">
+          {{ button.text | translate }}
+      </button>
+    </section>
+
+    <span class="spacer"></span>
+
+    <div class="menu-buttons-container">
+      <app-menu *ngIf="hideMenuButtons" [menuButton]="themeMenu" [isList]="isSideNav" />
+
+      <app-menu *ngIf="hideMenuButtons" [menuButton]="languageMenu" [isList]="isSideNav" />
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row *ngIf="!isSideNav" class="bottom-row">
+    <ng-container *ngIf="activePageService.activePage$ | async as pageKey">
+      <h3>{{ pageKey | translate }}</h3>
+    </ng-container>
+
+    <span class="spacer"></span>
+
+    <a *ngFor="let socialMedia of (socialMediaButtons | socialButtonLogo:(themeService.effectiveThemeMode$ | async))" mat-icon-button [href]="socialMedia.route" target="_blank">
+      <img *ngIf="socialMedia.icon !== null" #socialMediaLogo class="icon" alt="Social Media" [src]="socialMedia.icon" (error)="onImageError(socialMediaLogo)">
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>

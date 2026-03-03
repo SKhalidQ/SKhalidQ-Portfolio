@@ -1,0 +1,21 @@
+.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after, .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-indeterminate::after {
+  color: red !important;
+}
+
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+  --mat-option-selected-state-label-text-color: #e0e0e0;
+}
+
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
+  --mat-option-selected-state-layer-color: rgba(0, 0, 0, .04);
+}
+
+.DarkMode {
+  .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+    --mat-option-selected-state-label-text-color: #e0e0e0;
+  }
+
+  .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
+    --mat-option-selected-state-layer-color: rgba(255, 255, 255, .08);
+  }
+}
