@@ -102,6 +102,10 @@ const technicalSkill: TechnicalSkill[] = [
       {
         title: 'curriculumPage.technicalSkills.sections.devOpsAndTooling.skills.devOpsAndSourceControl.title',
         description: 'curriculumPage.technicalSkills.sections.devOpsAndTooling.skills.devOpsAndSourceControl.description'
+      },
+      {
+        title: 'curriculumPage.technicalSkills.sections.devOpsAndTooling.skills.aiAndAutomation.title',
+        description: 'curriculumPage.technicalSkills.sections.devOpsAndTooling.skills.aiAndAutomation.description'
       }
     ]
   }
