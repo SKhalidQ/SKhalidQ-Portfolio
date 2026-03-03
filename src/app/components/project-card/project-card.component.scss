@@ -26,6 +26,14 @@ mat-card {
     }
   }
 
+  .poster-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+  }
+
   .poster {
     max-width: 100%;
     background-size: cover;
@@ -34,7 +42,7 @@ mat-card {
     transition: all 0.3s ease-in-out;
   }
 
-  .error-icon {
+  .error-icon, .poster.img--fallback {
     display: flex;
     place-content: center center;
     margin: -20px 0 20px 0;
@@ -78,6 +86,14 @@ mat-card {
       }
     }
   }
+}
+
+.poster.img--fallback {
+  display: flex;
+  place-content: center center;
+  margin: -20px 0 20px 0;
+  font-size: 252px; // Based on the height of the other cards
+  width: 100%;
 }
 
 // Animations

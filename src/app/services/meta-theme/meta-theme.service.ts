@@ -7,6 +7,7 @@ import { ThemeService } from '../theme/theme.service';
   providedIn: 'root'
 })
 /**
+ * @description
  * Service to manage the theme-color meta tag dynamically based on the application's theme.
  * It listens to theme changes from ThemeService and updates the meta tag accordingly.
  */
@@ -29,6 +30,12 @@ export class MetaThemeService {
     });
   }
 
+  /**
+   * @description
+   * Ensures the `theme-color` meta tag exists in the document `<head>`.
+   * If absent, creates it with the default light-mode colour.
+   * @returns {void}
+   */
   private initializeMetaTag(): void {
     // Check if theme-color meta tag exists, if not create it with a default value
     const existingTag = this.meta.getTag('name="theme-color"');
@@ -37,28 +44,41 @@ export class MetaThemeService {
     }
   }
 
+  /**
+   * @description Updates the `theme-color` meta tag content to match the given theme mode.
+   * @param {ThemeMode} themeMode - The {@link ThemeMode} to resolve a colour for.
+   * @returns {void}
+   */
   private updateThemeColor(themeMode: ThemeMode): void {
     const color = this.getThemeColorValue(themeMode);
     this.meta.updateTag({ name: 'theme-color', content: color });
   }
 
   /**
-   * Manually update the theme color meta tag
-   * @param themeMode The theme mode to set the color for
+   * @description Manually update the theme color meta tag.
+   * @param {ThemeMode} themeMode - The theme mode to set the color for.
+   * @returns {void}
    */
   public setThemeColor(themeMode: ThemeMode): void {
     this.updateThemeColor(themeMode);
   }
 
   /**
-   * Get the current theme color value
-   * @param themeMode The theme mode to get the color for
-   * @returns The color value as a string
+   * @description Get the current theme color value.
+   * @param {ThemeMode} themeMode - The theme mode to get the color for.
+   * @returns {string} The color value as a hex string.
    */
   public getThemeColor(themeMode: ThemeMode): string {
     return this.getThemeColorValue(themeMode);
   }
 
+  /**
+   * @description
+   * Resolves the hex colour string for a given theme mode.
+   * Handles the {@link ThemeMode.SystemDefault} edge case by reading the OS preference.
+   * @param {ThemeMode} themeMode - The {@link ThemeMode} to resolve.
+   * @returns {string} A hex colour string appropriate for the `theme-color` meta tag.
+   */
   private getThemeColorValue(themeMode: ThemeMode): string {
     if (themeMode === ThemeMode.SystemDefault) {
       // This shouldn't happen as effectiveThemeMode$ should resolve SystemDefault

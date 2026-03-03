@@ -16,9 +16,18 @@
       }
     },
     {
+      "name": "large-assets",
+      "installMode": "prefetch",
+      "updateMode": "lazy",
+      "resources": {
+        "files": [
+          "/assets/easter-eggs/**"
+        ]
+      }
+    },
+    {
       "name": "assets",
-      "installMode": "lazy",
-      "updateMode": "prefetch",
+      "installMode": "prefetch",
       "resources": {
         "files": [
           "/assets/**",

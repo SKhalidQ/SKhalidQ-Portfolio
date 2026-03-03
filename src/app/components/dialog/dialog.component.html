@@ -5,5 +5,6 @@
 </mat-dialog-content>
 
 <mat-dialog-actions align="end">
-  <button mat-stroked-button mat-dialog-close>{{ data.action | translate }}</button>
+  <button type="button" mat-button [mat-dialog-close]="false">{{ data.actions.negative | translate }}</button>
+  <button *ngIf="data.actions.positive" type="button" mat-stroked-button cdkFocusInitial [mat-dialog-close]="true">{{ data.actions.positive | translate }}</button>
 </mat-dialog-actions>

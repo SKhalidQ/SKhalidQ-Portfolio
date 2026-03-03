@@ -1,11 +1,10 @@
-// TODO: Need to find a proper fix for these styles. Maybe Material now lets you do it in a fancy way?
+@use '@angular/material' as mat;
 
 .tooltip {
-  background: rgba(255, 0, 0, 0.815);
-  font-size: small;
+  border-radius: 4px !important;
 }
 
 .mdc-tooltip__surface {
-  background: rgba(255, 0, 0, 0.815) !important;
+  background: mat.get-color-from-palette(mat.$red-palette, 600) !important;
   font-size: small !important;
 }

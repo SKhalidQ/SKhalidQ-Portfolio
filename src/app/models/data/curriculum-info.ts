@@ -41,12 +41,12 @@ const employmentHistory: History[] = [
 
 const education: History[] = [
   {
-    dates: '2017 - 2020',
+    dates: 'curriculumPage.educationHistory.institutions.university.dates',
     title: 'curriculumPage.educationHistory.institutions.university.title',
     description: 'curriculumPage.educationHistory.institutions.university.description'
   },
   {
-    dates: '2012 - 2016',
+    dates: 'curriculumPage.educationHistory.institutions.academy.dates',
     title: 'curriculumPage.educationHistory.institutions.academy.title',
     description: 'curriculumPage.educationHistory.institutions.academy.description'
   }
@@ -54,63 +54,60 @@ const education: History[] = [
 
 const technicalSkill: TechnicalSkill[] = [
   {
-    title: 'C#/.NET',
-    percentage: 90
+    title: 'curriculumPage.technicalSkills.sections.backendDevelopment.title',
+    skills: [
+      {
+        title: 'curriculumPage.technicalSkills.sections.backendDevelopment.skills.dotNet.title',
+        description: 'curriculumPage.technicalSkills.sections.backendDevelopment.skills.dotNet.description'
+      },
+      {
+        title: 'curriculumPage.technicalSkills.sections.backendDevelopment.skills.sql.title',
+        description: 'curriculumPage.technicalSkills.sections.backendDevelopment.skills.sql.description'
+      }
+    ]
   },
   {
-    title: 'ASP.NET Core',
-    percentage: 80
+    title: 'curriculumPage.technicalSkills.sections.frontendDevelopment.title',
+    skills: [
+      {
+        title: 'curriculumPage.technicalSkills.sections.frontendDevelopment.skills.angular.title',
+        description: 'curriculumPage.technicalSkills.sections.frontendDevelopment.skills.angular.description'
+      },
+      {
+        title: 'curriculumPage.technicalSkills.sections.frontendDevelopment.skills.react.title',
+        description: 'curriculumPage.technicalSkills.sections.frontendDevelopment.skills.react.description'
+      },
+      {
+        title: 'curriculumPage.technicalSkills.sections.frontendDevelopment.skills.others.title',
+        description: 'curriculumPage.technicalSkills.sections.frontendDevelopment.skills.others.description'
+      }
+    ]
   },
   {
-    title: 'Entity Framework Core',
-    percentage: 90
+    title: 'curriculumPage.technicalSkills.sections.cloudAndInfrastructure.title',
+    skills: [
+      {
+        title: 'curriculumPage.technicalSkills.sections.cloudAndInfrastructure.skills.msAzure.title',
+        description: 'curriculumPage.technicalSkills.sections.cloudAndInfrastructure.skills.msAzure.description'
+      },
+      {
+        title: 'curriculumPage.technicalSkills.sections.cloudAndInfrastructure.skills.docker.title',
+        description: 'curriculumPage.technicalSkills.sections.cloudAndInfrastructure.skills.docker.description'
+      }
+    ]
   },
   {
-    title: 'Angular',
-    percentage: 90
-  },
-  {
-    title: 'TypeScript',
-    percentage: 70
-  },
-  {
-    title: 'SQL',
-    percentage: 80
-  },
-  {
-    title: 'Azure',
-    percentage: 60
-  },
-  {
-    title: 'HTML/CSS',
-    percentage: 90
-  },
-  {
-    title: 'Docker/Kubernetes',
-    percentage: 60
-  },
-  {
-    title: 'NGINX',
-    percentage: 60
-  },
-  {
-    title: 'Git',
-    percentage: 75
-  }
-];
-
-const nonTechnicalSkill: BulletPoints[] = [
-  {
-    title: 'curriculumPage.nonTechnicalSkills.skills.teamwork.title',
-    description: 'curriculumPage.nonTechnicalSkills.skills.teamwork.description'
-  },
-  {
-    title: 'curriculumPage.nonTechnicalSkills.skills.communication.title',
-    description: 'curriculumPage.nonTechnicalSkills.skills.communication.description'
-  },
-  {
-    title: 'curriculumPage.nonTechnicalSkills.skills.organisation.title',
-    description: 'curriculumPage.nonTechnicalSkills.skills.organisation.description'
+    title: 'curriculumPage.technicalSkills.sections.devOpsAndTooling.title',
+    skills: [
+      {
+        title: 'curriculumPage.technicalSkills.sections.devOpsAndTooling.skills.devOpsAndSourceControl.title',
+        description: 'curriculumPage.technicalSkills.sections.devOpsAndTooling.skills.devOpsAndSourceControl.description'
+      },
+      {
+        title: 'curriculumPage.technicalSkills.sections.devOpsAndTooling.skills.aiAndAutomation.title',
+        description: 'curriculumPage.technicalSkills.sections.devOpsAndTooling.skills.aiAndAutomation.description'
+      }
+    ]
   }
 ];
 
@@ -122,30 +119,39 @@ const achievement: BulletPoints[] = [
   }
 ];
 
+const language: string[] = [
+  'curriculumPage.languages.english',
+  'curriculumPage.languages.spanish',
+  'curriculumPage.languages.catalan',
+  'curriculumPage.languages.urdu',
+  'curriculumPage.languages.punjabi'
+];
+
 const hobbies: Hobbies[] = [
   {
-    name: 'curriculumPage.hobbies.hobbies.movies',
-    icon: 'video_library'
+    name: 'curriculumPage.hobbies.hobbies.badminton',
+    icon: 'badminton',
+    path: '../../../../assets/images/icons/badminton_24dp.svg'
+  },
+  {
+    name: 'curriculumPage.hobbies.hobbies.fitness',
+    icon: 'fitness_center'
   },
   {
     name: 'curriculumPage.hobbies.hobbies.gaming',
     icon: 'sports_esports'
   },
   {
-    name: 'curriculumPage.hobbies.hobbies.music',
-    icon: 'library_music'
-  },
-  {
-    name: 'curriculumPage.hobbies.hobbies.videoEditing',
-    icon: 'movie_creation'
-  },
-  {
     name: 'curriculumPage.hobbies.hobbies.code',
     icon: 'code'
   },
   {
-    name: 'curriculumPage.hobbies.hobbies.fitness',
-    icon: 'fitness_center'
+    name: 'curriculumPage.hobbies.hobbies.designing',
+    icon: 'design_services'
+  },
+  {
+    name: 'curriculumPage.hobbies.hobbies.videoEditing',
+    icon: 'movie_creation'
   }
 ];
 
@@ -162,15 +168,15 @@ export const CurriculumInfo: Curriculum = {
   },
   technicalSkills: {
     title: 'curriculumPage.technicalSkills.title',
-    skills: technicalSkill
-  },
-  nonTechnicalSkills: {
-    title: 'curriculumPage.nonTechnicalSkills.title',
-    skills: nonTechnicalSkill
+    sections: technicalSkill
   },
   achievements: {
     title: 'curriculumPage.achievements.title',
     achievements: achievement
+  },
+  languages: {
+    title: 'curriculumPage.languages.title',
+    languages: language
   },
   hobbies: {
     title: 'curriculumPage.hobbies.title',
