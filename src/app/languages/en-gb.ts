@@ -47,10 +47,12 @@ export const enGB = {
     educationHistory: {
       institutions: {
         academy: {
+          dates: 'Sep 2012 - Jun 2016',
           description: 'A-Level Spanish and BTEC Level 3 Diploma in Business, 5 GCSEs Inc. Maths and English, 3 BTECs Inc. Science',
           title: 'Nottingham Academy'
         },
         university: {
+          dates: 'Sep 2017 - Jun 2020',
           description: 'Studied a wide range of topics including: Distributed systems programming, mobile application development, data mining and decision systems, and web technologies. Complete list of modules available on request.',
           title: 'BSc (Hons) Computer Science (2:1) - University of Hull'
         }
@@ -137,6 +139,10 @@ export const enGB = {
             devOpsAndSourceControl: {
               description: 'Working with Azure DevOps for boards, backlogs, sprint planning and CI/CD pipelines; with GitHub for personal projects with workflow automation and releases; and with Git across both platforms for repository management, branching, pull requests and code reviews.',
               title: 'Azure DevOps, Git, GitHub'
+            },
+            aiAndAutomation: {
+              description: 'Professional and personal experience across work and personal projects; used GitHub Copilot and other LLMs (Claude, GPT) to accelerate prototyping, generate test/config scaffolds and automate routine tasks, with manual review and final ownership.',
+              title: 'AI & Automation'
             }
           },
           title: 'DevOps & Tooling'

@@ -225,10 +225,7 @@ export class SiteStatusService {
 
   /**
    * @description Opens an informational dialog with optional reload-on-close behaviour.
-   * @param {string} title - Translation key for the dialog title.
-   * @param {string} message - Translation key for the dialog message body.
-   * @param {string} [action='Close'] - Translation key for the dismiss action label.
-   * @param {boolean} [shouldReload=false] - When `true`, triggers a full page reload after the dialog is closed.
+   * @param {DialogData} dialogData - Data for the dialog including title, message, actions and optional reloadOnClose flag.
    * @returns {void}
    */
   private showUpdateDialog(dialogData: DialogData): void {

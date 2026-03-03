@@ -36,9 +36,9 @@ export const urPK: LanguageStrings = {
     achievements: {
       list: {
         azureFundamentals: {
-          description: 'میں نے AZ-900 کی سند مکمل کی جو کلاؤڈ سروسز کے بنیادی علم اور یہ سروسز Microsoft Azure کے ساتھ کیسے فراہم کی جاتی ہیں، کو ظاہر کرتی ہے۔', // Main ne AZ-900 ki sanad mukammal ki jo cloud services ke bunyadi ilm aur yeh services Microsoft Azure ke saath kaise faraham ki jati hain, ko zahir karti hai.
-          title: 'Microsoft Certified: Azure Fundamentals',
-          year: 'نومبر 2024' // November 2024
+          description: 'میں نے اے زیڈ-۹۰۰ کی سند مکمل کی جو کلاؤڈ سروسز کے بنیادی علم اور یہ سروسز مائیکروسافٹ ایزور کے ساتھ کیسے فراہم کی جاتی ہیں، کو ظاہر کرتی ہے۔', // Main ne AZ-900 ki sanad mukammal ki jo cloud services ke bunyadi ilm aur yeh services Microsoft Azure ke saath kaise faraham ki jati hain, ko zahir karti hai.
+          title: 'مائیکروسافٹ سرٹیفائڈ: ایزور فنڈیمنٹلز',
+          year: 'نومبر ۲۰۲۴' // November 2024
         }
       },
       title: 'کامیابیاں' // Kamyabiyan
@@ -47,12 +47,14 @@ export const urPK: LanguageStrings = {
     educationHistory: {
       institutions: {
         academy: {
-          description: 'A-Level ہسپانوی اور BTEC Level 3 Diploma in Business,\n5 GCSEs بشمول ریاضی اور انگریزی، 3 BTECs بشمول سائنسز', // A-Level Hispanwi aur BTEC Level 3 Diploma in Business,\n5 GCSEs bashumul Riyazi aur Angrezi, 3 BTECs bashumul Sciences
-          title: 'Nottingham Academy'
+          dates: 'ستمبر ۲۰۱۲ - جون ۲۰۱۶', // September 2012 - June 2016
+          description: 'اے لیول ہسپانوی اور بی ٹیک لیول ۳ ڈپلومہ برائے بزنس,\n۵ جی سی ایس ایز بشمول ریاضی اور انگریزی، ۳ بی ٹیکز بشمول سائنسز', // A-Level Hispanwi aur BTEC Level 3 Diploma in Business,\n5 GCSEs bashumul Riyazi aur Angrezi, 3 BTECs bashumul Sciences
+          title: 'نٹنگھم اکیڈمی'
         },
         university: {
+          dates: 'ستمبر ۲۰۱۷ - جون ۲۰۲۰', // September 2017 - June 2020
           description: 'متنوع موضوعات کا مطالعہ کیا جن میں شامل ہیں: تقسیم شدہ نظام کی پروگرامنگ، موبائل ایپلیکیشن کی ترقی، ڈیٹا مائننگ اور فیصلہ سازی کے نظام، اور ویب ٹیکنالوجیز۔ ماڈیولز کی مکمل فہرست درخواست پر دستیاب ہے۔', // Mutanawwi mazameen ka mutalea kiya jin mein shamil hain: taqseemi nizaam ki programming, mobile application ki taraqqi, data mining aur faisla sazi ke nizaam, aur web technologies. Modules ki mukammal fehrist darkhast par dastiyab hai.
-          title: 'BSc (Hons) Computer Science (2:1) - University of Hull'
+          title: 'بی ایس سی (آنرز) کمپیوٹر سائنس (۲:۱) - ہل یونیورسٹی'
         }
       },
       title: 'تعلیم' // Taleem
@@ -60,19 +62,19 @@ export const urPK: LanguageStrings = {
     employmentHistory: {
       jobs: {
         weatherford: {
-          dates: 'دسمبر 2021 - موجودہ', // December 2021 - Mojooda
-          description: 'Weatherford کی Wireline ڈویژن میں کام کرتا ہوں، جو ڈاؤن ہول ڈیٹا حاصل کرنے، فائل مینجمنٹ، اور ریئل ٹائم لاگ ویژولائزیشن کے لیے سافٹ ویئر تیار کرتا ہے، دونوں CAPEX اور OPEX پروجیکٹس میں تیل کے میدان کی کارروائیوں کی حمایت کے لیے۔', // Weatherford ki Wireline division mein kaam karta hoon, jo downhole data hasil karne, file management, aur real-time log visualization ke liye software tayar karta hai, dono CAPEX aur OPEX projects mein tail ke maidan ki karwaiyon ki himayat ke liye.
-          title: 'سافٹ ویئر انجینئر - Weatherford Ltd (Reeves Wireline Technologies)' // Software Engineer - Weatherford Ltd (Reeves Wireline Technologies)
+          dates: 'دسمبر ۲۰۲۱ - موجودہ', // December 2021 - Mojooda
+          description: 'ویڈر فورڈ کی وائرلائن ڈویژن میں کام کرتا ہوں، جو ڈاؤن ہول ڈیٹا حاصل کرنے، فائل مینجمنٹ، اور ریئل ٹائم لاگ ویژولائزیشن کے لیے سافٹ ویئر تیار کرتا ہے، دونوں کیپیکس اور اوپیکس پروجیکٹس میں تیل کے میدان کی کارروائیوں کی حمایت کے لیے۔', // Weatherford ki Wireline division mein kaam karta hoon, jo downhole data hasil karne, file management, aur real-time log visualization ke liye software tayar karta hai, dono CAPEX aur OPEX projects mein tail ke maidan ki karwaiyon ki himayat ke liye.
+          title: 'سافٹ ویئر انجینئر - ویڈر فورڈ لمیٹڈ (ریوز وائرلائن ٹیکنالوجیز)' // Software Engineer - Weatherford Ltd (Reeves Wireline Technologies)
         },
         greenwood: {
-          dates: 'جنوری 2020 - نومبر 2021', // January 2020 - November 2021
+          dates: 'جنوری ۲۰۲۰ - نومبر ۲۰۲۱', // January 2020 - November 2021
           description: 'تیز رفتار IT سپورٹ ڈیپارٹمنٹ کا حصہ۔ اکیڈمی کے عملے کے اراکین کو تکنیکی مدد فراہم کی اور مختلف کام انجام دیے جن میں سرور کی دیکھ بھال، ڈیوائس کا انتظام اور مسائل کا حل شامل ہے۔', // Taiz raftaar IT support department ka hissa. Academy ke staff ke arkaan ko technical madad faraham ki aur mukhtalif kaam anjaam diye jin mein server ki dekh bhaal, device ka intizam aur masail ka hal shamil hai.
-          title: 'IT سپورٹ ٹیکنیشن - Greenwood Academies Trust' // IT Support Technician - Greenwood Academies Trust
+          title: 'آئی ٹی سپورٹ ٹیکنیشن - گرین ووڈ اکیڈمیز ٹرسٹ' // IT Support Technician - Greenwood Academies Trust
         },
         homeFundraising: {
-          dates: 'فروری 2017', // February 2017
+          dates: 'فروری ۲۰۱۷', // February 2017
           description: 'اس بات کی آگاہی پھیلانا کہ یہ تنظیم لوگوں کی کس طرح مدد کر رہی ہے اور دوسرے کس طرح مدد کر سکتے ہیں۔', // Is baat ki aagahi phailana ke yeh tanzeem logon ki kis tarah madad kar rahi hai aur doosre kis tarah madad kar sakte hain.
-          title: 'گھر گھر جا کر فنڈز اکٹھے کرنے والا - Home Fundraising' // Ghar ghar ja kar funds ikatha karne wala - Home Fundraising
+          title: 'گھر گھر جا کر فنڈز اکٹھے کرنے والا - ہوم فنڈ ریزنگ' // Ghar ghar ja kar funds ikatha karne wala - Home Fundraising
         }
       },
       title: 'ملازمت کی تاریخ' // Mulazmat ki tareekh
@@ -109,12 +111,12 @@ export const urPK: LanguageStrings = {
         backendDevelopment: {
           skills: {
             dotNet: {
-              description: 'تجربہ کار بیک اینڈ ڈویلپر جو C# اور ASP.NET Core میں مہارت رکھتا ہے، جس میں Entity Framework کے ساتھ ڈیٹا بیس انٹریکشن شامل ہے۔ پروڈکشن ایپلیکیشنز کے لیے مضبوط اور اسکیل ایبل APIs بنانے کا تجربہ ہے۔', // Tajurba kar backend developer jo C# aur ASP.NET Core mein mahir hai, jismein Entity Framework ke saath database interaction shamil hai. Production applications ke liye mazboot aur scalable APIs banane ka tajurba hai.
-              title: 'C#/.Net, ASP.NET Core, Entity Framework'
+              description: 'تجربہ کار بیک اینڈ ڈویلپر جو سی شارپ اور اے ایس پی ڈاٹ نیٹ کور میں مہارت رکھتا ہے، جس میں اینٹیٹی فریم ورک کے ساتھ ڈیٹا بیس انٹریکشن شامل ہے۔ پروڈکشن ایپلیکیشنز کے لیے مضبوط اور اسکیل ایبل اے پی آئیز بنانے کا تجربہ ہے۔', // Tajurba kar backend developer jo C# aur ASP.NET Core mein mahir hai, jismein Entity Framework ke saath database interaction shamil hai. Production applications ke liye mazboot aur scalable APIs banane ka tajurba hai.
+              title: 'سی شارپ/.نیٹ، اے ایس پی ڈاٹ نیٹ کور، اینٹیٹی فریم ورک'
             },
             sql: {
               description: 'ریلیشنل ماڈلز ڈیزائن کرنے، کوئریز لکھنے، اور پروڈکشن ڈیٹا بیسز کے ساتھ کام کرنے کا مضبوط تجربہ۔', // Relational models design karne, queries likhne, aur production databases ke saath kaam karne ka mazboot tajurba.
-              title: 'SQL'
+              title: 'ایس کیو ایل'
             }
           },
           title: 'بیک اینڈ ڈویلپمنٹ' // Back-end Development
@@ -123,7 +125,7 @@ export const urPK: LanguageStrings = {
           skills: {
             docker: {
               description: 'کنٹینرائزڈ ایپلیکیشنز کو ڈپلائے اور برقرار رکھنے کا تجربہ، جس میں دونوں کسٹم پروجیکٹس اور عوامی طور پر دستیاب امیجز شامل ہیں۔', // Containerized applications ko deploy aur barqarar rakhne ka tajurba, jismein dono custom projects aur awami tor par dastiyab images shamil hain.
-              title: 'Docker/Kubernetes'
+              title: 'ڈوکر/کبرنیٹس'
             },
             msAzure: {
               description: 'پروڈکشن ایپلیکیشنز کے لیے کلاؤڈ انفراسٹرکچر کو برقرار رکھنے کا تجربہ، جس میں سروسز بنانا اور اپ ڈیٹ کرنا، ہوسٹ کی گئی ایپلیکیشنز کی نگرانی کرنا، اور انفراسٹرکچر کو بطور سروس استعمال کرتے ہوئے ٹیررا فارم کے ساتھ کلاؤڈ وسائل فراہم کرنا شامل ہے۔', // Production applications ke liye cloud infrastructure ko barqarar rakhne ka tajurba, jismein services banana aur update karna, hosted applications ki nigrani karna, aur infrastructure ko as-a-service istemal karte hue Terraform ke saath cloud wasail faraham karna shamil hai.
@@ -135,8 +137,12 @@ export const urPK: LanguageStrings = {
         devOpsAndTooling: {
           skills: {
             devOpsAndSourceControl: {
-              description: 'Azure DevOps کے ساتھ بورڈز، بیک لاگز، سپرنٹ پلاننگ اور CI/CD پائپ لائنز پر کام کرنے کا تجربہ؛ GitHub کے ساتھ ذاتی منصوبوں کے لیے ورک فلو آٹومیشن اور ریلیزز؛ اور دونوں پلیٹ فارمز پر ریپوزٹری مینجمنٹ، برانچنگ، پل ریکویسٹ اور کوڈ ریویوز کے لیے Git کے ساتھ کام کرنے کا تجربہ۔', // Azure DevOps ke saath boards, backlogs, sprint planning aur CI/CD pipelines par kaam karne ka tajurba; GitHub ke saath zaati mansoobon ke liye workflow automation aur releases; aur dono platforms par repository management, branching, pull request aur code reviews ke liye Git ke saath kaam karne ka tajurba.
-              title: 'Azure DevOps, Git, GitHub' // Azure DevOps, Git, GitHub
+              description: 'ایزور ڈیو اوپس کے ساتھ بورڈز، بیک لاگز، سپرنٹ پلاننگ اور سی آئی/سی ڈی پائپ لائنز پر کام کرنے کا تجربہ؛ گٹ ہب کے ساتھ ذاتی منصوبوں کے لیے ورک فلو آٹومیشن اور ریلیزز؛ اور دونوں پلیٹ فارمز پر ریپوزٹری مینجمنٹ، برانچنگ، پل ریکویسٹ اور کوڈ ریویوز کے لیے گٹ کے ساتھ کام کرنے کا تجربہ۔', // Azure DevOps ke saath boards, backlogs, sprint planning aur CI/CD pipelines par kaam karne ka tajurba; GitHub ke saath zaati mansoobon ke liye workflow automation aur releases; aur dono platforms par repository management, branching, pull request aur code reviews ke liye Git ke saath kaam karne ka tajurba.
+              title: 'ایزور ڈیو اوپس، گٹ، گٹ ہب' // Azure DevOps, Git, GitHub
+            },
+            aiAndAutomation: {
+              description: 'کام اور ذاتی منصوبوں کے ذریعے پیشہ ورانہ اور ذاتی تجربہ؛ گٹ ہب کوپائلٹ اور دیگر ایل ایل ایمز (Claude, GPT) کو پروٹوٹائپنگ کو تیز کرنے، ٹیسٹ/کنفیگریشن جنریٹ کرنے اور معمول کے کاموں کو خودکار بنانے کے لیے استعمال کیا گیا، جس میں دستی جائزہ اور حتمی ملکیت شامل ہے۔', // Kam aur zaati mansoobon ke zariye pesha warana aur zaati tajurba; GitHub Copilot aur doosre LLMs (Claude, GPT) ko prototyping ko tez karne, test/configuration generate karne aur mamool ke kamon ko khudkar banane ke liye istemal kiya gaya, jismein dasti jaiza aur hatmi milkiet shamil hai.
+              title: 'مصنوعی ذہانت اور خودکاری' // Masnoi zahanat aur khudkari
             }
           },
           title: 'ڈیو اوپس اور ٹولنگ' // DevOps aur Tooling
@@ -145,15 +151,15 @@ export const urPK: LanguageStrings = {
           skills: {
             angular: {
               description: 'متعدد ذاتی منصوبوں میں ذاتی تجربہ؛ کمپوننٹ آرکیٹیکچر، روٹنگ، سروسز، گارڈز، اور مزید سے واقف۔', // Mutadid zaati mansoobon mein zaati tajurba; component architecture, routing, services, guards, aur mazeed se waqif.
-              title: 'Angular'
+              title: 'اینگولر'
             },
             react: {
               description: 'پیشہ ورانہ تجربہ کمپوننٹ پر مبنی UI بنانے، یونٹ ٹیسٹ لکھنے اور دوبارہ قابل استعمال ویژولائزیشن لائبریری تیار کرنے میں۔', // Pesha warana tajurba component par mabni UI banane, unit test likhne aur dobara qabil-e-istimal visualization library tayar karne mein.
-              title: 'React'
+              title: 'ری ایکٹ' // React
             },
             others: {
               description: 'مختلف فریم ورکز میں UI ٹولز اور انٹرایکٹو ایپلیکیشنز بنانے کے لیے استعمال کیا گیا۔', // Mukhtalif frameworks mein UI tools aur interactive applications banane ke liye istemal kiya gaya.
-              title: 'Javascript/TypeScript, CSS/SCSS'
+              title: 'جاوا اسکرپٹ/ٹائپ اسکرپٹ، سی ایس ایس/ایس سی ایس ایس'
             }
           },
           title: 'فرنٹ اینڈ ڈویلپمنٹ' // Front-end Development
@@ -208,62 +214,62 @@ export const urPK: LanguageStrings = {
     adminCommands: {
       description: 'آسان رسائی کے لیے کمانڈز کے مجموعے کے ساتھ ایک batch script۔ کمانڈز جیسے مقامی ایڈمنسٹریٹر اکاؤنٹ کو فعال کرنا تاکہ ڈیوائس سے متعلق تمام معلومات نکالی جا سکیں اور دیگر فنکشنز۔', // Aasan rasai ke liye commands ke majmue ke saath ek batch script. Commands jaise maqami administrator account ko fa'al karna taake device se mutaliq tamam maloomat nikali ja saken aur doosre functions.
       subtitle: 'ذاتی پروجیکٹ', // Zaati Project
-      title: 'Administrative Commands (Deprecated)'
+      title: 'ایڈمنسٹریٹو کمانڈز (ڈپریکیٹڈ)' // Administrative Commands (Deprecated)
     },
     agentChatBot: {
-      description: 'SWI Prolog استعمال کرکے بنایا گیا سادہ chatbot agent جو input جملے کی بنیاد پر recursive search استعمال کرکے سفارش کے ساتھ جواب دیتا ہے۔ ایجنٹ سادہ اصولوں کا استعمال کرتے ہوئے بہترین میچ کی بنیاد پر پہلے عمل کے ساتھ جواب دیگا۔', // SWI Prolog istemal karke banaya gaya saada chatbot agent jo input jumlay ki bunyaad par recursive search istemal karke sifarish ke saath jawab deta hai. Agent saada usoolon ka istemal karte hue behtareen match ki bunyaad par pehle amal ke saath jawab dega.
-      subtitle: 'مصنوعی ذہانت - دوسرے سال کا ماڈیول', // Masnoi zahanat - doosre saal ka module
-      title: 'Agent Chatbot'
+      description: 'ایس ڈبلیو آئی پرو لاگ استعمال کرکے بنایا گیا سادہ چیٹ بوٹ ایجنٹ جو ان پٹ جملے کی بنیاد پر ریکرسیو سرچ استعمال کرکے سفارش کے ساتھ جواب دیتا ہے۔ ایجنٹ سادہ اصولوں کا استعمال کرتے ہوئے بہترین میچ کی بنیاد پر پہلے عمل کے ساتھ جواب دے گا۔', // SWI Prolog istemal karke banaya gaya saada chatbot agent jo input jumlay ki bunyaad par recursive search istemal karke sifarish ke saath jawab deta hai. Agent saada usoolon ka istemal karte hue behtareen match ki bunyaad par pehle amal ke saath jawab dega.
+      subtitle: 'مصنوعی ذہانت - 2 سال کا ماڈیول', // Masnoi zahanat - 2 saal ka module
+      title: 'ایجنٹ چیٹ بوٹ' // Agent Chatbot
     },
     angularI18n: {
       description: 'ایک Angular i18n لائبریری جس میں قسم محفوظ ترجمہ کیز اور ری ایکٹیو زبان کی تبدیلی ہے تاکہ UI ایپلیکیشن میں فوری طور پر اپ ڈیٹ ہو جائے۔ انٹرپولیشن اور جمعیت، زبان کی مستقل مزاجی، بیک اپ ترجمے، اور چھوٹے ابتدائی بنڈلز کے لیے زبان کے پیکجز کے اختیاری سست لوڈنگ کی حمایت کرتا ہے۔', // Ek Angular i18n library jismein type-safe translation keys aur reactive zaban ki tabdeeli hai taake UI application mein fori tor par update ho jaye. Interpolation aur pluralization, zaban ki mustaqil mizaji, backup translations, aur chotay initial bundles ke liye language packages ke ikhtiyari slow loading ki himayat karta hai.
       subtitle: 'ذاتی پروجیکٹ', // Zaati Project
-      title: 'Angular Library - i18n'
+      title: 'اینگولر لائبریری - i18n' // Angular Library - i18n
     },
     bbisa: {
-      description: 'حتمی سال کا پروجیکٹ جو Angular اور ASP.NET Core استعمال کرکے بنایا گیا۔ یہ صارفین کو بیئر بوتل کی تفصیلات شامل کرکے انوینٹری کا ٹریک کرنے کی اجازت دیتا ہے۔ صارف آرڈرز اور فروخت کی تاریخ لاگ کر سکتا ہے جو پروڈکٹ کے اسٹاک کی مقدار پر اثر ڈالتی ہے۔', // Hatmi saal ka project jo Angular aur ASP.NET Core istemal karke banaya gaya. Yeh users ko beer bottle ki tafseelat shamil karke inventory ka track karne ki ijazat deta hai. User orders aur farokht ki tareekh log kar sakta hai jo product ke stock ki miqdaar par asar dalti hai.
+      description: 'حتمی سال کا پروجیکٹ جو اینگولر اور اے ایس پی ڈاٹ نیٹ کور استعمال کرکے بنایا گیا۔ یہ صارفین کو بیئر بوتل کی تفصیلات شامل کرکے انوینٹری کا ٹریک کرنے کی اجازت دیتا ہے۔ صارف آرڈرز اور فروخت کی تاریخ لاگ کر سکتا ہے جو پروڈکٹ کے اسٹاک کی مقدار پر اثر ڈالتی ہے۔', // Hatmi saal ka project jo Angular aur ASP.NET Core istemal karke banaya gaya. Yeh users ko beer bottle ki tafseelat shamil karke inventory ka track karne ki ijazat deta hai. User orders aur farokht ki tareekh log kar sakta hai jo product ke stock ki miqdaar par asar dalti hai.
       subtitle: 'آنرز اسٹیج پروجیکٹ', // Honors stage project
-      title: 'Beer Bottle Inventory System App'
+      title: 'بیئر بوتل انوینٹری سسٹم ایپ' // Beer Bottle Inventory System App
     },
     dataMining: {
-      description: 'یہ Data Mining پروجیکٹ طبی تاریخ کے ڈیٹاسیٹ کا تجزیہ کرتا ہے مختلف algorithms استعمال کرکے یہ پیش گوئی کرنے کے لیے کہ مریض اپنی بیماریوں کی وجہ سے کتنے زیادہ خطرے میں ہیں۔ Python اور Jupyter Notebook استعمال کرکے بنایا گیا۔', // Yeh Data Mining project tibi tareekh ke dataset ka tajzia karta hai mukhtalif algorithms istemal karke yeh peshgoi karne ke liye ke mareez apni bemariyon ki wajah se kitne zyada khatre mein hain. Python aur Jupyter Notebook istemal karke banaya gaya.
-      subtitle: 'ڈیٹا مائننگ اور فیصلہ سازی کے نظام - تیسرے سال کا ماڈیول', // Data Mining aur Faisla sazi ke nizaam - teesre saal ka module
-      title: 'Medical Data Analysis'
+      description: 'یہ Data Mining پروجیکٹ طبی تاریخ کے ڈیٹاسیٹ کا تجزیہ کرتا ہے مختلف الگورِتھمز استعمال کرکے یہ پیش گوئی کرنے کے لیے کہ مریض اپنی بیماریوں کی وجہ سے کتنے زیادہ خطرے میں ہیں۔ پائتھن اور جوپیٹر نوٹ بُک استعمال کرکے بنایا گیا۔', // Yeh Data Mining project tibi tareekh ke dataset ka tajzia karta hai mukhtalif algorithms istemal karke yeh peshgoi karne ke liye ke mareez apni bemariyon ki wajah se kitne zyada khatre mein hain. Python aur Jupyter Notebook istemal karke banaya gaya.
+      subtitle: 'ڈیٹا مائننگ اور فیصلہ سازی کے نظام - 3 سال کا ماڈیول', // Data Mining aur Faisla sazi ke nizaam - 3 saal ka module
+      title: 'میڈیکل ڈیٹا تجزیہ' // Medical Data Analysis
     },
     distributedSystems: {
-      description: 'ASP.NET Core Web API پروجیکٹ جس میں symmetric اور asymmetric encryption استعمال کرکے مختلف cryptographic functions کے لیے endpoints ہیں۔ Claims-based authorization اور Entity Framework Core استعمال کرتا ہے۔', // ASP.NET Core Web API project jismein symmetric aur asymmetric encryption istemal karke mukhtalif cryptographic functions ke liye endpoints hain. Claims-based authorization aur Entity Framework Core istemal karta hai.
-      subtitle: 'تقسیم شدہ نظام کی پروگرامنگ - تیسرے سال کا ماڈیول', // Taqseem shuda nizaam ki programming - teesre saal ka module
-      title: 'API and Client Development'
+      description: 'اے ایس پی ڈاٹ نیٹ کور ویب اے پی آئی پروجیکٹ جس میں symmetric اور asymmetric encryption استعمال کرکے مختلف cryptographic functions کے لیے endpoints ہیں۔ Claims-based authorization اور اینٹیٹی فریم ورک کور استعمال کرتا ہے۔', // ASP.NET Core Web API project jismein symmetric aur asymmetric encryption istemal karke mukhtalif cryptographic functions ke liye endpoints hain. Claims-based authorization aur Entity Framework Core istemal karta hai.
+      subtitle: 'تقسیم شدہ نظام کی پروگرامنگ - 3 سال کا ماڈیول', // Taqseem shuda nizaam ki programming - 3 saal ka module
+      title: 'API تے کلائنٹ ڈویلپمنٹ' // API and Client Development
     },
     fileExplorer: {
-      description: 'ایک جدید فائل ایکسپلورر جو میری نیٹ ورک ڈرائیوز کو دور سے منظم کرنے کے لیے استعمال ہوتا ہے۔ مجھے فائلیں شامل کرنے، ترمیم کرنے یا حذف کرنے، ان کی جگہ اپڈیٹ کرنے اور یہاں تک کہ مواد کا اشتراک کرنے کی اجازت دیتا ہے۔ Angular استعمال کرکے کلائنٹ بنایا گیا اور ASP.NET Core استعمال کرکے بیک اینڈ بنایا گیا جو Docker کنٹینر میں چل رہا ہے۔', // Ek jadeed file explorer jo meri network drives ko door se munazzam karne ke liye istemal hota hai. Mujhe files shamil karne, tarmeem karne ya hazf karne, unki jagah update karne aur yahan tak ke mazmoon ka ishtiraak karne ki ijazat deta hai. Angular istemal karke client banaya gaya aur ASP.NET Core istemal karke backend banaya gaya jo Docker container mein chal raha hai.
+      description: 'ایک جدید فائل ایکسپلورر جو میری نیٹ ورک ڈرائیوز کو دور سے منظم کرنے کے لیے استعمال ہوتا ہے۔ مجھے فائلیں شامل کرنے، ترمیم کرنے یا حذف کرنے، ان کی جگہ اپڈیٹ کرنے اور یہاں تک کہ مواد کا اشتراک کرنے کی اجازت دیتا ہے۔ اینگولر استعمال کرکے کلائنٹ بنایا گیا اور اے ایس پی ڈاٹ نیٹ کور استعمال کرکے بیک اینڈ بنایا گیا جو ڈوکر کنٹینر میں چل رہا ہے۔', // Ek jadeed file explorer jo meri network drives ko door se munazzam karne ke liye istemal hota hai. Mujhe files shamil karne, tarmeem karne ya hazf karne, unki jagah update karne aur yahan tak ke mazmoon ka ishtiraak karne ki ijazat deta hai. Angular istemal karke client banaya gaya aur ASP.NET Core istemal karke backend banaya gaya jo Docker container mein chal raha hai.
       subtitle: 'ذاتی پروجیکٹ', // Zaati Project
-      title: 'File Explorer (Alpha)'
+      title: 'فائل ایکسپلورر (الفا)' // File Explorer (Alpha)
     },
     jumble: {
-      description: 'Android Studio (Java) استعمال کرکے بنایا گیا موبائل ایپ گیم جو صارف کو انٹرنیٹ پر دستیاب تصاویر کی فہرست مکمل کرنے کی اجازت دیتا ہے۔ کھلاڑی کو کم سے کم حرکات میں پزل ختم کرنا ہوتا ہے اور وہ اپنا سکور محفوظ کرکے دوسرے کھلاڑیوں کے ساتھ شیئر کر سکتا ہے۔', // Android Studio (Java) istemal karke banaya gaya mobile app game jo user ko internet par dastiyab tasveeron ki fehrist mukammal karne ki ijazat deta hai. Khiladi ko kam se kam harkat mein puzzle khatam karna hota hai aur woh apna score mehfooz karke doosre khilariyon ke saath share kar sakta hai.
-      subtitle: 'موبائل ڈیولپمنٹ اور ڈیوائسز - تیسرے سال کا ماڈیول', // Mobile development aur devices - teesre saal ka module
-      title: 'Jumble!'
+      description: 'اینڈرائیڈ اسٹوڈیو (جاوا) استعمال کرکے بنایا گیا موبائل ایپ گیم جو صارف کو انٹرنیٹ پر دستیاب تصاویر کی فہرست مکمل کرنے کی اجازت دیتا ہے۔ کھلاڑی کو کم سے کم حرکات میں پزل ختم کرنا ہوتا ہے اور وہ اپنا سکور محفوظ کرکے دوسرے کھلاڑیوں کے ساتھ شیئر کر سکتا ہے۔', // Android Studio (Java) istemal karke banaya gaya mobile app game jo user ko internet par dastiyab tasveeron ki fehrist mukammal karne ki ijazat deta hai. Khiladi ko kam se kam harkat mein puzzle khatam karna hota hai aur woh apna score mehfooz karke doosre khilariyon ke saath share kar sakta hai.
+      subtitle: 'موبائل ڈیولپمنٹ اور ڈیوائسز - 3 سال کا ماڈیول', // Mobile development aur devices - 3 saal ka module
+      title: 'جمبل!' // Jumble!
     },
     mediaPlay: {
-      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, quo voluptates? Quas placeat fugiat libero eveniet saepe et minima veniam quisquam doloremque. Quia esse autem fugit odio tenetur saepe delectus.', // Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, quo voluptates? Quas placeat fugiat libero eveniet saepe et minima veniam quisquam doloremque. Quia esse autem fugit odio tenetur saepe delectus.
+      description: 'ایک میڈیا پلیئر ایپلیکیشن جو صارفین کو مختلف میڈیا فائلز چلانے اور منظم کرنے کی سہولت فراہم کرتی ہے۔ یہ متعدد فارمیٹس کو سپورٹ کرتی ہے اور بہترین صارف انٹرفیس فراہم کرتی ہے۔', // Ek media player application jo users ko mukhtalif media files chalane aur organize karne ki sehalat faraham karti hai. Yeh mutadid formats ko support karti hai aur behtareen user interface faraham karti hai.
       subtitle: 'ذاتی پروجیکٹ', // Zaati Project
       title: 'MediaPlay'
     },
     myList: {
-      description: 'ایک ویب ایپلیکیشن جو صارفین کو ان سیریز اور فلموں کا ٹریک کرنے کی اجازت دیتا ہے جو وہ دیکھ رہے ہیں۔ وہ کوئی سیریز شامل کر سکتے ہیں اور اپڈیٹ کر سکتے ہیں کہ وہ کس ایپیسوڈ کے نمبر اور منٹ پر آخری بار رک گئے تھے۔ یہ پروجیکٹ Angular اور ASP.NET Core استعمال کرکے تیار کیا گیا ہے۔', // Ek web application jo users ko un series aur filmon ka track karne ki ijazat deta hai jo woh dekh rahe hain. Woh koi series shamil kar sakte hain aur update kar sakte hain ke woh kis episode ke number aur minute par aakhri baar ruk gaye thay. Yeh project Angular aur ASP.NET Core istemal karke tayar kiya gaya hai.
+      description: 'ایک ویب ایپلیکیشن جو صارفین کو ان سیریز اور فلموں کا ٹریک کرنے کی اجازت دیتا ہے جو وہ دیکھ رہے ہیں۔ وہ کوئی سیریز شامل کر سکتے ہیں اور اپڈیٹ کر سکتے ہیں کہ وہ کس ایپیسوڈ کے نمبر اور منٹ پر آخری بار رک گئے تھے۔ یہ پروجیکٹ اینگولر اور اے ایس پی ڈاٹ نیٹ کور استعمال کرکے تیار کیا گیا ہے۔', // Ek web application jo users ko un series aur filmon ka track karne ki ijazat deta hai jo woh dekh rahe hain. Woh koi series shamil kar sakte hain aur update kar sakte hain ke woh kis episode ke number aur minute par aakhri baar ruk gaye thay. Yeh project Angular aur ASP.NET Core istemal karke tayar kiya gaya hai.
       subtitle: 'ذاتی پروجیکٹ', // Zaati Project
-      title: 'MyList (Beta)'
+      title: 'میری لسٹ (بیٹا)' // MyList (Beta)
     },
     networking: {
-      description: 'C# اور WPF استعمال کرکے تیار کیا گیا کلائنٹ، جو WPF میں بنے سرور کو مختلف HTTP Protocols کے ساتھ درخواستیں بھیجتا ہے جن میں \'Whois\' اور HTTP 0.9 - 1.1 شامل ہیں۔', // C# aur WPF istemal karke tayar kiya gaya client, jo WPF mein bane server ko mukhtalif HTTP protocols ke saath darkhwastain bhejta hai jin mein 'Whois' aur HTTP 0.9 - 1.1 shamil hain.
-      subtitle: 'نیٹ ورکنگ اور صارف انٹرفیس ڈیزائن - دوسرے سال کا ماڈیول', // Networking aur user interface design - doosre saal ka module
-      title: 'Networking and UI Design'
+      description: 'سی شارپ اور ڈبلیو پی ایف استعمال کرکے تیار کیا گیا کلائنٹ، جو ڈبلیو پی ایف میں بنے سرور کو مختلف ایچ ٹی ٹی پی پروٹوکولز کے ساتھ درخواستیں بھیجتا ہے جن میں \'Whois\' اور ایچ ٹی ٹی پی ۰.۹ - ۱.۱ شامل ہیں۔', // C# aur WPF istemal karke tayar kiya gaya client, jo WPF mein bane server ko mukhtalif HTTP protocols ke saath darkhwastain bhejta hai jin mein 'Whois' aur HTTP 0.9 - 1.1 shamil hain.
+      subtitle: 'نیٹ ورکنگ اور صارف انٹرفیس ڈیزائن - 2 سال کا ماڈیول', // Networking aur user interface design - 2 saal ka module
+      title: 'نیٹ ورکنگ اور صارف انٹرفیس ڈیزائن' // Networking and UI Design
     },
     webTech: {
-      description: 'HTML، CSS اور PHP استعمال کرکے بنائی گئی ویب سائٹ جو SQL ڈیٹابیس میں تمام ڈیٹا محفوظ کرکے طالب علم یا عملے کی جگہ کا ٹریک کرنے کی اجازت دیتی ہے۔', // HTML, CSS aur PHP istemal karke banai gai website jo SQL database mein tamam data mehfooz karke talib-e-ilm ya staff ki jagah ka track karne ki ijazat deti hai.
-      subtitle: 'انفارمیشن سسٹمز اور ویب ٹیکنالوجیز - دوسرے سال کا ماڈیول', // Information systems aur web technologies - doosre saal ka module
-      title: 'Web Location Interface Design'
+      description: 'ایچ ٹی ایم ایل، سی ایس ایس اور پی ایچ پی استعمال کرکے بنائی گئی ویب سائٹ جو ایس کیو ایل ڈیٹابیس میں تمام ڈیٹا محفوظ کرکے طالب علم یا عملے کی جگہ کا ٹریک کرنے کی اجازت دیتی ہے۔', // HTML, CSS aur PHP istemal karke banai gai website jo SQL database mein tamam data mehfooz karke talib-e-ilm ya staff ki jagah ka track karne ki ijazat deti hai.
+      subtitle: 'انفارمیشن سسٹمز اور ویب ٹیکنالوجیز - 2 سال کا ماڈیول', // Information systems aur web technologies - 2 saal ka module
+      title: 'ویب لوکیشن انٹرفیس ڈیزائن' // Web Location Interface Design
     }
   },
   projectCard: {

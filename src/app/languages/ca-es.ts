@@ -47,10 +47,12 @@ export const caES: LanguageStrings = {
     educationHistory: {
       institutions: {
         academy: {
+          dates: 'Set 2012 - Jun 2016',
           description: 'A-Level Castellà i BTEC Nivell 3 Diploma en Negocis,\n5 GCSEs Incloent Matemàtiques i Anglès, 3 BTECs Incloent Ciències',
           title: 'Nottingham Academy'
         },
         university: {
+          dates: 'Set 2017 - Jun 2020',
           description: 'Vaig estudiar una àmplia gamma de temes que inclouen: programació de sistemes distribuïts, desenvolupament d\'aplicacions mòbils, data mining i sistemes de decisió i, tecnologies web. Llista completa de mòduls disponible a petició.',
           title: 'BSc (Hons) Computer Science (2:1) - University of Hull'
         }
@@ -70,7 +72,7 @@ export const caES: LanguageStrings = {
           title: 'Recaptador de Fons Porta a Porta  - Home Fundraising'
         },
         weatherford: {
-          dates: 'Dec 2021 - Present',
+          dates: 'Des 2021 - Present',
           description: 'Treballo a la divisió de Wireline de Weatherford, desenvolupant programari per a l\'adquisició de dades en el fons del pou, gestió de fitxers i visualització de registres en temps real en projectes CAPEX i OPEX en suport a les operacions petrolieres.',
           title: 'Enginyer Informàtic - Weatherford Ltd (Reeves Wireline Technologies)'
         }
@@ -137,6 +139,10 @@ export const caES: LanguageStrings = {
             devOpsAndSourceControl: {
               description: 'Experiència treballant amb Azure DevOps per a taulers, backlogs, planificació de sprints i pipelines CI/CD; amb GitHub per a projectes personals amb automatització de fluxos de treball i llançaments; i amb Git a través de ambdues plataformes per a la gestió de repositoris, branques, pull requests i revisions de codi.',
               title: 'Azure DevOps, Git, GitHub'
+            },
+            aiAndAutomation: {
+              description: 'Experiència professional i personal a través de treball i projectes personales; utilitzant GitHub Copilot i altres LLMs (Claude, GPT) para acelerar prototipado, generar pruebas/configuración y automatizar tareas rutinarias, con revisión manual y propiedad final.',
+              title: 'IA y Automatización'
             }
           },
           title: 'DevOps i Eines'

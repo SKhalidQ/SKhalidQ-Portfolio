@@ -41,12 +41,12 @@ const employmentHistory: History[] = [
 
 const education: History[] = [
   {
-    dates: '2017 - 2020',
+    dates: 'curriculumPage.educationHistory.institutions.university.dates',
     title: 'curriculumPage.educationHistory.institutions.university.title',
     description: 'curriculumPage.educationHistory.institutions.university.description'
   },
   {
-    dates: '2012 - 2016',
+    dates: 'curriculumPage.educationHistory.institutions.academy.dates',
     title: 'curriculumPage.educationHistory.institutions.academy.title',
     description: 'curriculumPage.educationHistory.institutions.academy.description'
   }
