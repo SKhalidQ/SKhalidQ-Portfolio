@@ -1,0 +1,18 @@
+<div class="main-container">
+  <div class="title">
+    <p class="bold">{{ title | translate }}</p>
+  </div>
+
+  <div class="history">
+    <ul class="content">
+      <li *ngFor="let item of history">
+        <div class="date">{{ item.dates | translate }}</div>
+
+        <div class="info">
+          <p class="semi-bold">{{ item.title | translate }}</p>
+          <p class="description">{{ item.description | translate }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

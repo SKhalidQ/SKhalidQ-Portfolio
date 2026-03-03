@@ -1,0 +1,10 @@
+@use '@angular/material' as mat;
+
+.tooltip {
+  border-radius: 4px !important;
+}
+
+.mdc-tooltip__surface {
+  background: mat.get-color-from-palette(mat.$red-palette, 600) !important;
+  font-size: small !important;
+}

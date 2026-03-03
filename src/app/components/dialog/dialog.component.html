@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>{{ data.title | translate }}</h2>
+
+<mat-dialog-content>
+  <p>{{ data.message | translate }}</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button type="button" mat-button [mat-dialog-close]="false">{{ data.actions.negative | translate }}</button>
+  <button *ngIf="data.actions.positive" type="button" mat-stroked-button cdkFocusInitial [mat-dialog-close]="true">{{ data.actions.positive | translate }}</button>
+</mat-dialog-actions>

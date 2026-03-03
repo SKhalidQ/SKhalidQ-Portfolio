@@ -1,69 +1,60 @@
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { DialogComponent } from './Components/dialog/dialog.component';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { environment } from 'src/environments/environment.prod';
-import { ThemeService } from 'src/app/Services/theme.service';
-import { ConnectionService } from 'ng-connection-service';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
-import { SwUpdate } from '@angular/service-worker';
-import { ThemeMode, Themes } from './Models/theme';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Platform } from '@angular/cdk/platform';
-import { filter, map } from 'rxjs/operators';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter, map } from 'rxjs';
+import { Page } from './models/enums/page';
+import { MetaThemeService } from './services/meta-theme/meta-theme.service';
+import { SiteStatusService } from './services/site-status/site-status.service';
+import { ThemeService } from './services/theme/theme.service';
+import { Environment } from './models/enums/environment';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  animations: []
+  styleUrls: ['./app.component.scss']
 })
+/**
+ * @description
+ * Root application component.
+ * Bootstraps global services (theme, meta-theme, site-status) and manages
+ * the browser tab title by subscribing to router navigation events.
+ */
 export class AppComponent implements OnInit {
+  readonly themeService = inject(ThemeService);
+  private readonly metaThemeService = inject(MetaThemeService);
+  private readonly activatedRoute = inject(ActivatedRoute);
+  private readonly router = inject(Router);
+  private readonly titleService = inject(Title);
+  private readonly siteStatusService = inject(SiteStatusService);
 
-  title = 'SKhalidQ Portfolio';
-  versionNumber = environment.appVersion;
-  showFiller = false;
-  smallScreen: boolean | any;
-  xSmallScreen: boolean | any;
-  currentTheme: ThemeMode | any;
-  themeData = Themes;
-
-  updateContent = false;
-
-  constructor(
-    public breakpointObserver: BreakpointObserver,
-    public themeService: ThemeService,
-    public platform: Platform,
-    private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private titleService: Title,
-    private dialog: MatDialog,
-    private update: SwUpdate,
-    private connectionService: ConnectionService) {
-
-    breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe((x) => {
-      this.smallScreen = x.breakpoints[Breakpoints.Small] && !x.breakpoints[Breakpoints.XSmall];
-      this.xSmallScreen = x.breakpoints[Breakpoints.XSmall];
-    });
-
-    this.CheckConnection();
-
-    this.CheckUpdates();
-  }
-
+  /**
+   * @description Initialises the dynamic page title subscription.
+   */
   ngOnInit(): void {
-    this.SetTabTitle();
+    this.setTabTitle();
   }
 
-  SetTabTitle(): any {
+  /**
+   * @description
+   * Subscribes to Angular router {@link NavigationEnd} events and updates
+   * the browser tab title based on the deepest activated route's `pageTitle` data property.
+   * Falls back to the app-level title when no route data is present.
+   * @returns {void}
+   */
+  setTabTitle(): void {
     const appTitle = this.titleService.getTitle();
-    const title = 'title';
+    const title = 'pageTitle';
 
     this.router.events.pipe(filter(event => event instanceof NavigationEnd),
       map(() => {
-        const child: any = this.activatedRoute.firstChild;
-        if (child.snapshot.data[title]) {
-          return child.snapshot.data[title];
+        let route: ActivatedRoute | null = this.activatedRoute.firstChild;
+        while (route?.firstChild) {
+          route = route.firstChild;
+        }
+
+        if (route?.snapshot.data[title]) {
+          return `${Page[route.snapshot.data[title]]} | Porfolio - ${Environment[environment.environment]} | SKhalidQ`;
         }
 
         return appTitle;
@@ -71,37 +62,5 @@ export class AppComponent implements OnInit {
         this.titleService.setTitle(ttl);
       }
     );
-  }
-
-  CheckUpdates(): void {
-    this.update.available.subscribe(() => {
-      this.dialog.open(DialogComponent, {
-        data: {
-          Title: `New update!`,
-          Message: 'There is new content available on this page. Would you like to update?',
-          Action: 'Refresh'
-        },
-        panelClass: [this.themeService.themeMode.value],
-      }).afterClosed().subscribe(() => {
-        document.location.reload();
-      });
-    });
-  }
-
-  CheckConnection(): void {
-    this.connectionService.monitor().subscribe(isConnected => {
-      if (!isConnected) {
-        this.dialog.open(DialogComponent, {
-          data: {
-            Title: `Lost connection`,
-            Message: 'It seems like you have lost connection. Some features might not be accessible.',
-            Action: 'Close'
-          },
-          panelClass: [this.themeService.themeMode.value],
-        })
-      } else {
-        this.dialog.closeAll();
-      }
-    });
   }
 }

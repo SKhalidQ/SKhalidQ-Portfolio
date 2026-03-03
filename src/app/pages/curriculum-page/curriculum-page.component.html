@@ -1,0 +1,5 @@
+<div class="main-container">
+  <app-classic-curriculum *ngIf="curriculum" [@fade-in-out] [curriculum]="curriculum" class="cv"></app-classic-curriculum>
+
+  <h1 *ngIf="!curriculum"><mat-icon color="warn">error_outline</mat-icon> There seems to be a problem while getting all the data</h1>
+</div>

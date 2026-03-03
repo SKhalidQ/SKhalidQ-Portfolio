@@ -1,0 +1,31 @@
+<main>
+  <section>
+    <div *ngFor="let credit of aboutCredits" class="credit-container">
+      <img [src]="credit.imagePath" alt="{{ credit.title }} Logo" #logo (error)="onImageError(logo)">
+
+      <a [class]="changeColour" [href]="credit.pageUrl">
+        <h2>{{ credit.title }}</h2>
+      </a>
+
+      <h3>{{ credit.version }}</h3>
+    </div>
+
+    <div class="action-container">
+      <!-- TODO: Add a changelog -->
+      <!-- <button mat-button type="button" disabled>{{ changelogText | translate }}</button> -->
+
+      <button mat-flat-button type="button" (click)="checkForUpdates()">
+        <mat-icon>{{ checkUpdate.icon }}</mat-icon>
+        {{ checkUpdate.text | translate }}
+      </button>
+    </div>
+
+    <div class="copyright">
+      <div class="logo-container" role="button" tabindex="0" (click)="navigateToHomeSite()" (keydown.enter)="navigateToHomeSite()" aria-label="Home">
+        <img [src]="logoPath" #logo alt="Logo" (error)="onImageError(logo)">
+      </div>
+
+      <h4>{{ copyright }}</h4>
+    </div>
+  </section>
+</main>

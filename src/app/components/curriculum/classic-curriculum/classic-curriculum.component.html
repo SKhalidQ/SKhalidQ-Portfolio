@@ -1,0 +1,74 @@
+<div class="cv-container">
+  <div class="header">
+    <div class="profile">
+      <img src="./assets/images/logos/group_logo.png" #logo appDisableRightclick alt="profile_pic" (error)="onImageError(logo)">
+    </div>
+
+    <div class="info-container">
+      <div class="title-container">
+        <p class="name">{{ curriculum.header.name | translate }}</p>
+        <p class="title">{{ curriculum.header.title | translate }}</p>
+      </div>
+
+      <mat-divider class="divider"></mat-divider>
+
+      <div class="contact-container">
+        <div *ngFor="let contact of curriculum.header.contactDetails"
+             class="contact"
+             mat-icon-button
+             [cdkCopyToClipboard]="contact.contact"
+             (click)="notify()"
+             (keydown.enter)="notify()"
+             tabindex="0"
+             [matTooltip]="clipboardMessage | translate"
+             matTooltipShowDelay="600"
+             matTooltipClass="toolTip">
+          <mat-icon #contactIcon>{{ contact.icon }}</mat-icon>
+          <label for="contactIcon"> {{ contact.contact }} </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <!-- Profile -->
+
+    <app-profile [title]="curriculum.profile.title" [description]="curriculum.profile.description"></app-profile>
+
+    <mat-divider class="section-divider"></mat-divider>
+
+    <!-- Employment History -->
+
+    <app-history [history]="curriculum.employment.history" [title]="curriculum.employment.title" />
+
+    <mat-divider class="section-divider"></mat-divider>
+
+    <!-- Education -->
+
+    <app-history [history]="curriculum.education.education" [title]="curriculum.education.title" />
+
+    <mat-divider class="section-divider"></mat-divider>
+
+    <!-- Technical Skills -->
+
+    <app-bullet [title]="curriculum.technicalSkills.title" [sections]="curriculum.technicalSkills.sections"></app-bullet>
+
+    <mat-divider class="section-divider"></mat-divider>
+
+    <!-- Achievements -->
+
+    <app-bullet [title]="curriculum.achievements.title" [points]="curriculum.achievements.achievements" />
+
+    <mat-divider class="section-divider"></mat-divider>
+
+    <!-- Languages -->
+
+    <app-list [title]="curriculum.languages.title" [list]="curriculum.languages.languages"></app-list>
+
+    <mat-divider class="section-divider"></mat-divider>
+
+    <!-- Hobbies -->
+
+    <app-icon-rail [hobbies]="curriculum.hobbies.hobbies" [title]="curriculum.hobbies.title"></app-icon-rail>
+  </div>
+</div>
