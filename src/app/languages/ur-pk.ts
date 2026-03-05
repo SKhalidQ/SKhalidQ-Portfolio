@@ -168,6 +168,10 @@ export const urPK: LanguageStrings = {
       title: 'تکنیکی مہارتیں' // Technical Skills
     }
   },
+  environments: {
+    Alpha: 'Alpha',
+    Beta: 'Beta'
+  },
   errorPage: {
     forbidden: 'آپ کو اس پیج تک رسائی کی اجازت نہیں ہے۔', // Aap ko is page tak rasai ki ijazat nahi hai.
     notFound: 'پہلے سے موجود صفحہ نہیں ملا یا لنک ٹوٹ گیا ہے۔', // Pehle se mojood safha nahi mila ya link toot gaya hai.
@@ -210,6 +214,7 @@ export const urPK: LanguageStrings = {
     Home: 'ہوم', // Home
     Projects: 'پروجیکٹس' // Projects
   },
+  portfolio: 'پورٹ فولیو', // Portfolio
   projects: {
     adminCommands: {
       description: 'آسان رسائی کے لیے کمانڈز کے مجموعے کے ساتھ ایک batch script۔ کمانڈز جیسے مقامی ایڈمنسٹریٹر اکاؤنٹ کو فعال کرنا تاکہ ڈیوائس سے متعلق تمام معلومات نکالی جا سکیں اور دیگر فنکشنز۔', // Aasan rasai ke liye commands ke majmue ke saath ek batch script. Commands jaise maqami administrator account ko fa'al karna taake device se mutaliq tamam maloomat nikali ja saken aur doosre functions.

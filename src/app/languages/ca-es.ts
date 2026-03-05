@@ -168,6 +168,10 @@ export const caES: LanguageStrings = {
       title: 'Habilitats Tècniques'
     }
   },
+  environments: {
+    Alpha: 'Alfa',
+    Beta: 'Beta'
+  },
   errorPage: {
     forbidden: 'No tens permís per accedir a aquesta pàgina.',
     notFound: 'Sembla que la pàgina que buscaves no existeix o l\'enllaç està trencat.',
@@ -210,6 +214,7 @@ export const caES: LanguageStrings = {
     Home: 'Inici',
     Projects: 'Projectes'
   },
+  portfolio: 'Portafoli',
   projects: {
     adminCommands: {
       description: 'Un script en Batch amb una col·lecció de comands per a facilitar el seu accés. Comands com habilitar el compte d\'administrador local per extreure tota la informació relacionada amb el dispositiu i altres funcions.',

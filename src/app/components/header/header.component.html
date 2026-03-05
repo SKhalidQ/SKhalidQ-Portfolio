@@ -35,7 +35,7 @@
        mat-icon-button
        [href]="socialMedia.route"
        target="_blank"
-       [matTooltip]="socialMedia.text | translate"
+       [matTooltip]="socialMedia.tooltip!"
        matTooltipPosition="below"
       >
       <img *ngIf="socialMedia.icon !== null" #socialMediaLogo class="icon" alt="Social Media" [src]="socialMedia.icon" (error)="onImageError(socialMediaLogo)">

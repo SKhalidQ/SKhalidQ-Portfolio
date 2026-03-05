@@ -168,6 +168,10 @@ export const enGB = {
       title: 'Technical Skills'
     }
   },
+  environments: {
+    Alpha: 'Alpha',
+    Beta: 'Beta'
+  },
   errorPage: {
     forbidden: 'You do not have permission to access this page.',
     notFound: 'Looks like the page you were looking for doesn\'t exist or the link is broken.',
@@ -210,6 +214,7 @@ export const enGB = {
     Home: 'Home',
     Projects: 'Projects'
   },
+  portfolio: 'Portfolio',
   projects: {
     adminCommands: {
       description: 'A batch script with a collection of commands for easier access. Commands such as enabling the local administrator account to extract all the information related to the device and others.',

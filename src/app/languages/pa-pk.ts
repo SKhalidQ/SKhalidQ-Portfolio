@@ -168,6 +168,10 @@ export const paPK: LanguageStrings = {
       title: 'تکنیکی مہارتاں' // Technical Skills
     }
   },
+  environments: {
+    Alpha: 'Alpha',
+    Beta: 'Beta'
+  },
   errorPage: {
     forbidden: 'تہانوں اس صفحے تک رسائی دی اجازت نئیں اے۔', // Tuhanu is safhe tak rasai di ijazat nai ae.
     notFound: 'موجود صفحہ لبھیا نئیں یا لنک ٹٹ گیا اے۔', // Mojood safha labhiya nai ya link tut gaya ae.
@@ -210,6 +214,7 @@ export const paPK: LanguageStrings = {
     Home: 'ہوم', // Home
     Projects: 'پروجیکٹس' // Projects
   },
+  portfolio: 'پورٹ فولیو', // Portfolio
   projects: {
     adminCommands: {
       description: 'آسان رسائی لئی کمانڈز دے مجموعے نال اک batch script۔ کمانڈز ورگے مقامی ایڈمنسٹریٹر اکاؤنٹ نوں فعال کرنا تاکہ ڈیوائس توں متعلق ساری معلومات کڈیاں جا سکّن تے ہور فنکشنز۔', // Aasan rasai lai commands de majmue nal ek batch script. Commands wargay maqami administrator account nu fa'al karna taake device ton mutaliq sari maloomat kaddiyan ja sakan te hor functions.

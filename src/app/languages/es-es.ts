@@ -168,6 +168,10 @@ export const esES: LanguageStrings = {
       title: 'Habilidades Técnicas'
     }
   },
+  environments: {
+    Alpha: 'Alfa',
+    Beta: 'Beta'
+  },
   errorPage: {
     forbidden: 'No tienes permiso para acceder a esta página.',
     genericError: 'Algo salió mal en nuestro lado. Por favor, inténtalo de nuevo más tarde.',
@@ -210,6 +214,7 @@ export const esES: LanguageStrings = {
     Home: 'Inicio',
     Projects: 'Proyectos'
   },
+  portfolio: 'Portafolio',
   projects: {
     adminCommands: {
       description: 'Un script en Batch con una colección de comandos para facilitar su acceso. Comandos como habilitar la cuenta de administrador local para extraer toda la información relacionada con el dispositivo y otras funciones.',

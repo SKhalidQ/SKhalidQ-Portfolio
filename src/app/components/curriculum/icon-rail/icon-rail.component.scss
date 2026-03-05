@@ -9,6 +9,11 @@
     font-family: 'Earth Normal';
     font-size: x-large;
     color: red;
+    margin: 15px 0 0;
+
+    p {
+      margin: 10px 0 12px;
+    }
   }
 
   ul {
@@ -28,7 +33,7 @@
       display: flex;
       place-content: center center;
 
-      mat-icon {
+      mat-icon, img {
         font-size: 40px;
         display: flex;
         justify-content: center;
@@ -37,6 +42,7 @@
 
       img {
         width: 40px;
+        height: 80px;
         margin: auto;
       }
     }
