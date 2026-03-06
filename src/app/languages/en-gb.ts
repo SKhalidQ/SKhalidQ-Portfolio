@@ -281,7 +281,9 @@ export const enGB = {
     privateRepoTooltip: 'Available at request',
     repoTooltip: 'GitHub Repository Link',
     unavailableWebsiteTooltip: 'Site unavailable',
-    websiteTooltip: 'View site'
+    websiteTooltip: 'View site',
+    readMore: 'Read More',
+    readLess: 'Read Less'
   },
   projectsPage: {
     filter: 'Filter by Project Type',

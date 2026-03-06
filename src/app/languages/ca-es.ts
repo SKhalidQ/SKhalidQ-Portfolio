@@ -281,7 +281,9 @@ export const caES: LanguageStrings = {
     privateRepoTooltip: 'Disponible a petició',
     repoTooltip: 'Enllaç al repositori de GitHub',
     unavailableWebsiteTooltip: 'Pàgina no disponible',
-    websiteTooltip: 'Veure pàgina'
+    websiteTooltip: 'Veure pàgina',
+    readMore: 'Llegir Més',
+    readLess: 'Llegir Menys'
   },
   projectsPage: {
     filter: 'Filtrar per Tipus de Projecte',

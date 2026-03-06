@@ -281,7 +281,9 @@ export const paPK: LanguageStrings = {
     privateRepoTooltip: 'درخواست تے دستیاب', // Darkhast te dastiyab
     repoTooltip: 'GitHub ریپوزٹری دا لنک', // GitHub repository da link
     unavailableWebsiteTooltip: 'ویب سائٹ دستیاب نئیں اے', // Website dastiyab nai ae
-    websiteTooltip: 'پروجیکٹ دی ویب سائٹ ویکھو' // Project di website vekho
+    websiteTooltip: 'پروجیکٹ دی ویب سائٹ ویکھو', // Project di website vekho
+    readMore: 'ہور پڑھو', // Hor parho
+    readLess: 'کم پڑھو' // Kam parho
   },
   projectsPage: {
     filter: 'پروجیکٹس دی قسم دے حساب نال فلٹر کرو', // Projects di qism de hisab nal filter karo

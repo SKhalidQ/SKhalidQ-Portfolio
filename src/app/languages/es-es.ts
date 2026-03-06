@@ -281,7 +281,9 @@ export const esES: LanguageStrings = {
     privateRepoTooltip: 'Disponible a petición',
     repoTooltip: 'Enlace al repositorio de GitHub',
     unavailableWebsiteTooltip: 'Página no disponible',
-    websiteTooltip: 'Ver sitio'
+    websiteTooltip: 'Ver sitio',
+    readMore: 'Leer Más',
+    readLess: 'Leer Menos'
   },
   projectsPage: {
     filter: 'Filtrar por Tipo de Proyecto',

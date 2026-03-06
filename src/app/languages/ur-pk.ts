@@ -281,7 +281,9 @@ export const urPK: LanguageStrings = {
     privateRepoTooltip: 'درخواست پر دستیاب', // Darkhast par dastiyab
     repoTooltip: 'GitHub ریپوزٹری کا لنک', // GitHub repository ka link
     unavailableWebsiteTooltip: 'ویب سائٹ دستیاب نہیں ہے', // Website dastiyab nahi hai
-    websiteTooltip: 'پروجیکٹ کی ویب سائٹ دیکھیں' // Project ki website dekhen
+    websiteTooltip: 'پروجیکٹ کی ویب سائٹ دیکھیں', // Project ki website dekhen
+    readMore: 'مزید پڑھیں', // Mazeed parhen
+    readLess: 'کم پڑھیں' // Kam parhen
   },
   projectsPage: {
     filter: 'پروجیکٹ کی قسم کے لحاظ سے فلٹر کریں', // Project ki qism ke lehaaz se filter karen
