@@ -71,7 +71,7 @@ mat-card {
 
       .read-more {
         cursor: pointer;
-        font-weight: bold;
+        font-weight: 600;
         color: inherit;
 
         &:hover {
@@ -96,7 +96,6 @@ mat-card {
         transform: scale(1.25);
       }
     }
-
 
     .github-button {
       display: flex;

@@ -9,7 +9,7 @@ const header: Header = {
     icon: 'mail'
   },
   {
-    contact: 'skhalidq.dev',
+    contact: 'SKhalidQ.Dev',
     icon: 'web'
   }]
 };
