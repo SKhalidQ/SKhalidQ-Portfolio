@@ -57,6 +57,7 @@ $translate-X: -600px;
         margin: 0 15px 0 0;
         max-width: 800px;
         border-radius: 2px;
+        z-index: 1;
 
         animation: 2s ease-out 1 preview-animation;
         transition: opacity 0.3s ease-in-out;
@@ -79,7 +80,6 @@ $translate-X: -600px;
         text-align: center;
         $translate-X: -500px;
         max-width: 1200px;
-        z-index: -1;
         animation: 2s ease-in-out 1.5s 1 cv-animation forwards;
       }
     }

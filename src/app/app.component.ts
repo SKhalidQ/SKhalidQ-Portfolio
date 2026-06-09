@@ -2,12 +2,13 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Environment } from './models/enums/environment';
 import { Page } from './models/enums/page';
 import { MetaThemeService } from './services/meta-theme/meta-theme.service';
 import { SiteStatusService } from './services/site-status/site-status.service';
 import { ThemeService } from './services/theme/theme.service';
-import { Environment } from './models/enums/environment';
-import { environment } from 'src/environments/environment';
+import { TranslationService } from './services/translation/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +28,7 @@ export class AppComponent implements OnInit {
   private readonly router = inject(Router);
   private readonly titleService = inject(Title);
   private readonly siteStatusService = inject(SiteStatusService);
+  private readonly translationService = inject(TranslationService);
 
   /**
    * @description Initialises the dynamic page title subscription.
