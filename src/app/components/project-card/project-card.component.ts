@@ -35,7 +35,7 @@ export class ProjectCardComponent {
   get getWebsiteTooltip(): string {
     const websiteTooltip = 'projectCard.websiteTooltip';
     const unavailableWebsiteTooltip = 'projectCard.unavailableWebsiteTooltip';
-    const tooltip = this.translationService.getTextPath(this.project.websiteUrl ? websiteTooltip : unavailableWebsiteTooltip);
+    const tooltip = this.translationService.getText(this.project.websiteUrl ? websiteTooltip : unavailableWebsiteTooltip);
 
     return tooltip;
   }
@@ -49,7 +49,7 @@ export class ProjectCardComponent {
   get getRepoTooltip(): string {
     const repoTooltip = 'projectCard.repoTooltip';
     const privateRepoTooltip = 'projectCard.privateRepoTooltip';
-    const tooltip = this.translationService.getTextPath(this.project.isRepoPublic ? repoTooltip : privateRepoTooltip);
+    const tooltip = this.translationService.getText(this.project.isRepoPublic ? repoTooltip : privateRepoTooltip);
 
     return tooltip;
   }

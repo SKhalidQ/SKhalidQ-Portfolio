@@ -54,8 +54,8 @@ export class TranslatePipe implements PipeTransform {
     }
 
     const value: string = replacements
-      ? this.translationService.getTextPath(trimmed, replacements)
-      : this.translationService.getTextPath(trimmed);
+      ? this.translationService.getText(trimmed, replacements)
+      : this.translationService.getText(trimmed);
 
     if ((value && typeof value === 'object') || value === trimmed) {
       return fallback ?? trimmed;
