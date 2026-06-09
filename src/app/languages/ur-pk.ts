@@ -212,7 +212,7 @@ export const urPK: LanguageStrings = {
   },
   projects: {
     adminCommands: {
-      description: 'آسان رسائی کے لیے کمانڈز کے مجموعے کے ساتھ ایک batch script۔ کمانڈز جیسے مقامی ایڈمنسٹریٹر اکاؤنٹ کو فعال کرنا تاکہ ڈیوائس سے متعلق تمام معلومات نکالی جا سکیں اور دیگر فنکشنز۔', // Aasan rasai ke liye commands ke majmue ke saath ek batch script. Commands jaise maqami administrator account ko fa'al karna taake device se mutaliq tamam maloomat nikali ja saken aur doosre functions.
+      description: 'آسان رسائی کے لیے کمانڈز کے مجموعے کے ساتھ ایک batch script۔ کمانڈز جیسے مقامی ایڈمنسٹریٹر اکاؤنٹ کو فعال کرنا تاکہ ڈیوائس سے متعلق تمام معلومات نکالی جا سکیں اور دیگر فنکشنز۔', // Aasan rasai ke liye commands ke majmue ke saath ek batch script. Commands ???? maqami administrator account ko fa'al karna taake device se mutaliq tamam maloomat nikali ja saken aur doosre functions.
       subtitle: 'ذاتی پروجیکٹ', // Zaati Project
       title: 'ایڈمنسٹریٹو کمانڈز (ڈپریکیٹڈ)' // Administrative Commands (Deprecated)
     },
@@ -265,6 +265,11 @@ export const urPK: LanguageStrings = {
       description: 'سی شارپ اور ڈبلیو پی ایف استعمال کرکے تیار کیا گیا کلائنٹ، جو ڈبلیو پی ایف میں بنے سرور کو مختلف ایچ ٹی ٹی پی پروٹوکولز کے ساتھ درخواستیں بھیجتا ہے جن میں \'Whois\' اور ایچ ٹی ٹی پی ۰.۹ - ۱.۱ شامل ہیں۔', // C# aur WPF istemal karke tayar kiya gaya client, jo WPF mein bane server ko mukhtalif HTTP protocols ke saath darkhwastain bhejta hai jin mein 'Whois' aur HTTP 0.9 - 1.1 shamil hain.
       subtitle: 'نیٹ ورکنگ اور صارف انٹرفیس ڈیزائن - 2 سال کا ماڈیول', // Networking aur user interface design - 2 saal ka module
       title: 'نیٹ ورکنگ اور صارف انٹرفیس ڈیزائن' // Networking and UI Design
+    },
+    passport: {
+      description: 'ایک مارچی شانکھت اور رساں پلیٹ فارم جو میرے تمام ذاتی ایپلیکیشنز کو پاور دیتا ہے۔ یہ محفوظ تصدیق، کھاتہ انتظام اور پروجیکٹس میں کنسلڈ رساں کنٹرول فراہم کرتا ہے، جبکہ پروجیکٹ-خصوصص رساں درخواستوں اور انتظامی تصدیق فلوورکس کو بھی سپورٹ کرتا ہے۔ فائل ایکسپلورر، میری لسٹ اور ہوم صفحہ جیسے پروجیکٹس کے لئے مشترکہ OAuth2/OpenID Connect SSO پروائڈر کے طور پر عمل کرتا ہے، جو میرے تمام پروجیکٹس کو ایک منتظم، قابلِ مقامِ سائنس دار تصدیق سسٹم پر انحصار کرنے دیتا ہے بجائے ہر ایک کے لئے سلامتی دوبارہ انحصار کرنے والے۔ اے ایس پی ڈاٹ نیٹ کور ۱۰، ڈوئندے آئیڈینٹیٹی سرور، اینٹیٹی فریم ورک کور، ایس کیو ایل سرور اور اینگولر ۲۱ کے ساتھ بنایا گیا ہے، اور ڈوکر کنٹینر میں ڈپلائے کیا گیا ہے۔', // Ek marchi shankhat aur rasan platform jo mere tamam zaati applications ko power deta hai. Yeh mehfooz tasdeeq, khata intizam aur projects mein konsalid rasan control faraham karta hai, jabke project-khusus rasan darkhwastain aur intizami tasdeeq workflows ko bhi support karta hai. File Explorer, Meri List aur Home safha ???? projects ke liye mushtarka OAuth2/OpenID Connect SSO provider ke tor par amal karta hai, jo mere tamam projects ko ek munazzam, qabil-e-maqam-e-sainsdar tasdeeq system par inhisar karne deta hai bajaye har ek ke liye salamati dobara inhisar karne wale. ASP.NET Core 10, Duende IdentityServer, Entity Framework Core, SQL Server aur Angular 21 ke sath banaya gaya hai, aur Docker container mein deploy kiya gaya hai.
+      subtitle: 'ذاتی پروجیکٹ', // Zaati Project
+      title: 'ایس خالد کیو پاسپورٹ' // s khalid q passport
     },
     webTech: {
       description: 'ایچ ٹی ایم ایل، سی ایس ایس اور پی ایچ پی استعمال کرکے بنائی گئی ویب سائٹ جو ایس کیو ایل ڈیٹابیس میں تمام ڈیٹا محفوظ کرکے طالب علم یا عملے کی جگہ کا ٹریک کرنے کی اجازت دیتی ہے۔', // HTML, CSS aur PHP istemal karke banai gai website jo SQL database mein tamam data mehfooz karke talib-e-ilm ya staff ki jagah ka track karne ki ijazat deti hai.
