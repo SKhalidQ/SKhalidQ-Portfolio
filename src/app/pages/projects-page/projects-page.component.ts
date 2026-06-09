@@ -79,7 +79,7 @@ export class ProjectsPageComponent implements OnInit {
    * @returns {string} Translated error string.
    */
   get errorMessage(): string {
-    return this.translationService.getText('projectsPage.noProjectsError');
+    return this.translationService.getTextPath('projectsPage.noProjectsError');
   }
 
   /**
