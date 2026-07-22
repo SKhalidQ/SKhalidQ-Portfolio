@@ -31,7 +31,13 @@
 
     <span class="spacer"></span>
 
-    <a *ngFor="let socialMedia of (socialMediaButtons | socialButtonLogo:(themeService.effectiveThemeMode$ | async))" mat-icon-button [href]="socialMedia.route" target="_blank">
+    <a *ngFor="let socialMedia of (socialMediaButtons | socialButtonLogo:(themeService.effectiveThemeMode$ | async))"
+       mat-icon-button
+       [href]="socialMedia.route"
+       target="_blank"
+       [matTooltip]="socialMedia.tooltip!"
+       matTooltipPosition="below"
+      >
       <img *ngIf="socialMedia.icon !== null" #socialMediaLogo class="icon" alt="Social Media" [src]="socialMedia.icon" (error)="onImageError(socialMediaLogo)">
     </a>
   </mat-toolbar-row>

@@ -62,8 +62,8 @@ export const urPK: LanguageStrings = {
     employmentHistory: {
       jobs: {
         weatherford: {
-          dates: 'دسمبر ۲۰۲۱ - موجودہ', // December 2021 - Mojooda
-          description: 'ویڈر فورڈ کی وائرلائن ڈویژن میں کام کرتا ہوں، جو ڈاؤن ہول ڈیٹا حاصل کرنے، فائل مینجمنٹ، اور ریئل ٹائم لاگ ویژولائزیشن کے لیے سافٹ ویئر تیار کرتا ہے، دونوں کیپیکس اور اوپیکس پروجیکٹس میں تیل کے میدان کی کارروائیوں کی حمایت کے لیے۔', // Weatherford ki Wireline division mein kaam karta hoon, jo downhole data hasil karne, file management, aur real-time log visualization ke liye software tayar karta hai, dono CAPEX aur OPEX projects mein tail ke maidan ki karwaiyon ki himayat ke liye.
+          dates: 'دسمبر ۲۰۲۱ - مارچ ۲۰۲۶', // December 2021 - March 2026
+          description: 'ویڈر فورڈ کی وائرلائن ڈویژن میں کام کرتا تھا، جو ڈاؤن ہول ڈیٹا حاصل کرنے، فائل مینجمنٹ، اور ریئل ٹائم لاگ ویژولائزیشن کے لیے سافٹ ویئر تیار کرتا تھا، دونوں کیپیکس اور اوپیکس پروجیکٹس میں تیل کے میدان کی کارروائیوں کی حمایت کے لیے۔', // Weatherford ki Wireline division mein kaam karta tha, jo downhole data hasil karne, file management, aur real-time log visualization ke liye software tayar karta tha, dono CAPEX aur OPEX projects mein tail ke maidan ki karwaiyon ki himayat ke liye.
           title: 'سافٹ ویئر انجینئر - ویڈر فورڈ لمیٹڈ (ریوز وائرلائن ٹیکنالوجیز)' // Software Engineer - Weatherford Ltd (Reeves Wireline Technologies)
         },
         greenwood: {
@@ -168,6 +168,10 @@ export const urPK: LanguageStrings = {
       title: 'تکنیکی مہارتیں' // Technical Skills
     }
   },
+  environments: {
+    Alpha: 'Alpha',
+    Beta: 'Beta'
+  },
   errorPage: {
     forbidden: 'آپ کو اس پیج تک رسائی کی اجازت نہیں ہے۔', // Aap ko is page tak rasai ki ijazat nahi hai.
     notFound: 'پہلے سے موجود صفحہ نہیں ملا یا لنک ٹوٹ گیا ہے۔', // Pehle se mojood safha nahi mila ya link toot gaya hai.
@@ -210,6 +214,7 @@ export const urPK: LanguageStrings = {
     Home: 'ہوم', // Home
     Projects: 'پروجیکٹس' // Projects
   },
+  portfolio: 'پورٹ فولیو', // Portfolio
   projects: {
     adminCommands: {
       description: 'آسان رسائی کے لیے کمانڈز کے مجموعے کے ساتھ ایک batch script۔ کمانڈز جیسے مقامی ایڈمنسٹریٹر اکاؤنٹ کو فعال کرنا تاکہ ڈیوائس سے متعلق تمام معلومات نکالی جا سکیں اور دیگر فنکشنز۔', // Aasan rasai ke liye commands ke majmue ke saath ek batch script. Commands ???? maqami administrator account ko fa'al karna taake device se mutaliq tamam maloomat nikali ja saken aur doosre functions.
@@ -281,7 +286,9 @@ export const urPK: LanguageStrings = {
     privateRepoTooltip: 'درخواست پر دستیاب', // Darkhast par dastiyab
     repoTooltip: 'GitHub ریپوزٹری کا لنک', // GitHub repository ka link
     unavailableWebsiteTooltip: 'ویب سائٹ دستیاب نہیں ہے', // Website dastiyab nahi hai
-    websiteTooltip: 'پروجیکٹ کی ویب سائٹ دیکھیں' // Project ki website dekhen
+    websiteTooltip: 'پروجیکٹ کی ویب سائٹ دیکھیں', // Project ki website dekhen
+    readMore: 'مزید پڑھیں', // Mazeed parhen
+    readLess: 'کم پڑھیں' // Kam parhen
   },
   projectsPage: {
     filter: 'پروجیکٹ کی قسم کے لحاظ سے فلٹر کریں', // Project ki qism ke lehaaz se filter karen

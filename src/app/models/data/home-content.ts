@@ -7,7 +7,7 @@ export const HomeContentData: HomeContent = {
     previewPath: './assets/images/previews/CVPreviewDark.png',
     navigationButton: {
       text: 'homePage.cvHighlight.navigationButton.text',
-      route: '/cv'
+      route: '/curriculum'
     }
   },
   projectsHighlight: {
