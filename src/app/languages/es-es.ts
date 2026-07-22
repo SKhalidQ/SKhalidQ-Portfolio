@@ -271,6 +271,11 @@ export const esES: LanguageStrings = {
       subtitle: 'Networking y Diseño de IU - Módulo del 2do Año',
       title: 'Networking y Diseño de IU'
     },
+    passport: {
+      description: 'Una plataforma centralizada de identidad y acceso que alimenta todas mis aplicaciones personales. Proporciona autenticación segura, administración de cuentas y control de acceso consistente entre proyectos, al mismo tiempo que admite solicitudes de acceso específicas de proyecto y flujos de trabajo de aprobación de administrador. Actuando como proveedor compartido SSO OAuth2/OpenID Connect para proyectos como File Explorer, MyList y la página de inicio, permite que todos mis proyectos confíen en un único sistema de autenticación confiable y escalable en lugar de reimplementar la seguridad para cada uno. Construido con ASP.NET Core 10, Duende IdentityServer, Entity Framework Core, SQL Server y Angular 21, y desplegado en un contenedor Docker.',
+      subtitle: 'Proyecto Personal',
+      title: 'SKhalidQ Passport'
+    },
     webTech: {
       description: 'Una web construida usando HTML, CSS y PHP que permite rastrear la ubicación de un estudiante o personal almacenando todos los datos en una base de datos SQL.',
       subtitle: 'Sistemas de Información y Tecnologías Web - Módulo del 2do Año',

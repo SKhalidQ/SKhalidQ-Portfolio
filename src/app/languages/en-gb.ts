@@ -271,6 +271,11 @@ export const enGB = {
       subtitle: 'Networking and User Interface Design - 2nd Year Module',
       title: 'Networking and UI Design'
     },
+    passport: {
+      description: 'A centralised identity and access platform powering all my personal applications. It provides secure authentication, account management and consistent access control across projects, while also supporting project-specific access requests and admin approval workflows. Acting as a shared OAuth2/OpenID Connect SSO provider for projects like File Explorer, MyList and the home page, it lets all my projects rely on one trusted, scalable authentication system instead of re-implementing security for each one. Built with ASP.NET Core 10, Duende IdentityServer, Entity Framework Core, SQL Server and Angular 21, and deployed in a Docker container.',
+      subtitle: 'Personal Project',
+      title: 'SKhalidQ Passport'
+    },
     webTech: {
       description: 'A website built using HTML, CSS and PHP which allows tracking a student or staff\' location by storing all the data in a SQL Database.',
       subtitle: 'Information Systems and Web Technologies - 2nd Year Module',

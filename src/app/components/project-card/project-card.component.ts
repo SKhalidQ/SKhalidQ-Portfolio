@@ -37,9 +37,12 @@ export class ProjectCardComponent implements OnInit, AfterViewInit, OnDestroy {
   readonly descriptionCharacterLimit = 263;
   /** Whether the full description is currently shown (toggled by "Read More"). */
   showFullDescription = false;
+  /** Whether the card is currently expanded for the animation state. */
+  cardState: 'collapsed' | 'expanded' = 'collapsed';
   /** Whether the description text overflows the allocated space, necessitating truncation. */
   hasOverflow = false;
 
+  private readonly collapseDelayMs = 250;
   private destroy$ = new Subject<void>();
 
   ngOnInit(): void {
@@ -49,6 +52,7 @@ export class ProjectCardComponent implements OnInit, AfterViewInit, OnDestroy {
       .pipe(skip(1), takeUntil(this.destroy$))
       .subscribe(() => {
         this.showFullDescription = false;
+        this.cardState = 'collapsed';
         this.hasOverflow = false; // Show full text so the DOM renders it before measuring
         setTimeout(() => {
           this.detectDomOverflow();
@@ -68,6 +72,28 @@ export class ProjectCardComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
+  }
+
+  /**
+   * @description
+   * Toggles the description between the compact and full states.
+   * The card animation is driven independently so that the collapsed text can
+   * be truncated only after the height transition has completed.
+   */
+  toggleDescription(): void {
+    if (this.showFullDescription) {
+      this.cardState = 'collapsed';
+
+      setTimeout(() => {
+        this.showFullDescription = false;
+        this.cdr.detectChanges();
+      }, this.collapseDelayMs);
+
+      return;
+    }
+
+    this.showFullDescription = true;
+    this.cardState = 'expanded';
   }
 
   /**

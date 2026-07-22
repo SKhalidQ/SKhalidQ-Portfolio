@@ -271,6 +271,11 @@ export const caES: LanguageStrings = {
       subtitle: 'Networking i Disseny d\'Interfície d\'Usuari - Mòdul de 2n any',
       title: 'Networking i Disseny d\'IU'
     },
+    passport: {
+      description: 'Una plataforma centralitzada d’identitat i accés que alimenta totes les meves aplicacions personals. Proporciona autenticació segura, gestió de comptes i control d’accés coherent entre projectes, alhora que admet sol·licituds d’accés específiques de projecte i fluxos de treball d’aprovació d’administrador. Actuant com a proveïdor compartit SSO OAuth2/OpenID Connect per a projectes com File Explorer, MyList i la pàgina d’inici, permet que tots els meus projectes confiïn en un únic sistema d’autenticació de confiança i escalable en lloc de reimplementar la seguretat per a cadascun. Construït amb ASP.NET Core 10, Duende IdentityServer, Entity Framework Core, SQL Server i Angular 21, i desplegat en un contenidor Docker.',
+      subtitle: 'Projecte Personal',
+      title: 'SKhalidQ Passport'
+    },
     webTech: {
       description: 'Una pàgina web construïda fent servir HTML, CSS i PHP que permet rastrejar l\'ubicació d\'un estudiant o personal emmagatzemant totes les dades en una base de dades SQL.',
       subtitle: 'Sistemes Informàtics i Tecnologies Web - Mòdul de 2n any',
