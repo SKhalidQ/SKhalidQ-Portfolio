@@ -7,7 +7,7 @@
 
       <div class="description">
         <p>{{ homeData.cvHighlight.description | translate }}</p>
-        <button mat-raised-button [routerLink]="homeData.cvHighlight.navigationButton.route">{{ homeData.cvHighlight.navigationButton.text | translate }}</button>
+        <button mat-raised-button type="button" [routerLink]="homeData.cvHighlight.navigationButton.route">{{ homeData.cvHighlight.navigationButton.text | translate }}</button>
       </div>
     </div>
 
@@ -16,7 +16,7 @@
 
       <div class="description">
         <p>{{ homeData.projectsHighlight.description | translate }}</p>
-        <button mat-raised-button [routerLink]="homeData.projectsHighlight.navigationButton.route">{{ homeData.projectsHighlight.navigationButton.text | translate}}</button>
+        <button mat-raised-button type="button" [routerLink]="homeData.projectsHighlight.navigationButton.route">{{ homeData.projectsHighlight.navigationButton.text | translate}}</button>
       </div>
     </div>
   </div>

@@ -16,9 +16,7 @@ const header: Header = {
 
 const profile: Profile = {
   title: 'curriculumPage.profile.title',
-  description: 'curriculumPage.profile.description',
-  // Tempting:
-  // description: 'A passionate and dedicated Full Stack Developer with a strong foundation in computer science and a keen interest in web development. Experienced in building robust and scalable applications using modern technologies. Eager to contribute my skills and knowledge to a dynamic team while continuously learning and growing in the field.'
+  description: 'curriculumPage.profile.description'
 };
 
 const employmentHistory: History[] = [
