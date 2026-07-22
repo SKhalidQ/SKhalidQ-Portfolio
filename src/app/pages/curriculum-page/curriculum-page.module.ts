@@ -10,6 +10,7 @@ import { ListComponent } from 'src/app/components/curriculum/list/list.component
 import { ProfileComponent } from 'src/app/components/curriculum/profile/profile.component';
 
 import { CurriculumPageComponent } from './curriculum-page.component';
+import { MarkdownPipe } from 'src/app/pipes/nl2br/markdown.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CurriculumPageComponent } from './curriculum-page.component';
     IconRailComponent,
     ListComponent,
     ProfileComponent,
+    MarkdownPipe
   ],
   imports: [
     SharedModule,

@@ -72,8 +72,8 @@ export const caES: LanguageStrings = {
           title: 'Recaptador de Fons Porta a Porta  - Home Fundraising'
         },
         weatherford: {
-          dates: 'Des 2021 - Present',
-          description: 'Treballo a la divisió de Wireline de Weatherford, desenvolupant programari per a l\'adquisició de dades en el fons del pou, gestió de fitxers i visualització de registres en temps real en projectes CAPEX i OPEX en suport a les operacions petrolieres.',
+          dates: 'Des 2021 - Mar 2026',
+          description: 'Vaig treballar a la divisió de Wireline de Weatherford, desenvolupant programari per a l\'adquisició de dades en el fons del pou, gestió de fitxers i visualització de registres en temps real en projectes CAPEX i OPEX en suport a les operacions petrolieres.',
           title: 'Enginyer Informàtic - Weatherford Ltd (Reeves Wireline Technologies)'
         }
       },
@@ -168,6 +168,10 @@ export const caES: LanguageStrings = {
       title: 'Habilitats Tècniques'
     }
   },
+  environments: {
+    Alpha: 'Alfa',
+    Beta: 'Beta'
+  },
   errorPage: {
     forbidden: 'No tens permís per accedir a aquesta pàgina.',
     notFound: 'Sembla que la pàgina que buscaves no existeix o l\'enllaç està trencat.',
@@ -210,6 +214,7 @@ export const caES: LanguageStrings = {
     Home: 'Inici',
     Projects: 'Projectes'
   },
+  portfolio: 'Portafoli',
   projects: {
     adminCommands: {
       description: 'Un script en Batch amb una col·lecció de comands per a facilitar el seu accés. Comands com habilitar el compte d\'administrador local per extreure tota la informació relacionada amb el dispositiu i altres funcions.',
@@ -266,6 +271,11 @@ export const caES: LanguageStrings = {
       subtitle: 'Networking i Disseny d\'Interfície d\'Usuari - Mòdul de 2n any',
       title: 'Networking i Disseny d\'IU'
     },
+    passport: {
+      description: 'Una plataforma centralitzada d’identitat i accés que alimenta totes les meves aplicacions personals. Proporciona autenticació segura, gestió de comptes i control d’accés coherent entre projectes, alhora que admet sol·licituds d’accés específiques de projecte i fluxos de treball d’aprovació d’administrador. Actuant com a proveïdor compartit SSO OAuth2/OpenID Connect per a projectes com File Explorer, MyList i la pàgina d’inici, permet que tots els meus projectes confiïn en un únic sistema d’autenticació de confiança i escalable en lloc de reimplementar la seguretat per a cadascun. Construït amb ASP.NET Core 10, Duende IdentityServer, Entity Framework Core, SQL Server i Angular 21, i desplegat en un contenidor Docker.',
+      subtitle: 'Projecte Personal',
+      title: 'SKhalidQ Passport'
+    },
     webTech: {
       description: 'Una pàgina web construïda fent servir HTML, CSS i PHP que permet rastrejar l\'ubicació d\'un estudiant o personal emmagatzemant totes les dades en una base de dades SQL.',
       subtitle: 'Sistemes Informàtics i Tecnologies Web - Mòdul de 2n any',
@@ -276,7 +286,9 @@ export const caES: LanguageStrings = {
     privateRepoTooltip: 'Disponible a petició',
     repoTooltip: 'Enllaç al repositori de GitHub',
     unavailableWebsiteTooltip: 'Pàgina no disponible',
-    websiteTooltip: 'Veure pàgina'
+    websiteTooltip: 'Veure pàgina',
+    readMore: 'Llegir Més',
+    readLess: 'Llegir Menys'
   },
   projectsPage: {
     filter: 'Filtrar per Tipus de Projecte',

@@ -10,7 +10,7 @@
 
         <div class="info">
           <p class="semi-bold">{{ item.title | translate }}</p>
-          <p class="description">{{ item.description | translate }}</p>
+          <p class="description" [innerHTML]="item.description | translate | markdown"></p>
         </div>
       </li>
     </ul>
