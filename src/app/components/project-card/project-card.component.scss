@@ -4,9 +4,9 @@ mat-card {
   align-items: flex-start;
   flex-direction: column;
 
-  height: 490px;
+  min-height: 490px;
   width: 28.125em;
-  transition: all .3s ease-in-out;
+  transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
 
   mat-card-header {
     mat-card-title {
@@ -53,6 +53,27 @@ mat-card {
   mat-card-content {
     font-size: 0.875em;
     min-height: 100px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      flex-grow: 1;
+      overflow: hidden;
+      margin-bottom: auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+
+      .read-more {
+        cursor: pointer;
+        font-weight: 600;
+        color: inherit;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 
   mat-card-actions {
@@ -70,7 +91,6 @@ mat-card {
         transform: scale(1.25);
       }
     }
-
 
     .github-button {
       display: flex;
@@ -114,7 +134,7 @@ mat-card:hover {
   mat-card {
     min-width: 21.875em;
     max-width: 21.875em;
-    height: auto;
+    height: auto !important;
 
     .poster {
       max-width: 100%;

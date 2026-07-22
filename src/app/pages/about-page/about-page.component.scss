@@ -67,8 +67,9 @@ main {
     .copyright {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
       flex-direction: row;
+      flex-wrap: wrap;
       gap: 15px;
 
       .logo-container {
@@ -89,11 +90,11 @@ main {
       }
 
       h4 {
-        padding: 0 40px 0 0;
+        text-align: center;
         margin: 0 0 2px;
         font-family: 'Chintzy CPU', 'Segoe UI' !important;
         font-weight: lighter;
-        letter-spacing: 0.09vw;
+        letter-spacing: 0.06em;
       }
     }
   }
@@ -123,3 +124,15 @@ section {
   }
 }
 
+@media only screen and (max-width: 487px) {
+  main {
+    section {
+      .copyright {
+        margin-top: 1em;
+        h4 {
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+}
