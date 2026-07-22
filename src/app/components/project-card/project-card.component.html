@@ -1,4 +1,4 @@
-<mat-card [class.expanded]="showFullDescription">
+<mat-card [@cardExpandCollapse]="showFullDescription ? 'expanded' : 'collapsed'">
   <mat-card-header>
     <div mat-card-avatar class="project-icon">
       <mat-icon color="warn">{{ project.icon }}</mat-icon>

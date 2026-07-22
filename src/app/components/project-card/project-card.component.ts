@@ -4,11 +4,13 @@ import { ThemeService } from 'src/app/services/theme/theme.service';
 import { TranslationService } from 'src/app/services/translation/translation.service';
 import { LanguageService } from 'src/app/services/language/language.service';
 import { Subject, skip, takeUntil } from 'rxjs';
+import { Animations } from 'src/app/app.animations';
 
 @Component({
   selector: 'app-project-card',
   templateUrl: './project-card.component.html',
-  styleUrls: ['./project-card.component.scss']
+  styleUrls: ['./project-card.component.scss'],
+  animations: [Animations.cardExpandCollapse]
 })
 /**
  * @description

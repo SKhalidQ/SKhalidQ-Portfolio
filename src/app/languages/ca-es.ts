@@ -72,8 +72,8 @@ export const caES: LanguageStrings = {
           title: 'Recaptador de Fons Porta a Porta  - Home Fundraising'
         },
         weatherford: {
-          dates: 'Des 2021 - Present',
-          description: 'Treballo a la divisió de Wireline de Weatherford, desenvolupant programari per a l\'adquisició de dades en el fons del pou, gestió de fitxers i visualització de registres en temps real en projectes CAPEX i OPEX en suport a les operacions petrolieres.',
+          dates: 'Des 2021 - Mar 2026',
+          description: 'Vaig treballar a la divisió de Wireline de Weatherford, desenvolupant programari per a l\'adquisició de dades en el fons del pou, gestió de fitxers i visualització de registres en temps real en projectes CAPEX i OPEX en suport a les operacions petrolieres.',
           title: 'Enginyer Informàtic - Weatherford Ltd (Reeves Wireline Technologies)'
         }
       },

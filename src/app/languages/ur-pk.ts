@@ -62,8 +62,8 @@ export const urPK: LanguageStrings = {
     employmentHistory: {
       jobs: {
         weatherford: {
-          dates: 'دسمبر ۲۰۲۱ - موجودہ', // December 2021 - Mojooda
-          description: 'ویڈر فورڈ کی وائرلائن ڈویژن میں کام کرتا ہوں، جو ڈاؤن ہول ڈیٹا حاصل کرنے، فائل مینجمنٹ، اور ریئل ٹائم لاگ ویژولائزیشن کے لیے سافٹ ویئر تیار کرتا ہے، دونوں کیپیکس اور اوپیکس پروجیکٹس میں تیل کے میدان کی کارروائیوں کی حمایت کے لیے۔', // Weatherford ki Wireline division mein kaam karta hoon, jo downhole data hasil karne, file management, aur real-time log visualization ke liye software tayar karta hai, dono CAPEX aur OPEX projects mein tail ke maidan ki karwaiyon ki himayat ke liye.
+          dates: 'دسمبر ۲۰۲۱ - مارچ ۲۰۲۶', // December 2021 - March 2026
+          description: 'ویڈر فورڈ کی وائرلائن ڈویژن میں کام کرتا تھا، جو ڈاؤن ہول ڈیٹا حاصل کرنے، فائل مینجمنٹ، اور ریئل ٹائم لاگ ویژولائزیشن کے لیے سافٹ ویئر تیار کرتا تھا، دونوں کیپیکس اور اوپیکس پروجیکٹس میں تیل کے میدان کی کارروائیوں کی حمایت کے لیے۔', // Weatherford ki Wireline division mein kaam karta tha, jo downhole data hasil karne, file management, aur real-time log visualization ke liye software tayar karta tha, dono CAPEX aur OPEX projects mein tail ke maidan ki karwaiyon ki himayat ke liye.
           title: 'سافٹ ویئر انجینئر - ویڈر فورڈ لمیٹڈ (ریوز وائرلائن ٹیکنالوجیز)' // Software Engineer - Weatherford Ltd (Reeves Wireline Technologies)
         },
         greenwood: {

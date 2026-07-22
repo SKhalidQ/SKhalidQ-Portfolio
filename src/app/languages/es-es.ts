@@ -63,17 +63,17 @@ export const esES: LanguageStrings = {
       jobs: {
         greenwood: {
           dates: 'Ene 2020 - Nov 2021',
-          description: 'Formar parte de un departamento de soporte de IT de alto ritmo. Proporcionar soporte técnico a los miembros del personal de la academia y realizar diversas tareas incluido el mantenimiento de los servidores, la administración de dispositivos y la resolución de problemas.',
+          description: 'Formé parte de un departamento de soporte de IT de alto ritmo. Proporcioné soporte técnico a los miembros del personal de la academia y realicé diversas tareas incluido el mantenimiento de los servidores, la administración de dispositivos y la resolución de problemas.',
           title: 'Técnico de Soporte de IT - Greenwood Academies Trust'
         },
         homeFundraising: {
           dates: 'Feb 2017',
-          description: 'Difundir conciencia sobre cómo la organización está ayudando a las personas y cómo otros pueden ayudar.',
+          description: 'Difundí conciencia sobre cómo la organización está ayudando a las personas y cómo otros pueden ayudar.',
           title: 'Recaudador de Fondos Puerta a Puerta - Home Fundraising'
         },
         weatherford: {
-          dates: 'Dic 2021 - Presente',
-          description: 'Trabajo en la división de Wireline de Weatherford, desarrollando software para la adquisición de datos en el fondo del pozo, gestión de archivos y visualización de registros en tiempo real en proyectos CAPEX y OPEX en apoyo a las operaciones petroleras.',
+          dates: 'Dic 2021 - Mar 2026',
+          description: 'Trabajé en la división de Wireline de Weatherford, desarrollando software para la adquisición de datos en el fondo del pozo, gestión de archivos y visualización de registros en tiempo real en proyectos CAPEX y OPEX en apoyo a las operaciones petroleras.',
           title: 'Ingeniero Informático - Weatherford Ltd (Reeves Wireline Technologies)'
         }
       },
