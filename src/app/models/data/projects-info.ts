@@ -17,6 +17,20 @@ const MediaPlay: Project = {
   isHidden: true
 };
 
+const SKhalidQPassport: Project = {
+  title: 'projects.passport.title',
+  subtitle: 'projects.passport.subtitle',
+  icon: 'fingerprint',
+  projectType: ProjectType.PersonalProject,
+  imagePath: './assets/images/projects/SKhalidQPassport.png',
+  description: 'projects.passport.description',
+  hasWebsite: true,
+  websiteUrl: 'https://passport.skhalidq.dev/',
+  isRepoPublic: false,
+  githubUrl: undefined,
+  isHidden: false
+};
+
 const AngularI18n: Project = {
   title: 'projects.angularI18n.title',
   subtitle: 'projects.angularI18n.subtitle',
@@ -172,6 +186,7 @@ const AgentChatBot: Project = {
 
 export const Projects: Project[] = [
   MediaPlay,
+  SKhalidQPassport,
   AngularI18n,
   FileExplorer,
   MyList,

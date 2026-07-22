@@ -13,14 +13,14 @@
   </div>
 
   <mat-menu #menu="matMenu" [class]="themeService.getEffectiveThemeMode()">
-    <button mat-menu-item *ngFor="let option of menuButton.options" (click)="onMenuOptionClick(option)" [disabled]="option.isDisabled || option.isActive">
+    <button *ngFor="let option of filteredOptions()" [class]="'option' + (option.isActive ? ' menu-option-selected' : '')" type="button" mat-menu-item (click)="onMenuOptionClick(option)" [disabled]="option.isDisabled || option.isActive">
       <mat-icon *ngIf="option.iconType === 'icon'">
         {{ option.icon }}
       </mat-icon>
 
       <img *ngIf="option.iconType === 'image'" class="icon" alt="image" [src]="option.icon" onerror="this.src='assets/images/icons/error_outline-14px.svg'">
 
-      {{ option.text | translate }}
+      {{option.text | translate }}
     </button>
   </mat-menu>
 </ng-container>

@@ -54,6 +54,11 @@ export const Animations = {
       animate('1.5s ease-in-out', style({ opacity: 0 }))
     ])
   ]),
+  cardExpandCollapse: trigger('cardExpandCollapse', [
+    state('collapsed', style({ height: '490px', overflow: 'hidden' })),
+    state('expanded', style({ height: '*', minHeight: '490px' })),
+    transition('collapsed <=> expanded', animate('300ms ease-in-out'))
+  ]),
   projectFilter: trigger('projectFilter', [
     transition('* => *', [
       // First: Hide cards that are leaving
