@@ -1,4 +1,4 @@
-<mat-card [@cardExpandCollapse]="showFullDescription ? 'expanded' : 'collapsed'">
+<mat-card>
   <mat-card-header>
     <div mat-card-avatar class="project-icon">
       <mat-icon color="warn">{{ project.icon }}</mat-icon>
@@ -14,12 +14,7 @@
   <mat-icon *ngIf="!project.imagePath" class="error-icon" color="warn" mat-card-image [inline]="true">error_outline</mat-icon>
 
   <mat-card-content>
-    <p #descriptionElement>
-      {{ displayDescription }}
-      <span *ngIf="hasOverflow" class="read-more" (click)="showFullDescription = !showFullDescription" (keydown.enter)="showFullDescription = !showFullDescription" tabindex="0" role="button">
-        {{ showFullDescription ? ('projectCard.readLess' | translate) : ('projectCard.readMore' | translate) }}
-      </span>
-    </p>
+    <p>{{ project.description | translate }}</p>
   </mat-card-content>
 
   <mat-card-actions>

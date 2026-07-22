@@ -72,8 +72,8 @@ export const enGB = {
           title: 'Door to Door Fundraiser - Home Fundraising'
         },
         weatherford: {
-          dates: 'Dec 2021 - March 2026',
-          description: 'Worked in Weatherford\'s Wireline division, developing software for downhole data acquisition, file management, and real-time log visualisation across both CAPEX and OPEX projects in support of oilfield operations.',
+          dates: 'Dec 2021 - Present',
+          description: 'Work in Weatherford\'s Wireline division, developing software for downhole data acquisition, file management, and real-time log visualisation across both CAPEX and OPEX projects in support of oilfield operations.',
           title: 'Software Engineer - Weatherford Ltd (Reeves Wireline Technologies)'
         }
       },
@@ -168,10 +168,6 @@ export const enGB = {
       title: 'Technical Skills'
     }
   },
-  environments: {
-    Alpha: 'Alpha',
-    Beta: 'Beta'
-  },
   errorPage: {
     forbidden: 'You do not have permission to access this page.',
     notFound: 'Looks like the page you were looking for doesn\'t exist or the link is broken.',
@@ -214,7 +210,6 @@ export const enGB = {
     Home: 'Home',
     Projects: 'Projects'
   },
-  portfolio: 'Portfolio',
   projects: {
     adminCommands: {
       description: 'A batch script with a collection of commands for easier access. Commands such as enabling the local administrator account to extract all the information related to the device and others.',
@@ -281,9 +276,7 @@ export const enGB = {
     privateRepoTooltip: 'Available at request',
     repoTooltip: 'GitHub Repository Link',
     unavailableWebsiteTooltip: 'Site unavailable',
-    websiteTooltip: 'View site',
-    readMore: 'Read More',
-    readLess: 'Read Less'
+    websiteTooltip: 'View site'
   },
   projectsPage: {
     filter: 'Filter by Project Type',

@@ -21,6 +21,7 @@
              (keydown.enter)="notify()"
              tabindex="0"
              [matTooltip]="clipboardMessage | translate"
+             matTooltipShowDelay="600"
              matTooltipClass="toolTip">
           <mat-icon #contactIcon>{{ contact.icon }}</mat-icon>
           <label for="contactIcon"> {{ contact.contact }} </label>

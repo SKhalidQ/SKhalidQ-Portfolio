@@ -52,8 +52,4 @@ export class MenuComponent {
       option.method(option.text);
     }
   }
-
-  filteredOptions(): MenuOption[] {
-    return this.menuButton.options?.filter(option => !option.isHidden) || [];
-  }
 }

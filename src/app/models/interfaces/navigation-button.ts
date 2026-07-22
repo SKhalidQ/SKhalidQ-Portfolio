@@ -3,5 +3,4 @@ export interface NavigationButton {
   icon: string;
   route: string;
   method?: () => void;
-  tooltip?: string;
 }

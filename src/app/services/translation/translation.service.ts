@@ -109,7 +109,7 @@ export class TranslationService {
 
   /**
    * @description Substitutes `{n}` indexed placeholders in a template string.
-   * @param {string} template - The template string containing `{0}`, `{1}`, � tokens.
+   * @param {string} template - The template string containing `{0}`, `{1}`, … tokens.
    * @param {(string | number)[] | string | number} [replacements] - A single value or array of values to interpolate.
    * @returns {string} The template with all matching placeholders replaced.
    */

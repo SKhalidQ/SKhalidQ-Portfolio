@@ -1,13 +1,10 @@
-import { environment } from './../../../environments/environment';
 import { Component, inject, OnInit } from '@angular/core';
 import { AboutCredits } from 'src/app/models/data/about-credits';
-import { Environment } from 'src/app/models/enums/environment';
 import { Page } from 'src/app/models/enums/page';
 import { ThemeMode } from 'src/app/models/enums/theme-mode';
 import { ActivePageService } from 'src/app/services/active-page/active-page.service';
 import { SiteStatusService } from 'src/app/services/site-status/site-status.service';
 import { ThemeService } from 'src/app/services/theme/theme.service';
-import { TranslationService } from 'src/app/services/translation/translation.service';
 
 @Component({
   selector: 'app-about-page',
@@ -24,7 +21,6 @@ export class AboutPageComponent implements OnInit {
   private readonly themeService = inject(ThemeService);
   private readonly activePageService = inject(ActivePageService);
   private readonly siteStatusService = inject(SiteStatusService);
-  private readonly translationService = inject(TranslationService);
 
   /** Path to the group logo asset displayed on the about page. */
   readonly logoPath = '../../../assets/images/logos/group_logo_transparent.png';
@@ -76,11 +72,8 @@ export class AboutPageComponent implements OnInit {
    * @returns {string} A formatted copyright string including the current year and app version.
    */
   get copyright(): string {
-    // TODO: Get version number from package.json file.
-    const translatedEnvironmentName = this.translationService.getTextPath(`environments.${Environment[environment.environment]}`);
-    const currentEnvironment = environment.environment === Environment.Production
-      ? '' : ` - ${translatedEnvironmentName} `;
-    return `Copyright SKhalidQ ©${this.currentYear} v1.4.2${currentEnvironment}`;
+    // TODO: Get version number
+    return `Copyright SKhalidQ ©${this.currentYear} v1.4.1`;
   }
 
   /**
