@@ -63,17 +63,17 @@ export const esES: LanguageStrings = {
       jobs: {
         greenwood: {
           dates: 'Ene 2020 - Nov 2021',
-          description: 'Formar parte de un departamento de soporte de IT de alto ritmo. Proporcionar soporte técnico a los miembros del personal de la academia y realizar diversas tareas incluido el mantenimiento de los servidores, la administración de dispositivos y la resolución de problemas.',
+          description: 'Formé parte de un departamento de soporte de IT de alto ritmo. Proporcioné soporte técnico a los miembros del personal de la academia y realicé diversas tareas incluido el mantenimiento de los servidores, la administración de dispositivos y la resolución de problemas.',
           title: 'Técnico de Soporte de IT - Greenwood Academies Trust'
         },
         homeFundraising: {
           dates: 'Feb 2017',
-          description: 'Difundir conciencia sobre cómo la organización está ayudando a las personas y cómo otros pueden ayudar.',
+          description: 'Difundí conciencia sobre cómo la organización está ayudando a las personas y cómo otros pueden ayudar.',
           title: 'Recaudador de Fondos Puerta a Puerta - Home Fundraising'
         },
         weatherford: {
-          dates: 'Dic 2021 - Presente',
-          description: 'Trabajo en la división de Wireline de Weatherford, desarrollando software para la adquisición de datos en el fondo del pozo, gestión de archivos y visualización de registros en tiempo real en proyectos CAPEX y OPEX en apoyo a las operaciones petroleras.',
+          dates: 'Dic 2021 - Mar 2026',
+          description: 'Trabajé en la división de Wireline de Weatherford, desarrollando software para la adquisición de datos en el fondo del pozo, gestión de archivos y visualización de registros en tiempo real en proyectos CAPEX y OPEX en apoyo a las operaciones petroleras.',
           title: 'Ingeniero Informático - Weatherford Ltd (Reeves Wireline Technologies)'
         }
       },
@@ -168,6 +168,10 @@ export const esES: LanguageStrings = {
       title: 'Habilidades Técnicas'
     }
   },
+  environments: {
+    Alpha: 'Alfa',
+    Beta: 'Beta'
+  },
   errorPage: {
     forbidden: 'No tienes permiso para acceder a esta página.',
     genericError: 'Algo salió mal en nuestro lado. Por favor, inténtalo de nuevo más tarde.',
@@ -210,6 +214,7 @@ export const esES: LanguageStrings = {
     Home: 'Inicio',
     Projects: 'Proyectos'
   },
+  portfolio: 'Portafolio',
   projects: {
     adminCommands: {
       description: 'Un script en Batch con una colección de comandos para facilitar su acceso. Comandos como habilitar la cuenta de administrador local para extraer toda la información relacionada con el dispositivo y otras funciones.',
@@ -266,6 +271,11 @@ export const esES: LanguageStrings = {
       subtitle: 'Networking y Diseño de IU - Módulo del 2do Año',
       title: 'Networking y Diseño de IU'
     },
+    passport: {
+      description: 'Una plataforma centralizada de identidad y acceso que alimenta todas mis aplicaciones personales. Proporciona autenticación segura, administración de cuentas y control de acceso consistente entre proyectos, al mismo tiempo que admite solicitudes de acceso específicas de proyecto y flujos de trabajo de aprobación de administrador. Actuando como proveedor compartido SSO OAuth2/OpenID Connect para proyectos como File Explorer, MyList y la página de inicio, permite que todos mis proyectos confíen en un único sistema de autenticación confiable y escalable en lugar de reimplementar la seguridad para cada uno. Construido con ASP.NET Core 10, Duende IdentityServer, Entity Framework Core, SQL Server y Angular 21, y desplegado en un contenedor Docker.',
+      subtitle: 'Proyecto Personal',
+      title: 'SKhalidQ Passport'
+    },
     webTech: {
       description: 'Una web construida usando HTML, CSS y PHP que permite rastrear la ubicación de un estudiante o personal almacenando todos los datos en una base de datos SQL.',
       subtitle: 'Sistemas de Información y Tecnologías Web - Módulo del 2do Año',
@@ -276,7 +286,9 @@ export const esES: LanguageStrings = {
     privateRepoTooltip: 'Disponible a petición',
     repoTooltip: 'Enlace al repositorio de GitHub',
     unavailableWebsiteTooltip: 'Página no disponible',
-    websiteTooltip: 'Ver sitio'
+    websiteTooltip: 'Ver sitio',
+    readMore: 'Leer Más',
+    readLess: 'Leer Menos'
   },
   projectsPage: {
     filter: 'Filtrar por Tipo de Proyecto',
