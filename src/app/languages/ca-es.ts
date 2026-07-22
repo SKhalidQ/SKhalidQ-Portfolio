@@ -72,8 +72,8 @@ export const caES: LanguageStrings = {
           title: 'Recaptador de Fons Porta a Porta  - Home Fundraising'
         },
         weatherford: {
-          dates: 'Des 2021 - Present',
-          description: 'Treballo a la divisió de Wireline de Weatherford, desenvolupant programari per a l\'adquisició de dades en el fons del pou, gestió de fitxers i visualització de registres en temps real en projectes CAPEX i OPEX en suport a les operacions petrolieres.',
+          dates: 'Des 2021 - Mar 2026',
+          description: 'Vaig treballar a la divisió de Wireline de Weatherford, desenvolupant programari per a l\'adquisició de dades en el fons del pou, gestió de fitxers i visualització de registres en temps real en projectes CAPEX i OPEX en suport a les operacions petrolieres.',
           title: 'Enginyer Informàtic - Weatherford Ltd (Reeves Wireline Technologies)'
         }
       },
@@ -168,6 +168,10 @@ export const caES: LanguageStrings = {
       title: 'Habilitats Tècniques'
     }
   },
+  environments: {
+    Alpha: 'Alfa',
+    Beta: 'Beta'
+  },
   errorPage: {
     forbidden: 'No tens permís per accedir a aquesta pàgina.',
     notFound: 'Sembla que la pàgina que buscaves no existeix o l\'enllaç està trencat.',
@@ -210,6 +214,7 @@ export const caES: LanguageStrings = {
     Home: 'Inici',
     Projects: 'Projectes'
   },
+  portfolio: 'Portafoli',
   projects: {
     adminCommands: {
       description: 'Un script en Batch amb una col·lecció de comands per a facilitar el seu accés. Comands com habilitar el compte d\'administrador local per extreure tota la informació relacionada amb el dispositiu i altres funcions.',
@@ -276,7 +281,9 @@ export const caES: LanguageStrings = {
     privateRepoTooltip: 'Disponible a petició',
     repoTooltip: 'Enllaç al repositori de GitHub',
     unavailableWebsiteTooltip: 'Pàgina no disponible',
-    websiteTooltip: 'Veure pàgina'
+    websiteTooltip: 'Veure pàgina',
+    readMore: 'Llegir Més',
+    readLess: 'Llegir Menys'
   },
   projectsPage: {
     filter: 'Filtrar per Tipus de Projecte',

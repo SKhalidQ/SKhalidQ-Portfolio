@@ -62,8 +62,8 @@ export const paPK: LanguageStrings = {
     employmentHistory: {
       jobs: {
         weatherford: {
-          dates: 'دسمبر ۲۰۲۱ - موجودہ', // December 2021 - Mojooda
-          description: 'Weatherford دی Wireline ڈویژن وچ کم کردا آں، جو ڈاؤن ہول ڈیٹا حاصل کرن، فائل مینجمنٹ، تے ریئل ٹائم لاگ ویژولائزیشن لئی سافٹ ویئر تیار کردا اے، دونے CAPEX تے OPEX پروجیکٹس وچ تیل دے میدان دیاں کارروائیاں دی سپورٹ لئی۔', // Weatherford di Wireline division vich kam karda aan, jo downhole data hasil karan, file management, te real-time log visualization lai software tayar karda ae, done CAPEX te OPEX projects vich tail de maidan di karwaiyan di support lai.
+          dates: 'دسمبر ۲۰۲۱ - مارچ ۲۰۲۶', // December 2021 - March 2026
+          description: 'ویڈر فورڈ دی وائرلائن ڈویژن وچ کم کیتا، جو ڈاؤن ہول ڈیٹا حاصل کرن، فائل مینجمنٹ، تے ریئل ٹائم لاگ ویژولائزیشن لئی سافٹ ویئر تیار کردا سی، دونے کیپیکس تے اوپیکس پروجیکٹس وچ تیل دے میدان دیاں کارروائیاں دی سپورٹ لئی۔', // Weatherford di Wireline division vich kam kita, jo downhole data hasil karan, file management, te real-time log visualization lai software tayar karda si, done CAPEX te OPEX projects vich tail de maidan di karwaiyan di support lai.
           title: 'سافٹ ویئر انجینئر - ویڈر فورڈ لمیٹڈ (ریوز وائرلائن ٹیکنالوجیز)' // Software Engineer - Weatherford Ltd (Reeves Wireline Technologies)
         },
         greenwood: {
@@ -168,6 +168,10 @@ export const paPK: LanguageStrings = {
       title: 'تکنیکی مہارتاں' // Technical Skills
     }
   },
+  environments: {
+    Alpha: 'Alpha',
+    Beta: 'Beta'
+  },
   errorPage: {
     forbidden: 'تہانوں اس صفحے تک رسائی دی اجازت نئیں اے۔', // Tuhanu is safhe tak rasai di ijazat nai ae.
     notFound: 'موجود صفحہ لبھیا نئیں یا لنک ٹٹ گیا اے۔', // Mojood safha labhiya nai ya link tut gaya ae.
@@ -210,6 +214,7 @@ export const paPK: LanguageStrings = {
     Home: 'ہوم', // Home
     Projects: 'پروجیکٹس' // Projects
   },
+  portfolio: 'پورٹ فولیو', // Portfolio
   projects: {
     adminCommands: {
       description: 'آسان رسائی لئی کمانڈز دے مجموعے نال اک batch script۔ کمانڈز ورگے مقامی ایڈمنسٹریٹر اکاؤنٹ نوں فعال کرنا تاکہ ڈیوائس توں متعلق ساری معلومات کڈیاں جا سکّن تے ہور فنکشنز۔', // Aasan rasai lai commands de majmue nal ek batch script. Commands wargay maqami administrator account nu fa'al karna taake device ton mutaliq sari maloomat kaddiyan ja sakan te hor functions.
@@ -276,7 +281,9 @@ export const paPK: LanguageStrings = {
     privateRepoTooltip: 'درخواست تے دستیاب', // Darkhast te dastiyab
     repoTooltip: 'GitHub ریپوزٹری دا لنک', // GitHub repository da link
     unavailableWebsiteTooltip: 'ویب سائٹ دستیاب نئیں اے', // Website dastiyab nai ae
-    websiteTooltip: 'پروجیکٹ دی ویب سائٹ ویکھو' // Project di website vekho
+    websiteTooltip: 'پروجیکٹ دی ویب سائٹ ویکھو', // Project di website vekho
+    readMore: 'ہور پڑھو', // Hor parho
+    readLess: 'کم پڑھو' // Kam parho
   },
   projectsPage: {
     filter: 'پروجیکٹس دی قسم دے حساب نال فلٹر کرو', // Projects di qism de hisab nal filter karo
