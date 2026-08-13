@@ -283,6 +283,7 @@ export const paPK: LanguageStrings = {
     }
   },
   projectCard: {
+    packageTooltip: 'NPM پیکیج لنک', // NPM Package Link
     privateRepoTooltip: 'درخواست تے دستیاب', // Darkhast te dastiyab
     repoTooltip: 'GitHub ریپوزٹری دا لنک', // GitHub repository da link
     unavailableWebsiteTooltip: 'ویب سائٹ دستیاب نئیں اے', // Website dastiyab nai ae

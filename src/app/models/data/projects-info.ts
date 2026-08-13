@@ -14,6 +14,7 @@ const MediaPlay: Project = {
   websiteUrl: undefined,
   isRepoPublic: false,
   githubUrl: undefined,
+  hasPublishedPackage: false,
   isHidden: true
 };
 
@@ -28,6 +29,7 @@ const SKhalidQPassport: Project = {
   websiteUrl: 'https://passport.skhalidq.dev/',
   isRepoPublic: false,
   githubUrl: undefined,
+  hasPublishedPackage: false,
   isHidden: false
 };
 
@@ -42,6 +44,9 @@ const AngularI18n: Project = {
   websiteUrl: 'https://i18n-demo.skhalidq.dev/',
   isRepoPublic: false,
   githubUrl: undefined,
+  hasPublishedPackage: true,
+  packageType: 'npm',
+  packageUrl: 'https://www.npmjs.com/package/@skhalidq/ngx-i18n',
   isHidden: false
 };
 
@@ -56,7 +61,8 @@ const FileExplorer: Project = {
   websiteUrl: 'https://alpha-explorer.skhalidq.dev/',
   isRepoPublic: false,
   githubUrl: undefined,
-  isHidden: false
+  hasPublishedPackage: false,
+  isHidden: true
 };
 
 const MyList: Project = {
@@ -69,7 +75,7 @@ const MyList: Project = {
   hasWebsite: true,
   websiteUrl: 'https://beta-myList.skhalidq.dev/',
   isRepoPublic: false,
-  githubUrl: 'https://github.com/user/project1',
+  hasPublishedPackage: false,
   isHidden: false
 };
 
@@ -83,6 +89,7 @@ const AdminCommands: Project = {
   hasWebsite: false,
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/Comandos-Administrativos',
+  hasPublishedPackage: false,
   isHidden: false
 };
 
@@ -97,6 +104,7 @@ const BBISA: Project = {
   websiteUrl: 'https://bbis.skhalidq.dev/Home',
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/',
+  hasPublishedPackage: false,
   isHidden: false
 };
 
@@ -111,6 +119,7 @@ const DistributedSystems: Project = {
   websiteUrl: '',
   isRepoPublic: false,
   githubUrl: 'https://github.com/SKhalidQ/Distributed-RESTful-API',
+  hasPublishedPackage: false,
   isHidden: false
 };
 
@@ -125,6 +134,7 @@ const Jumble: Project = {
   websiteUrl: '',
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/Jumble-Mobile-App',
+  hasPublishedPackage: false,
   isHidden: false
 };
 
@@ -139,6 +149,7 @@ const DataMining: Project = {
   websiteUrl: '',
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/Medical-Data-Analysis',
+  hasPublishedPackage: false,
   isHidden: false
 };
 
@@ -153,6 +164,7 @@ const Networking: Project = {
   websiteUrl: '',
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/Networking',
+  hasPublishedPackage: false,
   isHidden: false
 };
 
@@ -167,6 +179,7 @@ const WebTech: Project = {
   websiteUrl: 'https://wt-location.skhalidq.dev/',
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/WT-Location-Website',
+  hasPublishedPackage: false,
   isHidden: false
 };
 
@@ -181,6 +194,7 @@ const AgentChatBot: Project = {
   websiteUrl: '',
   isRepoPublic: true,
   githubUrl: 'https://github.com/SKhalidQ/Artificial-Intelligence',
+  hasPublishedPackage: false,
   isHidden: false
 };
 

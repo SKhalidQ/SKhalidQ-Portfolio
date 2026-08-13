@@ -24,7 +24,7 @@ export class SnackbarComponent {
    * Bound to the action button in the template.
    * @returns {void}
    */
-  public dismiss(): void {
+   dismiss(): void {
     this.snackRef.dismiss();
   }
 }

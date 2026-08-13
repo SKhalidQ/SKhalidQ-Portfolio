@@ -283,8 +283,9 @@ export const enGB = {
     },
   },
   projectCard: {
+    packageTooltip: 'NPM package link',
     privateRepoTooltip: 'Available at request',
-    repoTooltip: 'GitHub Repository Link',
+    repoTooltip: 'GitHub repository link',
     unavailableWebsiteTooltip: 'Site unavailable',
     websiteTooltip: 'View site',
     readMore: 'Read More',

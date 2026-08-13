@@ -283,6 +283,7 @@ export const esES: LanguageStrings = {
     }
   },
   projectCard: {
+    packageTooltip: 'Enlace al paquete NPM',
     privateRepoTooltip: 'Disponible a petición',
     repoTooltip: 'Enlace al repositorio de GitHub',
     unavailableWebsiteTooltip: 'Página no disponible',

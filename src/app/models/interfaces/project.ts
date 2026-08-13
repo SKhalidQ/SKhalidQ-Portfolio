@@ -10,6 +10,9 @@ export interface Project {
   hasWebsite: boolean;
   websiteUrl?: string | null;
   isRepoPublic: boolean;
-  githubUrl?: string | null;
+  hasPublishedPackage: boolean;
+  packageType?: 'npm' | 'nuget';
+  packageUrl?: string;
+  githubUrl?: string;
   isHidden: boolean;
 }

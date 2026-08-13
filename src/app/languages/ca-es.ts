@@ -283,6 +283,7 @@ export const caES: LanguageStrings = {
     }
   },
   projectCard: {
+    packageTooltip: 'Enllaç al paquet NPM',
     privateRepoTooltip: 'Disponible a petició',
     repoTooltip: 'Enllaç al repositori de GitHub',
     unavailableWebsiteTooltip: 'Pàgina no disponible',
