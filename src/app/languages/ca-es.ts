@@ -229,7 +229,8 @@ export const caES: LanguageStrings = {
     angularI18n: {
       description: 'Una biblioteca de i18n per a Angular amb claus de traducció segures per tipus i canvi d\'idioma reactiu perquè la IU s\'actualitzi instantàniament a tota l\'aplicació. Suporta interpolació i pluralització, persistència d\'idioma, traduccions de suport i càrrega diferida opcional de paquets d\'idioma per a paquets inicials més petits.',
       subtitle: 'Projecte Personal',
-      title: 'Angular Library - i18n'
+      title: 'Angular Library - i18n',
+      action: 'Veure Demo'
     },
     bbisa: {
       description: 'Projecte desenvolupat amb Angular i ASP.NET Core. Permet als usuaris rastrejar un inventari d\'ampolles de cervesa afegint els seus detalls. L\'usuari pot registrar comandes i historial de vendes que impacten la quantitat d\'estoc d\'un producte.',
@@ -283,6 +284,7 @@ export const caES: LanguageStrings = {
     }
   },
   projectCard: {
+    packageTooltip: 'Enllaç al paquet NPM',
     privateRepoTooltip: 'Disponible a petició',
     repoTooltip: 'Enllaç al repositori de GitHub',
     unavailableWebsiteTooltip: 'Pàgina no disponible',

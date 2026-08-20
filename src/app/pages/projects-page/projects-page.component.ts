@@ -30,7 +30,7 @@ enum ProjectTypeFilter {
 export class ProjectsPageComponent implements OnInit {
   private readonly activePageService = inject(ActivePageService);
   private readonly translationService = inject(TranslationService);
-  public readonly themeService = inject(ThemeService);
+  protected readonly themeService = inject(ThemeService);
 
   /** Full unfiltered project list from the static data model. */
   private readonly allProjects: Project[] = Projects;

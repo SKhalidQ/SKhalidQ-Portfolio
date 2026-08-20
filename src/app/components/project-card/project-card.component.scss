@@ -92,17 +92,23 @@ mat-card {
       }
     }
 
-    .github-button {
+    .resource-buttons-container {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 37px;
-      height: 37px;
+      flex-direction: row;
+      gap: 0.5em;
 
-      img {
-        margin: 5.5px 0 0 0;
+      .github-button, .npm-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 37px;
         height: 37px;
+
+        img {
+          margin: 5.5px 0 0 0;
+          width: 37px;
+          height: 37px;
+        }
       }
     }
   }

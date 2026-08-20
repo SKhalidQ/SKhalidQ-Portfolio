@@ -57,7 +57,7 @@ export class ClassicCurriculumComponent {
    * @param imageElement The image element that encountered an error.
    * @returns void
    */
-  public onImageError(imageElement: HTMLImageElement): void {
+  protected onImageError(imageElement: HTMLImageElement): void {
     if ((imageElement.dataset)['fallbackApplication']) {
       return;
     }
