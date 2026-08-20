@@ -15,4 +15,5 @@ export interface Project {
   packageUrl?: string;
   githubUrl?: string;
   isHidden: boolean;
+  actionText?: string;
 }

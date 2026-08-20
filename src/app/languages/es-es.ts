@@ -229,7 +229,8 @@ export const esES: LanguageStrings = {
     angularI18n: {
       description: 'Una biblioteca de i18n para Angular con claves de traducción seguras para tipos y cambio de idioma reactivo para que la IU se actualice instantáneamente en toda la aplicación. Soporta interpolación y pluralización, persistencia de idioma, traducciones de respaldo y carga diferida opcional de paquetes de idioma para paquetes iniciales más pequeños.',
       subtitle: 'Proyecto Personal',
-      title: 'Angular Library - i18n'
+      title: 'Angular Library - i18n',
+      action: 'Ver Demo'
     },
     bbisa: {
       description: 'Proyecto desarrollado con Angular y ASP.NET Core. Permite a los usuarios rastrear un inventario de botellas de cerveza añadiendo sus detalles. El usuario puede registrar pedidos e historial de ventas que impactan la cantidad de stock de un producto.',

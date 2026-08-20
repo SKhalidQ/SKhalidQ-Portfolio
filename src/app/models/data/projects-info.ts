@@ -38,7 +38,7 @@ const AngularI18n: Project = {
   subtitle: 'projects.angularI18n.subtitle',
   icon: 'translate',
   projectType: ProjectType.PersonalProject,
-  imagePath: './assets/images/projects/coming-soon/ComingSoon v2.png',
+  imagePath: './assets/images/projects/i18nLibraryPreview.png',
   description: 'projects.angularI18n.description',
   hasWebsite: true,
   websiteUrl: 'https://i18n-demo.skhalidq.dev/',
@@ -47,7 +47,8 @@ const AngularI18n: Project = {
   hasPublishedPackage: true,
   packageType: 'npm',
   packageUrl: 'https://www.npmjs.com/package/@skhalidq/ngx-i18n',
-  isHidden: false
+  isHidden: false,
+  actionText: 'projects.angularI18n.action'
 };
 
 const FileExplorer: Project = {
