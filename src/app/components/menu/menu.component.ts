@@ -31,9 +31,9 @@ export class MenuComponent {
    */
   @Input() onMenuClose: () => void = (): void => { /* no-op */ };
 
-  public readonly themeService = inject(ThemeService);
+  protected readonly themeService = inject(ThemeService);
 
-  ThemeMode = ThemeMode;
+  protected readonly ThemeMode = ThemeMode;
 
   /**
    * @description

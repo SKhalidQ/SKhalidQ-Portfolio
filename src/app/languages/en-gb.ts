@@ -229,7 +229,8 @@ export const enGB = {
     angularI18n: {
       description: 'An Angular i18n library with type-safe translation keys and reactive language switching so the UI updates instantly across the application. Supports interpolation and pluralisation, language persistence, fallback translations, and optional lazy-loading of language packs for smaller initial bundles.',
       subtitle: 'Personal Project',
-      title: 'Angular Library - i18n'
+      title: 'Angular Library - i18n',
+      action: 'View Demo'
     },
     bbisa: {
       description: 'Final year project built using Angular and ASP.NET Core. It allows users to track a beer bottle inventory by adding their details. The user can log orders and history of the sales which impact the stock amount of a product.',
@@ -283,8 +284,9 @@ export const enGB = {
     },
   },
   projectCard: {
+    packageTooltip: 'NPM package link',
     privateRepoTooltip: 'Available at request',
-    repoTooltip: 'GitHub Repository Link',
+    repoTooltip: 'GitHub repository link',
     unavailableWebsiteTooltip: 'Site unavailable',
     websiteTooltip: 'View site',
     readMore: 'Read More',

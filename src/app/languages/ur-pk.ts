@@ -229,7 +229,8 @@ export const urPK: LanguageStrings = {
     angularI18n: {
       description: 'ایک Angular i18n لائبریری جس میں قسم محفوظ ترجمہ کیز اور ری ایکٹیو زبان کی تبدیلی ہے تاکہ UI ایپلیکیشن میں فوری طور پر اپ ڈیٹ ہو جائے۔ انٹرپولیشن اور جمعیت، زبان کی مستقل مزاجی، بیک اپ ترجمے، اور چھوٹے ابتدائی بنڈلز کے لیے زبان کے پیکجز کے اختیاری سست لوڈنگ کی حمایت کرتا ہے۔', // Ek Angular i18n library jismein type-safe translation keys aur reactive zaban ki tabdeeli hai taake UI application mein fori tor par update ho jaye. Interpolation aur pluralization, zaban ki mustaqil mizaji, backup translations, aur chotay initial bundles ke liye language packages ke ikhtiyari slow loading ki himayat karta hai.
       subtitle: 'ذاتی پروجیکٹ', // Zaati Project
-      title: 'اینگولر لائبریری - i18n' // Angular Library - i18n
+      title: 'اینگولر لائبریری - i18n', // Angular Library - i18n
+      action: 'ڈیمو دیکھیں' // Demo dekhen
     },
     bbisa: {
       description: 'حتمی سال کا پروجیکٹ جو اینگولر اور اے ایس پی ڈاٹ نیٹ کور استعمال کرکے بنایا گیا۔ یہ صارفین کو بیئر بوتل کی تفصیلات شامل کرکے انوینٹری کا ٹریک کرنے کی اجازت دیتا ہے۔ صارف آرڈرز اور فروخت کی تاریخ لاگ کر سکتا ہے جو پروڈکٹ کے اسٹاک کی مقدار پر اثر ڈالتی ہے۔', // Hatmi saal ka project jo Angular aur ASP.NET Core istemal karke banaya gaya. Yeh users ko beer bottle ki tafseelat shamil karke inventory ka track karne ki ijazat deta hai. User orders aur farokht ki tareekh log kar sakta hai jo product ke stock ki miqdaar par asar dalti hai.
@@ -283,6 +284,7 @@ export const urPK: LanguageStrings = {
     }
   },
   projectCard: {
+    packageTooltip: 'NPM پیکیج لنک', // NPM Package Link
     privateRepoTooltip: 'درخواست پر دستیاب', // Darkhast par dastiyab
     repoTooltip: 'GitHub ریپوزٹری کا لنک', // GitHub repository ka link
     unavailableWebsiteTooltip: 'ویب سائٹ دستیاب نہیں ہے', // Website dastiyab nahi hai

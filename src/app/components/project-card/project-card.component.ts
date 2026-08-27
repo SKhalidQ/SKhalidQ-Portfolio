@@ -24,23 +24,25 @@ export class ProjectCardComponent implements OnInit, AfterViewInit, OnDestroy {
   /** Reference to the paragraph element containing the project description. Used for overflow detection. */
   @ViewChild('descriptionElement') private descriptionElementReference!: ElementRef<HTMLParagraphElement>;
 
-  public readonly themeService = inject(ThemeService);
+  protected readonly themeService = inject(ThemeService);
   private readonly translationService = inject(TranslationService);
   private readonly languageService = inject(LanguageService);
   private readonly cdr = inject(ChangeDetectorRef);
 
   /** CSS class applied to all tooltips on this card. */
-  readonly tooltipClass: string = 'tooltip';
+  protected readonly tooltipClass: string = 'tooltip';
   /** Delay in milliseconds before tooltips appear. */
-  readonly tooltipShowDelay: number = 200;
+  protected readonly tooltipShowDelay: number = 200;
   /** Number of characters shown in the truncated state. Only used for slicing, not for overflow detection. */
-  readonly descriptionCharacterLimit = 263;
+  protected readonly descriptionCharacterLimit = 263;
   /** Whether the full description is currently shown (toggled by "Read More"). */
-  showFullDescription = false;
+  protected showFullDescription = false;
   /** Whether the card is currently expanded for the animation state. */
-  cardState: 'collapsed' | 'expanded' = 'collapsed';
+  protected cardState: 'collapsed' | 'expanded' = 'collapsed';
   /** Whether the description text overflows the allocated space, necessitating truncation. */
-  hasOverflow = false;
+  protected hasOverflow = false;
+  /** Path to the NPM logo image. */
+  protected readonly npmLogoPath = '../../../assets/images/logos/npm-logo.svg';
 
   private readonly collapseDelayMs = 250;
   private destroy$ = new Subject<void>();
@@ -151,6 +153,18 @@ export class ProjectCardComponent implements OnInit, AfterViewInit, OnDestroy {
     const repoTooltip = 'projectCard.repoTooltip';
     const privateRepoTooltip = 'projectCard.privateRepoTooltip';
     const tooltip = this.translationService.getTextPath(this.project.isRepoPublic ? repoTooltip : privateRepoTooltip);
+
+    return tooltip;
+  }
+
+  /**
+   * @description
+   * Returns the translated tooltip text for the project package button.
+   * @returns {string} Translated tooltip string.
+   */
+  get getPackageTooltip(): string {
+    const packageTooltip = 'projectCard.packageTooltip';
+    const tooltip = this.translationService.getTextPath(packageTooltip);
 
     return tooltip;
   }
