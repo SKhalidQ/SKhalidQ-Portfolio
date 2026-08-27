@@ -25,15 +25,23 @@
   <mat-card-actions>
     <div>
       <a *ngIf="project.hasWebsite" class="page-button" mat-flat-button color="accent" [disabled]="!project.websiteUrl" [href]="project.websiteUrl">
-        {{ "projectsPage.visitSite" | translate }}
+        {{ project.actionText ?? "projectsPage.visitSite" | translate }}
         <mat-icon>arrow_forward</mat-icon>
       </a>
     </div>
 
-    <div [matTooltipShowDelay]="tooltipShowDelay" [matTooltipClass]="tooltipClass" [matTooltip]="getRepoTooltip">
-      <a mat-icon-button class="github-button" [disabled]="!project.isRepoPublic" [href]="project.githubUrl">
-        <img #githubLogo [src]="project.isRepoPublic | githubLogo:(themeService.effectiveThemeMode$ | async):'../../../assets/images/icons'" alt="GitHub Image" (error)="onImageError(githubLogo)">
-      </a>
+    <div class="resource-buttons-container">
+      <div [matTooltipShowDelay]="tooltipShowDelay" [matTooltipClass]="tooltipClass" [matTooltip]="getPackageTooltip">
+        <a *ngIf="project.hasPublishedPackage" mat-icon-button class="npm-button" [disabled]="!project.hasPublishedPackage" [href]="project.packageUrl">
+          <img #npmLogo [src]="npmLogoPath" alt="NPM Image" (error)="onImageError(npmLogo)">
+        </a>
+      </div>
+
+      <div [matTooltipShowDelay]="tooltipShowDelay" [matTooltipClass]="tooltipClass" [matTooltip]="getRepoTooltip">
+        <a mat-icon-button class="github-button" [disabled]="!project.isRepoPublic" [href]="project.githubUrl">
+          <img #githubLogo [src]="project.isRepoPublic | githubLogo:(themeService.effectiveThemeMode$ | async):'../../../assets/images/icons'" alt="GitHub Image" (error)="onImageError(githubLogo)">
+        </a>
+      </div>
     </div>
   </mat-card-actions>
 </mat-card>

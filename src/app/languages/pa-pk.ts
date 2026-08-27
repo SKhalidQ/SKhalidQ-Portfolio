@@ -229,7 +229,8 @@ export const paPK: LanguageStrings = {
     angularI18n: {
       description: 'اک Angular i18n لائبریری جیہڑی ٹائپ سیف ترجمہ کیز تے ری ایکٹو زبان تبدیلی رکھدی اے تاکہ UI ایپلیکیشن فوراً اپڈیٹ ہو جائے۔ انٹرپولیشن تے جمعیت، زبان دی مستقل مزاجی، بیک اپ ترجمے، تے چھوٹے ابتدائی بنڈلز لئی زبان پیکجز دی اختیاری سست لوڈنگ نوں سپورٹ کردی اے۔', // Ek Angular i18n library jehri type-safe translation keys te reactive zaban tabdeeli rakhdi ae taake UI application foran update ho jaye. Interpolation te pluralization, zaban di mustaqil mizaji, backup translations, te chotay initial bundles lai language packages di ikhtiyari slow loading nu support kardi ae.
       subtitle: 'ذاتی پروجیکٹ', // Zaati Project
-      title: 'اینگولر لائبریری - i18n' // Angular Library - i18n
+      title: 'اینگولر لائبریری - i18n', // Angular Library - i18n
+      action: 'ڈیمو ویکھو' // Demo vekho
     },
     bbisa: {
       description: 'حتمی سال دا پروجیکٹ جو اینگولر تے اے ایس پی ڈاٹ نیٹ کور ورت کے بنایا گیا۔ ایہ صارفین نوں بیئر بوتل دیاں تفصیلات شامل کر کے انوینٹری ٹریک کرن دی اجازت دیندا اے۔ صارف آرڈرز تے فروخت دی تاریخ لاگ کر سکدا اے جو پروڈکٹ دے اسٹاک تے اثر انداز ہوندی اے۔', // Hatmi saal da project jo Angular te ASP.NET Core vart ke banaya gaya. Eh users nu beer bottle diyan tafseelat shamil kar ke inventory track karan di ijazat dinda ae. User orders te farokht di tareekh log kar sakda ae jo product de stock te asar andaz hondi ae.
@@ -283,6 +284,7 @@ export const paPK: LanguageStrings = {
     }
   },
   projectCard: {
+    packageTooltip: 'NPM پیکیج لنک', // NPM Package Link
     privateRepoTooltip: 'درخواست تے دستیاب', // Darkhast te dastiyab
     repoTooltip: 'GitHub ریپوزٹری دا لنک', // GitHub repository da link
     unavailableWebsiteTooltip: 'ویب سائٹ دستیاب نئیں اے', // Website dastiyab nai ae
